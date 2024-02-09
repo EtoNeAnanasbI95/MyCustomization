@@ -1,0 +1,29 @@
+{
+    "editor.fontFamily": "Hack Nerd Font",
+    "workbench.colorTheme": "After Dark Owl",
+    "window.commandCenter": false,
+    "workbench.editor.editorActionsLocation": "hidden",
+
+    "workbench.layoutControl.enabled": false,
+    "window.titleBarStyle": "custom",
+
+    //"vscode_vibrancy.opacity": 0.5,
+    //"vscode_vibrancy.refreshInterval": 10,
+    //"vscode_vibrancy.type": "acrylic",
+    "workbench.activityBar.location": "hidden",
+    "workbench.statusBar.visible": false,
+    "search.defaultViewMode": "list",
+    "window.menuBarVisibility": "hidden",
+    "workbench.editor.showTabs": "single",
+    "breadcrumbs.enabled": false,
+    "editor.glyphMargin": false,
+    "editor.minimap.autohide": true,
+    "diffEditor.renderMarginRevertIcon": false,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+    "editor.stickyScroll.enabled": true,
+
+    "window.restoreWindows": "none",
+    "editor.guides.indentation": false,
+    "glassit.alpha": 205,
+}
