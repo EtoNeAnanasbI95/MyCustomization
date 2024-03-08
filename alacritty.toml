@@ -1,0 +1,17 @@
+[window]
+opacity = 0.4
+
+[colors.cursor]
+cursor = "#a605cd"
+text = "#FFFFFF"
+
+[colors.normal]
+black = "#0c0c0c"
+blue = "#0037da"
+cyan = "#3a96dd"
+green = "#FF00FF"
+magenta = "#881798"
+red = "#c50f1f"
+white = "#cccccc"
+yellow = "#c19c00"
+
