@@ -1,6 +1,10 @@
 {
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+
+    
     "editor.fontFamily": "Hack Nerd Font",
-    "workbench.colorTheme": "After Dark Owl",
     "window.commandCenter": false,
     "workbench.editor.editorActionsLocation": "hidden",
 
@@ -25,11 +29,10 @@
 
     "window.restoreWindows": "none",
     "editor.guides.indentation": false,
-    //"glassit.alpha": 220,
     "tabnine.experimentalAutoImports": true,
     "explorer.confirmDelete": false,
     "background.windowBackgrounds": [
-        "C:\\Users\\AnanasoviiKompJN\\Desktop\\ \\фотки\\фотки важно\\VS_CODE_WALLPAPER.gif"
+        "C:\\Users\\eto_d\\OneDrive\\Рабочий стол\\ \\фотки\\фотки важно\\MyMainGifWallpaper.gif"
     ],
     "background.backgroundBlur": [
         "10px",
@@ -44,5 +47,10 @@
         0.7
     ],
     "background.autoInstall": true,
-    
+    "workbench.colorTheme": "purple vampire",
+    "cmake.showOptionsMovedNotification": false,
+    "frosted-glass-theme.revealEffect.enabled": true,
+    "indentRainbow.indicatorStyle": "light",
+    "indentRainbow.lightIndicatorStyleLineWidth": 2,
+    "indentRainbow.excludedLanguages": ["plaintext"],
 }
