@@ -25,5 +25,24 @@
 
     "window.restoreWindows": "none",
     "editor.guides.indentation": false,
-    "glassit.alpha": 205,
+    //"glassit.alpha": 220,
+    "tabnine.experimentalAutoImports": true,
+    "explorer.confirmDelete": false,
+    "background.windowBackgrounds": [
+        "C:\\Users\\AnanasoviiKompJN\\Desktop\\ \\фотки\\фотки важно\\VS_CODE_WALLPAPER.gif"
+    ],
+    "background.backgroundBlur": [
+        "10px",
+        "10px",
+        "10px",
+        "10px"
+    ],
+    "background.backgroundOpacity": [
+        0.7,
+        0.7,
+        0.7,
+        0.7
+    ],
+    "background.autoInstall": true,
+    
 }
