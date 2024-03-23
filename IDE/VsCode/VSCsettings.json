@@ -52,5 +52,8 @@
     "frosted-glass-theme.revealEffect.enabled": true,
     "indentRainbow.indicatorStyle": "light",
     "indentRainbow.lightIndicatorStyleLineWidth": 2,
-    "indentRainbow.excludedLanguages": ["plaintext"],
+    "indentRainbow.excludedLanguages": [
+        "plaintext"
+    ],
+    "solidity.telemetry": true,
 }
