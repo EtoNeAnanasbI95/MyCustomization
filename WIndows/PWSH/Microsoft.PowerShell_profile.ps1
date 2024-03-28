@@ -1,11 +1,9 @@
-# Initial oh-my-posh theme in my PWSH terminal
 oh-my-posh init pwsh --config "C:\Users\eto_d\AppData\Local\Programs\oh-my-posh\themes\bubbles.omp.json" | Invoke-Expression;
 clear;
 
-# simple alias for fast clean
 New-Alias -Name c -Value clear
+New-Alias -Name pcs -Value Stop-Computer
 
-# simple function for copy file path to clipboard
 function cpPath {
     
     [CmdletBinding()]
@@ -15,7 +13,6 @@ function cpPath {
     else { Get-Location | Set-Clipboard;}
 }
 
-# simple function for force delete files
 function fdel {
     param (
         [string]$item
@@ -23,6 +20,27 @@ function fdel {
 
     if ($item) {
         remove-item $item -r -Force
+    }
+    
+}
+
+function q {
+    Get-Process WindowsTerminal | Stop-Process -Force
+}
+
+function fp {
+    param (
+        [string]$item
+    )
+
+    if ($item) {
+        git add .;
+        git commit -m "$item";
+        git push -u origin main;
+    } else {
+        git add .;
+        git commit -m "some fix";
+        git push -u origin main;
     }
     
 }
