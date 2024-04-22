@@ -1,5 +1,5 @@
 # Терминалы
-* Конфигурации моих терминалов лежат в папке terms(типа ссылка на папку).
+* Конфигурации моих терминалов лежат в папке [terms](https://github.com/EtoNeAnanasbI95/MyCustomization/tree/main/terms).
 
 ▼  В этой папке лежат конфигурации:
    1. Hyper terminal (ссылка него)
