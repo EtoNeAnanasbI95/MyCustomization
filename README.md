@@ -1,19 +1,25 @@
 # Терминалы
 * Конфигурации моих терминалов лежат в папке [terms](https://github.com/EtoNeAnanasbI95/MyCustomization/tree/main/terms).
 
-▼  В этой папке лежат конфигурации:
-   1. Hyper terminal (ссылка него)
-   2. Alacritty
-   3. Default windows terminal
+<details>
+   <summary>В этой папке лежат конфигурации:</summary>
+      1. Hyper terminal (ссылка него)<br/>
+      2. Alacritty<br/>
+      3. Default windows terminal<br/>
+
 > Из всего выше перечисленного, файл (WindowsTerminalColorSchemes) является просто цветовой схемой для терминала windows, ***если вы хотите посмотреть конфигурацию именно powershell, то просмотрите папку Windows → PWSH***
+</details>
 
 # Редакторы кода (IDE)
 * Конфиги всех редакторов кода находятся в папке IDE
-  
-▼  Там находятся конфиги:
-  1. IDE от jetbrains которыми я пользуюсь на постоянной основе
-  2. VS code
+
+<details>
+   <summary>Там находятся конфиги:</summary>
+      1. IDE от jetbrains которыми я пользуюсь на постоянной основе<br/>
+      2. VS code<br/>
+
 > Гайд на кастомизацию vscode: (https://marred-chartreuse-801.notion.site/vs-code-acaf2e071b91435fad37bb784c9b3941?pvs=4)
+</details>
 
 # Linux
 * Эта папка, как не странно, содержит в себе файлы, которые я использую для кастомизации моего Linux, пока что там мало файлов, но там лежит мой конфиг с .zshrc, который содержит в себе внешнюю кастомизацию zsh, алисы и homebrew
