@@ -3,7 +3,7 @@
 
 <details>
    <summary>В этой папке лежат конфигурации:</summary>
-      1. Hyper terminal (ссылка него)<br/>
+      1. Hyper terminal<br/>
       2. Alacritty<br/>
       3. Default windows terminal<br/>
 
