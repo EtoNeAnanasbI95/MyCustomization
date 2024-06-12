@@ -36,11 +36,11 @@ function fp {
     if ($item) {
         git add .;
         git commit -m "$item";
-        git push -u origin main;
+        git push;
     } else {
         git add .;
         git commit -m "some fix";
-        git push -u origin main;
+        git push;
     }
     
 }
