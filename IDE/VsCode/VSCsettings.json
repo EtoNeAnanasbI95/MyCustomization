@@ -1,19 +1,13 @@
 {
-    "extensions.experimental.affinity": {
-        "asvetliakov.vscode-neovim": 1
-    },
-
-    
-    "editor.fontFamily": "Hack Nerd Font",
+    "editor.fontFamily": "FiraCode Nerd Font",
+    "editor.fontSize": 14,
+    "editor.fontLigatures": true,
     "window.commandCenter": false,
     "workbench.editor.editorActionsLocation": "hidden",
 
     "workbench.layoutControl.enabled": false,
     "window.titleBarStyle": "custom",
 
-    //"vscode_vibrancy.opacity": 0.5,
-    //"vscode_vibrancy.refreshInterval": 10,
-    //"vscode_vibrancy.type": "acrylic",
     "workbench.activityBar.location": "hidden",
     "workbench.statusBar.visible": false,
     "search.defaultViewMode": "list",
@@ -28,11 +22,17 @@
     "editor.stickyScroll.enabled": true,
 
     "window.restoreWindows": "none",
-    "editor.guides.indentation": false,
+    "editor.guides.indentation": true,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorStyle": "block-outline",
+    "explorer.confirmDragAndDrop": false,
+    "workbench.colorCustomizations": {
+        "editorCursor.foreground": "#FF00FF", 
+    },
     "tabnine.experimentalAutoImports": true,
     "explorer.confirmDelete": false,
     "background.windowBackgrounds": [
-        "C:\\Users\\eto_d\\OneDrive\\Рабочий стол\\ \\фотки\\фотки важно\\MyMainGifWallpaper.gif"
+        ""
     ],
     "background.backgroundBlur": [
         "10px",
@@ -42,18 +42,12 @@
     ],
     "background.backgroundOpacity": [
         0.7,
-        0.7,
+        1,
         0.7,
         0.7
-    ],
+        ],
     "background.autoInstall": true,
-    "workbench.colorTheme": "purple vampire",
-    "cmake.showOptionsMovedNotification": false,
+    "workbench.colorTheme": "Prplkai",
     "frosted-glass-theme.revealEffect.enabled": true,
-    "indentRainbow.indicatorStyle": "light",
-    "indentRainbow.lightIndicatorStyleLineWidth": 2,
-    "indentRainbow.excludedLanguages": [
-        "plaintext"
-    ],
-    "solidity.telemetry": true,
+    "workbench.iconTheme": "material-icon-theme",
 }
