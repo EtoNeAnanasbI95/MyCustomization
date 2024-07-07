@@ -1,8 +1,0 @@
-#!/bin/bash
-
-path=""
-if [ -z "$1" ]; then
-	echo -n "$(pwd)" | /usr/bin/wl-copy
-else
-	echo -n "$(realpath "$1")" | /usr/bin/wl-copy
-fi
