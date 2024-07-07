@@ -1,22 +1,18 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
-#add homebrew to PATH
-test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
-test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.bashrc
-
-# Path to your oh-my-zsh installation.
+# Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
+# load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
-#OH-MY-POSH theme
-eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/bubbles.omp.json)"
+# Add pokemon script to my term start
+
+pokemon-colorscripts -r
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -48,13 +44,6 @@ eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/bubbles.
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
 
-alias cl='clear'
-alias gi='git init'
-alias ga='git add .'
-alias gbm='git branch -m main'
-alias gpu='git push -u origin main'
-alias gpf='git push -f origin main'
-
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
 
@@ -85,11 +74,8 @@ alias gpf='git push -f origin main'
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-	git
-	zsh-autosuggestions
-)
-
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting )
+# fast-syntax-highlighting zsh-autocomplete
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -109,12 +95,25 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# Set personal aliases, overriding those provided by Oh My Zsh libs,
+# plugins, and themes. Aliases can be placed here, though Oh My Zsh
+# users are encouraged to define aliases within a top-level file in
+# the $ZSH_CUSTOM folder, with .zsh extension. Examples:
+# - $ZSH_CUSTOM/aliases.zsh
+# - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# User functions
+
+
+# User aliases
+alias c="clear"
+alias q="exit"
+alias pcs="shutdown -h now"
+alias n="nvim"
+alias cd..="cd .."
+alias rp="pokemon-colorscripts -r"
+alias zr="omz reload"
+
+# User binary directories
+export PATH="$HOME/bin:$PATH"
