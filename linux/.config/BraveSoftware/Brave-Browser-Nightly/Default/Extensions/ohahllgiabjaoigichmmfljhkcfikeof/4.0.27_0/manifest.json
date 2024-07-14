@@ -1,0 +1,102 @@
+{
+   "action": {
+      "default_icon": {
+         "19": "assets/icons/enabled-19.png",
+         "38": "assets/icons/enabled-38.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "__MSG_name__"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "content-scripts.js" ],
+      "match_about_blank": true,
+      "matches": [ "*://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "declarative_net_request": {
+      "rule_resources": [ {
+         "enabled": true,
+         "id": "ruleset_1",
+         "path": "filters/declarative/ruleset_1/ruleset_1.json"
+      }, {
+         "enabled": false,
+         "id": "ruleset_10",
+         "path": "filters/declarative/ruleset_10/ruleset_10.json"
+      }, {
+         "enabled": false,
+         "id": "ruleset_11",
+         "path": "filters/declarative/ruleset_11/ruleset_11.json"
+      }, {
+         "enabled": false,
+         "id": "ruleset_12",
+         "path": "filters/declarative/ruleset_12/ruleset_12.json"
+      }, {
+         "enabled": false,
+         "id": "ruleset_13",
+         "path": "filters/declarative/ruleset_13/ruleset_13.json"
+      }, {
+         "enabled": false,
+         "id": "ruleset_14",
+         "path": "filters/declarative/ruleset_14/ruleset_14.json"
+      }, {
+         "enabled": false,
+         "id": "ruleset_2",
+         "path": "filters/declarative/ruleset_2/ruleset_2.json"
+      }, {
+         "enabled": true,
+         "id": "ruleset_3",
+         "path": "filters/declarative/ruleset_3/ruleset_3.json"
+      }, {
+         "enabled": false,
+         "id": "ruleset_4",
+         "path": "filters/declarative/ruleset_4/ruleset_4.json"
+      }, {
+         "enabled": true,
+         "id": "ruleset_5",
+         "path": "filters/declarative/ruleset_5/ruleset_5.json"
+      }, {
+         "enabled": false,
+         "id": "ruleset_6",
+         "path": "filters/declarative/ruleset_6/ruleset_6.json"
+      }, {
+         "enabled": false,
+         "id": "ruleset_7",
+         "path": "filters/declarative/ruleset_7/ruleset_7.json"
+      }, {
+         "enabled": false,
+         "id": "ruleset_8",
+         "path": "filters/declarative/ruleset_8/ruleset_8.json"
+      }, {
+         "enabled": false,
+         "id": "ruleset_9",
+         "path": "filters/declarative/ruleset_9/ruleset_9.json"
+      } ]
+   },
+   "default_locale": "en",
+   "description": "__MSG_description__",
+   "differential_fingerprint": "1.acdad7065c87e84138cc01f70f28d4ef95905364bd80ad56767803c808a0cacb",
+   "host_permissions": [ "\u003Call_urls>" ],
+   "icons": {
+      "128": "assets/icons/enabled-128.png",
+      "16": "assets/icons/enabled-16.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr2Pqt+V0eGdP/ZlzTEf3fbsSi+S+VTz/dmchekNg0dPN9B+3/d+/ZUA/1Aon0sniTcDlisRAl1YByp0j1RchO7W5I/JCSq4gWn6sSZcyaON626hiDjIRATBf0Sxhzlur8Ukxgn1XL7ThotmPLI+o9CNMC1kvHY3FvKEmqDGHA1QzrgNuwlBh6vEXutndbGh6AkSLJCnqAxpa0GcnQ8T+ZoEXlubZ4G6ZMYpivLjma0OIUCSfv3vK4odevZ3In7S60aUPsj7ANKMTpErEtsIxi3DKry2jLEI4WQ3u2fsf41iCKhSFtsRbe3TKJMbQwZ4hMCVl/vEh7mvVlnA7qZx9ZwIDAQAB",
+   "manifest_version": 3,
+   "name": "__MSG_name__",
+   "options_page": "options.html",
+   "permissions": [ "tabs", "contextMenus", "scripting", "storage", "declarativeNetRequest", "declarativeNetRequestFeedback", "unlimitedStorage", "webNavigation", "webRequest" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "4.0.27",
+   "web_accessible_resources": [ {
+      "matches": [ "http://*/*", "https://*/*" ],
+      "resources": [ "web-accessible-resources/*" ],
+      "use_dynamic_url": true
+   }, {
+      "matches": [ "http://*/*", "https://*/*" ],
+      "resources": [ "static-web-accessible-resources/*" ]
+   } ]
+}

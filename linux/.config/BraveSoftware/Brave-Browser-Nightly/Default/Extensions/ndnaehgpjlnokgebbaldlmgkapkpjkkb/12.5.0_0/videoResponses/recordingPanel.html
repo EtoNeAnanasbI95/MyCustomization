@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Mailsuite -  Recording Panel</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="/scripts/bundles/videoResponses.bundle.js"></script>
+    <link rel="stylesheet" type="text/css" href="/styles/videoResponsesStyles.css" />
+</head>
+
+<body>
+    <header>
+        <h1>
+            <img src="/images/icons/mt-logo.svg" alt="" />
+            Video Message
+        </h1>
+    </header>
+    <aside>
+        <button id="desktop" class="mt-btn mt-btn--green big">
+            <img src="/images/icons/icon-shareScreenAndCamera.svg" alt="" />
+            Screen Share & Camera
+        </button>
+        <button id="webcam" class="mt-btn mt-btn--grey-border big">
+            <img src="/images/icons/icon-shareCamera.svg" alt="" />
+            Camera only
+        </button>
+    </aside>
+    <main class="hidden">
+        <div class="player">
+            <video id="video" oncontextmenu="return false;"></video>
+        </div>
+        <h2 class="only-preview">Camera & Mic</h2>
+        <h2 class="only-recording only-desktop">Camera position</h2>
+        <section class="options">
+            <div id="camOptions" class="deviceControl only-preview">
+                <img src="/images/icons/icon-camera.svg" alt="Camera" />
+                <select class="deviceSelector"></select>
+                <label class="toggle">
+                    <input type="checkbox" class="deviceEnabler" checked></input>
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div id="micOptions" class="deviceControl only-preview">
+                <img src="/images/icons/icon-microphone.svg" alt="Microphone" />
+                <select class="deviceSelector"></select>
+                <label class="toggle">
+                    <input type="checkbox" class="deviceEnabler" checked></input>
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div id="layoutOptions" class="deviceControl only-preview only-recording only-desktop">
+                <img src="/images/icons/icon-camera-position.svg" alt="Layout" />
+                <select class="deviceSelector">
+                    <option value="3">Camera Top Left</option>
+                    <option value="4">Camera Top Right</option>
+                    <option value="5">Camera Bottom Left</option>
+                    <option value="6">Camera Bottom Right</option>
+                    <option value="2">Camera Hidden</option>
+                </select>
+            </div>
+        </section>
+        <h2 class="only-preview only-desktop">Screen share</h2>
+        <section class="options only-preview only-desktop">
+            <div id="screenOptions" class="deviceControl">
+                <img src="/images/icons/icon-screen.svg" alt="Screen shared" />
+                <button>Specific window</button>
+            </div>
+        </section>
+        <section class="recordControls">
+            <span id="status" class="withIcon"></span>
+            <button id="start" class="mt-btn mt-btn--red only-preview expanded" aria-label="Record webcam">Start recording</button>
+            <button id="stop" class="mt-btn mt-btn--red-inverted only-recording withIcon expanded" data-icon="stop" aria-label="Stop recording">
+                Stop recording
+            </button>
+            <button id="discard" class="mt-btn mt-no-btn only-recorded" aria-label="Insert recording">Discard video</button>
+            <button id="save" class="mt-btn mt-btn--green only-recorded" data-icon="add_circle" aria-label="Insert recording">Insert video</button>
+        </section>
+        <video id="webcamstream" muted></video>
+        <video id="desktopstream" muted></video>
+        
+        <canvas id="canvas" width="320" height="180"></canvas>
+    </main>
+</body>
+
+</html>

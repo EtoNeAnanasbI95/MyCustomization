@@ -1,0 +1,14 @@
+{
+   "appDescription": {
+      "description": "شرح برنامه",
+      "message": "با افزونه رایگان پروکسی VPN ما به هر وب سایتی دسترسی داشته باشید و تبلیغات را مسدود کنید"
+   },
+   "appName": {
+      "description": "نام برنامه",
+      "message": "پروکسی رایگان VPN و مسدود کننده تبلیغات - Planet VPN"
+   },
+   "appNameBeta": {
+      "description": "نام برنامه",
+      "message": "Planet VPN (BETA) - سرویس VPN رایگان"
+   }
+}

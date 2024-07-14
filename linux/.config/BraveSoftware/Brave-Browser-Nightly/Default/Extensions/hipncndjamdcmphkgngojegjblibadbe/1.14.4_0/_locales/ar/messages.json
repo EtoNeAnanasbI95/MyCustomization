@@ -1,0 +1,14 @@
+{
+   "appDescription": {
+      "description": "وصف التطبيق",
+      "message": "تمكن من الوصول إلى أي موقع وقم بحظر الإعلانات باستخدام إضافة الـ VPN المجانية الخاصة بنا"
+   },
+   "appName": {
+      "description": "اسم التطبيق",
+      "message": "وكيل VPN ومانع إعلانات مجاني - Planet VPN"
+   },
+   "appNameBeta": {
+      "description": "اسم التطبيق",
+      "message": "Planet VPN (Beta) - خدمة VPN مجانية"
+   }
+}

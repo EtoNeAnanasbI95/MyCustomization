@@ -1,0 +1,99 @@
+2024-07-12 03:21:09.867 [info] Experiment 'pythonaa' is active
+2024-07-12 03:21:09.868 [info] Experiment 'pythonCreateEnvOnPipInstall' is active
+2024-07-12 03:21:09.868 [info] Experiment 'pythonRecommendTensorboardExt' is active
+2024-07-12 03:21:09.868 [info] Experiment 'pythonTerminalEnvVarActivation' is active
+2024-07-12 03:21:09.868 [info] Experiment 'pythonTestAdapter' is active
+2024-07-12 03:21:09.881 [error] Reading directory to watch failed [Error: ENOENT: no such file or directory, scandir '/home/notpineapple/.config/eww/.pixi/envs'
+	at Object.readdirSync (node:fs:1515:3)
+	at t.readdirSync (node:electron/js2c/node_init:2:11289)
+	at /home/notpineapple/.vscode/extensions/ms-python.python-2024.10.0-linux-x64/out/client/extension.js:2:574598
+	at /home/notpineapple/.vscode/extensions/ms-python.python-2024.10.0-linux-x64/out/client/extension.js:2:574789
+	at Array.map (<anonymous>)
+	at d.initWatchers (/home/notpineapple/.vscode/extensions/ms-python.python-2024.10.0-linux-x64/out/client/extension.js:2:574507)
+	at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+	at async d.ensureWatchersReady (/home/notpineapple/.vscode/extensions/ms-python.python-2024.10.0-linux-x64/out/client/extension.js:2:536827)] {
+  errno: -2,
+  syscall: 'scandir',
+  code: 'ENOENT',
+  path: '/home/notpineapple/.config/eww/.pixi/envs'
+}
+2024-07-12 03:21:09.881 [error] Dir "/home/notpineapple/.config/eww/.pixi/envs" is not watchable (directory does not exist)
+2024-07-12 03:21:09.916 [info] Default formatter is set to null for workspace /home/notpineapple/.config/eww
+2024-07-12 03:21:09.927 [info] Starting Environment refresh
+2024-07-12 03:21:09.927 [info] Searching for interpreters in posix paths locator
+2024-07-12 03:21:09.937 [info] Searching for pyenv environments
+2024-07-12 03:21:09.937 [info] Searching for conda environments
+2024-07-12 03:21:09.937 [info] Searching for global virtual environments
+2024-07-12 03:21:09.937 [info] Searching for custom virtual environments
+2024-07-12 03:21:09.947 [info] pyenv is not installed
+2024-07-12 03:21:09.947 [info] Finished searching for pyenv environments: 19 milliseconds
+2024-07-12 03:21:09.947 [info] Finished searching for custom virtual envs: 18 milliseconds
+2024-07-12 03:21:09.952 [info] > conda info --json
+2024-07-12 03:21:09.956 [info] > pixi --version
+2024-07-12 03:21:09.957 [error] [Error: spawn pixi ENOENT
+	at ChildProcess._handle.onexit (node:internal/child_process:286:19)
+	at onErrorNT (node:internal/child_process:484:16)
+	at process.processTicksAndRejections (node:internal/process/task_queues:82:21)] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'spawn pixi',
+  path: 'pixi',
+  spawnargs: [ '--version' ]
+}
+2024-07-12 03:21:09.960 [info] > hatch env show --json
+2024-07-12 03:21:09.960 [info] cwd: .
+2024-07-12 03:21:10.308 [info] > pyenv which python
+2024-07-12 03:21:10.308 [info] cwd: .
+2024-07-12 03:21:10.308 [info] Finished searching for global virtual envs: 379 milliseconds
+2024-07-12 03:21:10.357 [info] Found: /bin/python --> /bin/python3.12
+2024-07-12 03:21:10.362 [info] Found: /bin/python3 --> /bin/python3.12
+2024-07-12 03:21:10.363 [info] Found: /bin/python3.12 --> /bin/python3.12
+2024-07-12 03:21:10.378 [info] Found: /sbin/python --> /sbin/python3.12
+2024-07-12 03:21:10.378 [info] Found: /sbin/python3 --> /sbin/python3.12
+2024-07-12 03:21:10.378 [info] Found: /sbin/python3.12 --> /sbin/python3.12
+2024-07-12 03:21:10.381 [info] Found: /usr/bin/python --> /usr/bin/python3.12
+2024-07-12 03:21:10.381 [info] Found: /usr/bin/python3 --> /usr/bin/python3.12
+2024-07-12 03:21:10.381 [info] Found: /usr/bin/python3.12 --> /usr/bin/python3.12
+2024-07-12 03:21:10.395 [info] Found: /usr/sbin/python --> /usr/sbin/python3.12
+2024-07-12 03:21:10.395 [info] Found: /usr/sbin/python3 --> /usr/sbin/python3.12
+2024-07-12 03:21:10.395 [info] Found: /usr/sbin/python3.12 --> /usr/sbin/python3.12
+2024-07-12 03:21:10.406 [info] > /bin/python -I ~/.vscode/extensions/ms-python.python-2024.10.0-linux-x64/python_files/get_output_via_markers.py ~/.vscode/extensions/ms-python.python-2024.10.0-linux-x64/python_files/interpreterInfo.py
+2024-07-12 03:21:10.412 [info] > /sbin/python -I ~/.vscode/extensions/ms-python.python-2024.10.0-linux-x64/python_files/get_output_via_markers.py ~/.vscode/extensions/ms-python.python-2024.10.0-linux-x64/python_files/interpreterInfo.py
+2024-07-12 03:21:10.415 [info] Finished searching for interpreters in posix paths locator: 490 milliseconds
+2024-07-12 03:21:10.418 [info] Environments refresh paths discovered (event): 494 milliseconds
+2024-07-12 03:21:10.418 [info] Environments refresh paths discovered: 494 milliseconds
+2024-07-12 03:21:10.438 [info] > /usr/bin/python -I ~/.vscode/extensions/ms-python.python-2024.10.0-linux-x64/python_files/get_output_via_markers.py ~/.vscode/extensions/ms-python.python-2024.10.0-linux-x64/python_files/interpreterInfo.py
+2024-07-12 03:21:10.443 [info] > /usr/sbin/python -I ~/.vscode/extensions/ms-python.python-2024.10.0-linux-x64/python_files/get_output_via_markers.py ~/.vscode/extensions/ms-python.python-2024.10.0-linux-x64/python_files/interpreterInfo.py
+2024-07-12 03:21:10.470 [info] Environments refresh finished (event): 546 milliseconds
+2024-07-12 03:21:10.476 [info] Environment refresh took 552 milliseconds
+2024-07-12 03:21:10.477 [warning] could not find a pixi interpreter for the interpreter at /bin/python
+2024-07-12 03:21:10.481 [info] Python interpreter path: /bin/python
+2024-07-12 03:21:10.495 [info] > /sbin/python3.12 -I ~/.vscode/extensions/ms-python.python-2024.10.0-linux-x64/python_files/get_output_via_markers.py ~/.vscode/extensions/ms-python.python-2024.10.0-linux-x64/python_files/interpreterInfo.py
+2024-07-12 03:21:10.498 [info] > /usr/sbin/python3.12 -I ~/.vscode/extensions/ms-python.python-2024.10.0-linux-x64/python_files/get_output_via_markers.py ~/.vscode/extensions/ms-python.python-2024.10.0-linux-x64/python_files/interpreterInfo.py
+2024-07-12 03:21:10.526 [info] > /usr/sbin/python3 -I ~/.vscode/extensions/ms-python.python-2024.10.0-linux-x64/python_files/get_output_via_markers.py ~/.vscode/extensions/ms-python.python-2024.10.0-linux-x64/python_files/interpreterInfo.py
+2024-07-12 03:21:10.529 [info] > /sbin/python3 -I ~/.vscode/extensions/ms-python.python-2024.10.0-linux-x64/python_files/get_output_via_markers.py ~/.vscode/extensions/ms-python.python-2024.10.0-linux-x64/python_files/interpreterInfo.py
+2024-07-12 03:21:11.150 [info] Shell integration status changed, can confirm it's working.
+2024-07-12 03:21:11.151 [warning] could not find a pixi interpreter for the interpreter at /bin/python
+2024-07-12 03:21:11.153 [warning] could not find a pixi interpreter for the interpreter at /bin/python
+2024-07-12 03:21:11.486 [warning] could not find a pixi interpreter for the interpreter at /bin/python
+2024-07-12 03:21:11.487 [warning] could not find a pixi interpreter for the interpreter at /bin/python
+2024-07-12 03:21:11.530 [info] Starting Pylance language server.
+2024-07-12 03:39:39.000 [info] > ./.venv/bin/python -I ~/.vscode/extensions/ms-python.python-2024.10.0-linux-x64/python_files/get_output_via_markers.py ~/.vscode/extensions/ms-python.python-2024.10.0-linux-x64/python_files/interpreterInfo.py
+2024-07-12 03:39:39.000 [info] Environments refresh paths discovered: 8 milliseconds
+2024-07-12 03:39:39.030 [info] Environments refresh finished (event): 37 milliseconds
+2024-07-12 03:40:41.690 [info] Discover tests for workspace name: eww - uri: /home/notpineapple/.config/eww
+2024-07-12 03:40:41.690 [info] Python interpreter path: ./.venv/bin/python
+2024-07-12 03:40:41.690 [warning] could not find a pixi interpreter for the interpreter at /home/notpineapple/.config/eww/.venv/bin/python
+2024-07-12 03:40:41.699 [info] > . ./.venv/bin/activate && echo 'e8b39361-0157-4923-80e1-22d70d46dee6' && python ~/.vscode/extensions/ms-python.python-2024.10.0-linux-x64/python_files/printEnvVariables.py
+2024-07-12 03:40:41.699 [info] shell: zsh
+2024-07-12 03:40:41.728 [info] > /bin/python ~/.vscode/extensions/ms-python.python-2024.10.0-linux-x64/python_files/printEnvVariables.py
+2024-07-12 03:40:41.728 [info] shell: zsh
+2024-07-12 03:40:41.751 [info] Prepending environment variable PATH in collection with /home/notpineapple/.vscode/extensions/ms-python.python-2024.10.0-linux-x64/python_files/deactivate/zsh:/home/notpineapple/.config/eww/.venv/bin: {"applyAtShellIntegration":true,"applyAtProcessCreation":true}
+2024-07-12 03:40:41.751 [info] Setting environment variable VIRTUAL_ENV in collection to /home/notpineapple/.config/eww/.venv {"applyAtShellIntegration":true,"applyAtProcessCreation":true}
+2024-07-12 03:40:41.751 [info] Prepending environment variable PS1 in collection with (.venv)  {"applyAtShellIntegration":true,"applyAtProcessCreation":false}
+2024-07-12 03:40:41.751 [info] Setting environment variable VIRTUAL_ENV_PROMPT in collection to (.venv)  {"applyAtShellIntegration":true,"applyAtProcessCreation":true}
+2024-07-12 03:40:41.752 [info] Send text to terminal: /bin/python /home/notpineapple/.vscode/extensions/ms-python.python-2024.10.0-linux-x64/python_files/printEnvVariablesToFile.py /home/notpineapple/.vscode/extensions/ms-python.python-2024.10.0-linux-x64/python_files/deactivate/zsh/envVars.txt
+2024-07-12 03:41:53.150 [info] Discover tests for workspace name: eww - uri: /home/notpineapple/.config/eww
+2024-07-12 03:41:53.150 [info] Python interpreter path: /bin/python
+2024-07-12 03:41:53.151 [warning] could not find a pixi interpreter for the interpreter at /bin/python
+2024-07-12 03:41:53.157 [warning] could not find a pixi interpreter for the interpreter at /bin/python

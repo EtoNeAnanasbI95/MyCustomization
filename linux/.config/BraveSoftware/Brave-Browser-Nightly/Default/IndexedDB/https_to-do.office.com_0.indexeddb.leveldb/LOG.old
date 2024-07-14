@@ -1,0 +1,31 @@
+2024/07/07-13:53:23.496 e64 Creating DB /home/notpineapple/.config/BraveSoftware/Brave-Browser-Nightly/Default/IndexedDB/https_to-do.office.com_0.indexeddb.leveldb since it was missing.
+2024/07/07-13:53:23.505 e64 Reusing MANIFEST /home/notpineapple/.config/BraveSoftware/Brave-Browser-Nightly/Default/IndexedDB/https_to-do.office.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/07/07-13:53:23.515 e64 Level-0 table #5: started
+2024/07/07-13:53:23.518 e64 Level-0 table #5: 525 bytes OK
+2024/07/07-13:53:23.523 e64 Delete type=0 #3
+2024/07/07-13:53:23.523 e64 Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)
+2024/07/07-13:53:23.541 e64 Level-0 table #7: started
+2024/07/07-13:53:23.544 e64 Level-0 table #7: 506 bytes OK
+2024/07/07-13:53:23.554 e64 Delete type=0 #4
+2024/07/07-13:53:23.554 e6d Manual compaction at level-0 from '\x00\x02\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x03\x00\x00\x00' @ 0 : 0; will stop at (end)
+2024/07/07-13:53:23.555 e64 Level-0 table #9: started
+2024/07/07-13:53:23.559 e64 Level-0 table #9: 508 bytes OK
+2024/07/07-13:53:23.566 e64 Delete type=0 #6
+2024/07/07-13:53:23.567 e64 Manual compaction at level-0 from '\x00\x03\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x04\x00\x00\x00' @ 0 : 0; will stop at '\x00\x03\x00\x00\x05' @ 41 : 1
+2024/07/07-13:53:23.567 e64 Compacting 1@0 + 1@1 files
+2024/07/07-13:53:23.571 e64 Generated table #10@0: 13 keys, 480 bytes
+2024/07/07-13:53:23.571 e64 Compacted 1@0 + 1@1 files => 480 bytes
+2024/07/07-13:53:23.578 e64 compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/07/07-13:53:23.578 e64 Delete type=2 #9
+2024/07/07-13:53:23.579 e64 Manual compaction at level-0 from '\x00\x03\x00\x00\x05' @ 41 : 1 .. '\x00\x04\x00\x00\x00' @ 0 : 0; will stop at (end)
+2024/07/07-13:53:23.592 e64 Level-0 table #12: started
+2024/07/07-13:53:23.596 e64 Level-0 table #12: 5389 bytes OK
+2024/07/07-13:53:23.601 e64 Delete type=2 #7
+2024/07/07-13:53:23.601 e64 Delete type=0 #8
+2024/07/07-13:53:23.601 e64 Manual compaction at level-0 from '\x00\x04\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x05\x00\x00\x00' @ 0 : 0; will stop at '\x00\x04\x00\x00\xc8\x05\x00t\x00a\x00s\x00k\x00s' @ 92 : 1
+2024/07/07-13:53:23.601 e64 Compacting 1@0 + 1@1 files
+2024/07/07-13:53:23.605 e64 Generated table #13@0: 140 keys, 1575 bytes
+2024/07/07-13:53:23.605 e64 Compacted 1@0 + 1@1 files => 1575 bytes
+2024/07/07-13:53:23.610 e64 compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/07/07-13:53:23.611 e64 Delete type=2 #12
+2024/07/07-13:53:23.611 e64 Manual compaction at level-0 from '\x00\x04\x00\x00\xc8\x05\x00t\x00a\x00s\x00k\x00s' @ 92 : 1 .. '\x00\x05\x00\x00\x00' @ 0 : 0; will stop at (end)

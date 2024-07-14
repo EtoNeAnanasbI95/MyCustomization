@@ -1,0 +1,14 @@
+{
+   "appDescription": {
+      "description": "응용 프로그램에 대한 설명",
+      "message": "무료 VPN 프록시 프로그램으로 모든 웹사이트에 액세스하고 광고를 차단하세요."
+   },
+   "appName": {
+      "description": "응용 프로그램의 이름",
+      "message": "무료 VPN 프록시 및 광고 차단기 - Planet VPN"
+   },
+   "appNameBeta": {
+      "description": "응용 프로그램의 이름",
+      "message": "Planet VPN(BETA) - 무료 VPN 서비스"
+   }
+}

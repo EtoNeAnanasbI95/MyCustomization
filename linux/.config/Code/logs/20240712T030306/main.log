@@ -1,0 +1,6 @@
+2024-07-12 03:03:06.859 [info] update#setState idle
+2024-07-12 03:03:36.861 [info] update#setState checking for updates
+2024-07-12 03:03:36.938 [info] update#setState idle
+2024-07-12 03:06:15.368 [info] Extension host with pid 456168 exited with code: 0, signal: unknown.
+2024-07-12 03:46:41.731 [error] [UtilityProcess type: shared-process, pid: 456238]: crashed with code 15 and reason 'killed'
+2024-07-12 03:46:41.775 [error] ptyHost terminated unexpectedly with code 0

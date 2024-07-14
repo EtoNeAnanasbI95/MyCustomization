@@ -1,0 +1,38 @@
+2024-07-13 00:32:29.811 [info] Extension host with pid 1622872 started
+2024-07-13 00:32:29.811 [info] Skipping acquiring lock for /home/notpineapple/.config/Code/User/workspaceStorage/1ced654a5551433c67792edfd9358260.
+2024-07-13 00:32:30.008 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2024-07-13 00:32:30.013 [info] ExtensionService#_doActivateExtension eww-yuck.yuck, startup: false, activationEvent: 'onLanguage:yuck'
+2024-07-13 00:32:30.124 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2024-07-13 00:32:30.126 [info] ExtensionService#_doActivateExtension Yunduo.color-highlight-css-color-4, startup: true, activationEvent: '*'
+2024-07-13 00:32:30.129 [info] ExtensionService#_doActivateExtension ms-python.python, startup: true, activationEvent: 'workspaceContains:.venv'
+2024-07-13 00:32:30.287 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2024-07-13 00:32:30.310 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2024-07-13 00:32:30.418 [info] Eager extensions activated
+2024-07-13 00:32:30.456 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2024-07-13 00:32:30.458 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2024-07-13 00:32:30.467 [info] ExtensionService#_doActivateExtension Katsute.code-background, startup: false, activationEvent: 'onStartupFinished'
+2024-07-13 00:32:30.474 [info] ExtensionService#_doActivateExtension PKief.material-icon-theme, startup: false, activationEvent: 'onStartupFinished'
+2024-07-13 00:32:30.480 [info] ExtensionService#_doActivateExtension RichardLuo.frosted-glass-theme, startup: false, activationEvent: 'onStartupFinished'
+2024-07-13 00:32:30.481 [info] ExtensionService#_doActivateExtension TabNine.tabnine-vscode, startup: false, activationEvent: 'onStartupFinished'
+2024-07-13 00:32:30.788 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-07-13 00:32:30.791 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-07-13 00:32:30.808 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-07-13 00:32:30.867 [info] ExtensionService#_doActivateExtension ms-python.vscode-pylance, startup: false, activationEvent: 'api', root cause: ms-python.python
+2024-07-13 01:31:01.611 [info] ExtensionService#_doActivateExtension ms-python.debugpy, startup: false, activationEvent: 'onLanguage:python'
+2024-07-13 01:31:01.655 [info] ExtensionService#_doActivateExtension VisualStudioExptTeam.intellicode-api-usage-examples, startup: false, activationEvent: 'onLanguage:python'
+2024-07-13 01:31:01.718 [info] ExtensionService#_doActivateExtension VisualStudioExptTeam.vscodeintellicode, startup: false, activationEvent: 'onLanguage:python'
+2024-07-13 01:31:03.054 [error] [VisualStudioExptTeam.intellicode-api-usage-examples] provider FAILED
+2024-07-13 01:31:03.054 [error] Error: Unhandled method getIdAtPosition
+	at /home/notpineapple/.vscode/extensions/visualstudioexptteam.intellicode-api-usage-examples-0.2.8/dist/extension.js:2:398068
+	at re (/home/notpineapple/.vscode/extensions/visualstudioexptteam.intellicode-api-usage-examples-0.2.8/dist/extension.js:2:398362)
+	at /home/notpineapple/.vscode/extensions/visualstudioexptteam.intellicode-api-usage-examples-0.2.8/dist/extension.js:2:393146
+	at Immediate.<anonymous> (/home/notpineapple/.vscode/extensions/visualstudioexptteam.intellicode-api-usage-examples-0.2.8/dist/extension.js:2:393166)
+	at process.processImmediate (node:internal/timers:478:21)
+2024-07-13 01:31:03.205 [error] [VisualStudioExptTeam.intellicode-api-usage-examples] provider FAILED
+2024-07-13 01:31:03.205 [error] Error: Unhandled method getIdAtPosition
+	at /home/notpineapple/.vscode/extensions/visualstudioexptteam.intellicode-api-usage-examples-0.2.8/dist/extension.js:2:398068
+	at re (/home/notpineapple/.vscode/extensions/visualstudioexptteam.intellicode-api-usage-examples-0.2.8/dist/extension.js:2:398362)
+	at /home/notpineapple/.vscode/extensions/visualstudioexptteam.intellicode-api-usage-examples-0.2.8/dist/extension.js:2:393146
+	at Immediate.<anonymous> (/home/notpineapple/.vscode/extensions/visualstudioexptteam.intellicode-api-usage-examples-0.2.8/dist/extension.js:2:393166)
+	at process.processImmediate (node:internal/timers:478:21)
+2024-07-13 01:41:02.279 [info] ExtensionService#_doActivateExtension foxundermoon.shell-format, startup: false, activationEvent: 'onLanguage:shellscript'

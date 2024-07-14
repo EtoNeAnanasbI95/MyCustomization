@@ -1,0 +1,1 @@
+import{r as t}from"./client-45b27fd3.js";function o(){const[i,n]=t.useState([0,0]);return t.useLayoutEffect(()=>{function e(){n([window.innerWidth,window.innerHeight])}return window.addEventListener("resize",e),e(),()=>window.removeEventListener("resize",e)},[]),i}export{o as u};

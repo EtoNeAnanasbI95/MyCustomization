@@ -1,0 +1,48 @@
+{
+   "action": {
+      "default_icon": "js/bext/vpn/ui/img/icon16_new.png",
+      "default_popup": "js/popup.html",
+      "default_title": "__MSG_appNameChrome__"
+   },
+   "background": {
+      "service_worker": "js/bg.bg.bundle.js"
+   },
+   "content_scripts": [ {
+      "js": [ "js/bext/vpn/bg/cs_hola.js" ],
+      "matches": [ "https://*.hola.org/*", "https://*.zspeed-cdn.com/*", "https://*.h-vpn.org/*", "https://*.holavpn.com/*", "https://*.holavpnworld.com/*", "https://*.holavpnextension.com/*", "https://*.holavpninstaller.com/*", "https://*.holabrowser.com/*", "https://*.holafreevpn.com/*", "https://*.holavpnrussia.com/*", "https://*.hola-vpn.com/*", "https://*.holax.io/*", "https://*.holavpn.net/*", "https://*.holavpnandroid.com/*", "https://*.c6gj-static.net/*", "https://*.su89-cdn.net/*", "https://*.yd6n63ptky.com/*", "https://*.yg5sjx5kzy.com/*", "https://*.kbz0pwvxmv.com/*", "https://*.wbzby2a2k9.com/*", "https://*.hola-compat.com/*", "https://*.x-cdn-static.com/*", "*://new-tab-page/*", "*://hola-new-tab-page/*", "*://hola-diagnostics/*", "*://hola-settings/*", "*://settings/*" ],
+      "run_at": "document_start"
+   } ],
+   "content_security_policy": {
+      "extension_pages": "connect-src *; img-src *; style-src 'self' 'unsafe-inline'; default-src 'self';"
+   },
+   "default_locale": "en",
+   "description": "__MSG_appDescChrome__",
+   "differential_fingerprint": "1.82209d476af7c6602bf7617ef6402b0d3b346f73c3e86c64480012b7b55b4241",
+   "externally_connectable": {
+      "ids": [  ]
+   },
+   "homepage_url": "https://hola.org",
+   "host_permissions": [ "*://*/*" ],
+   "icons": {
+      "128": "js/bext/vpn/ui/img/icon128_new.png",
+      "16": "js/bext/vpn/ui/img/icon16_new.png",
+      "48": "js/bext/vpn/ui/img/icon48_new.png"
+   },
+   "incognito": "split",
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC3YOSz7vDWj4WatsffMfOjv0bt8gMXFxKRPml/oRE7VmpRLT8b/vq7em+EZj3AKlj0fAOvrU1YjubIIMlTCZc/RKjNYNjxM4/+4RXGOKbQkM6wWNuQ7prP4Mu0IGBDiVs19dKSwkknAgco2/U4DA6kVXJ4hwedTLlfUsRSN5MKfQIDAQAB",
+   "manifest_version": 3,
+   "minimum_chrome_version": "88",
+   "name": "__MSG_appNameChrome__",
+   "optional_permissions": [ "management" ],
+   "permissions": [ "proxy", "webRequest", "storage", "tabs", "webNavigation", "cookies", "scripting", "webRequestAuthProvider", "declarativeNetRequest" ],
+   "short_name": "Hola VPN",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.227.696",
+   "web_accessible_resources": [ {
+      "matches": [ "*://*/*" ],
+      "resources": [ "/js/popup.html" ]
+   }, {
+      "matches": [ "*://*/*" ],
+      "resources": [ "/js/login_done.html" ]
+   } ]
+}

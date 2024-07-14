@@ -1,0 +1,413 @@
+{
+   "aboutDescription": {
+      "message": "Дозволяє отримувати прямі посилання для завантаження з понад 40 сайтів, серед яких VK.com, TikTok.com та інші."
+   },
+   "aboutDescriptionLite": {
+      "message": "Дозволяє отримувати прямі посилання для завантаження з понад 40 сайтів, серед яких VK.com та інші."
+   },
+   "aboutPage": {
+      "message": "Про розширення"
+   },
+   "aboutSupported": {
+      "message": "Ресурси, які підтримуються"
+   },
+   "aboutTitle": {
+      "message": "SaveFrom.net помічник"
+   },
+   "aboutVersion": {
+      "message": "Версія"
+   },
+   "beforeDownloadPopupWarn": {
+      "message": "Увага: скасувати або призупинити завантаження буде неможливо."
+   },
+   "cancel": {
+      "message": "Скасування"
+   },
+   "close": {
+      "message": "Закрити"
+   },
+   "continue": {
+      "message": "Продовжити"
+   },
+   "copy": {
+      "message": "Копіювати"
+   },
+   "disable": {
+      "message": "Вимкнути"
+   },
+   "disableModule": {
+      "message": "Вимкнути на цьому сайті"
+   },
+   "download": {
+      "message": "Завантажити"
+   },
+   "downloadFromCurrentPage": {
+      "message": "Перейти на SaveFrom.net"
+   },
+   "downloadMP3Files": {
+      "message": "Скачати аудіо файли"
+   },
+   "downloadPhotos": {
+      "message": "Скачати фотографії"
+   },
+   "downloadPlaylist": {
+      "message": "Скачати плейлист"
+   },
+   "downloadTitle": {
+      "message": "Натисніть на посилання, утримуючи клавішу Alt чи Ctrl, щоб зберегти файл."
+   },
+   "downloadWholePlaylist": {
+      "message": "Завантажити весь плейліст"
+   },
+   "enableDisableModule": {
+      "message": "Вкл./вимк. на цьому сайті"
+   },
+   "enableModule": {
+      "message": "Увімкнути на цьому сайті"
+   },
+   "extDescription": {
+      "message": "Завантажуйте з «ВКонтакте», TikTok, Facebook і ще 40 сайтів за 1 клік."
+   },
+   "extDescriptionLite": {
+      "message": "Завантажуйте з «ВКонтакте», YouTube, Facebook і ще 40 сайтів за 1 клік."
+   },
+   "extName": {
+      "message": "SaveFrom.net помічник"
+   },
+   "extNameLite": {
+      "message": "SaveFrom.net помічник lite"
+   },
+   "filelist": {
+      "message": "Список файлів"
+   },
+   "filelistInstruction": {
+      "message": "['Щоб завантажити усі файли, скопіюйте список посилань і вставте його у ',{a:{href:'http://ru.wikipedia.org/wiki/Менеджер_загрузок',text:'менеджер завантажень'}},'. Якщо у вас не встановлений менеджер завантажень, рекомендуємо встановити ',{a:{href:'http://www.westbyte.com/dm/',text:'Download Master'}},'.']"
+   },
+   "filelistTitle": {
+      "message": "Список знайдених файлів"
+   },
+   "getFileSizeFailTitle": {
+      "message": "Не вдалося визначити розмір файлу. Спробуйте ще раз."
+   },
+   "getFileSizeTitle": {
+      "message": "Визначити розмір файлу"
+   },
+   "homePage": {
+      "message": "Домашня сторінка"
+   },
+   "installFullVersion": {
+      "message": "Встановити повну версію"
+   },
+   "kbps": {
+      "message": "кб/с"
+   },
+   "lang": {
+      "message": "uk"
+   },
+   "lmButtonTitle": {
+      "message": "Отримай пряме посилання"
+   },
+   "menuDisable": {
+      "message": "Вимкнути"
+   },
+   "menuDownloadFromCurrentPage": {
+      "message": "Завантажити файли з поточної сторінки за допомогою сервісу SaveFrom.net"
+   },
+   "menuDownloadMP3Files": {
+      "message": "Завантажити всі знайдені на сторінці аудіофайли"
+   },
+   "menuDownloadPhotos": {
+      "message": "Завантажити всі знайдені на сторінці фотографії"
+   },
+   "menuDownloadPlaylist": {
+      "message": "Формує та завантажує плейлист з посиланнями на аудіофайли"
+   },
+   "menuEnable": {
+      "message": "Увімкнути"
+   },
+   "menuEnableExtension": {
+      "message": ""
+   },
+   "menuOpenPoll": {
+      "message": "Будь ласка, оцініть якість розширення \"SaveFrom.net помічник\""
+   },
+   "menuReportBug": {
+      "message": "Дайте нам знати, якщо виникли проблеми"
+   },
+   "menuShowOptions": {
+      "message": "Вкл. / Вимк. підтримувані ресурси і можливості помічника"
+   },
+   "menuUpdateLinks": {
+      "message": "Натисніть, якщо посилання для скачування не з'являється"
+   },
+   "more": {
+      "message": "Ще"
+   },
+   "no": {
+      "message": "Ні"
+   },
+   "noLinksFound": {
+      "message": "Не вдалося знайти посилання"
+   },
+   "noWarning": {
+      "message": "Не попереджати"
+   },
+   "openPoll": {
+      "message": "Стати краще"
+   },
+   "optionsAviaBarEnabled": {
+      "message": "Cheap Flights Advisor"
+   },
+   "optionsBitrate": {
+      "message": "Показувати бітрейт одразу"
+   },
+   "optionsDailymotion": {
+      "message": "Dailymotion"
+   },
+   "optionsFacebook": {
+      "message": "Facebook"
+   },
+   "optionsGmNativeDownload": {
+      "message": "Розширений режим закачування"
+   },
+   "optionsHandleLinks": {
+      "message": "Обробляти посилання"
+   },
+   "optionsInstagram": {
+      "message": "Instagram"
+   },
+   "optionsMailru": {
+      "message": "Мой мир"
+   },
+   "optionsMediaHostings": {
+      "message": "На медіахостинги"
+   },
+   "optionsModules": {
+      "message": "Модулі"
+   },
+   "optionsOdnoklassniki": {
+      "message": "Одноклассники"
+   },
+   "optionsRutube": {
+      "message": "Rutube"
+   },
+   "optionsSaveAsDialog": {
+      "message": "Завжди запитувати де зберегти файли"
+   },
+   "optionsShowUmmyBtn": {
+      "message": "Відображати кнопку Ummy"
+   },
+   "optionsShowUmmyInfo": {
+      "message": "Показувати підказки для Ummy Video Downloader"
+   },
+   "optionsSoundcloud": {
+      "message": "SoundCloud"
+   },
+   "optionsSovetnikEnabled": {
+      "message": "Порадник"
+   },
+   "optionsTiktok": {
+      "message": "Tiktok"
+   },
+   "optionsTitle": {
+      "message": "SaveFrom.net помічник - Налаштування"
+   },
+   "optionsVimeo": {
+      "message": "Vimeo"
+   },
+   "optionsVkontakte": {
+      "message": "ВКонтакте"
+   },
+   "optionsYTHideLinks": {
+      "message": "Сховати посилання"
+   },
+   "optionsYoutube": {
+      "message": "YouTube"
+   },
+   "playlist": {
+      "message": "Плейліст"
+   },
+   "playlistInstruction": {
+      "message": "Збережений плейліст можна відкрити у плеєрі для відтворення."
+   },
+   "playlistTitle": {
+      "message": "Плейліст"
+   },
+   "quality": {
+      "message": "Якість"
+   },
+   "qualityNote": {
+      "message": "Якщо відео в потрібній якості немає, скачається найкраще з можливого."
+   },
+   "readMore": {
+      "message": "Детальніше..."
+   },
+   "reportBug": {
+      "message": "Повідомити про помилку"
+   },
+   "shareIn": {
+      "message": "Поділитися в %w"
+   },
+   "showButton": {
+      "message": "Показувати кнопку розширення"
+   },
+   "showHideButton": {
+      "message": "Показ./скр. кнопку розширення"
+   },
+   "showOptions": {
+      "message": "Налаштування"
+   },
+   "size": {
+      "message": "розмір"
+   },
+   "socialDesc": {
+      "message": "SaveFrom.net помічник дає вам можливість безкоштовно завантажувати файли з TikTok.com, Facebook.com, VK.com та більше 40 інших сайтів лише одним кліком"
+   },
+   "subtitles": {
+      "message": "Субтитри"
+   },
+   "titleDefault": {
+      "message": "SaveFrom.net помічник"
+   },
+   "titleDesabled": {
+      "message": "SaveFrom.net помічник вимкнений"
+   },
+   "tooltipHide": {
+      "message": "Більше не показувати це повідомлення"
+   },
+   "tutorialS1Arrow": {
+      "message": "['Прагнеш довідатися як?', {br:{}}, 'Натисни тут']"
+   },
+   "tutorialS1Main": {
+      "message": "SaveFrom.net помічник дає вам можливість безкоштовно завантажувати файли з TikTok.com, Facebook.com, VK.com та більше 40 інших сайтів лише одним кліком"
+   },
+   "tutorialS1Title": {
+      "message": "Добрі новини!"
+   },
+   "tutorialS2Main": {
+      "message": "Щоб завантажити відео, оберіть формат і натисни кнопку \"Завантажити\""
+   },
+   "tutorialS3History": {
+      "message": "Переглянуті"
+   },
+   "tutorialS3Main": {
+      "message": "['Хочеш скачати вже переглянуте відео?', {br:{}}, 'Натискай на ', {img: {src: '#arrow'}}, ' на превью в переглянутих відео']"
+   },
+   "tutorialS4Main": {
+      "message": "['Відео не обов\\'язково переглядати —', {br:{}}, 'натискай на ', {img: {src: '#arrow'}}, ', обирай формат і скачуй. Це зручно!']"
+   },
+   "tutorialS5Main": {
+      "message": "['Залишилися питання? Є пропозиції? Загляньте на ',{a: {text: 'сторінку підтримки', href: '#support'}},' або вступайте до нашої ', {a: {text: 'ВК-спільноти', href: '#vk'}}]"
+   },
+   "tutorialS5Title": {
+      "message": "Приємної роботи!"
+   },
+   "tutorialTooltipText": {
+      "message": "['Щоб ',{b: {text: 'скачати'}},', просто клікніть по кнопці']"
+   },
+   "ummyMenuInfo": {
+      "message": "[{p:{text:'Встановіть безкоштовний Ummy Video Downloader і завантажуйте свої улюблені відео в HD або в MP3.'}},{p:{class:'center',append:[{a:{class:'green-btn-2 arrow',href:'{url}',target:'_blank',text:'СКАЧАТИ'}}]}},{p:{append:['Після встановлення при кліці на ',{img:{src:'#'}},' закачка буде починатися автоматично.']}}]"
+   },
+   "ummyMenuItem": {
+      "message": "[{span:{}},' з домомогою Ummy']"
+   },
+   "ummySfTitle": {
+      "message": "HD або MP3"
+   },
+   "ummyTooltipConfirm": {
+      "message": "['Ви вже встановили',{br:{}},{img:{}},' Ummy Video Downloader?']"
+   },
+   "updateLinks": {
+      "message": "Відновити посилання"
+   },
+   "updateLinksNotification": {
+      "message": "Посилання оновлені"
+   },
+   "updateTo": {
+      "message": "Оновити до %d"
+   },
+   "vkDownloadAllPhotoAlbums": {
+      "message": "Завантажити усі альбоми"
+   },
+   "vkDownloadFromYoutube": {
+      "message": "['Завантажити: відкрийте ',{a:{href:'{url}',text:'сторінку відео-ролика'}},' і натисніть кнопку \"Завантажити\" над плеєром']"
+   },
+   "vkDownloadPhotoAlbum": {
+      "message": "Завантажити альбом"
+   },
+   "vkFileSizeByte": {
+      "message": "Б"
+   },
+   "vkFileSizeGByte": {
+      "message": "ГБ"
+   },
+   "vkFileSizeKByte": {
+      "message": "кБ"
+   },
+   "vkFileSizeMByte": {
+      "message": "МБ"
+   },
+   "vkFileSizeTByte": {
+      "message": "ТБ"
+   },
+   "vkFoundFiles": {
+      "message": "Знайдено файлів: %d"
+   },
+   "vkFoundLinks": {
+      "message": "Знайдено посилань"
+   },
+   "vkFoundOf": {
+      "message": "з"
+   },
+   "vkFoundPhotos": {
+      "message": "Знайдено фотографій"
+   },
+   "vkInfo": {
+      "message": "Параметри"
+   },
+   "vkInfoTitle": {
+      "message": "Розмір файлу і бітрейт"
+   },
+   "vkKbps": {
+      "message": "кб/с"
+   },
+   "vkListOfLinks": {
+      "message": "Список посилань"
+   },
+   "vkListOfLinksInstruction": {
+      "message": "['Щоб завантажити усі фотографії, скопіюйте список посилань і вставте його у ',{a:{href:'http://ru.wikipedia.org/wiki/Менеджер_загрузок',text:'менеджер завантажень'}},'. Якщо у вас не встановлений менеджер завантажень, рекомендуємо встановити ',{a:{href:'http://www.westbyte.com/dm/',text:'Download Master'}},'.']"
+   },
+   "vkListOfPhotos": {
+      "message": "Список фотографій"
+   },
+   "vkListOfPhotosInstruction": {
+      "message": "Щоб завантажити фотографію, натисніть на неї лівою кнопкою миші."
+   },
+   "vkMp3LinksNotFound": {
+      "message": "Не знайдено посилань на MP3-файли"
+   },
+   "vkNotAvailablePhotos": {
+      "message": "%d фото тимчасово недоступно"
+   },
+   "vkPhotoLinksNotFound": {
+      "message": "Не знайдено посилань на фотографії"
+   },
+   "vkShowAs": {
+      "message": "Показати як"
+   },
+   "vkTableOfThumbnails": {
+      "message": "Таблицю ескізів"
+   },
+   "warningPopupDesc": {
+      "message": "Вибір папки при скачуванні повинен бути відключений."
+   },
+   "warningPopupTitle": {
+      "message": "Перевірте налаштування браузера"
+   },
+   "withoutAudio": {
+      "message": "без аудіо"
+   },
+   "yes": {
+      "message": "Так"
+   }
+}

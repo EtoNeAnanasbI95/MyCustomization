@@ -1,0 +1,37 @@
+{
+   "action": {
+      "default_icon": "images/icon-999.png",
+      "default_popup": "popup.html"
+   },
+   "background": {
+      "service_worker": "js/background/index.js"
+   },
+   "commands": {
+      "_execute_action": {
+         "suggested_key": {
+            "default": "Alt+Shift+P"
+         }
+      }
+   },
+   "default_locale": "en",
+   "description": "__MSG_appDesc__",
+   "icons": {
+      "128": "images/icon128-999.png",
+      "16": "images/icon16-999.png",
+      "48": "images/icon48-999.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDb5HGR8sO9jYpfNylXdnXNSzoeHaAdsBOpy5hiYEulgI5SOnkg1Zc93AZIlGUIJBODr3P3PGq4oAoyNr42loQP/IEaCPLLYxvB4516SLoJgSTF4DOASLampO1b5ji7WPSxweur8sUYSz9BNYs6/Exdwdg+54JRWJ8IOo8WZMibXwIDAQAB",
+   "manifest_version": 3,
+   "minimum_chrome_version": "102",
+   "name": "GoFullPage - Full Page Screen Capture",
+   "optional_host_permissions": [ "\u003Call_urls>", "webNavigation", "file://*/*" ],
+   "optional_permissions": [ "downloads", "webNavigation" ],
+   "options_page": "options.html",
+   "permissions": [ "activeTab", "scripting", "storage", "unlimitedStorage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "8.3",
+   "web_accessible_resources": [ {
+      "matches": [ "*://*.gofullpage.com/*", "https://localhost:1234/*", "https://dev.d32cgdvim65k7p.amplifyapp.com/*" ],
+      "resources": [ "p/*" ]
+   } ]
+}

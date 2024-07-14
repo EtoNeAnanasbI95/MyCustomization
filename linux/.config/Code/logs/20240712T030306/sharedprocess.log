@@ -1,0 +1,40 @@
+2024-07-12 03:03:08.334 [info] Deleted uninstalled extension from disk oderwat.indent-rainbow /home/notpineapple/.vscode/extensions/oderwat.indent-rainbow-8.3.1
+2024-07-12 03:21:01.081 [info] Getting Manifest... ms-python.python
+2024-07-12 03:21:01.088 [info] Installing extension: ms-python.python {"isMachineScoped":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/notpineapple/.vscode/extensions/extensions.json","path":"/home/notpineapple/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"installOnlyNewlyAddedFromExtensionPack":true,"isApplicationScoped":false,"productVersion":{"version":"1.91.1","date":"2024-07-09T22:08:12.169Z"}}
+2024-07-12 03:21:01.929 [info] Getting Manifest... ms-python.vscode-pylance
+2024-07-12 03:21:02.170 [info] Getting Manifest... ms-python.debugpy
+2024-07-12 03:21:02.249 [info] Installing extension: ms-python.vscode-pylance {"isMachineScoped":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/notpineapple/.vscode/extensions/extensions.json","path":"/home/notpineapple/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"installOnlyNewlyAddedFromExtensionPack":true,"isApplicationScoped":false,"productVersion":{"version":"1.91.1","date":"2024-07-09T22:08:12.169Z"},"context":{"dependecyOrPackExtensionInstall":true}}
+2024-07-12 03:21:02.249 [info] Installing extension: ms-python.debugpy {"isMachineScoped":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/notpineapple/.vscode/extensions/extensions.json","path":"/home/notpineapple/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"installOnlyNewlyAddedFromExtensionPack":true,"isApplicationScoped":false,"productVersion":{"version":"1.91.1","date":"2024-07-09T22:08:12.169Z"},"context":{"dependecyOrPackExtensionInstall":true}}
+2024-07-12 03:21:04.783 [info] Extension signature verification result for ms-python.debugpy: UnknownError. Executed: true. Duration: 6ms.
+2024-07-12 03:21:05.081 [info] Extracted extension to file:///home/notpineapple/.vscode/extensions/ms-python.debugpy-2024.8.0-linux-x64: ms-python.debugpy
+2024-07-12 03:21:05.087 [info] Renamed to /home/notpineapple/.vscode/extensions/ms-python.debugpy-2024.8.0-linux-x64
+2024-07-12 03:21:05.144 [info] Extension signature verification result for ms-python.python: UnknownError. Executed: true. Duration: 5ms.
+2024-07-12 03:21:05.169 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/notpineapple/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/notpineapple/.vscode/extensions/extensions.json.vsctmp'
+    at h.create (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:54:19262)
+    at f (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:54:19372)
+    at P.hb (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:59:36571)
+    at P.stat (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:59:28919)
+    at async s.stat (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:59:14907)
+    at async V.vb (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:105:119283)
+2024-07-12 03:21:06.306 [info] Extracted extension to file:///home/notpineapple/.vscode/extensions/ms-python.python-2024.10.0-linux-x64: ms-python.python
+2024-07-12 03:21:06.311 [info] Renamed to /home/notpineapple/.vscode/extensions/ms-python.python-2024.10.0-linux-x64
+2024-07-12 03:21:06.394 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/notpineapple/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/notpineapple/.vscode/extensions/extensions.json.vsctmp'
+    at h.create (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:54:19262)
+    at f (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:54:19372)
+    at P.hb (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:59:36571)
+    at P.stat (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:59:28919)
+    at async s.stat (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:59:14907)
+    at async V.vb (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:105:119283)
+2024-07-12 03:21:06.588 [info] Extension signature verification result for ms-python.vscode-pylance: UnknownError. Executed: true. Duration: 6ms.
+2024-07-12 03:21:09.062 [info] Extracted extension to file:///home/notpineapple/.vscode/extensions/ms-python.vscode-pylance-2024.7.1: ms-python.vscode-pylance
+2024-07-12 03:21:09.071 [info] Renamed to /home/notpineapple/.vscode/extensions/ms-python.vscode-pylance-2024.7.1
+2024-07-12 03:21:09.088 [info] Extension installed successfully: ms-python.debugpy vscode-userdata:/home/notpineapple/.vscode/extensions/extensions.json
+2024-07-12 03:21:09.088 [info] Extension installed successfully: ms-python.python vscode-userdata:/home/notpineapple/.vscode/extensions/extensions.json
+2024-07-12 03:21:09.088 [info] Extension installed successfully: ms-python.vscode-pylance vscode-userdata:/home/notpineapple/.vscode/extensions/extensions.json
+2024-07-12 03:21:09.152 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/notpineapple/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/notpineapple/.vscode/extensions/extensions.json.vsctmp'
+    at h.create (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:54:19262)
+    at f (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:54:19372)
+    at P.hb (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:59:36571)
+    at P.stat (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:59:28919)
+    at async s.stat (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:59:14907)
+    at async V.vb (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:105:119283)

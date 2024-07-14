@@ -1,0 +1,413 @@
+{
+   "aboutDescription": {
+      "message": "Hilft den Nutzern direkte Links zu Herunterladen von mehr als 40 Webseiten, inklusive Dailymotion.com, TikTok.com, VK.com und weiteren zu bekommen."
+   },
+   "aboutDescriptionLite": {
+      "message": "Hilft den Nutzern direkte Links zu Herunterladen von mehr als 40 Webseiten, inklusive Dailymotion.com, VK.com und weiteren zu bekommen."
+   },
+   "aboutPage": {
+      "message": "Über"
+   },
+   "aboutSupported": {
+      "message": "Unterstützte Ressourcen"
+   },
+   "aboutTitle": {
+      "message": "SaveFrom.net Helfer"
+   },
+   "aboutVersion": {
+      "message": "Version"
+   },
+   "beforeDownloadPopupWarn": {
+      "message": "Achtung! Der Download kann nicht abgebrochen oder angehalten werden."
+   },
+   "cancel": {
+      "message": "Abbrechen"
+   },
+   "close": {
+      "message": "Schließen"
+   },
+   "continue": {
+      "message": "Fortsetzen"
+   },
+   "copy": {
+      "message": "Kopie"
+   },
+   "disable": {
+      "message": "Deaktivieren"
+   },
+   "disableModule": {
+      "message": "Auf dieser Webseite deaktivieren"
+   },
+   "download": {
+      "message": "Herunterladen"
+   },
+   "downloadFromCurrentPage": {
+      "message": "Zu SaveFrom.net"
+   },
+   "downloadMP3Files": {
+      "message": "Download Audiodateien"
+   },
+   "downloadPhotos": {
+      "message": "Download Bilder"
+   },
+   "downloadPlaylist": {
+      "message": "Download Playlist"
+   },
+   "downloadTitle": {
+      "message": "Klicke Sie den Link während Sie die Alt/Einstellung oder Ctrl/Strg Taste drücken zum Herunterladen der Dateien."
+   },
+   "downloadWholePlaylist": {
+      "message": "Die komplette Wiedergabliste herunterladen"
+   },
+   "enableDisableModule": {
+      "message": "Ein/Aus auf dieser Webseite"
+   },
+   "enableModule": {
+      "message": "Auf dieser Webseite aktivieren"
+   },
+   "extDescription": {
+      "message": "Laden Sie von TikTok, Facebook, VK.com und mehr als 40 anderen Seiten mit einem Klick herunter."
+   },
+   "extDescriptionLite": {
+      "message": "Herunterladen von Facebook, VK.com und mehr als 40 weiteren Seiten mit einem Klick herunter."
+   },
+   "extName": {
+      "message": "SaveFrom.net Helfer"
+   },
+   "extNameLite": {
+      "message": "SaveFrom.net Helfer Lite"
+   },
+   "filelist": {
+      "message": "List of files"
+   },
+   "filelistInstruction": {
+      "message": "['Zum Herunterladen aller datien kopieren Sie die liste der Links in Ihren ',{a:{href:'http://en.wikipedia.org/wiki/Download_manager',text:'Download Manager'}},'. Wenn Sie noch keinen Download Manager haben we empfehlen wir Ihnen die Installation des ',{a:{href:'http://www.freedownloadmanager.org/',text:'Free Download Manager'}},'.']"
+   },
+   "filelistTitle": {
+      "message": "Die Liste der gefundenen dateien"
+   },
+   "getFileSizeFailTitle": {
+      "message": "Fehler bei bestimmung der Dateigröße. Bitte versuchen Sie es erneut."
+   },
+   "getFileSizeTitle": {
+      "message": "Dateigröße bestimmen"
+   },
+   "homePage": {
+      "message": "Homepage"
+   },
+   "installFullVersion": {
+      "message": "Install full version"
+   },
+   "kbps": {
+      "message": "kbps"
+   },
+   "lang": {
+      "message": "de"
+   },
+   "lmButtonTitle": {
+      "message": "Holen Sie sich einen direkten Link."
+   },
+   "menuDisable": {
+      "message": "Deaktivieren"
+   },
+   "menuDownloadFromCurrentPage": {
+      "message": "Laden Sie die Dateien mit SaveFrom.net von der aktuellen Seite"
+   },
+   "menuDownloadMP3Files": {
+      "message": "Alle auf dieser Seite gefundenen Audiodateien herunterladen"
+   },
+   "menuDownloadPhotos": {
+      "message": "Alle auf der aktuellen Seite gefundenen Bilder herunterladen"
+   },
+   "menuDownloadPlaylist": {
+      "message": "Playliste mit den Links zu den Audiodateien generieren und downloaden"
+   },
+   "menuEnable": {
+      "message": "Aktivieren"
+   },
+   "menuEnableExtension": {
+      "message": ""
+   },
+   "menuOpenPoll": {
+      "message": ""
+   },
+   "menuReportBug": {
+      "message": "Schreiben Sie uns, wenn Probleme auftreten"
+   },
+   "menuShowOptions": {
+      "message": "AN/AUS unterstützte Ressourcen und Helperoptionen"
+   },
+   "menuUpdateLinks": {
+      "message": "Hier klicke, wenn die Download-Taste nicht erscheint"
+   },
+   "more": {
+      "message": "Mehr"
+   },
+   "no": {
+      "message": "Nein"
+   },
+   "noLinksFound": {
+      "message": "Keine Links wurden gefunden"
+   },
+   "noWarning": {
+      "message": "Nicht benachrichtigen"
+   },
+   "openPoll": {
+      "message": "Become better"
+   },
+   "optionsAviaBarEnabled": {
+      "message": "Cheap Flights Advisor"
+   },
+   "optionsBitrate": {
+      "message": "Bitrate sofort zeigen"
+   },
+   "optionsDailymotion": {
+      "message": "Dailymotion"
+   },
+   "optionsFacebook": {
+      "message": "Facebook"
+   },
+   "optionsGmNativeDownload": {
+      "message": "Erweiterter Download-Modus"
+   },
+   "optionsHandleLinks": {
+      "message": "Links handhaben"
+   },
+   "optionsInstagram": {
+      "message": "Instagram"
+   },
+   "optionsMailru": {
+      "message": "Moy Mir"
+   },
+   "optionsMediaHostings": {
+      "message": "Zu Medienhoster"
+   },
+   "optionsModules": {
+      "message": "Module"
+   },
+   "optionsOdnoklassniki": {
+      "message": "Odnoklassniki"
+   },
+   "optionsRutube": {
+      "message": "Rutube"
+   },
+   "optionsSaveAsDialog": {
+      "message": "Jedes Mal nachfragen, wo eine Datei gespeichert werden soll"
+   },
+   "optionsShowUmmyBtn": {
+      "message": "Schaltfläche Ummy anzeigen"
+   },
+   "optionsShowUmmyInfo": {
+      "message": "Tipps für UVD einblenden"
+   },
+   "optionsSoundcloud": {
+      "message": "SoundCloud"
+   },
+   "optionsSovetnikEnabled": {
+      "message": "Advisor"
+   },
+   "optionsTiktok": {
+      "message": "Tiktok"
+   },
+   "optionsTitle": {
+      "message": "SaveFrom.net Helfer - Einstellungen"
+   },
+   "optionsVimeo": {
+      "message": "Vimeo"
+   },
+   "optionsVkontakte": {
+      "message": "VK"
+   },
+   "optionsYTHideLinks": {
+      "message": "Links ausblenden"
+   },
+   "optionsYoutube": {
+      "message": "YouTube"
+   },
+   "playlist": {
+      "message": "Wiedergabliste"
+   },
+   "playlistInstruction": {
+      "message": "Zur Wiedergabe Ihrer gespeicherten Wiedergabliste kann es nun mit einem Musik-Player geöffnet werden."
+   },
+   "playlistTitle": {
+      "message": "Wiedergabliste"
+   },
+   "quality": {
+      "message": "Qualität"
+   },
+   "qualityNote": {
+      "message": "Wenn es nicht um Qualität geht, wird das nächste verfügbare Video heruntergeladen."
+   },
+   "readMore": {
+      "message": "Mehr"
+   },
+   "reportBug": {
+      "message": "Fehler melden"
+   },
+   "shareIn": {
+      "message": "In %w teilen"
+   },
+   "showButton": {
+      "message": "Erweiterungs Knopf anzeigen"
+   },
+   "showHideButton": {
+      "message": "Erweitern Ein-/Ausblenden"
+   },
+   "showOptions": {
+      "message": "Einstellungen"
+   },
+   "size": {
+      "message": "größe"
+   },
+   "socialDesc": {
+      "message": "Der SaveFrom.net Helper ermöglicht es Ihnen Dateien TikTok.com, Facebook.com, VK.com und mehr als 40 andere Seiten mit einem Klick herunterzuladen"
+   },
+   "subtitles": {
+      "message": "Untertitel"
+   },
+   "titleDefault": {
+      "message": "SaveFrom.net Helfer"
+   },
+   "titleDesabled": {
+      "message": "SaveFrom.net Helfer deaktiviert"
+   },
+   "tooltipHide": {
+      "message": "Diese Meldung nicht wieder anzeigen"
+   },
+   "tutorialS1Arrow": {
+      "message": "['Wie das geht?',{br:{}},'Hier erfährst du es']"
+   },
+   "tutorialS1Main": {
+      "message": "Der SaveFrom.net Helper ermöglicht es Ihnen Dateien TikTok.com, Facebook.com, VK.com und mehr als 40 andere Seiten mit einem Klick herunterzuladen"
+   },
+   "tutorialS1Title": {
+      "message": "Gute Nachrichten!"
+   },
+   "tutorialS2Main": {
+      "message": "Wähle das Format des Videos, das du herunterladen möchtest und klicke auf \"Herunterladen\""
+   },
+   "tutorialS3History": {
+      "message": "Historie"
+   },
+   "tutorialS3Main": {
+      "message": "['Du möchtest ein Video aus der Historie herunterladen? Klicke einfach in der Vorschau des zuletzt gesehenen Videos auf ', {img: {src: '#arrow'}}]"
+   },
+   "tutorialS4Main": {
+      "message": "['Du musst dir das Video nicht ansehen — klicke einfach auf ', {img: {src: '#arrow'}}, ', wähle die Qualität und lade es herunter. Ganz einfach, oder?']"
+   },
+   "tutorialS5Main": {
+      "message": "['Noch Fragen? Vorschläge? Willkommen auf unserer ', {a: {text: 'Support-Seite', href: '#support'}} ,'. Schließe dich uns bei ', {a: {text: 'Facebook', href: '#fb'}} ,' an']"
+   },
+   "tutorialS5Title": {
+      "message": "Viel Spaß mit SaveFrom.net Helper!"
+   },
+   "tutorialTooltipText": {
+      "message": "['Klicke Sie zum ',{b: {text: 'Download'}},', einfach auf die Schaltfläche']"
+   },
+   "ummyMenuInfo": {
+      "message": "[{p:{text:'Schnell und einfach HD Videos und MP3 über Ummy Video Downloader herunterladen!'}},{p:{class:'center',append:[{a:{class:'green-btn-2 arrow',href:'{url}',target:'_blank',text:'Jetzt installieren'}}]}},{p:{append:['Nach der Installation startet jederzeit ein Download, wenn Sie auf ',{img:{src:'#'}},' klicke']}}]"
+   },
+   "ummyMenuItem": {
+      "message": "[{span:{}},' mithilfe von Ummy herunterladen']"
+   },
+   "ummySfTitle": {
+      "message": "HD oder MP3"
+   },
+   "ummyTooltipConfirm": {
+      "message": "['Hatten Sie ',{img:{}},' Ummy Video Downloader bereits zuvor installiert?']"
+   },
+   "updateLinks": {
+      "message": "Links aktualisieren"
+   },
+   "updateLinksNotification": {
+      "message": "Links aktualisiert"
+   },
+   "updateTo": {
+      "message": "Update auf %d"
+   },
+   "vkDownloadAllPhotoAlbums": {
+      "message": "Alle Alben herunterladen"
+   },
+   "vkDownloadFromYoutube": {
+      "message": "['Herunterladen: Öffnen Sie ',{a:{href:'{url}',text:'die Video Seite'}},' und drücken Sie den \"Herunterladen\" Knopf über dem Video-Spieler']"
+   },
+   "vkDownloadPhotoAlbum": {
+      "message": "Album herunterladen"
+   },
+   "vkFileSizeByte": {
+      "message": "B"
+   },
+   "vkFileSizeGByte": {
+      "message": "GB"
+   },
+   "vkFileSizeKByte": {
+      "message": "kB"
+   },
+   "vkFileSizeMByte": {
+      "message": "MB"
+   },
+   "vkFileSizeTByte": {
+      "message": "TB"
+   },
+   "vkFoundFiles": {
+      "message": "Dateien gefunden: %d"
+   },
+   "vkFoundLinks": {
+      "message": "Gefundene Links"
+   },
+   "vkFoundOf": {
+      "message": "von"
+   },
+   "vkFoundPhotos": {
+      "message": "Gefundene Fotos"
+   },
+   "vkInfo": {
+      "message": "Info"
+   },
+   "vkInfoTitle": {
+      "message": "Dateigröße und Bitrate"
+   },
+   "vkKbps": {
+      "message": "kbps"
+   },
+   "vkListOfLinks": {
+      "message": "Liste der Links"
+   },
+   "vkListOfLinksInstruction": {
+      "message": "['Um alle Fotos herunterzuladen, kopieren Sie die Links aus der Liste und fügen Sie diese in Ihren ',{a:{href:'http://en.wikipedia.org/wiki/Download_manager',text:'Download Manager'}},' ein. Wenn Sie noch keinen Download Manager haben we empfehlen wir Ihnen die Installation des ',{a:{href:'http://www.freedownloadmanager.org/',text:'Free Download Manager'}},'.']"
+   },
+   "vkListOfPhotos": {
+      "message": "Liste der Fotos"
+   },
+   "vkListOfPhotosInstruction": {
+      "message": "klicke Sie auf ein Foto um es herunterzuladen."
+   },
+   "vkMp3LinksNotFound": {
+      "message": "Links zu MP3 Dateien wurden nicht gefunden"
+   },
+   "vkNotAvailablePhotos": {
+      "message": "%d Foto(s) vorübergehend nicht verfügbar"
+   },
+   "vkPhotoLinksNotFound": {
+      "message": "Photos are not found"
+   },
+   "vkShowAs": {
+      "message": "Zeigen als"
+   },
+   "vkTableOfThumbnails": {
+      "message": "Tabelle der Thumbnails"
+   },
+   "warningPopupDesc": {
+      "message": "Die Option \"Jedes Mal nachfragen, wo eine Datei gespeichert werden soll\" muss deaktiviert sein."
+   },
+   "warningPopupTitle": {
+      "message": "Überprüfen Sie die Browsereinstellungen"
+   },
+   "withoutAudio": {
+      "message": "without audio"
+   },
+   "yes": {
+      "message": "Ja"
+   }
+}

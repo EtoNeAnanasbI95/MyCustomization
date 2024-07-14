@@ -1,0 +1,51 @@
+2024/07/13-18:09:25.325 4 Reusing MANIFEST /home/notpineapple/.config/BraveSoftware/Brave-Browser-Nightly/Default/Local Storage/leveldb/MANIFEST-000001
+2024/07/13-18:09:25.331 4 Recovering log #484
+2024/07/13-18:09:25.334 4 Reusing old log /home/notpineapple/.config/BraveSoftware/Brave-Browser-Nightly/Default/Local Storage/leveldb/000484.log 
+2024/07/13-18:13:05.311 4 Level-0 table #489: started
+2024/07/13-18:13:05.316 4 Level-0 table #489: 99992 bytes OK
+2024/07/13-18:13:05.321 4 Delete type=0 #484
+2024/07/13-18:15:49.813 4 Level-0 table #491: started
+2024/07/13-18:15:49.818 4 Level-0 table #491: 75301 bytes OK
+2024/07/13-18:15:49.823 4 Delete type=0 #488
+2024/07/13-19:01:43.870 5 Level-0 table #493: started
+2024/07/13-19:01:43.874 5 Level-0 table #493: 53907 bytes OK
+2024/07/13-19:01:43.879 5 Delete type=0 #490
+2024/07/13-20:54:46.178 5 Level-0 table #495: started
+2024/07/13-20:54:46.182 5 Level-0 table #495: 67359 bytes OK
+2024/07/13-20:54:46.187 5 Delete type=0 #492
+2024/07/13-20:54:46.188 5 Compacting 4@0 + 1@1 files
+2024/07/13-20:54:46.205 5 Generated table #496@0: 1131 keys, 1270471 bytes
+2024/07/13-20:54:46.205 5 Compacted 4@0 + 1@1 files => 1270471 bytes
+2024/07/13-20:54:46.210 5 compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/07/13-20:54:46.210 5 Delete type=2 #493
+2024/07/13-20:54:46.210 5 Delete type=2 #489
+2024/07/13-20:54:46.210 5 Delete type=2 #495
+2024/07/13-20:54:46.210 5 Delete type=2 #491
+2024/07/13-20:54:46.211 5 Delete type=2 #486
+2024/07/13-20:57:24.646 5 Level-0 table #498: started
+2024/07/13-20:57:24.651 5 Level-0 table #498: 60901 bytes OK
+2024/07/13-20:57:24.657 5 Delete type=0 #494
+2024/07/13-20:58:43.712 4 Level-0 table #500: started
+2024/07/13-20:58:43.717 4 Level-0 table #500: 60556 bytes OK
+2024/07/13-20:58:43.722 4 Delete type=0 #497
+2024/07/13-22:00:22.102 5 Level-0 table #502: started
+2024/07/13-22:00:22.107 5 Level-0 table #502: 92127 bytes OK
+2024/07/13-22:00:22.112 5 Delete type=0 #499
+2024/07/13-22:21:59.639 5 Level-0 table #504: started
+2024/07/13-22:21:59.646 5 Level-0 table #504: 60439 bytes OK
+2024/07/13-22:21:59.652 5 Delete type=0 #501
+2024/07/13-22:21:59.652 5 Compacting 4@0 + 1@1 files
+2024/07/13-22:21:59.671 5 Generated table #505@0: 1153 keys, 1268809 bytes
+2024/07/13-22:21:59.671 5 Compacted 4@0 + 1@1 files => 1268809 bytes
+2024/07/13-22:21:59.676 5 compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/07/13-22:21:59.676 5 Delete type=2 #502
+2024/07/13-22:21:59.676 5 Delete type=2 #500
+2024/07/13-22:21:59.676 5 Delete type=2 #498
+2024/07/13-22:21:59.677 5 Delete type=2 #496
+2024/07/13-22:21:59.677 5 Delete type=2 #504
+2024/07/14-02:16:15.263 5 Level-0 table #507: started
+2024/07/14-02:16:15.267 5 Level-0 table #507: 9580 bytes OK
+2024/07/14-02:16:15.272 5 Delete type=0 #503
+2024/07/14-02:18:47.807 5 Level-0 table #509: started
+2024/07/14-02:18:47.812 5 Level-0 table #509: 57805 bytes OK
+2024/07/14-02:18:47.817 5 Delete type=0 #506

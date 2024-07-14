@@ -1,0 +1,3 @@
+2024-07-12 02:13:07.755 [info] Started initializing default profile extensions in extensions installation folder. file:///home/notpineapple/.vscode/extensions
+2024-07-12 02:13:07.817 [warning] Failed to create default profile extensions manifest in extensions installation folder. file:///home/notpineapple/.vscode/extensions Unable to create file 'vscode-userdata:/home/notpineapple/.vscode/extensions/extensions.json' that already exists when overwrite flag is not set
+2024-07-12 02:13:07.817 [info] Completed initializing default profile extensions in extensions installation folder. file:///home/notpineapple/.vscode/extensions

@@ -1,0 +1,10 @@
+2024/07/13-22:01:13.765 2653d Creating DB /home/notpineapple/.config/BraveSoftware/Brave-Browser-Nightly/Default/WebStorage/74/IndexedDB/indexeddb.leveldb since it was missing.
+2024/07/13-22:01:13.773 2653d Reusing MANIFEST /home/notpineapple/.config/BraveSoftware/Brave-Browser-Nightly/Default/WebStorage/74/IndexedDB/indexeddb.leveldb/MANIFEST-000001
+2024/07/13-22:01:13.896 26680 Level-0 table #5: started
+2024/07/13-22:01:13.899 26680 Level-0 table #5: 2719 bytes OK
+2024/07/13-22:01:13.907 26680 Delete type=0 #3
+2024/07/13-22:01:13.907 2653e Manual compaction at level-0 from '\x00\x02\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x03\x00\x00\x00' @ 0 : 0; will stop at (end)
+2024/07/13-22:01:27.321 2653d Level-0 table #7: started
+2024/07/13-22:01:27.325 2653d Level-0 table #7: 12917 bytes OK
+2024/07/13-22:01:27.332 2653d Delete type=0 #4
+2024/07/13-22:01:27.332 26680 Manual compaction at level-0 from '\x00\x04\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x05\x00\x00\x00' @ 0 : 0; will stop at (end)

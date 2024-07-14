@@ -1,0 +1,4181 @@
+[
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "-consent-banner.",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546830
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "-cookie-consent.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546831
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/as24-cmp/consent-banner/",
+      "resourceTypes": [
+        "script"
+      ],
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546832
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/avia-snippet-cookieconsent.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546833
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/avis_cookies",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546834
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/bb-cookies.",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546835
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/bc-cookie-consent/assets/js/klaro.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546836
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/becookiebar.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546837
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/bica-cookie-alert/js/bica.min.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546838
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/bluelabs-gdpr.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546839
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/borlabs-cookie/",
+      "resourceTypes": [
+        "script"
+      ],
+      "isUrlFilterCaseSensitive": false,
+      "excludedDomains": [
+        "kombi.de",
+        "online.sovendus.com"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546840
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/born-cookies-public.",
+      "resourceTypes": [
+        "script",
+        "stylesheet"
+      ],
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546841
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/c-cookiepolicy",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546842
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/ccbundle.min.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546843
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/ccbundle2.min.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546844
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/ccm/public/app.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546845
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/ccm19/public/app.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546846
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/complianz-gdpr/cookiebanner/",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546847
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/consent-banner-",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546848
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/consent-layer/js/consent-layer-loader.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546849
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/consent-tracking-",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546850
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/consent_v2/choice.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546851
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/consentbanner-fragment/",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546852
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/consenttracking-",
+      "isUrlFilterCaseSensitive": false,
+      "excludedDomains": [
+        "eu.gregorypacks.com"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546853
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/cookie-banner",
+      "isUrlFilterCaseSensitive": false,
+      "excludedDomains": [
+        "bbc.co.uk",
+        "bbc.com",
+        "stwater.co.uk"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546854
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/cookie-consent",
+      "resourceTypes": [
+        "script"
+      ],
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546855
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/cookie-consent-",
+      "isUrlFilterCaseSensitive": false,
+      "excludedDomains": [
+        "cookielaw.org",
+        "github.com",
+        "gitlab.com"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546856
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/cookie-consent-manager.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546857
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/cookie-info.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546858
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/cookie-info.min.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546859
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/cookie-information.min.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546860
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/cookie-law-info-",
+      "isUrlFilterCaseSensitive": false,
+      "excludedDomains": [
+        "swnsdigital.com"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546861
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/cookie-message.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546862
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/cookie-policy.js",
+      "isUrlFilterCaseSensitive": false,
+      "excludedDomains": [
+        "newpharma.be"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546863
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/cookie-prompt.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546864
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/cookie-widget/",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546865
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/cookie_agreement_dialogue.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546866
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/cookie_offcanvas",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546867
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/cookie_policy.",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546868
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/cookiebar.",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546869
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/cookiecode.dist.min.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546870
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/cookieconsent-",
+      "resourceTypes": [
+        "script"
+      ],
+      "isUrlFilterCaseSensitive": false,
+      "excludedDomains": [
+        "banknorwegian.no"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546871
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/cookieconsent.",
+      "resourceTypes": [
+        "script"
+      ],
+      "isUrlFilterCaseSensitive": false,
+      "excludedDomains": [
+        "lightningmaps.org",
+        "plus-gp-joule.de"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546872
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/cookieconsent/",
+      "isUrlFilterCaseSensitive": false,
+      "excludedDomains": [
+        "combi.de",
+        "mytime.de"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546873
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/cookiecontrol.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546874
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/cookieinfo.min.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546875
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/cookielaw.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546876
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/cookielayover-min.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546877
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/cookielayover.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546878
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/cookiemodal.",
+      "isUrlFilterCaseSensitive": false,
+      "excludedDomains": [
+        "pertemps.co.uk"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546879
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/cookiemonster.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546880
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/cookienotice.build.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546881
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/cookienotice.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546882
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/cookieoptin.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546883
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/cookiepolicies",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546884
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/cookiepolicy",
+      "resourceTypes": [
+        "script"
+      ],
+      "isUrlFilterCaseSensitive": false,
+      "excludedDomains": [
+        "barclays.co.uk",
+        "oakley.com",
+        "steuerberatung-berlin.de"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546885
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/cookies-consent-management/ccm.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546886
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/cookies-info.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546887
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/cookies-min.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546888
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/cookies-notification.",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546889
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/cookies-policy-notification-bar.min.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546890
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/cookiesjsr^",
+      "resourceTypes": [
+        "script"
+      ],
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546891
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/cookieswarning.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546892
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/didomi.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546893
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/disclaimer-cookies.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546894
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/eu_cookie_compliance.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546895
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/eu_cookie_compliance/",
+      "resourceTypes": [
+        "script"
+      ],
+      "isUrlFilterCaseSensitive": false,
+      "excludedDomains": [
+        "mangasaki.org"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546896
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/ga-cookie-policy.min.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546897
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/gdpr-banner/",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546898
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/gdpr-consent.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546899
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/gdpr-cookie-compliance/",
+      "resourceTypes": [
+        "script"
+      ],
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546900
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/gdpr.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546901
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/gdpr/*/loader.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546902
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/gdpr/gdpr_",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546903
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/getcookieconsent.php",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546904
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/glowcookies",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546905
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/ht_cookielaw",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546906
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/hw-cookie-consent/",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546907
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/ilmenite-cookie-consent.min.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546908
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/ionic_consent/",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546909
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/jcookie_v2.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546910
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/jeucookielaw.min.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546911
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/js/cookies_bar",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546912
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/ke_authenticationfile.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546913
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/klaro-no-css.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546914
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/marked-cookie-consent-web/app.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546915
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/mibreitcookieconsent.min.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546916
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/modal-gdpr.",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546917
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/msm-cookie-banner.",
+      "resourceTypes": [
+        "script"
+      ],
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546918
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/nanogdpr.min.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546919
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/nc-rgpd-cookies",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546920
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/onpc-cookie-notice.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546921
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/pandectes-core.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546922
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/pitprivacy.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546923
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/plugins/am-cookie-ban/",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546924
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/plugins/bst-dsgvo-cookie/",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546925
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/plugins/complianz-gdpr-premium/",
+      "isUrlFilterCaseSensitive": false,
+      "excludedDomains": [
+        "technopat.net"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546926
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/plugins/cookiebox/",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546927
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/plugins/cookiefox/",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546928
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/plugins/gdpr-cookie-compliance",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546929
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/plugins/intersites-cookie/",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546930
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/plugins/mrdev_cmp/",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546931
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/plugins/real-cookie-banner",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546932
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/plugins/rh-privacy-consent/",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546933
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/plugins/wordpress-gdpr/",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546934
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/plugins/wp-cookie-allow/",
+      "resourceTypes": [
+        "script"
+      ],
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546935
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/plumrocket_cookieconsent/",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546936
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/pp-t-a-c.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546937
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/privacy-banner/storefront-banner.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546938
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/privacy/providers/cookiesdataprovider",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546939
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/privacypopup/",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546940
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/rg-gdpr.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546941
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/rgpd.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546942
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/rm-cookieconsent.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546943
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/rs/cookiemanager/",
+      "resourceTypes": [
+        "script"
+      ],
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546944
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/silverstripe-dsgvo-cookies/",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546945
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/sizzlegdpr.",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546946
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/sp-dsgvo-public.min.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546947
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/storage/ui/cookies-banner",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546948
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/syno_cookie_element.",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546949
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/tagcommander/privacy_",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546950
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/tcf-cmp.min.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546951
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/tfcookie.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546952
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/tracking-opt-in/",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546953
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/unibo-cookies.",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546954
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/unitb-cmp.",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546955
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/user-cookie-banner/",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546956
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/viucomcookie/",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546957
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/wp-content/plugins/cookies-and-content-security-policy",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546958
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/wpjslib-ecom.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546959
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/ws5_eucookie/",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546960
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "_cookie_consent",
+      "resourceTypes": [
+        "script"
+      ],
+      "isUrlFilterCaseSensitive": false,
+      "excludedDomains": [
+        "bookingbuddy.com",
+        "ifabrik.de"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546961
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "_cookieconsent.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546962
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "cookielayer.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546963
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "cookiemon.atcom.gr",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546964
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "dl.cmp.min.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546965
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "global.ketchcdn.com",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546966
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "ihavecookies.",
+      "resourceTypes": [
+        "script",
+        "stylesheet"
+      ],
+      "isUrlFilterCaseSensitive": false,
+      "excludedDomains": [
+        "tutorcruncher.com"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546967
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "nexus.ensighten.com",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546968
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||a-lehdet.fi^*/cmp.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546969
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||almamedia.fi/almacmp/",
+      "resourceTypes": [
+        "script"
+      ],
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty",
+      "excludedDomains": [
+        "iltalehti.fi"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546970
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||am-static.com/cookie-banner/sdk.js",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546971
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||appconsent.io",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546972
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||assetlab.io/consent/",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546973
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||axept.io^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546974
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||bandeau-cookie.com^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546975
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||cc.anytrack.de^",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546976
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||ccm19.de/app.js",
+      "resourceTypes": [
+        "script"
+      ],
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546977
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||ccm19boros.de^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546978
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||cdn-cookieyes.com/client_data/",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546979
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||choices.consentframework.com",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546980
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||civiccomputing.com^*/cookiecontrol-",
+      "isUrlFilterCaseSensitive": false,
+      "excludedDomains": [
+        "stagecoachbus.com"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546981
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||classistatic.de/consent-statics",
+      "resourceTypes": [
+        "script"
+      ],
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546982
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||clickio.mgr.consensu.org^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546983
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||clickiocmp.com^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546984
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||cmp.gemius.com^",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546985
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||cmp.inmobi.com^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty",
+      "excludedDomains": [
+        "express.co.uk"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546986
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||cmp.osano.com^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty",
+      "excludedDomains": [
+        "ebscohost.com",
+        "insider.com",
+        "insiderintelligence.com"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546987
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||cmp.setupcmp.com/",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546988
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||cmp.uniconsent.com^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546989
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||consent-bist.de/public/app.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546990
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||consent.cookiefirst.com",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty",
+      "excludedDomains": [
+        "hemmersbach.com",
+        "parken-in-mainz.de",
+        "proaurum.de"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546991
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||consent.hr/delivery/js/cmp",
+      "resourceTypes": [
+        "script"
+      ],
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546992
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||consent.marktplaats.nl",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546993
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||consent.trustarc.com/asset/notice.js",
+      "isUrlFilterCaseSensitive": false,
+      "excludedDomains": [
+        "tripit.com"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546994
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||consent.trustarc.com/notice^",
+      "resourceTypes": [
+        "script"
+      ],
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty",
+      "excludedDomains": [
+        "concursolutions.com",
+        "forbes.com",
+        "formula1.com",
+        "fortune.com",
+        "tripit.com"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546995
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||consentmanager.mgr.consensu.org^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546996
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||consentmanager.net^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty",
+      "excludedDomains": [
+        "axelspringer-syndication.de",
+        "gofeminin.de",
+        "onmeda.de",
+        "winfuture.de"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546997
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||cookie-script.com^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546998
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||cookiebot.com^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty",
+      "excludedDomains": [
+        "deutschesapothekenportal.de",
+        "ekstrabladet.dk",
+        "yelmocines.es"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 546999
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||cookiebot.eu/uc.js",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547000
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||cookiebox.ro^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547001
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||cookiehub.eu",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547002
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||cookiehub.net^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547003
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||cookieinformation.com/*/*.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547004
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||cookieinformation.com^",
+      "resourceTypes": [
+        "sub_frame"
+      ],
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547005
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||cookielaw.emea.fcagroup.com^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547006
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||cookielaw.org^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547007
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||cookiemanager.wirth-horn.de^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547008
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||cookiepro.com^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty",
+      "excludedDomains": [
+        "a1.ro",
+        "antena3.ro"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547009
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||cookiereports.com^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547010
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||cscript-cdn-use.cassiecloud.com/loader.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547011
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||diadao-services.com/rgpd-cookies^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547012
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||dmgmediaprivacy.co.uk^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547013
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||efilli.com^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547014
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||epccm19.com/app.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547015
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||evidon.com/sitenotice/evidon-sitenotice-tag.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547016
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||fastcmp.com^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547017
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||gdpr-api.sharethis.com/cmp",
+      "resourceTypes": [
+        "script"
+      ],
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547018
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||gdpr-legal-cookie.beeclever.app^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547019
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||gdpr.mandarin-medien.de/manager.js",
+      "resourceTypes": [
+        "script"
+      ],
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547020
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||goadopt.io/*/get-consent",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547021
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||hs-banner.com^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty",
+      "excludedDomains": [
+        "insider-inc.com"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547022
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||hu-manity.co/hu-banner.min.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547023
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||illow.io/public/cookies/",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547024
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||itv.com/itvstatic/assets/cookies-prompt/",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547025
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||iubenda.com/",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547026
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||lawwwing.com/widgets^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547027
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||myprivacy.dpgmedia.net/consent.js",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547028
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||network-n.com^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547029
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||nojazz.eu/consent/cmpv3^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547030
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||onetrust.com^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty",
+      "excludedDomains": [
+        "pushsquare.com",
+        "shein.com",
+        "worldremit.com"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547031
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||onetrust.mgr.consensu.org^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547032
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||opencmp.net^",
+      "resourceTypes": [
+        "script"
+      ],
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty",
+      "excludedDomains": [
+        "idowa.de"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547033
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||piwik.pro",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547034
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||privacy-center.org^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty",
+      "excludedDomains": [
+        "europe1.fr",
+        "seloger.com"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547035
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||privacy-mgmt.com",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty",
+      "excludedDomains": [
+        "11freunde.de",
+        "auto-motor-sport.de",
+        "auto-motor-und-sport.de",
+        "bild.de",
+        "boerse-online.de",
+        "bold.dk",
+        "businessinsider.de",
+        "bz-berlin.de",
+        "chip.de",
+        "cielotv.it",
+        "clever-tanken.de",
+        "cosmopolitan.de",
+        "cyberport.at",
+        "cyberport.de",
+        "derstandard.at",
+        "derstandard.de",
+        "epaper.volksstimme.de",
+        "express.de",
+        "faz.net",
+        "finanzen.at",
+        "finanzen.ch",
+        "finanzen.net",
+        "fitbook.de",
+        "focus.de",
+        "formula1.com",
+        "freenet-funk.de",
+        "giga.de",
+        "golem.de",
+        "heise.de",
+        "helpster.de",
+        "idealo.at",
+        "idealo.de",
+        "idealo.es",
+        "idealo.fr",
+        "idealo.it",
+        "insider.com",
+        "ladenzeile.de",
+        "lvz.de",
+        "maennersache.de",
+        "mein-schoener-garten.de",
+        "meinestadt.de",
+        "metal-hammer.de",
+        "musikexpress.de",
+        "myhomebook.de",
+        "n-tv.de",
+        "nu.nl",
+        "ostsee-zeitung.de",
+        "pelikone.fi",
+        "politico.eu",
+        "praxisvita.de",
+        "privacy-mgmt.com",
+        "rollingstone.de",
+        "rtl.de",
+        "rtl2.de",
+        "ruutu.fi",
+        "si.com",
+        "sky.com",
+        "spiegel.de",
+        "standard.co.uk",
+        "stern.de",
+        "stylebook.de",
+        "sueddeutsche.de",
+        "t-online.de",
+        "t3n.de",
+        "techbook.de",
+        "theguardian.com.",
+        "tomsguide.com",
+        "transfermarkt.at",
+        "transfermarkt.ch",
+        "transfermarkt.co.uk",
+        "transfermarkt.com",
+        "transfermarkt.com.tr",
+        "transfermarkt.de",
+        "transfermarkt.fr",
+        "transfermarkt.it",
+        "transfermarkt.nl",
+        "transfermarkt.pl",
+        "transfermarkt.pt",
+        "transfermarkt.us",
+        "tv8.it",
+        "tvmovie.de",
+        "tvspielfilm.de",
+        "vip.de",
+        "virginradio.co.uk",
+        "volkskrant.nl",
+        "vox.de",
+        "welt.de",
+        "wieistmeineip.at",
+        "wieistmeineip.ch",
+        "wieistmeineip.de",
+        "wunderweib.de"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547036
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||privacymanager.io",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547037
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||pubtech.ai",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547038
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||push-content.springernature.io^",
+      "resourceTypes": [
+        "script"
+      ],
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547039
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||quantcast.com/tcfv2^",
+      "resourceTypes": [
+        "script"
+      ],
+      "isUrlFilterCaseSensitive": false,
+      "excludedDomains": [
+        "comingsoon.it",
+        "express.co.uk",
+        "formulatv.com",
+        "vita.gr"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547040
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||quantcast.mgr.consensu.org^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty",
+      "excludedDomains": [
+        "cerebriti.com",
+        "fly4free.com",
+        "kueez.com"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547041
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||ressource.gdpr-banner.awsmpsa.com^",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547042
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||s.clickiocdn.com/t/consent_",
+      "resourceTypes": [
+        "script"
+      ],
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547043
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||secureprivacy.ai/secureprivacy-plugin/",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547044
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||sharethis.mgr.consensu.org^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547045
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||sibbo.net",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty",
+      "excludedDomains": [
+        "atresplayer.com"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547046
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||smart.idmnet.pl/consent/",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547047
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||sourcepoint.mgr.consensu.org^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty",
+      "excludedDomains": [
+        "t3n.de"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547048
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||t.atmng.io^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547049
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||tarteaucitron.io/",
+      "resourceTypes": [
+        "script"
+      ],
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547050
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||termly.io^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547051
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||transcend.io^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547052
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||truendo.com^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547053
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||truevaultcdn.com^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547054
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||trustcommander.net/privacy",
+      "resourceTypes": [
+        "script"
+      ],
+      "isUrlFilterCaseSensitive": false,
+      "excludedDomains": [
+        "tf1.fr",
+        "tf1info.fr"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547055
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||usercentrics.eu",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty",
+      "excludedDomains": [
+        "idealo.co.uk",
+        "immonet.de",
+        "joyn.de",
+        "kabeleins.de",
+        "prosieben.de",
+        "ran.de",
+        "sat1.de",
+        "sixx.de",
+        "wetter.com"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547056
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||webcache-eu.datareporter.eu^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547057
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||widget.clym-sdk.net^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547058
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||wip.pl/js/cookie.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547059
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||yastatic.net/s3/gdpr",
+      "resourceTypes": [
+        "script"
+      ],
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547060
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||cookietractor.com^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty"
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547061
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "/klaro-config.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547062
+  },
+  {
+    "priority": 2000,
+    "condition": {
+      "urlFilter": "/ccpa_iframe",
+      "resourceTypes": [
+        "sub_frame"
+      ],
+      "isUrlFilterCaseSensitive": false,
+      "domains": [
+        "dropbox.com"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547063
+  },
+  {
+    "priority": 2000,
+    "condition": {
+      "urlFilter": "/chunk-cookie-consent-modal",
+      "resourceTypes": [
+        "script"
+      ],
+      "isUrlFilterCaseSensitive": false,
+      "domains": [
+        "jobs.ch",
+        "jobup.ch"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547064
+  },
+  {
+    "priority": 2000,
+    "condition": {
+      "urlFilter": "/cmp.js",
+      "isUrlFilterCaseSensitive": false,
+      "domains": [
+        "corporate.modivo.com"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547065
+  },
+  {
+    "priority": 2000,
+    "condition": {
+      "urlFilter": "/cmp.min.js",
+      "isUrlFilterCaseSensitive": false,
+      "domains": [
+        "paruvendu.fr"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547066
+  },
+  {
+    "priority": 2000,
+    "condition": {
+      "urlFilter": "/consent",
+      "isUrlFilterCaseSensitive": false,
+      "domains": [
+        "careers.equinix.com"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547067
+  },
+  {
+    "priority": 2000,
+    "condition": {
+      "urlFilter": "/cookie",
+      "isUrlFilterCaseSensitive": false,
+      "domains": [
+        "e-herbapol.com.pl"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547068
+  },
+  {
+    "priority": 2000,
+    "condition": {
+      "urlFilter": "/cookie",
+      "resourceTypes": [
+        "script"
+      ],
+      "isUrlFilterCaseSensitive": false,
+      "domains": [
+        "jamieoliver.com"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547069
+  },
+  {
+    "priority": 2000,
+    "condition": {
+      "urlFilter": "/cookie-scripts-*.js",
+      "isUrlFilterCaseSensitive": false,
+      "domains": [
+        "worktop-express.de"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547070
+  },
+  {
+    "priority": 2000,
+    "condition": {
+      "urlFilter": "/cookie.jsx",
+      "isUrlFilterCaseSensitive": false,
+      "domains": [
+        "bravoerotica.com"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547071
+  },
+  {
+    "priority": 2000,
+    "condition": {
+      "urlFilter": "/cookie_modal_ajax.php",
+      "isUrlFilterCaseSensitive": false,
+      "domains": [
+        "georg.at"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547072
+  },
+  {
+    "priority": 2000,
+    "condition": {
+      "urlFilter": "/cookies.js",
+      "isUrlFilterCaseSensitive": false,
+      "domains": [
+        "cifas.org.uk",
+        "defencediscountservice.co.uk",
+        "loveholidays.com",
+        "loveholidays.ie"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547073
+  },
+  {
+    "priority": 2000,
+    "condition": {
+      "urlFilter": "/cookies.min.js",
+      "isUrlFilterCaseSensitive": false,
+      "domains": [
+        "bpmarco.pl",
+        "bulk.com",
+        "exellent.be"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547074
+  },
+  {
+    "priority": 2000,
+    "condition": {
+      "urlFilter": "/ensighten/",
+      "isUrlFilterCaseSensitive": false,
+      "domains": [
+        "ba.com",
+        "britishairways.com"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547075
+  },
+  {
+    "priority": 2000,
+    "condition": {
+      "urlFilter": "/gdpr",
+      "resourceTypes": [
+        "script"
+      ],
+      "isUrlFilterCaseSensitive": false,
+      "domains": [
+        "giga.de",
+        "kleinanzeigen.de",
+        "weebly.com"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547076
+  },
+  {
+    "priority": 2000,
+    "condition": {
+      "urlFilter": "/gdpr/native-message",
+      "isUrlFilterCaseSensitive": false,
+      "domains": [
+        "golem.de",
+        "gpfans.com",
+        "newsnow.co.uk",
+        "parkers.co.uk",
+        "planetradio.co.uk",
+        "selbst.de",
+        "tagesspiegel.de",
+        "telegraph.co.uk",
+        "unsere-helden.com",
+        "wetteronline.de",
+        "wiwo.de"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547077
+  },
+  {
+    "priority": 2000,
+    "condition": {
+      "urlFilter": "/jimmsconsent",
+      "isUrlFilterCaseSensitive": false,
+      "domains": [
+        "jimms.fi"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547078
+  },
+  {
+    "priority": 2000,
+    "condition": {
+      "urlFilter": "/js.cookie.min.js",
+      "isUrlFilterCaseSensitive": false,
+      "domains": [
+        "oxfordshire.gov.uk"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547079
+  },
+  {
+    "priority": 2000,
+    "condition": {
+      "urlFilter": "/main-rgpd.js",
+      "isUrlFilterCaseSensitive": false,
+      "domains": [
+        "inclusiscore.org"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547080
+  },
+  {
+    "priority": 2000,
+    "condition": {
+      "urlFilter": "/module-html-consent",
+      "isUrlFilterCaseSensitive": false,
+      "domains": [
+        "jmonline.com.br"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547081
+  },
+  {
+    "priority": 2000,
+    "condition": {
+      "urlFilter": "/opt-in",
+      "isUrlFilterCaseSensitive": false,
+      "domains": [
+        "sparebank1.no"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547082
+  },
+  {
+    "priority": 2000,
+    "condition": {
+      "urlFilter": "/pdcookiepro/",
+      "isUrlFilterCaseSensitive": false,
+      "domains": [
+        "medyczny.store"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547083
+  },
+  {
+    "priority": 2000,
+    "condition": {
+      "urlFilter": "/theme-cookie/",
+      "isUrlFilterCaseSensitive": false,
+      "domains": [
+        "ludigoodies.com"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547084
+  },
+  {
+    "priority": 2000,
+    "condition": {
+      "urlFilter": "/user-consent-management/",
+      "isUrlFilterCaseSensitive": false,
+      "domains": [
+        "americanexpress.com"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547085
+  },
+  {
+    "priority": 2000,
+    "condition": {
+      "urlFilter": "/wrappermessagingwithoutdetection.js",
+      "isUrlFilterCaseSensitive": false,
+      "domains": [
+        "10kysymysta.fi",
+        "4players.de",
+        "7sur7.be",
+        "abiristeilyt.fi",
+        "ad-alliance.de",
+        "aftenposten.no",
+        "akuankka.fi",
+        "alypaa.com",
+        "apotheken-umschau.de",
+        "autoexpress.co.uk",
+        "automobil-elektronik-kongress.de",
+        "autotrader.co.uk",
+        "autozeitung.de",
+        "baby-und-familie.de",
+        "badoo.com",
+        "bbcgoodfood.com",
+        "bestcheck.de",
+        "bikeradar.com",
+        "bitpipe.com",
+        "bitpipe.com.br",
+        "brighttalk.com",
+        "bt.no",
+        "businessinsider.com",
+        "businessinsider.es",
+        "camping.info",
+        "capital.de",
+        "caravaning.de",
+        "cardscout.de",
+        "carthrottle.com",
+        "cavallo.de",
+        "channelpartner.de",
+        "chefkoch.de",
+        "chesterstandard.co.uk",
+        "cio.com",
+        "cio.de",
+        "classicfm.com",
+        "computerfrage.net",
+        "computerhoy.com",
+        "computerweekly.com",
+        "computerwoche.de",
+        "computerworld.com",
+        "csoonline.com",
+        "dailyresearchplot.com",
+        "denofgeek.com",
+        "dexerto.com",
+        "digilehdet.fi",
+        "digitalartsonline.co.uk",
+        "discoverwildlife.com",
+        "duden.de",
+        "ecomento.de",
+        "edpc.eu",
+        "eiu.com",
+        "ekuriren.se",
+        "elektroauto-news.net",
+        "essen-und-trinken.de",
+        "esslinger-zeitung.de",
+        "expertreviews.co.uk",
+        "familie.de",
+        "finanzen100.de",
+        "finanzfrage.net",
+        "finn.no",
+        "flugrevue.de",
+        "frag-mutti.de",
+        "futisporssi.fi",
+        "gala.fr",
+        "gelderlander.nl",
+        "geo-television.de",
+        "gladbachlive.de",
+        "globalplayer.com",
+        "goom.net",
+        "gruenderkueche.de",
+        "gutefrage.net",
+        "hannover.de",
+        "heise.de",
+        "helpster.de",
+        "himosjuhannus.fi",
+        "hitc.com",
+        "hobbyconsolas.com",
+        "hockeygm.fi",
+        "iltapulu.fi",
+        "iskelma.fi",
+        "iskelmafestivaali.fi",
+        "itpro.co.uk",
+        "jameda.de",
+        "justthenews.com",
+        "jysari.fi",
+        "kachelmannwetter.com",
+        "kkuriren.se",
+        "klamm.de",
+        "kn-online.de",
+        "krzbb.de",
+        "kuechengoetter.de",
+        "kuopiorock.fi",
+        "lancashiretelegraph.co.uk",
+        "lbc.co.uk",
+        "lecker.de",
+        "leijonaporssi.fi",
+        "lemagit.fr",
+        "leonberger-kreiszeitung.de",
+        "lepoint.fr",
+        "leserreisen.mz-web.de",
+        "liberation.fr",
+        "liigaporssi.fi",
+        "livingathome.de",
+        "ln-online.de",
+        "lovelybooks.de",
+        "macwelt.de",
+        "macworld.com",
+        "madeformums.com",
+        "mcnmotorcycleshow.com",
+        "mediaimpact.de",
+        "mein-schoener-garten.de",
+        "meine.noz.de",
+        "meineorte.com",
+        "menshealth.de",
+        "morewithvpro.com",
+        "mountainbike-magazin.de",
+        "muehlacker-tagblatt.de",
+        "myvouchercodes.co.uk",
+        "n-page.de",
+        "nelonenmedialive.fi",
+        "netdoktor.de",
+        "netmoms.de",
+        "networkworld.com",
+        "neuepresse.de",
+        "nitro-tv.de",
+        "nnn.de",
+        "nowtv.it",
+        "noz.de",
+        "oekotest.de",
+        "olivemagazine.com",
+        "oskar.de",
+        "ostsee-zeitung.de",
+        "pcgamesn.com",
+        "pclifecyclemanagement.com",
+        "pcwelt.de",
+        "pcworld.com",
+        "pcworld.es",
+        "phonostar.de",
+        "planet3ds.de",
+        "planetds.de",
+        "planetgameboy.de",
+        "planetiphone.de",
+        "planetswitch.de",
+        "planetvita.de",
+        "playstationportable.de",
+        "podplay.com",
+        "portablegaming.de",
+        "praxisvita.de",
+        "prignitzer.de",
+        "promobil.de",
+        "qz.com",
+        "radio.de",
+        "radio.net",
+        "radio.pl",
+        "radiocity.fi",
+        "radionova.fi",
+        "radioplay.fi",
+        "radiopooki.fi",
+        "rakennuslehti.fi",
+        "realitytitbit.com",
+        "reisefrage.net",
+        "rheinpfalz.de",
+        "rmj.fi",
+        "roadbike.de",
+        "rockfest.fi",
+        "rtl-passion.de",
+        "rtlplus.de",
+        "rugbydump.com",
+        "rugbyonslaught.com",
+        "sanakirja.org",
+        "sanoma.fi",
+        "scholieren.com",
+        "sciencefocus.com",
+        "senioren-ratgeber.de",
+        "shz.de",
+        "si.com",
+        "sky.com",
+        "sky.de",
+        "speed.io",
+        "sportbible.com",
+        "sportsmole.co.uk",
+        "standard.co.uk",
+        "startpagina.nl",
+        "streampicker.de",
+        "studyflix.de",
+        "stuff.tv",
+        "stuttgarter-zeitung.de",
+        "sueddeutscher-verlag.de",
+        "suomipopfestivaali.fi",
+        "suomitutka.fi",
+        "sv-veranstaltungen.de",
+        "svd.se",
+        "svz.de",
+        "swmh.de",
+        "t-online.de",
+        "tahkojuhannus.fi",
+        "tammerfest.fi",
+        "tecchannel.de",
+        "techadvisor.com",
+        "techadvisor.fr",
+        "techhive.com",
+        "techstage.de",
+        "techtarget.com",
+        "techtarget.de",
+        "techtarget.fr",
+        "testedich.de",
+        "the-sun.com",
+        "thecelticblog.com",
+        "theloadout.com",
+        "thepeoplesperson.com",
+        "thepoke.com",
+        "thescottishsun.co.uk",
+        "theserverside.com",
+        "thesun.co.uk",
+        "thesun.ie",
+        "toggo.de",
+        "tv14.de",
+        "tvmovie.de",
+        "tvnow.at",
+        "utopia.de",
+        "vaalikone.fi",
+        "vg.no",
+        "vink.aftenposten.no",
+        "visit-hannover.com",
+        "vkmag.com",
+        "vkz.de",
+        "voice.fi",
+        "wetteronline.de",
+        "whats-on-netflix.com",
+        "wisden.com",
+        "wiwo.de",
+        "zvw.de"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547086
+  },
+  {
+    "priority": 2000,
+    "condition": {
+      "urlFilter": "consent.js",
+      "isUrlFilterCaseSensitive": false,
+      "domains": [
+        "bonprix.es",
+        "bonprix.hu",
+        "bonprix.pl",
+        "bonprix.ro",
+        "bonprix.sk"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547087
+  },
+  {
+    "priority": 2000,
+    "condition": {
+      "urlFilter": "cookie.js",
+      "isUrlFilterCaseSensitive": false,
+      "domains": [
+        "eshop.idsbk.sk",
+        "ideo.com",
+        "theodorkoernerfonds.at"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547088
+  },
+  {
+    "priority": 2000,
+    "condition": {
+      "urlFilter": "trcking.min.js^",
+      "isUrlFilterCaseSensitive": false,
+      "domains": [
+        "canalplus.com"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547089
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||cc.diewebsitemacherei.de^",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547090
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||cmp.biomedcentral.com",
+      "resourceTypes": [
+        "script"
+      ],
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547091
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||cmp.bordverpflegung.de/public/app.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547092
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||cmp.courrierinternational.com^",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547093
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||cmp.tek.no^",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547094
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||cmp.telerama.fr^",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547095
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||cnsnt.goal.com^",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547096
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||consent.pdf24.org^",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547097
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||consent.werner-mertz.de",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547098
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||consenttool.haendlerbund.de^",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547099
+  },
+  {
+    "priority": 2000,
+    "condition": {
+      "urlFilter": "||cookiebot.eu/uc.js",
+      "isUrlFilterCaseSensitive": false,
+      "domains": [
+        "casio.com",
+        "expert.de",
+        "heima24.de",
+        "heizungsdiscount24.de"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547100
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||cookies.jeugdjournaal.nl^",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547101
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||cookies.nos.nl^",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547102
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||fastweb.it/cookie-center/",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547103
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||fc2.com/share/js/gdpr/",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547104
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||interia.pl/rodo/messages-jsonp",
+      "resourceTypes": [
+        "script"
+      ],
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547105
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||lego.com/api/graphql/consentmodalsettings",
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547106
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||link.com/cookie-notifications",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547107
+  },
+  {
+    "priority": 2000,
+    "condition": {
+      "urlFilter": "||seznam.cz/cmp^",
+      "isUrlFilterCaseSensitive": false,
+      "domains": [
+        "fullmoonzine.cz"
+      ]
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547108
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||shop.mango.com/st-cookies/",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547109
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||sourcepoint.gizmodo.com^",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547110
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||storage-mart.com/sm-policy-banner.js",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547111
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||teufel.*/privacy-layer",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547112
+  },
+  {
+    "priority": 1000,
+    "condition": {
+      "urlFilter": "||teufelaudio.*/privacy-layer",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "block"
+    },
+    "id": 547113
+  },
+  {
+    "priority": 2000,
+    "condition": {
+      "urlFilter": "||cookielaw.org^",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "thirdParty",
+      "domains": [
+        "a1.ro",
+        "agriculture.com",
+        "allpeoplequilt.com",
+        "allrecipes.com",
+        "antena3.ro",
+        "beko.com",
+        "bhg.com",
+        "brides.com",
+        "byrdie.com",
+        "cnn.com",
+        "dailypaws.com",
+        "eatingwell.com",
+        "eurogamer.es",
+        "eurogamer.nl",
+        "ew.com",
+        "foodandwine.com",
+        "health.com",
+        "homedepot.ca",
+        "instyle.com",
+        "investopedia.com",
+        "jetztspielen.de",
+        "larousse.fr",
+        "lifewire.com",
+        "liquor.com",
+        "marthastewart.com",
+        "midwestliving.com",
+        "mtvuutiset",
+        "mtvuutiset.fi",
+        "mydomaine.com",
+        "parents.com",
+        "people.com",
+        "peopleenespanol.com",
+        "pge.com",
+        "politico.com",
+        "realsimple.com",
+        "seriouseats.com",
+        "shape.com",
+        "southernliving.com",
+        "ted.com",
+        "thebalancemoney.com",
+        "thespruce.com",
+        "thespruceeats.com",
+        "thesprucepets.com",
+        "travelandleisure.com",
+        "treehugger.com",
+        "tripsavvy.com",
+        "tunein.com",
+        "tvn24.pl",
+        "verywellfamily.com",
+        "verywellfit.com",
+        "verywellhealth.com",
+        "verywellmind.com",
+        "vmware.com",
+        "wallapop.com",
+        "webuyanycar.com",
+        "woodmagazine.com"
+      ]
+    },
+    "action": {
+      "type": "allow"
+    },
+    "id": 547114
+  },
+  {
+    "priority": 2000,
+    "condition": {
+      "urlFilter": "||geolocation.onetrust.com/cookieconsentpub/",
+      "resourceTypes": [
+        "xmlhttprequest"
+      ],
+      "isUrlFilterCaseSensitive": false,
+      "domains": [
+        "beko.com",
+        "homedepot.ca",
+        "jetztspielen.de",
+        "larousse.fr",
+        "politico.com",
+        "ted.com",
+        "tunein.com",
+        "webuyanycar.com"
+      ]
+    },
+    "action": {
+      "type": "allow"
+    },
+    "id": 547115
+  },
+  {
+    "priority": 2000,
+    "condition": {
+      "urlFilter": "||iubenda.com^",
+      "resourceTypes": [
+        "script",
+        "sub_frame",
+        "xmlhttprequest"
+      ],
+      "isUrlFilterCaseSensitive": false,
+      "domains": [
+        "capital.it",
+        "deejay.it",
+        "ilgazzettino.it",
+        "m2o.it",
+        "repubblica.it",
+        "virginradio.it"
+      ]
+    },
+    "action": {
+      "type": "allow"
+    },
+    "id": 547116
+  },
+  {
+    "priority": 2000,
+    "condition": {
+      "urlFilter": "||portal.energie-graz.at/kundenportal/css/cookieconsent/",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "firstParty"
+    },
+    "action": {
+      "type": "allow"
+    },
+    "id": 547117
+  },
+  {
+    "priority": 2000,
+    "condition": {
+      "urlFilter": "||portal.energie-graz.at/kundenportal/js/lib/cookieconsent.js",
+      "isUrlFilterCaseSensitive": false,
+      "domainType": "firstParty"
+    },
+    "action": {
+      "type": "allow"
+    },
+    "id": 547118
+  },
+  {
+    "priority": 2000,
+    "condition": {
+      "urlFilter": "||privacymanager.io^",
+      "isUrlFilterCaseSensitive": false,
+      "domains": [
+        "geenstijl.nl",
+        "gids.tv",
+        "kurier.at",
+        "profil.at"
+      ]
+    },
+    "action": {
+      "type": "allow"
+    },
+    "id": 547119
+  },
+  {
+    "priority": 2000,
+    "condition": {
+      "urlFilter": "||salonkee.cloud/data/other/js/cookie-consent-",
+      "isUrlFilterCaseSensitive": false
+    },
+    "action": {
+      "type": "allow"
+    },
+    "id": 547120
+  },
+  {
+    "priority": 2000,
+    "condition": {
+      "urlFilter": "||sdk.privacy-center.org^",
+      "resourceTypes": [
+        "script"
+      ],
+      "isUrlFilterCaseSensitive": false,
+      "domains": [
+        "as.com",
+        "bfmtv.com",
+        "bonduelle.it",
+        "cnews.fr",
+        "corrieredellosport.it",
+        "dumpert.nl",
+        "euronews.com",
+        "filmweb.pl",
+        "francetvinfo.fr",
+        "funradio.fr",
+        "gamestar.de",
+        "goplay.be",
+        "hbvl.be",
+        "imoveis.mitula.pt",
+        "ivoox.com",
+        "jeanmarcmorandini.com",
+        "jeuxvideo.com",
+        "jofogas.hu",
+        "lequipe.fr",
+        "marianne.net",
+        "mein-mmo.de",
+        "mundodeportivo.com",
+        "nieuwsblad.be",
+        "onmeda.de",
+        "opodo.co.uk",
+        "opodo.com",
+        "opodo.de",
+        "opodo.fr",
+        "opodo.it",
+        "podcasts.leparisien.fr",
+        "rtl.be",
+        "rtl.fr",
+        "seguro.elespanol.com",
+        "sncf-connect.com",
+        "standaard.be",
+        "strefabiznesu.pl",
+        "telegraaf.nl",
+        "trontv.com",
+        "tuttosport.com",
+        "vecernji.hr",
+        "xataka.com"
+      ]
+    },
+    "action": {
+      "type": "allow"
+    },
+    "id": 547121
+  },
+  {
+    "priority": 2000,
+    "condition": {
+      "urlFilter": "||usercentrics.eu^",
+      "resourceTypes": [
+        "script",
+        "sub_frame",
+        "xmlhttprequest"
+      ],
+      "isUrlFilterCaseSensitive": false,
+      "domains": [
+        "atv.at",
+        "bayer04.de",
+        "douglas.de",
+        "festool.at",
+        "festool.be",
+        "festool.bg",
+        "festool.ch",
+        "festool.cn",
+        "festool.co.kr",
+        "festool.co.uk",
+        "festool.co.za",
+        "festool.com",
+        "festool.cz",
+        "festool.de",
+        "festool.dk",
+        "festool.es",
+        "festool.fi",
+        "festool.fr",
+        "festool.hu",
+        "festool.ie",
+        "festool.it",
+        "festool.lt",
+        "festool.nl",
+        "festool.no",
+        "festool.pl",
+        "festool.pt",
+        "festool.ro",
+        "festool.ru",
+        "festool.se",
+        "festool.sk",
+        "festool.ua",
+        "festoolcanada.com",
+        "festoolusa.com",
+        "morenutrition.de",
+        "paketshop.myhermes.de",
+        "prosieben.at",
+        "puls4.com",
+        "radiobob.de",
+        "ran.de",
+        "rts.ch",
+        "sat1.at",
+        "schlager.radio",
+        "sportdeutschland.tv",
+        "sportscheck.com",
+        "verivox.de"
+      ]
+    },
+    "action": {
+      "type": "allow"
+    },
+    "id": 547122
+  }
+]

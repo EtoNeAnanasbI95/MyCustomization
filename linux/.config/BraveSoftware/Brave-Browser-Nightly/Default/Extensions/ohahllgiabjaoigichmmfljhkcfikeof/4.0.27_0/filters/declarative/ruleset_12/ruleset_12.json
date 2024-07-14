@@ -1,0 +1,4273 @@
+[
+	{
+		"id": 14,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "-gooadsense.",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 15,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": ".com/bannerlar/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 16,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": ".tr/ads/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 17,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": ".tr/AdServer/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 18,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": ".tr/images/banners/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 19,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": ".tr/includes/yaprak",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 20,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": ".tr/medya.php?mn=29349",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 21,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": ".tr/medya.php?mn=32260",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 22,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": ".tr/medya.php?mn=32760",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 23,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": ".tr/Statistic/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 24,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/_js/adnet_",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 25,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/adaff.",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 26,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/adaff/*",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 27,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/adnet_async.",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 28,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/adnetSet.",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 29,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/ADSgmts.",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 30,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/BannerMilliyet.",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 31,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/Banners/Sponsored",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 32,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/budapop.",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 33,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/ebulten/ebulten_",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 34,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/gazetereklam/*",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 35,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/HeaderReklam.",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 36,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/inc_kare_banner_",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 37,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/incereklam.",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 38,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/leftreklam1.",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 39,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/leftreklam2.",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 40,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/MainPage/NDBanners/*",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 41,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/megacash.",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 42,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/MNetOrfad.",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 43,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/mod_moopopup/*",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 44,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/myClientAds.",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 45,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/r1eklam.",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 46,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/reklam-",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 47,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/reklam.swf",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 48,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/reklam1.swf",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 49,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/reklam3.",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 50,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/reklam_",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 51,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/reklamalanlariCSHTR.",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 52,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/reklambelirteci.",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 53,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/reklamci/*",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 54,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/reklamlar.",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 55,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/Reklamlar/*",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 56,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/reklamm.js",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 57,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/reklamsol.",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 58,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/reklamsplash.",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 59,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/reklamver.",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 60,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/renklam/*",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 61,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/rightreklam1.",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 62,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/servad.",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 63,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "/todayszaman/banners/*",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 64,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "_reklam_125_",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 68,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||213.137.61.43/banners/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 69,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||50.7.242.74^*/splash.php",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 70,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||acunn.com/static/images/acunnbanner",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 71,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||add.bugun.com.tr/show/?",
+			"resourceTypes": [
+				"script"
+			],
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 101
+	},
+	{
+		"id": 72,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||ads.garga.biz^",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 73,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||ads.zamunda.net^",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 74,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||adv.letitbit.net^",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 75,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||ahmetturan.org/splash.",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 76,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||akademikles.org/omur/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 77,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||akamaihd.net/hphotos-ak-xtf1/",
+			"initiatorDomains": [
+				"altyazilifilmizle.org"
+			],
+			"resourceTypes": [
+				"image"
+			],
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 301
+	},
+	{
+		"id": 78,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||akilli.tv^*/banner/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 79,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||aksam.com.tr/images/banner_",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 80,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||alacaknevar.com/banner/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 81,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||alkislarlayasiyorum.com/300_250_",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 82,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||antoloji.com/images/banners/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 83,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||aofforum.com^*banner",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 84,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||appleturk.net^*.swf",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 85,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||aslanlar.tv/js/popup.js",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 86,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||azginvideoo.com/vpillsss.gif",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 87,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||azgnvideo.com/vidust.gif",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 88,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||bicaps.net/bicaps-bg*.jpg",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 89,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||bitturk.net/banner.gif",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 90,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||bitturk.net/pasta_tarifleri.gif",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 91,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||bitturk.net/Vpills.swf",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 92,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||bitturk.net^*/save_stats.php?",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 93,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||chip.com.tr/bmedia/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 94,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||cumhuriyet.com.tr/medya.php?mn=46327",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 95,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||cumhuriyet.com.tr/medya.php?mn=59367",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 96,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||cumhuriyet.com.tr/medya.php?mn=59378",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 97,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||derinport.in/pop.js",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 98,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||dipnot.tv/Images/banner/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 99,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||direkizle.net/anigif.gif",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 100,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||direkizle.net/vicepradizi.jpg",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 101,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||direkizle.net/vp.gif",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 102,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||divxm.com/*.swf",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 103,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||divxm.com/images/elma728",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 104,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||divxm.com/images/rapid",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 105,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||dizihd.com/mika.",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 106,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||dizihd.com/tatilbudur.png",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 107,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||diziizleyelim.com/forumlar1.htm",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 108,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||diziizleyelim.com/sbanner.gif",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 109,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||diziizleyelim.com/yenibanner.htm",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 110,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||dizilab.com/v/page_skin.jpg",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 111,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||donanimhaber.com/ads/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 112,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||e-pornolar.com/popup.php",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 113,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||e-pornolar.com/splash.php",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 114,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||ekolhoca.com/flash/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 115,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||ekolhoca.com/resim/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 116,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||emlakkulisi.com/ad/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 117,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||emlakkulisi.com/Banner",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 118,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||enguzelpornolari.biz/sagbanner.gif",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 119,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||enguzelpornolari.biz/splash.php",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 120,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||enguzelpornolarii.biz/1pop.js",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 121,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||enguzelpornolarii.biz/1splash.php",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 122,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||eniyifilmizle.com/wp-content/uploads/*_1807x807-",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 123,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||evrenselfilm.com/css/ad.js",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 124,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||filminiizle.com/reklamigec.html",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 125,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||filmizlettir.net/*.swf",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 126,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||frmtr.com/images/r/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 127,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||gazetevatan.com/adv_",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 128,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||gazetevatan.com/resimler/rightbanner",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 129,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||gecce.com/img/Banners/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 130,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||geceshop.com/hd.js",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 131,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||gizleseneee.net/sag.gif",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 132,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||gizleseneee.net/sol.swf",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 133,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||haber365.com/bn.php?BannerTIP=",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 134,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||haber7.com/load-banner.php",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 135,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||haberdiyarbakir.com/images/banner/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 136,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||habervaktim.com/1453",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 137,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||habervaktim.com/hvreklam/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 138,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||habervaktim.com/rd.swf",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 139,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||hemmenindir.org/mypop.js",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 140,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||hepsiburada.com*/Banners/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 141,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||hikayehikaye.net^*-clickjacking.js",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 142,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||hurriyet.com.tr/ReadCountOfNews.aspx?",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 143,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||hurriyet.de/_banners/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 144,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||inadinasexx.com/468.gif",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 145,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||inadinasexx.com/splash",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 146,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||indirdoldur.org/*banner",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 147,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||inilti.com/dikbanner.jpg",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 148,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||inilti.com/gecis.png",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 149,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||inilti.com/splash",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 150,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||inilti.com/yenipop.js",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 151,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||inilti.in/fuat/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 152,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||inilti.info/onatsplash.php",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 153,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||inndir.com/ads/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 154,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||internethaber.com/banner/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 155,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||kanald.com.tr/KD_Flash/900",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 156,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||kanalvip.com.tr/kadikon",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 157,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||kobi-efor.com.tr/banner/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 158,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||kpsscafe.com/images/ihtiyac.jpg",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 159,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||kpsscafe.com^*.swf",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 160,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||mailce.com/wp-content/plugins/wp-super-popup/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 161,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||maraton.com.tr/banner",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 162,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||maraton.com.tr/img/iddaabanner",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 163,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||medya73.com/images/banner/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 164,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||memlekethaber.com/banner/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 165,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||milliyet.com.tr/d/f/1/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 166,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||milliyet.com.tr/D/i/_subV2/bgPageSkin2.",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 167,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||milliyet.com.tr/d/i/ekonomi/ekonomiPageSkin/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 168,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||milliyet.com.tr/D/i/Nivea.png",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 169,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||motordelisi.com^",
+			"resourceTypes": [
+				"object"
+			],
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 101
+	},
+	{
+		"id": 170,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||movieizle.com/videonette-banner(image).gif",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 171,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||movieizle.com^*/telkinigi.png",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 172,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||mynet.com/*/pageskin/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 173,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||nationalturk.com/media/banner/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 174,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||nethaber.com/TextBanner.",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 175,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||ntvmsnbc.com/adv/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 176,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||odatv.com/staticimages/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 177,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||ogile.com/banner",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 178,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||orosbum.info/popup.swf",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 179,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||orosbum.info/popupum.js",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 180,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||orosbum.info/rklm_rsm/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 181,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||orosbum.info/splash.php",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 182,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||photobucket.com^",
+			"initiatorDomains": [
+				"rokettube.co"
+			],
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 201
+	},
+	{
+		"id": 183,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||posta.com.tr^*/advertorial/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 184,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||r10.net/reklam",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 185,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||realist.gen.tr/125",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 186,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||realist.gen.tr/777",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 187,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||realist.gen.tr/banner.",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 188,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||realist.gen.tr/logo.php?",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 189,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||resim.sinemalarizle.com/kucukresim/",
+			"resourceTypes": [
+				"sub_frame",
+				"script"
+			],
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 76
+	},
+	{
+		"id": 190,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||roketone.com/_banner/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 191,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||rokettube.me/splash3.",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 192,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||rokettubefile.com/splash",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 193,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||sabah.com.tr/banner/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 194,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||sabah.com.tr/geo",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 195,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||sacitaslan.com/b/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 196,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||sadecegir.com/ifr/mypop.js",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 197,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||sanliurfa.com/frame/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 198,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||seslial.com^*banner.gif",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 199,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||sesonline.net/banner/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 200,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||sinemakeyfi.gen.tr/ali.swf",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 201,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||sinesalon.com/splash.",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 202,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||sporx.com/i/sx_",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 203,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||superpoligon.com/tracker",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 204,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||t24.com.tr/flash/*_banneri_",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 205,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||t24.com.tr^*/banner.swf",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 206,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||takvim.com.tr/banner/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 207,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||techno-labs.com/banner/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 208,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||tinyurl.com^",
+			"initiatorDomains": [
+				"xpornosikis1.com"
+			],
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 201
+	},
+	{
+		"id": 209,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||trt.net.tr/flash/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 210,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||tumgazeteler.com/?cat",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 211,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||turizmhaberleri.com/img/banner/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 212,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||turkiyegazetesi.com.tr/images/",
+			"resourceTypes": [
+				"object"
+			],
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 101
+	},
+	{
+		"id": 213,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||turkiyegazetesi.com.tr^*/banner/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 214,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||turkticaret.net/ads/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 215,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||turktime.com/banner/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 216,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||turuncutime.com/images/sinasi",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 217,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||ucanhoroz.com^*.swf",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 218,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||uludagsozluk.com/theme/res/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 219,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||uyesiz.org/pop.js",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 220,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||uzunpenisler.com/splash.gif",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 221,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||vakit.com.tr/0s.swf",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 222,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||vakit.com.tr/ad.",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 223,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||virgul.com/ad_",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 224,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||vizyonkolik.com/splash",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 225,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||wardom.com.tr/keylogger.gif",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 226,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||wardom.com.tr/pop2.js",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 227,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||wardom.com.tr/splash.js",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 228,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||wardom.org/msnpop",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 229,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||web.tr/banner/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 230,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||web.tr/v2/banner/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 231,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||webhaber.com/advers/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 232,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||wmaraci.com/sponsor/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 233,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||xpornosikis1.com/rek1.gif",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 234,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||xpornosikis1.com/rek2.gif",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 235,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||xpornosikis1.com/splash.php",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 236,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||xsikisizle.net/splash.php",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 237,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||yabancidiziizle.com/logro.html",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 238,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||yahoyt.com/main_banner",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 239,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||yenicaggazetesi.com.tr/banner/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 240,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||zehirli.net/splash.",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 241,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||zevkli.org/okey.gif",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 242,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||zorgenclik.us/pop.js",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 243,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||zorgenclik.us/splash.php",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 247,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||217.195.197.45^",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 248,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||ad.donanimhaber.com^",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 249,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||ad.logro.com.tr^",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 250,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||ad.ntvmsnbc.com^",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 251,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||ad.webservis.gen.tr^",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 252,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||ad.zaman.com.tr^",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 253,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||ad4game.sharingcentre.net^",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 254,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||adpozitif.com^",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 255,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||adpre.com^",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 256,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||adrayon.com^",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 257,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||ads-rouge.haber7.com^",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 258,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||ads.gercekgundem.com^",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 259,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||ads.sharepi.com^",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 260,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||ads.videonap.com^",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 261,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||adshare3.freedocast.com^",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 262,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||adworld.com.tr^",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 263,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||aff2.gittigidiyor.com^",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 264,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||aff3.gittigidiyor.com^",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 265,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||ajansreklam.net/media/banner/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 266,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||b.cdn.md^",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 267,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||banners.tempobet.com^",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 268,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||bumerangshowsites.hurriyet.com.tr^",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 269,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||buyuksun.com^",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 270,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||e-kolay.net^",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 271,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||leetmedia.com/spot.php",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 272,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||medyaklik.com^",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 273,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||reklamalan.com^",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 274,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||reklamport.com^",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 275,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||rs.chip.com.tr^",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 276,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||sayyac.net^",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 277,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||superstadyum.net/banner/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 278,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||top10.yazete.com^",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 279,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||torrentfrancais.com/pub.html",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 280,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||uzmanreklam.com^",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 284,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||109.73.75.29^",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 285,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||109.73.75.3^",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 286,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||ad.mygamesol.com^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 287,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||ad.wslinx.com^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 288,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||adcater.com^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 289,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||admax.com.tr^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 290,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||admdspc.com^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 291,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||admost.com^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 292,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||adnet.com.tr^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 293,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||adport.com.tr^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 294,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||adrayon.net^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 295,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||adrttt.com^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 296,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||ads.ihaberadserver.com^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 297,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||ads.oyungemisi.com^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 298,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||ads.webme.com^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 299,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||adserver.adklik.com.tr^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 300,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||adsp.ciner.com.tr^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 301,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||adtech.com.tr^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 302,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||aff.indirdik.com^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 303,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||aff.tamvakti.com^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 304,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||altinpiyasa.com^*-banner.swf",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 305,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||arabam.com^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 306,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||arealistikmanken.net^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 307,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||artemisaffiliates.com^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 308,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||bakire.ws^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 309,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||baskentmedya.com^",
+			"domainType": "thirdParty",
+			"resourceTypes": [
+				"object"
+			],
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 102
+	},
+	{
+		"id": 310,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||boldserver.net^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 311,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||catacat.tk^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 312,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||dulsohbet.net^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 313,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||fotocu.org^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 314,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||fotocunuz.com^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 315,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||grimex.net^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 316,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||hizlicevap.com^",
+			"domainType": "thirdParty",
+			"resourceTypes": [
+				"sub_frame"
+			],
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 102
+	},
+	{
+		"id": 317,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||ingilizce.tk^*.swf",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 318,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||inilti.com^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 319,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||kadinca.us^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 320,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||kizlarlasohbet.co^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 321,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||lalmp3.org^*.html",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 322,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||linkcenneti.net^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 323,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||madserv.net^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 324,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||mariosonicgame.net^",
+			"domainType": "thirdParty",
+			"resourceTypes": [
+				"sub_frame"
+			],
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 102
+	},
+	{
+		"id": 325,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||minireklam.com^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 326,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||modatrendim.com^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 327,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||mp3indircem.tk^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 328,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||nealirsan3lira.com/banner/",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 329,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||netizle.net^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 330,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||onatbilisim.com^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 331,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||ontek-serv.com^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 332,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||orjinalmarket.net^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 333,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||orjinalshop.net^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 334,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||oyunsayar.com^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 335,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||partnermatrix.com^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 336,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||penisbuyutucuhaplari.com^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 337,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||penisbuyutucum.org^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 338,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||rdrtr.com^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 339,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||reklamdor.com^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 340,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||reklamint.com^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 341,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||reklamoloji.com^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 342,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||reklamsoft.com^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 343,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||reklamstore.com^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 344,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||saglik.meltemhastanesi.com^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 345,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||savoy.cubecdn.net^",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 346,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||sikisizlex.org^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 347,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||sikispornosextv.com^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 348,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||softreklam.com^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 349,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||sokakkizi.com^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 350,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||stargames.com^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 351,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||topeuro.biz^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 352,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||turkpartnerim.net^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 353,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||uzunpenisler.com^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 354,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||vpillstemsilcisi.com^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 355,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||xn--ayp-kua.com^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 356,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||ycreklam.com^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 357,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||yenimedya.com.tr^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 358,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||yudalisaccikartici.com^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 362,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||bingomingo.com^",
+			"excludedResourceTypes": [
+				"image"
+			],
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 102
+	},
+	{
+		"id": 363,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||cafecanli.com^",
+			"excludedResourceTypes": [
+				"image"
+			],
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 102
+	},
+	{
+		"id": 364,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||ciplakgorun.net^",
+			"excludedResourceTypes": [
+				"image"
+			],
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 102
+	},
+	{
+		"id": 365,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||geceshop.com/?",
+			"excludedResourceTypes": [
+				"image"
+			],
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 102
+	},
+	{
+		"id": 366,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||htfilmindir.com^",
+			"excludedResourceTypes": [
+				"image"
+			],
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 102
+	},
+	{
+		"id": 367,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||iload.to^",
+			"excludedResourceTypes": [
+				"image"
+			],
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 102
+	},
+	{
+		"id": 368,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||kirmiziyol.org^",
+			"excludedResourceTypes": [
+				"image"
+			],
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 102
+	},
+	{
+		"id": 369,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||mpornoizle.info^",
+			"excludedResourceTypes": [
+				"image"
+			],
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 102
+	},
+	{
+		"id": 370,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||notification.travian.com.tr^",
+			"excludedResourceTypes": [
+				"image"
+			],
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 102
+	},
+	{
+		"id": 371,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||penisbuyuten.net^",
+			"excludedResourceTypes": [
+				"image"
+			],
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 102
+	},
+	{
+		"id": 372,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||vidivodo.com/?utm_source",
+			"excludedResourceTypes": [
+				"image"
+			],
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 102
+	},
+	{
+		"id": 373,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||xsikisizle.net^",
+			"excludedResourceTypes": [
+				"image"
+			],
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 102
+	},
+	{
+		"id": 374,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||zorgenclik.us^",
+			"excludedResourceTypes": [
+				"image"
+			],
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 102
+	},
+	{
+		"id": 378,
+		"action": {
+			"type": "allow"
+		},
+		"condition": {
+			"urlFilter": "||ad.e-kolay.net/bt.js",
+			"initiatorDomains": [
+				"ekolay.net"
+			],
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 100201
+	},
+	{
+		"id": 380,
+		"action": {
+			"type": "allow"
+		},
+		"condition": {
+			"urlFilter": "||ad.e-kolay.net/MNetOrfad.js?",
+			"initiatorDomains": [
+				"ekolay.net"
+			],
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 100201
+	},
+	{
+		"id": 381,
+		"action": {
+			"type": "allow"
+		},
+		"condition": {
+			"urlFilter": "||ad.e-kolay.net/vast.a2?target",
+			"initiatorDomains": [
+				"milliyet.com.tr",
+				"shiftdelete.net"
+			],
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 100151
+	},
+	{
+		"id": 382,
+		"action": {
+			"type": "allow"
+		},
+		"condition": {
+			"urlFilter": "||ad.e-kolay.net/xmlad.a2?target",
+			"initiatorDomains": [
+				"medyafaresi.com"
+			],
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 100201
+	},
+	{
+		"id": 383,
+		"action": {
+			"type": "allow"
+		},
+		"condition": {
+			"urlFilter": "||ad.e-kolay.net^*.swf^",
+			"initiatorDomains": [
+				"ekolay.net"
+			],
+			"resourceTypes": [
+				"object"
+			],
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 100301
+	},
+	{
+		"id": 384,
+		"action": {
+			"type": "allow"
+		},
+		"condition": {
+			"urlFilter": "||advert.gittigidiyor.com^",
+			"initiatorDomains": [
+				"gittigidiyor.com"
+			],
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 100201
+	},
+	{
+		"id": 385,
+		"action": {
+			"type": "allow"
+		},
+		"condition": {
+			"urlFilter": "||cdntr.com/ntvspor/reklam_playlist.asp",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 100001
+	},
+	{
+		"id": 386,
+		"action": {
+			"type": "allow"
+		},
+		"condition": {
+			"urlFilter": "||delivery.reklamz.com/please/showit/",
+			"initiatorDomains": [
+				"xdiziizle.com"
+			],
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 100201
+	},
+	{
+		"id": 387,
+		"action": {
+			"type": "allow"
+		},
+		"condition": {
+			"urlFilter": "||mynet.com.tr/ads/*/clientAds-devel.js",
+			"initiatorDomains": [
+				"video.mynet.com"
+			],
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 100201
+	},
+	{
+		"id": 388,
+		"action": {
+			"type": "allow"
+		},
+		"condition": {
+			"urlFilter": "||mynet.com/reklam/*.swf",
+			"initiatorDomains": [
+				"mynet.com"
+			],
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 100201
+	},
+	{
+		"id": 389,
+		"action": {
+			"type": "allow"
+		},
+		"condition": {
+			"urlFilter": "||sondakika.com/video-haber/adsense_",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 100001
+	},
+	{
+		"id": 390,
+		"action": {
+			"type": "allow"
+		},
+		"condition": {
+			"urlFilter": "||zapkolik.com/reklam.xml",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 100001
+	},
+	{
+		"id": 391,
+		"action": {
+			"type": "allow"
+		},
+		"condition": {
+			"urlFilter": "||zapkolik.com/zaplayer.swf?",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 100001
+	},
+	{
+		"id": 395,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||alkislarlayasiyorum.com/tracker.html",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 396,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||bugun.com.tr^*/stat.aspx?",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 397,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||genelistatistik3.milliyet.com.tr^",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 398,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||istatistik.fanatik.com.tr^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 399,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||letitbit.net/counter/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 400,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||panel.gazetevatan.com^",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	},
+	{
+		"id": 401,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||reali.st^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 402,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||realist.gen.tr^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 403,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||webtemsilcisi.com^",
+			"domainType": "thirdParty",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 2
+	},
+	{
+		"id": 837,
+		"action": {
+			"type": "block"
+		},
+		"condition": {
+			"urlFilter": "||eksisozluk.com/adcss/",
+			"isUrlFilterCaseSensitive": false
+		},
+		"priority": 1
+	}
+]

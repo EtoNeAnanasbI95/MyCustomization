@@ -1,0 +1,6 @@
+2024/07/06-23:32:25.295 218c Creating DB /home/notpineapple/.config/BraveSoftware/Brave-Browser-Nightly/Default/IndexedDB/https_habr.com_0.indexeddb.leveldb since it was missing.
+2024/07/06-23:32:25.303 218c Reusing MANIFEST /home/notpineapple/.config/BraveSoftware/Brave-Browser-Nightly/Default/IndexedDB/https_habr.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/07/06-23:34:43.270 218c Level-0 table #5: started
+2024/07/06-23:34:43.274 218c Level-0 table #5: 1008 bytes OK
+2024/07/06-23:34:43.279 218c Delete type=0 #3
+2024/07/06-23:34:43.280 218c Manual compaction at level-0 from (begin) .. (end); will stop at (end)

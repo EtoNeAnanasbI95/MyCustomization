@@ -1,0 +1,18 @@
+2024/07/14-09:14:41.616 4 Reusing MANIFEST /home/notpineapple/.config/BraveSoftware/Brave-Browser-Nightly/Default/Local Storage/leveldb/MANIFEST-000001
+2024/07/14-09:14:41.620 4 Recovering log #508
+2024/07/14-09:14:41.621 4 Reusing old log /home/notpineapple/.config/BraveSoftware/Brave-Browser-Nightly/Default/Local Storage/leveldb/000508.log 
+2024/07/14-09:14:50.214 4 Level-0 table #512: started
+2024/07/14-09:14:50.223 4 Level-0 table #512: 94844 bytes OK
+2024/07/14-09:14:50.231 4 Delete type=0 #508
+2024/07/14-09:15:44.911 4 Level-0 table #514: started
+2024/07/14-09:15:44.915 4 Level-0 table #514: 94158 bytes OK
+2024/07/14-09:15:44.920 4 Delete type=0 #511
+2024/07/14-09:15:44.920 4 Compacting 4@0 + 1@1 files
+2024/07/14-09:15:44.939 4 Generated table #515@0: 1154 keys, 1304366 bytes
+2024/07/14-09:15:44.939 4 Compacted 4@0 + 1@1 files => 1304366 bytes
+2024/07/14-09:15:44.944 4 compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/07/14-09:15:44.945 4 Delete type=2 #512
+2024/07/14-09:15:44.945 4 Delete type=2 #507
+2024/07/14-09:15:44.945 4 Delete type=2 #505
+2024/07/14-09:15:44.945 4 Delete type=2 #509
+2024/07/14-09:15:44.945 4 Delete type=2 #514

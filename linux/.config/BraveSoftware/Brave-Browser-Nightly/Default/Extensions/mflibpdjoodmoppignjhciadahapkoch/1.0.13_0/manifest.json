@@ -1,0 +1,27 @@
+{
+   "background": {
+      "service_worker": "worker.js"
+   },
+   "content_scripts": [ {
+      "js": [ "init.js" ],
+      "matches": [ "https://vk.com/*", "https://vk.ru/*" ],
+      "run_at": "document_start"
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_description__",
+   "homepage_url": "https://vk.com/audio?section=all",
+   "host_permissions": [ "https://vk.com/*", "https://vk.ru/*" ],
+   "icons": {
+      "128": "128.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkpciXd6Oydp1cMDD+j0pHnV94KFrn3OBqg+R+2zlpF8jL8BnzYsUPEt4fgRZTb0LzKAgYSKi0sxzY81fo780R70wqqxTXCjWkXFRjdEs1r0sfWWl1tyVovJi4RuGcoevfz5RL1lFpe9OrskdmZIPD8FtNda8WKu74KNba4oTmUkT65JlCES/Qb+o0WsyO2e0e7Ect97FHBwYnYpto4zD9t8ZSV9VECPwN4gbGgbfvqgC6dNQkan4ai53HXZePkRTY7BAHUUia5Ez5JzjyEgZB3Sen1r67n9MQnmK6wF+zA3IDugMrbuqj/KnIl70jyWXs23/oahIJq9KEoQNho1pCwIDAQAB",
+   "manifest_version": 3,
+   "name": "__MSG_name__",
+   "permissions": [ "scripting" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.13",
+   "web_accessible_resources": [ {
+      "matches": [ "https://vk.com/*", "https://vk.ru/*" ],
+      "resources": [ "*" ]
+   } ]
+}

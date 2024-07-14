@@ -1,0 +1,28 @@
+02:33:39 GMT+0300 (Moscow Standard Time) [INFO]: spawning binary with command: /home/notpineapple/.config/Code/User/globalStorage/tabnine.tabnine-vscode/binaries/4.177.0/x86_64-unknown-linux-musl/TabNine args: --tls_config insecure=false --no-lsp=true --client=vscode --client-metadata clientVersion=1.91.1 pluginVersion=3.126.0 t9-vscode-AutoImportEnabled=true t9-vscode-TSAutoImportEnabled=true t9-vscode-JSAutoImportEnabled=true vscode-telemetry-enabled=true vscode-remote=false vscode-extension-kind=1 vscode-theme-name=Prplkai vscode-theme-kind=Dark vscode-machine-id=adc72cd601e8ed78dc228e186a8f563bf121fa61d47c8104b1d1695374bac0ed vscode-is-new-app-install=true vscode-session-id=fd6a743b-02eb-4e04-ae08-254faa3cd2d21720740782905 vscode-language=en vscode-app-name=Visual Studio Code vscode-beta-channel-enabled=false vscode-status-customization=unknown vscode-inline-api-enabled=true vscode-code-lens-enabled=true vscode-found-intellicode=false ide-restart-counter=0 
+
+02:33:39 GMT+0300 (Moscow Standard Time) [DEBUG]: capabilities resolved immediately 
+
+02:33:42 GMT+0300 (Moscow Standard Time) [DEBUG]: Updating root paths for project unknown: [] 
+
+02:34:12 GMT+0300 (Moscow Standard Time) [DEBUG]: Updating root paths for project unknown: [] 
+
+02:34:36 GMT+0300 (Moscow Standard Time) [ERROR]: Error: Binary request timed out. {"LoginWithCustomToken":{"custom_token":"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwczovL2lkZW50aXR5dG9vbGtpdC5nb29nbGVhcGlzLmNvbS9nb29nbGUuaWRlbnRpdHkuaWRlbnRpdHl0b29sa2l0LnYxLklkZW50aXR5VG9vbGtpdCIsImlhdCI6MTcyMDc0MDg0MywiZXhwIjoxNzIwNzQ0NDQzLCJpc3MiOiJmaXJlYmFzZS1hZG1pbnNkay02cjM0eUB0YWJuaW5lLWF1dGgtMzQwMDE1LmlhbS5nc2VydmljZWFjY291bnQuY29tIiwic3ViIjoiZmlyZWJhc2UtYWRtaW5zZGstNnIzNHlAdGFibmluZS1hdXRoLTM0MDAxNS5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsInVpZCI6ImhqU2x1SWpkem9ndHZEQUdNOWJVS2pMU0tsSDMifQ.Y4b4D_UfIm_zHrISuVCUXx4lqr7KGJnkkPeSfoYIOXw24NK4UsE8bCALLGswitViud63y9ERH_3eGfOmH1nNhp1j2FmhilZW0jGoKjPozXFCvd_ClHIWloi3YUHMPp9EU6CtTVRg3CKMntbn9xTaoRc2nIHeNfV1eetyfVlDl2H4sJ9V1A8JKtZYqTO-NhLXRsQ9OMVoS5_ehgh9JUbc9L0s4L8-QWiTSZkfRkRR9gpulUIcOIkLQ-E0itWwFwaHro5-4Dyb7c0iM31_gHKEiBbsHCia5ySXgAlt6HylWdDzRrjD8_a89ir1v0vdpO1GIu1syMLC-KmStCxS46p39w"}} 
+
+02:34:42 GMT+0300 (Moscow Standard Time) [DEBUG]: Updating root paths for project unknown: [] 
+
+02:35:12 GMT+0300 (Moscow Standard Time) [DEBUG]: Updating root paths for project unknown: [] 
+
+02:35:42 GMT+0300 (Moscow Standard Time) [DEBUG]: Updating root paths for project unknown: [] 
+
+02:36:12 GMT+0300 (Moscow Standard Time) [DEBUG]: Updating root paths for project unknown: [] 
+
+02:36:42 GMT+0300 (Moscow Standard Time) [DEBUG]: Updating root paths for project unknown: [] 
+
+02:37:12 GMT+0300 (Moscow Standard Time) [DEBUG]: Updating root paths for project unknown: [] 
+
+02:37:42 GMT+0300 (Moscow Standard Time) [DEBUG]: Updating root paths for project unknown: [] 
+
+02:38:12 GMT+0300 (Moscow Standard Time) [DEBUG]: Updating root paths for project unknown: [] 
+
+02:38:30 GMT+0300 (Moscow Standard Time) [WARN]: assistant is closing 
+
