@@ -1,5 +1,5 @@
 # Моя кастомизация arch linux
-* ReviOS подвела и я поставио arch, как только узнал о существовании r/unixporn сошёл с ума и погнал кастомизировать свой arch. Комбинировал разные готовые сборки, что-то взял из [hyde](https://github.com/prasanthrangan/hyprdots), что-то из [Shen Hyprhype](https://github.com/Shentxt/Hyprhype), что-то просто из интернета
+* ReviOS подвела и я поставил arch. Как только узнал о существовании r/unixporn, сошёл с ума и погнал кастомизировать свой arch. Комбинировал разные готовые сборки, что-то взял из [hyde](https://github.com/prasanthrangan/hyprdots), что-то из [Shen Hyprhype](https://github.com/Shentxt/Hyprhype), что-то просто из интернета
 # Описание
 * Шрифты -- JetBrainsMono Nerd Font, Font Awesome, Neto Color Emoji, Symbols Nerd Font
 * Виджеты -- eww
