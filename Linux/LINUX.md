@@ -27,6 +27,7 @@
 * GTK theme -- Catppuccin-Mocha-Standard-Lavender-Dark
 * Kvantum theme -- Catppuccin-Mocha-Pink
 # Препью
+> в процессе
 # TODO
 * Закастомить dolphin
 * Убрать мусор из eww
