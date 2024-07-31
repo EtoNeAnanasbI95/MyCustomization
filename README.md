@@ -33,3 +33,7 @@
 
 # Мусор
 * Помимо всего прочего, ради личого удобства, я закинул сюда свой [cs2AutoExecConfig](https://github.com/EtoNeAnanasbI95/MyCustomization/tree/main/CS2autoexec.cfg), а так [мою тему для дискорда](https://github.com/EtoNeAnanasbI95/MyCustomization/tree/main/BetterDiscord)
+
+# TODO
+* поменять конфиг alacritty
+* доделать linux
