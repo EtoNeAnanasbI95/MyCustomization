@@ -27,3 +27,10 @@
 * GTK theme -- Catppuccin-Mocha-Standard-Lavender-Dark
 * Kvantum theme -- Catppuccin-Mocha-Pink
 # Препью
+# TODO
+* Закастомить dolphin
+* Убрать мусор из eww
+* Разбить конфиг hyprland.conf на разные файлы
+* Добавить виджет с раскладкой в eww
+* Добавить виджет с погодой в bg_windgets eww
+* Дописать функционал для record_menu
