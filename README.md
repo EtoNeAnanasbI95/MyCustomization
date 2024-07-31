@@ -32,7 +32,7 @@
 * Ну и на сладкое, не большой пак обоев, как гифки так и обычные минималистичные обои
 
 # Мусор
-* Помимо всего прочего, ради личого удобства, я закинул сюда свой [cs2AutoExecConfig](https://github.com/EtoNeAnanasbI95/MyCustomization/tree/main/CS2autoexec.cfg), а так [мою тему для дискорда](https://github.com/EtoNeAnanasbI95/MyCustomization/tree/main/BetterDiscord)
+* Помимо всего прочего, ради личного удобства, я закинул сюда свой [cs2AutoExecConfig](https://github.com/EtoNeAnanasbI95/MyCustomization/tree/main/CS2autoexec.cfg), а так же [мою тему для дискорда](https://github.com/EtoNeAnanasbI95/MyCustomization/tree/main/BetterDiscord)
 
 # TODO
 * поменять конфиг alacritty
