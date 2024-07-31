@@ -1,0 +1,114 @@
+/*-------------------[Variables]------------------------------*/
+
+.bg {
+  padding: 7rem;
+  background: $fg;
+  border-radius: 30%;
+  border: 1px solid $magenta;
+}
+
+.separator {
+  color: $white;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+/*-------------------[Welcome]------------------------------*/
+
+.welcome {
+  margin-left: 1rem;
+}
+
+.welcome-text {
+  color: $white;
+  font-size: 2.50rem;
+}
+
+.user-text {
+  color: $white;
+  margin-bottom: -2rem;
+  margin-right: 0.50rem;
+  font-size: 2.50rem;
+}
+
+.welcome-image {
+  background-image: url("/home/notpineapple/.config/Eto_Ne_AnanasbI95.jpeg");
+  background-size: cover;
+  background-position: center;
+  min-height: 15rem;
+  min-width: 15rem;
+  border-radius: 100%;
+  border: 2px solid $magenta;
+}
+
+.second-container {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+/*-------------------[Clock]------------------------------*/
+
+.big_clock_box {
+  color: $white;
+}
+
+.big_clock_label {
+  font-size: 6rem;
+}
+
+.big_calen_label {
+  font-size: 2rem;
+}
+
+/*-------------------[Connect status]------------------------------*/
+
+.connect-status {
+  color: $white;
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/*-------------------[Info]------------------------------*/
+
+.info_box {
+  font-size: 2.50rem;
+}
+
+.info-circle {
+  border-radius: 100%;
+  padding: 2.15rem;
+  border: 12px none $white;
+}
+
+.stat-icon {
+  color: $white;
+}
+
+.cpu-text {
+  padding-top: 0;
+  padding-bottom: 2rem;
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: $white;
+}
+
+.memory-text {
+  padding-top: 0;
+  padding-bottom: 2rem;
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: $white;
+}
+
+.disk-text {
+  padding-top: 0;
+  padding-bottom: 2rem;
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: $white;
+}

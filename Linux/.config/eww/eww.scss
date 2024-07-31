@@ -1,0 +1,55 @@
+/*-------------------[Tooltip]------------------------------*/
+
+* {
+    all: unset;
+    font-family: JetBrainsMono Nerd Font;
+    font-weight: bold;
+}
+
+/*-------------------[Variable]------------------------------*/
+
+@mixin window {
+    background-color: $bg;
+    padding: 1rem;
+    color: $white;
+/*  box-shadow: 0 0 4px 2px $lavanda;*/
+    margin: 1rem;
+    border: 1px solid $magenta;
+    transition: 0.3s;
+    border-radius: 2rem;
+}
+
+@mixin over{
+  background-image: $gradient;
+}
+
+/*-------------------[Color]------------------------------*/
+
+$bg: rgba(12, 13, 9, 0.6);
+$fg: rgba(12, 13, 9, 0.4);
+
+$gradient: linear-gradient(45deg, #FCE355, #FDEA80, #FDF1AA);;
+
+
+
+$white:  #c2c2c1;
+$cyan: #4DD0E1;
+$magenta: #B5674A;
+$lavanda: #F8D962;
+
+/*-------------------[Import]------------------------------*/
+
+/*@import "scripts/colors/colors.scss";*/
+
+@import "scss/bar.scss";
+@import "scss/dock.scss";
+
+@import "scss/control_center.scss";
+@import "scss/notifications_popup.scss";
+@import "scss/music_popup.scss";
+
+@import "scss/bg_widgets.scss";
+@import "scss/quick_settings.scss";
+@import "scss/user.scss";
+@import "scss/volume.scss";
+@import "scss/notifications.scss";

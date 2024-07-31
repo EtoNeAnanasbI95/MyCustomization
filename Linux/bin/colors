@@ -1,0 +1,115 @@
+#!/bin/bash
+
+source ~/.cache/wal/colors.sh
+
+hex_to_rgb() {
+    local hex_nums=""
+    read hex_nums <<< "$(echo "${1#"#"}" | tr '[:lower:]' '[:upper:]')"
+
+    local r=$(echo "ibase=16; ${hex_nums:0:2}" | bc)
+    local g=$(echo "ibase=16; ${hex_nums:2:2}" | bc)
+    local b=$(echo "ibase=16; ${hex_nums:4:2}" | bc)
+
+    echo "$r $g $b"
+}
+
+rgb_to_hex() {
+  local r=$(printf '%02X' $1)
+  local g=$(printf '%02X' $2)
+  local b=$(printf '%02X' $3)
+  echo "#$r$g$b"
+}
+
+lighten_color() {
+  local r=$1
+  local g=$2
+  local b=$3
+  local factor=$4
+
+  local new_r=$(echo "$r + ($factor * (255 - $r))" | bc)
+  local new_g=$(echo "$g + ($factor * (255 - $g))" | bc)
+  local new_b=$(echo "$b + ($factor * (255 - $b))" | bc)
+
+  new_r=$(printf "%.0f" $new_r)
+  new_g=$(printf "%.0f" $new_g)
+  new_b=$(printf "%.0f" $new_b)
+
+  rgb_to_hex $new_r $new_g $new_b
+}
+
+edit_border_colors() {
+    tee "${HOME}/.config/hypr/colors.conf" > /dev/null <<EOL
+general {
+    col.active_border = rgb(${color1:1}) rgb(${color6:1}) 45deg
+    col.inactive_border = rgba(595959aa)
+}
+EOL
+}
+
+edit_eww_colors() {
+    sed -i "s/\(\$white:\s*\).*/\1$color7;/" "$HOME/.config/eww/eww.scss"
+    sed -i "s/\(\$magenta:\s*\).*/\1$color1;/" "$HOME/.config/eww/eww.scss"
+    sed -i "s/\(\$lavanda:\s*\).*/\1$color6;/" "$HOME/.config/eww/eww.scss"
+    read r g b <<< "$(hex_to_rgb $background)"
+    sed -i "s/\(\$bg:\s*\).*/\1rgba($r, $g, $b, 0.6);/" "$HOME/.config/eww/eww.scss"
+
+    read r g b <<< "$(hex_to_rgb $background)"
+    sed -i "s/\(\$fg:\s*\).*/\1rgba($r, $g, $b, 0.4);/" "$HOME/.config/eww/eww.scss"
+
+    read r g b <<< "$(hex_to_rgb $color4)"
+    LIGHTER_20=$(lighten_color $r $g $b 0.2)
+    LIGHTER_40=$(lighten_color $r $g $b 0.4)
+    LIGHTER_60=$(lighten_color $r $g $b 0.6)
+    gr="linear-gradient(45deg, $LIGHTER_20, $LIGHTER_40, $LIGHTER_60);"
+    sed -i "s/\(\$gradient:\s*\).*/\1$gr;/" "$HOME/.config/eww/eww.scss"
+}
+
+edit_alacritty_colors() {
+    cp "${HOME}/.cache/wal/colors-alacritty.toml" "${HOME}/.config/alacritty/alacritty.toml"
+    tee -a "${HOME}/.config/alacritty/alacritty.toml" > /dev/null <<EOL
+[window]
+opacity = 0.45
+blur = true
+padding = { x = 15, y = 15 }
+
+[font]
+size = 14.0
+normal = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+EOL
+}
+
+edit_hyprlock_backgroud() {
+    sed -i  "/^.*BACKGROUND$/,/^\s*}$/s|^\(\s*path\s*=\s*\).*|\1$wallpaper|"  ~/.config/hypr/hyprlock.conf
+}
+
+case $1 in
+--background | -b) echo $background ;;
+--foreground | -f) echo $foreground ;;
+--cursor | -c) echo $cursor ;;
+--color0 | -c0) echo $color0 ;;
+--color1 | -c1) echo $color1 ;;
+--color2 | -c2) echo $color2 ;;
+--color3 | -c3) echo $color3 ;;
+--color4 | -c4) echo $color4 ;;
+--color5 | -c5) echo $color5 ;;
+--color6 | -c6) echo $color6 ;;
+--color7 | -c7) echo $color7 ;;
+--color8 | -c8) echo $color8 ;;
+--color9 | -c9) echo $color9 ;;
+--color10 | -c10) echo $color10 ;;
+--color11 | -c11) echo $color11 ;;
+--color12 | -c12) echo $color12 ;;
+--color13 | -c13) echo $color13 ;;
+--color14 | -c14) echo $color14 ;;
+--color15 | -c15) echo $color15 ;;
+--set-colors | -S |*)
+    # switch alacritty colors
+    edit_alacritty_colors
+    # switch eww colors
+    edit_eww_colors
+    # switch hyprland border colors
+    edit_border_colors
+    # switch hyprlock background image
+    edit_hyprlock_backgroud 
+    ;;
+esac

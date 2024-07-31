@@ -1,0 +1,62 @@
+;;-------------------[Widgets]------------------------------
+
+(defwidget bg_widgets []
+  (box :orientation "v" :valign "center" :halign "center" :class "bg"
+    (box :orientation "h" :space-evenly false :halign "center"
+      (label :class "welcome-image" :valign "center")
+      (welcome)
+    )
+    (box :orientation "h" :space-evenly false :valign "center" :halign "center" :class "second-container"
+      (time)
+      (separator)
+      (quotes)
+    )
+  )
+)
+
+;;-------------------[Weather and clock]------------------------------
+
+(defwidget time []
+  (box :orientation "v" :space-evenly false :valign "center" :halign "center"
+    (box :class "big_clock_box" :orientation "v" :space-evenly false
+      (label :class "big_clock_label" :text {formattime(EWW_TIME, "%I:%M %p")})
+      (label :class "big_calen_label" :text {formattime(EWW_TIME, "%d %B %Y")})
+    )
+    (label :class "connect-status" :text "󰤨 Connect to the internet" :visible {weather == "null" ? true : false})
+  )
+)
+
+;;-------------------[Quotes]------------------------------
+
+(defwidget quotes []
+  (box :orientation "h" :space-evenly false  :valign "center" :halign "center"
+    (box :class "info_box" :orientation "v" :spacing 15 :space-evenly "false"
+      (circular-progress :class "stat-icon" :value cpu :thickness 11
+        (label :class "info-circle" :text "󰍛"))
+      (label :class "cpu-text" :valign "end" :halign "center" :text "${cpu}%"))
+    (box :class "info_box" :orientation "v" :spacing 15 :space-evenly "false"
+      (circular-progress :class "stat-icon" :value memory :thickness 11
+        (label :class "info-circle" :text "󰫗"))
+      (label :class "memory-text" :valign "end" :halign "center" :text "${memory}%"))
+    (box :class "info_box" :orientation "v" :spacing 15 :space-evenly "false"
+      (circular-progress :class "stat-icon" :value disk :thickness 11
+        (label :class "info-circle" :text "󰇑"))
+      (label :class "disk-text" :valign "end" :halign "center" :text "${disk}%"))
+  )
+)
+
+;;-------------------[Welcome]------------------------------
+
+(defwidget welcome []
+  (box :orientation "v" :space-evenly false :class "welcome" :valign "center"
+    (box :orientation "h" :space-evenly false
+      (label :class "welcome-text" :text username)
+      (label :class "welcome-text" :text ", Welcome Back")
+    )
+    (box :orientation "h" :space-evenly false
+      (label :class "user-text" :text uptime)
+      (label :class "user-text" :text {"@${hostname}"})
+    )
+  )
+)
+
