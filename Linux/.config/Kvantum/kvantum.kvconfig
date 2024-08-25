@@ -1,2 +1,6 @@
 [General]
-theme=Catppuccin-Mocha-Pink
+theme=wallbash
+
+[Applications]
+KvAdaptaDark=dolphin
+wallbash=dolphin
