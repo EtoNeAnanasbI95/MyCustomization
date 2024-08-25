@@ -4,9 +4,14 @@ source ~/.cache/wal/colors-tty.sh
 source ~/.cache/wal/colors.sh
 #User binary directories
 export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/go/bin:$PATH"
 
 # Add oh my posh to auto start
 eval "$(oh-my-posh init zsh --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/bubbles.omp.json')"
+
+# Add homebrew to varaibles
+# eval "$(/bin/brew shellenv)"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -114,13 +119,35 @@ sw() {
 	wal -i $1 -o "/home/notpineapple/bin/colors"
 }
 
+fp() {
+	git add .
+	git commit -m "$1"
+	if [ $2 != "" ]
+	then
+		echo
+		echo
+		echo
+		git branch -M $2
+		git push origin $2
+		echo
+		echo
+		echo
+	else
+		git push
+	fi
+}
+
 # User aliases
 alias c="clear"
 alias q="exit"
 alias pcs="shutdown -h now"
 alias n="nvim"
+alias vim="nvim"
 alias cd..="cd .."
 alias rp="pokemon-colorscripts -r"
 alias zr="omz reload"
 alias code="code --ozone-platform=wayland"
 alias wout="wlogout -b 2-2 -L 400 -R 400"
+alias gnome-loupe='flatpak run org.gnome.Loupe'
+
+
