@@ -29,17 +29,17 @@ case $1 in
     case $2 in
     all) 
         toggle_screenshot_menu
-        sleep 0.11
+        sleep 0.16
         hyprshot -o ~/Pictures/Screenshots -z -m output &
         ;;
     window)
         toggle_screenshot_menu
-        sleep 0.11
+        sleep 0.16
         hyprshot -o ~/Pictures/Screenshots -z -m window &
         ;;
     area)
         toggle_screenshot_menu
-        sleep 0.11
+        sleep 0.16
         hyprshot -o ~/Pictures/Screenshots -z -m region &
         ;;
     esac

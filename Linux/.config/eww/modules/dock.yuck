@@ -35,8 +35,8 @@
 
 (defwidget browser []
   (button
-    :onclick "brave-nightly &"
-    :class "icon" ""
+    :onclick "firefox &"
+    :class "icon" ""
   )
 )
 

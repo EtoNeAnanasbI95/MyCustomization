@@ -1,0 +1,6 @@
+(defwidget brightness_scale []
+    (overlay :hexpand true
+      (scale :min 0 :max 255  :value {brightness} :onchange "brightnessctl s {}" :class "volume-scale")
+      (label :class "volume-icon" :halign "start" :text {brightness < 85 ? "" : brightness < 170 ? "" : ""})
+    )
+  )

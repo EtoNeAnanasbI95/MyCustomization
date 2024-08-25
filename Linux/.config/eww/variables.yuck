@@ -26,6 +26,8 @@
 
 (defpoll memory :interval "5s" "scripts/info.sh mem")
 
+(defpoll brightness :interval "1s" "brightnessctl g")
+
 (defpoll vpn_status :initial "Off" :interval "2s" "~/bin/vpn --status")
 
 (defpoll disk :interval "1m" "scripts/info.sh disk")

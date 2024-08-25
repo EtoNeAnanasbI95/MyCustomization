@@ -7,6 +7,7 @@
 (include "modules/notifications_popup.yuck")
 (include "modules/control_center.yuck")
 (include "modules/variables.yuck")
+(include "modules/brightness.yuck")
 
 (include "modules/volume.yuck")
 (include "modules/notifications.yuck")
