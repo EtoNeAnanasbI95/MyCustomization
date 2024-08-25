@@ -26,7 +26,7 @@
 * IDE -- VSCode/neovim
 * GTK theme -- Catppuccin-Mocha-Standard-Lavender-Dark
 * Kvantum theme -- Catppuccin-Mocha-Pink
-# Препью
+# Превью
 > в процессе
 # TODO
 * Закастомить dolphin
