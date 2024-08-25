@@ -4,7 +4,7 @@
 * Шрифты -- JetBrainsMono Nerd Font, Font Awesome, Neto Color Emoji, Symbols Nerd Font
 * Виджеты -- eww
 * Уведомления -- dunst
-* Проводник -- dolphin
+* Проводник -- nemo
 * Экран блокировки -- hyprlock
 * Arch loader -- plymouth
 * Plymouth theme -- [adi1090x -- Colorful Loop](https://github.com/adi1090x/plymouth-themes)
