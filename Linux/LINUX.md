@@ -14,7 +14,7 @@
 * Grub theme -- [Graphite Grub2 theme](https://github.com/vinceliuice/Graphite-gtk-theme/tree/main/other/grub2)
 * TUI проводник -- yazi
 * Скриншоты -- hyprshot
-* Записать -- obs
+* Записать -- OBS/Kooha
 * Параметры -- gnome-control-center nwg-look kvantummanager pavucontrol font-manager bluedevil-wizard blueman-manager 
 * Браузер -- brave firefox
 * Обочка терминала -- zsh
@@ -34,4 +34,4 @@
 * Разбить конфиг hyprland.conf на разные файлы
 * Добавить виджет с раскладкой в eww
 * Добавить виджет с погодой в bg_windgets eww
-* Дописать функционал для record_menu
+* ~~Дописать функционал для record_menu~~ (перешёл на kooha)
