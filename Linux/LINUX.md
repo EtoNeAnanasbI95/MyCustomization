@@ -26,6 +26,7 @@
 * IDE -- VSCode/neovim
 * GTK theme -- Catppuccin-Mocha-Standard-Lavender-Dark
 * Kvantum theme -- Catppuccin-Mocha-Pink
+* Терминал -- kitty
 # Превью
 > в процессе
 # TODO
