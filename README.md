@@ -17,6 +17,7 @@
    <summary>Там находятся конфиги:</summary>
       1. IDE от jetbrains которыми я пользуюсь на постоянной основе<br/>
       2. VS code<br/>
+      3. neovim<br/>
 
 > Гайд на кастомизацию vscode: (https://marred-chartreuse-801.notion.site/vs-code-acaf2e071b91435fad37bb784c9b3941?pvs=4)
 </details>
@@ -35,5 +36,5 @@
 * Помимо всего прочего, ради личного удобства, я закинул сюда свой [cs2AutoExecConfig](https://github.com/EtoNeAnanasbI95/MyCustomization/tree/main/CS2autoexec.cfg), а так же [мою тему для дискорда](https://github.com/EtoNeAnanasbI95/MyCustomization/tree/main/BetterDiscord)
 
 # TODO
-* поменять конфиг alacritty
+* ~~поменять конфиг alacritty~~
 * доделать linux
