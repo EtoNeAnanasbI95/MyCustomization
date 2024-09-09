@@ -2,10 +2,19 @@
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 source ~/.cache/wal/colors-tty.sh
 source ~/.cache/wal/colors.sh
+
+export xdg_default_file_manager=nemo
+
 #User binary directories
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
-
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.platformio/penv/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+export DOTNET_ROOT=$HOME/.dotnet
+export PATH=$DOTNET_ROOT:$DOTNET_ROOT/tools:$PATH
+export PATH="$HOME/.local/share/JetBrains/Toolbox/scripts:$PATH"
 # Add oh my posh to auto start
 eval "$(oh-my-posh init zsh --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/bubbles.omp.json')"
 
@@ -138,6 +147,7 @@ fp() {
 }
 
 # User aliases
+alias ssh="TERM=xterm ssh"
 alias c="clear"
 alias q="exit"
 alias pcs="shutdown -h now"
@@ -149,5 +159,14 @@ alias zr="omz reload"
 alias code="code --ozone-platform=wayland"
 alias wout="wlogout -b 2-2 -L 400 -R 400"
 alias gnome-loupe='flatpak run org.gnome.Loupe'
+alias kooha='flatpak run io.github.seadve.Kooha'
+alias sshvpn="TERM=xterm sshpass -p '' ssh main@ "
+alias sshproxy="TERM=xterm sshpass -p '' ssh main@"
+alias ff="fastfetch"
+alias gnome-control-center="XDG_CURRENT_DESKTOP=gnome gnome-control-center &"
+# bun completions
+[ -s "/home/notpineapple/.bun/_bun" ] && source "/home/notpineapple/.bun/_bun"
 
-
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
