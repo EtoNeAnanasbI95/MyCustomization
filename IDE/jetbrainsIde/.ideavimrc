@@ -1,0 +1,19 @@
+" leader key
+let mapleader = ' '
+
+" sync Vim clipboard with OS clipboard
+set clipboard^=unnamed,unnamedplus
+" sync Vim clipboard with OS clipboard
+set clipboard^=unnamed,unnamedplus
+" jump between angle brackets
+set matchpairs+=<:>
+" smart line joining
+set ideajoin
+" open config
+noremap <leader>cc :edit ~/.ideavimrc<cr>
+" highlight search results
+set hlsearch
+" remove search highlights
+nnoremap <Esc> :nohlsearch<cr>
+" close current file
+noremap <leader>x :wq<cr>
