@@ -2,8 +2,8 @@ module.exports = {
     config: {
         opacity: 0.85,
         updateChannel: 'stable',
-        fontSize: 14,
-        fontFamily: "FiraCode Nerd Font",
+        fontSize: 16,
+        fontFamily: "JetBrainsMono Nerd Font",
         lineHeight: 1,
         letterSpacing: 0,
         cursorColor: 'rgba(248,28,229,0.8)',
@@ -36,5 +36,5 @@ module.exports = {
         },
         shell: 'pwsh.exe',
     },
-    plugins: ["hyperpower", "hyper-opacity", "hyperminimal"],
+    plugins: ["hyperpower", "hyper-opacity"],
 };
