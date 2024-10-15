@@ -24,7 +24,7 @@
 
 # [Linux](https://github.com/EtoNeAnanasbI95/MyCustomization/tree/main/Linux)
 * Наиболее крупная и важная папка. В ней содержатся мои dotfiles кастомизации Arch Linux 
-## Fist omz set-up
+## Fast omz set-up
 * At first install omz
 
 ``` 
