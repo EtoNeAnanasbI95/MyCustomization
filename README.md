@@ -40,7 +40,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/p
 
 git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
 
-sed -i 's/plugins=(git)/plugins=(git autosuggestions zsh-syntax-highlighting fast-syntax-highlighting)/g' "$HOME/.zshrc"
+sed -i 's/plugins=(git)/plugins=(git zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting)/g' "$HOME/.zshrc"
 ```
 
 # [Windows](https://github.com/EtoNeAnanasbI95/MyCustomization/tree/main/Windows)
