@@ -1,0 +1,43 @@
+#!/bin/bash
+connections=$(nmcli connection show --active | grep Laptop)
+
+status=false
+
+if [ "$connections" != "" ]
+then
+	status=true
+fi
+
+status() {
+	if [ $status = true ]; then
+		echo "On"
+	else
+		echo "Off"
+	fi
+}
+
+icon() {
+	if [ $status = true ]; then
+		echo ""
+	else
+		echo ""
+	fi
+}
+
+case "$1" in
+--status)
+	status
+	;;
+--toggle)
+	if [ $status != true ]; then
+		nmcli connection up Laptop
+		echo "vpn is active"
+	else
+		nmcli connection down Laptop
+		echo "vpn is deactive"
+	fi
+	;;
+*)
+	status
+	;;
+esac

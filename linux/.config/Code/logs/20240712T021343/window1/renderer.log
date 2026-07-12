@@ -1,3 +1,0 @@
-2024-07-12 02:13:44.397 [info] Initial editor state {"filesToOpenOrCreate":[{"fileUri":{"$mid":1,"path":"/home/notpineapple/.config/eww/eww.yuck","scheme":"file"},"type":1,"exists":true,"options":{}}],"filesToDiff":[],"filesToMerge":[]}
-2024-07-12 02:13:44.637 [info] Started local extension host with pid 45825.
-2024-07-12 02:13:47.330 [info] [perf] Render performance baseline is 27ms

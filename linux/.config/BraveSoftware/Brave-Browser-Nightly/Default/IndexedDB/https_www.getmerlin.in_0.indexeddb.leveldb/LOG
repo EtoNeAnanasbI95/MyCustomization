@@ -1,6 +1,0 @@
-2024/07/06-02:50:50.246 a4e0 Creating DB /home/notpineapple/.config/BraveSoftware/Brave-Browser-Nightly/Default/IndexedDB/https_www.getmerlin.in_0.indexeddb.leveldb since it was missing.
-2024/07/06-02:50:50.255 a4e0 Reusing MANIFEST /home/notpineapple/.config/BraveSoftware/Brave-Browser-Nightly/Default/IndexedDB/https_www.getmerlin.in_0.indexeddb.leveldb/MANIFEST-000001
-2024/07/06-02:50:50.307 a4eb Level-0 table #5: started
-2024/07/06-02:50:50.312 a4eb Level-0 table #5: 1269 bytes OK
-2024/07/06-02:50:50.317 a4eb Delete type=0 #3
-2024/07/06-02:50:50.317 a4e2 Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)

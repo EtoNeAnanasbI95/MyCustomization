@@ -1,6 +1,0 @@
-2024/07/12-02:33:52.503 55f Creating DB /home/notpineapple/.config/BraveSoftware/Brave-Browser-Nightly/Default/IndexedDB/https_app.tabnine.com_0.indexeddb.leveldb since it was missing.
-2024/07/12-02:33:52.514 55f Reusing MANIFEST /home/notpineapple/.config/BraveSoftware/Brave-Browser-Nightly/Default/IndexedDB/https_app.tabnine.com_0.indexeddb.leveldb/MANIFEST-000001
-2024/07/12-02:33:52.533 55e Level-0 table #5: started
-2024/07/12-02:33:52.539 55e Level-0 table #5: 1321 bytes OK
-2024/07/12-02:33:52.543 55e Delete type=0 #3
-2024/07/12-02:33:52.544 55f Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)
