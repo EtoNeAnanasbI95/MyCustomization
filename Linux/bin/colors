@@ -40,7 +40,7 @@ lighten_color() {
 edit_border_colors() {
     tee "${HOME}/.config/hypr/colors.conf" > /dev/null <<EOL
 general {
-    col.active_border = rgb(${color1:1}) rgb(${color6:1}) 45deg
+    col.active_border = rgb(${color5:1}) rgb(${color1:1}) 45deg
     col.inactive_border = rgba(595959aa)
 }
 EOL
@@ -48,8 +48,8 @@ EOL
 
 edit_eww_colors() {
     sed -i "s/\(\$white:\s*\).*/\1$color7;/" "$HOME/.config/eww/eww.scss"
-    sed -i "s/\(\$magenta:\s*\).*/\1$color1;/" "$HOME/.config/eww/eww.scss"
-    sed -i "s/\(\$lavanda:\s*\).*/\1$color6;/" "$HOME/.config/eww/eww.scss"
+    sed -i "s/\(\$magenta:\s*\).*/\1$color5;/" "$HOME/.config/eww/eww.scss"
+    sed -i "s/\(\$lavanda:\s*\).*/\1$color1;/" "$HOME/.config/eww/eww.scss"
     read r g b <<< "$(hex_to_rgb $background)"
     sed -i "s/\(\$bg:\s*\).*/\1rgba($r, $g, $b, 0.6);/" "$HOME/.config/eww/eww.scss"
 
