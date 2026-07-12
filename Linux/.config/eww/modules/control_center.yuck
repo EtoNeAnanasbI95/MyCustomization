@@ -5,6 +5,7 @@
         (user)
         (quick_settings)
         (volume_control_center)
+        (brightness_scale)
       )
     )
   )
