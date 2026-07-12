@@ -1,0 +1,14 @@
+{
+   "appDescription": {
+      "description": "Opis aplikácie",
+      "message": "Získajte prístup na akúkoľvek webovú stránku a zablokujte reklamy pomocou nášho bezplatného rozšírenia VPN proxy"
+   },
+   "appName": {
+      "description": "Názov aplikácie",
+      "message": "Bezplatný proxy server VPN a blokovanie reklám - Planet VPN"
+   },
+   "appNameBeta": {
+      "description": "Názov aplikácie",
+      "message": "Planet VPN (BETA) - bezplatná služba VPN"
+   }
+}

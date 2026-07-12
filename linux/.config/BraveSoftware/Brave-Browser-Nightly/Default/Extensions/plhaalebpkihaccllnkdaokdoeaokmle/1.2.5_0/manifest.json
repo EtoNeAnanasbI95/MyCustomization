@@ -1,0 +1,28 @@
+{
+   "action": {
+      "default_popup": "popup.html"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "contentScript.js" ],
+      "matches": [ "https://*.notion.so/*", "https://*.notion.site/*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "Insert draw.io diagrams in Notion pages and edit them",
+   "host_permissions": [ "https://*.notion.so/*", "https://*.notion.site/*" ],
+   "icons": {
+      "128": "images/logo128.png",
+      "16": "images/logo16.png",
+      "32": "images/logo32.png",
+      "48": "images/logo48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqd95mx+hLJcHBo2x/DyASXBhuJCrW0DNa9Yfepv+RX7/Aa4RAJXs4c0RHSYK/IItu7wEUTiV4U39Kk9XyYUr2pmruM7YPq/HabPBaQoS9swtjJB4aP62zzu1Gd9I4WPfdVEL9h5bmoOEcAXx2TiJ9yYGUgtKT2/6zSNP043uVyYqbcI3O1RP6V1bCepDb6CUGIzMSTgc6V3RAPKZL1nb8XiPfVMrmXivLq+L7cpB6OHO1Jqc+o/AQ4u9P1U0QyKKds2cWUauUi4zTva9DtNQMA+jGmv47xQKPRKBKcHgsWfBavylaqwUXDOr43mr8LXP6wcfe6KBieHs/zaVxRgNtwIDAQAB",
+   "manifest_version": 3,
+   "name": "draw.io for Notion",
+   "permissions": [ "storage", "declarativeContent" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.2.5"
+}

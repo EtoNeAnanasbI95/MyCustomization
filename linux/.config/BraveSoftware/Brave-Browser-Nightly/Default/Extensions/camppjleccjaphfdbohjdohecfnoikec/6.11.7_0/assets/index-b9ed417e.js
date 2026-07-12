@@ -1,0 +1,1 @@
+import{g as n,U as o}from"./index-9b1f0f42.js";import{L as l}from"./hook-ae816606.js";const d=i=>{var a;const[t=o,e]=l({instance:new n({area:"local"}),key:"UserSettings"});return{tutorial:(a=t.merlinOnSocialMedia[i])==null?void 0:a.tutorial,updateTutorial:r=>{e({...t,merlinOnSocialMedia:{...t.merlinOnSocialMedia,[i]:{...t.merlinOnSocialMedia[i],tutorial:r}}})}}};export{d as u};

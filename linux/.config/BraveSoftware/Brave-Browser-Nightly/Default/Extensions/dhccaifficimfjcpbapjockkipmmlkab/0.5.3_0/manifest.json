@@ -1,0 +1,28 @@
+{
+   "background": {
+      "page": "/background.html"
+   },
+   "browser_action": {
+      "default_icon": "/images/addon-128.png",
+      "default_popup": "/pages/popup.html",
+      "default_title": "LostFilm.TV (официальный плагин)"
+   },
+   "description": "Беспрепятственный доступ к сайту LostFilm.TV",
+   "icons": {
+      "128": "/images/addon-128.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjzr75wu7VHtbg9e1emvrGNNjzk+59gWFBh6bOF50atpQTEvma3GpG7nF4hRoNg8XaDQ/sX0J5wxcNpPZMOr3yM3UsICp+ftqZf67+LIo/oOyK+l22DVI28WnlweAHwL6sdtAtc8uq8lMJ8/1bL/nzjzeN97c0Yf4BQN/jJrabiA7HIkDjE/PZcm7lgdpLVMhUA6LldHlphzU9vDM8tVtf1A31ldMadP0DxTz5asJ7adNro5U4znM1Ssl0LbfiHBdallYjnBIGvZGBir/voX7aBrTfiaXmUWNpGd/lIiPprQ5V/vpUa2aiFGrvDpx51xWsr4dQm7IxKWL47YHBgNqswIDAQAB",
+   "manifest_version": 2,
+   "name": "LostFilm.TV - официальный плагин",
+   "optional_permissions": [ "\u003Call_urls>" ],
+   "options_ui": {
+      "chrome_style": false,
+      "open_in_tab": true,
+      "page": "/pages/options.html"
+   },
+   "permissions": [ "*://www.lostfilm.tv/*", "proxy", "storage", "webRequest", "webRequestBlocking" ],
+   "short_name": "LostFilm.TV",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.5.3",
+   "web_accessible_resources": [ "/pages/*" ]
+}

@@ -1,0 +1,7 @@
+
+[Default Applications]
+text/html=brave-browser-nightly.desktop
+x-scheme-handler/http=brave-browser-nightly.desktop
+x-scheme-handler/https=brave-browser-nightly.desktop
+x-scheme-handler/about=brave-browser-nightly.desktop
+x-scheme-handler/unknown=brave-browser-nightly.desktop

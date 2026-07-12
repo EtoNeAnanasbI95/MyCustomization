@@ -1,0 +1,14 @@
+{
+   "appDescription": {
+      "description": "תיאור האפליקציה",
+      "message": "קבל גישה לכל אתר וחסום פרסומות עם התוספת שלנו ל-VPN פרוקסי החינמית"
+   },
+   "appName": {
+      "description": "שם האפליקציה",
+      "message": "VPN Proxy חינמי וחוסם פרסומות - Planet VPNPlanet VPN"
+   },
+   "appNameBeta": {
+      "description": "שם האפליקציה",
+      "message": "Planet VPN (BETA) - שירות VPN חינמי"
+   }
+}

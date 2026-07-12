@@ -1,0 +1,10 @@
+2024-07-13 00:28:53.626 [info] Initial editor state {"filesToOpenOrCreate":[{"fileUri":{"$mid":1,"path":"/home/notpineapple/.config/eww/modules/user.yuck","scheme":"file"},"type":1,"exists":true,"options":{}}],"filesToDiff":[],"filesToMerge":[]}
+2024-07-13 00:28:53.844 [info] Started local extension host with pid 1314133.
+2024-07-13 00:28:56.430 [warning] 
+
+----------------------------------------------
+***	Installation has been modified on disk ***
+----------------------------------------------
+
+
+2024-07-13 00:28:56.688 [info] [perf] Render performance baseline is 38ms

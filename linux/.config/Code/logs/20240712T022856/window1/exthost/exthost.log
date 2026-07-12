@@ -1,0 +1,149 @@
+2024-07-12 02:28:57.518 [info] Extension host with pid 2166 started
+2024-07-12 02:28:57.608 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2024-07-12 02:28:57.711 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*'
+2024-07-12 02:28:57.741 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2024-07-12 02:28:57.758 [info] Eager extensions activated
+2024-07-12 02:28:57.761 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2024-07-12 02:28:57.763 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2024-07-12 02:28:57.770 [info] ExtensionService#_doActivateExtension PKief.material-icon-theme, startup: false, activationEvent: 'onStartupFinished'
+2024-07-12 02:28:57.777 [info] ExtensionService#_doActivateExtension RichardLuo.frosted-glass-theme, startup: false, activationEvent: 'onStartupFinished'
+2024-07-12 02:29:04.661 [info] ExtensionService#_doActivateExtension vscode.git, startup: false, activationEvent: 'api', root cause: vscode.github
+2024-07-12 02:29:04.695 [info] ExtensionService#_doActivateExtension Katsute.code-background, startup: false, activationEvent: 'onStartupFinished'
+2024-07-12 02:29:35.800 [info] Extension host terminating: renderer closed the MessagePort
+2024-07-12 02:29:35.816 [info] Extension host with pid 2166 exiting with code 0
+2024-07-12 02:29:37.141 [info] Extension host with pid 2450 started
+2024-07-12 02:29:37.216 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2024-07-12 02:29:37.331 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2024-07-12 02:29:37.345 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2024-07-12 02:29:37.363 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2024-07-12 02:29:37.403 [info] Eager extensions activated
+2024-07-12 02:29:37.423 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2024-07-12 02:29:37.425 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2024-07-12 02:29:37.431 [info] ExtensionService#_doActivateExtension Katsute.code-background, startup: false, activationEvent: 'onStartupFinished'
+2024-07-12 02:29:37.439 [info] ExtensionService#_doActivateExtension PKief.material-icon-theme, startup: false, activationEvent: 'onStartupFinished'
+2024-07-12 02:29:37.449 [info] ExtensionService#_doActivateExtension RichardLuo.frosted-glass-theme, startup: false, activationEvent: 'onStartupFinished'
+2024-07-12 02:29:55.735 [info] ExtensionService#_doActivateExtension eww-yuck.yuck, startup: false, activationEvent: 'onLanguage:yuck'
+2024-07-12 02:30:04.213 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-07-12 02:30:04.217 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-07-12 02:30:04.239 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-07-12 02:33:02.268 [info] Extension host terminating: renderer closed the MessagePort
+2024-07-12 02:33:02.293 [info] Extension host with pid 2450 exiting with code 0
+2024-07-12 02:33:03.400 [info] Extension host with pid 4850 started
+2024-07-12 02:33:03.476 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2024-07-12 02:33:03.482 [info] ExtensionService#_doActivateExtension eww-yuck.yuck, startup: false, activationEvent: 'onLanguage:yuck'
+2024-07-12 02:33:03.598 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2024-07-12 02:33:03.643 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2024-07-12 02:33:03.667 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2024-07-12 02:33:03.721 [info] Eager extensions activated
+2024-07-12 02:33:03.739 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2024-07-12 02:33:03.741 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2024-07-12 02:33:03.747 [info] ExtensionService#_doActivateExtension Katsute.code-background, startup: false, activationEvent: 'onStartupFinished'
+2024-07-12 02:33:03.752 [info] ExtensionService#_doActivateExtension PKief.material-icon-theme, startup: false, activationEvent: 'onStartupFinished'
+2024-07-12 02:33:03.759 [info] ExtensionService#_doActivateExtension RichardLuo.frosted-glass-theme, startup: false, activationEvent: 'onStartupFinished'
+2024-07-12 02:33:18.515 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-07-12 02:33:18.518 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-07-12 02:33:18.531 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-07-12 02:33:34.329 [info] ExtensionService#_doActivateExtension TabNine.tabnine-vscode, startup: false, activationEvent: 'onStartupFinished'
+2024-07-12 02:37:02.707 [info] ExtensionService#_doActivateExtension Yunduo.color-highlight-css-color-4, startup: false, activationEvent: '*'
+2024-07-12 02:38:03.477 [info] ExtensionService#_doActivateExtension oderwat.indent-rainbow, startup: false, activationEvent: '*'
+2024-07-12 02:38:30.100 [info] Extension host terminating: renderer closed the MessagePort
+2024-07-12 02:38:30.134 [error] Error: Channel has been closed
+	at f (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:157:2490)
+	at Object.appendLine (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:157:2608)
+	at Object.log (/home/notpineapple/.vscode/extensions/tabnine.tabnine-vscode-3.126.0/out/extension.js:17:168663)
+	at Object.error (/home/notpineapple/.vscode/extensions/tabnine.tabnine-vscode-3.126.0/out/extension.js:17:169007)
+	at t.default.request (/home/notpineapple/.vscode/extensions/tabnine.tabnine-vscode-3.126.0/out/extension.js:17:39259)
+	at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+	at async Promise.all (index 14)
+	at async m.$ (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:160:7930)
+2024-07-12 02:38:30.134 [error] Canceled: Canceled
+	at new I (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:144:34990)
+	at S.U (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:151:6023)
+	at z.<computed>.F.charCodeAt.T.CharCode.DollarSign.z.<computed> (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:151:3107)
+	at f.g (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:203861)
+	at f.executeCommand (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:203299)
+	at A.registerCommand.description (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:202623)
+	at f.h (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:204400)
+	at f.g (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:203392)
+	at f.executeCommand (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:203299)
+	at Object.executeCommand (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:164:23051)
+	at Object.dispose (/home/notpineapple/.vscode/extensions/tabnine.tabnine-vscode-3.126.0/out/extension.js:17:99856)
+	at c.<anonymous> (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:152:4048)
+	at c.dispose (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:152:4145)
+	at c.<anonymous> (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:152:4048)
+	at c.dispose (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:152:4145)
+	at /home/notpineapple/.vscode/extensions/tabnine.tabnine-vscode-3.126.0/out/extension.js:17:38130
+	at Array.forEach (<anonymous>)
+	at h (/home/notpineapple/.vscode/extensions/tabnine.tabnine-vscode-3.126.0/out/extension.js:17:38115)
+	at Object.dispose (/home/notpineapple/.vscode/extensions/tabnine.tabnine-vscode-3.126.0/out/extension.js:17:37501)
+	at d (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:30:744)
+	at m.eb (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:160:10039)
+	at /opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:160:7915
+	at Array.map (<anonymous>)
+	at m.$ (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:160:7902)
+	at m.terminate (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:160:8175)
+	at d.terminate (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:164:1513)
+	at i (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:177:10617)
+	at MessagePortMain.<anonymous> (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:177:6809)
+	at MessagePortMain.emit (node:events:514:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2285) setContext undefined
+2024-07-12 02:38:30.135 [info] Extension host with pid 4850 exiting with code 0
+2024-07-12 02:38:30.382 [info] Extension host with pid 6386 started
+2024-07-12 02:38:30.400 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2024-07-12 02:38:30.402 [info] ExtensionService#_doActivateExtension Yunduo.color-highlight-css-color-4, startup: true, activationEvent: '*'
+2024-07-12 02:38:30.405 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2024-07-12 02:38:30.408 [info] ExtensionService#_doActivateExtension eww-yuck.yuck, startup: false, activationEvent: 'onLanguage:yuck'
+2024-07-12 02:38:30.409 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-07-12 02:38:30.413 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-07-12 02:38:30.428 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-07-12 02:38:30.443 [info] ExtensionService#_doActivateExtension TabNine.tabnine-vscode, startup: false, activationEvent: 'onCommand:tabnine.signInUsingAuthToken'
+2024-07-12 02:38:30.668 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2024-07-12 02:38:30.683 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2024-07-12 02:38:30.779 [info] Eager extensions activated
+2024-07-12 02:38:30.805 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2024-07-12 02:38:30.807 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2024-07-12 02:38:30.813 [info] ExtensionService#_doActivateExtension Katsute.code-background, startup: false, activationEvent: 'onStartupFinished'
+2024-07-12 02:38:30.818 [info] ExtensionService#_doActivateExtension PKief.material-icon-theme, startup: false, activationEvent: 'onStartupFinished'
+2024-07-12 02:38:30.825 [info] ExtensionService#_doActivateExtension RichardLuo.frosted-glass-theme, startup: false, activationEvent: 'onStartupFinished'
+2024-07-12 02:57:21.325 [info] Extension host terminating: renderer closed the MessagePort
+2024-07-12 02:57:21.354 [error] Error: Channel has been closed
+	at f (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:157:2490)
+	at Object.appendLine (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:157:2608)
+	at Object.log (/home/notpineapple/.vscode/extensions/tabnine.tabnine-vscode-3.126.0/out/extension.js:17:168663)
+	at Object.error (/home/notpineapple/.vscode/extensions/tabnine.tabnine-vscode-3.126.0/out/extension.js:17:169007)
+	at t.default.request (/home/notpineapple/.vscode/extensions/tabnine.tabnine-vscode-3.126.0/out/extension.js:17:39259)
+	at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+	at async Promise.all (index 13)
+	at async m.$ (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:160:7930)
+2024-07-12 02:57:21.355 [error] Canceled: Canceled
+	at new I (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:144:34990)
+	at S.U (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:151:6023)
+	at z.<computed>.F.charCodeAt.T.CharCode.DollarSign.z.<computed> (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:151:3107)
+	at f.g (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:203861)
+	at f.executeCommand (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:203299)
+	at A.registerCommand.description (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:202623)
+	at f.h (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:204400)
+	at f.g (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:203392)
+	at f.executeCommand (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:203299)
+	at Object.executeCommand (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:164:23051)
+	at Object.dispose (/home/notpineapple/.vscode/extensions/tabnine.tabnine-vscode-3.126.0/out/extension.js:17:99856)
+	at c.<anonymous> (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:152:4048)
+	at c.dispose (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:152:4145)
+	at c.<anonymous> (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:152:4048)
+	at c.dispose (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:152:4145)
+	at /home/notpineapple/.vscode/extensions/tabnine.tabnine-vscode-3.126.0/out/extension.js:17:38130
+	at Array.forEach (<anonymous>)
+	at h (/home/notpineapple/.vscode/extensions/tabnine.tabnine-vscode-3.126.0/out/extension.js:17:38115)
+	at Object.dispose (/home/notpineapple/.vscode/extensions/tabnine.tabnine-vscode-3.126.0/out/extension.js:17:37501)
+	at d (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:30:744)
+	at m.eb (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:160:10039)
+	at /opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:160:7915
+	at Array.map (<anonymous>)
+	at m.$ (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:160:7902)
+	at m.terminate (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:160:8175)
+	at d.terminate (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:164:1513)
+	at i (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:177:10617)
+	at MessagePortMain.<anonymous> (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:177:6809)
+	at MessagePortMain.emit (node:events:514:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2285) setContext undefined
+2024-07-12 02:57:21.356 [info] Extension host with pid 6386 exiting with code 0

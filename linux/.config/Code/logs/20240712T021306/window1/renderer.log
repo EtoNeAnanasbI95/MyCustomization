@@ -1,0 +1,5 @@
+2024-07-12 02:13:07.287 [info] Initial editor state {"filesToOpenOrCreate":[{"fileUri":{"$mid":1,"path":"/home/notpineapple/.config/eww/eww.yuck","scheme":"file"},"type":1,"exists":true,"options":{}}],"filesToDiff":[],"filesToMerge":[]}
+2024-07-12 02:13:07.592 [info] Started local extension host with pid 45223.
+2024-07-12 02:13:07.625 [info] Started initializing default profile extensions in extensions installation folder. file:///home/notpineapple/.vscode/extensions
+2024-07-12 02:13:07.778 [info] Completed initializing default profile extensions in extensions installation folder. file:///home/notpineapple/.vscode/extensions
+2024-07-12 02:13:10.707 [info] [perf] Render performance baseline is 62ms

@@ -1,0 +1,97 @@
+{
+   "author": "Itproductdev Ltd",
+   "background": {
+      "persistent": true,
+      "scripts": [ "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "img/icon_19.png",
+         "38": "img/icon_38.png"
+      },
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "includes/commons.js", "includes/vimeo_com.js" ],
+      "matches": [ "*://*.vimeo.com/*" ],
+      "run_at": "document_end"
+   }, {
+      "all_frames": true,
+      "include_globs": [ "http://dailymotion.*/*", "http://*.dailymotion.*/*", "https://dailymotion.*/*", "https://*.dailymotion.*/*" ],
+      "js": [ "includes/commons.js", "includes/dailymotion_com.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_end"
+   }, {
+      "js": [ "includes/commons.js", "includes/soundcloud_com.js" ],
+      "matches": [ "*://*.soundcloud.com/*" ],
+      "run_at": "document_end"
+   }, {
+      "all_frames": true,
+      "js": [ "includes/commons.js", "includes/vkontakte_ru.js" ],
+      "matches": [ "*://*.vk.com/*", "*://*.vkontakte.ru/*" ],
+      "run_at": "document_end"
+   }, {
+      "js": [ "includes/commons.js", "includes/odnoklassniki_ru.js" ],
+      "matches": [ "*://*.ok.ru/*", "*://*.odnoklassniki.ru/*" ],
+      "run_at": "document_end"
+   }, {
+      "js": [ "includes/commons.js", "includes/mail_ru.js" ],
+      "matches": [ "*://my.mail.ru/*" ],
+      "run_at": "document_end"
+   }, {
+      "js": [ "includes/commons.js", "includes/facebook_com.js" ],
+      "matches": [ "*://*.facebook.com/*" ],
+      "run_at": "document_end"
+   }, {
+      "all_frames": true,
+      "js": [ "includes/commons.js", "includes/instagram_com.js" ],
+      "matches": [ "*://*.instagram.com/*" ],
+      "run_at": "document_end"
+   }, {
+      "all_frames": true,
+      "js": [ "includes/commons.js", "includes/rutube_ru.js" ],
+      "matches": [ "*://*.rutube.ru/*" ],
+      "run_at": "document_end"
+   }, {
+      "all_frames": true,
+      "js": [ "includes/commons.js", "includes/tiktok_com.js" ],
+      "matches": [ "*://*.tiktok.com/*" ],
+      "run_at": "document_end"
+   }, {
+      "all_frames": true,
+      "js": [ "includes/commons.js", "includes/yandex_music.js" ],
+      "matches": [ "*://music.yandex.ru/*", "*://music.yandex.by/*" ],
+      "run_at": "document_end"
+   }, {
+      "all_frames": true,
+      "js": [ "includes/commons.js", "includes/twitch_tv.js" ],
+      "matches": [ "*://*.twitch.tv/*" ],
+      "run_at": "document_end"
+   }, {
+      "all_frames": true,
+      "js": [ "includes/commons.js", "includes/match_tv.js" ],
+      "matches": [ "*://matchtv.ru/*" ],
+      "run_at": "document_end"
+   }, {
+      "js": [ "includes/tab.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_end"
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "default_locale": "ru",
+   "description": "__MSG_extDescription__",
+   "icons": {
+      "128": "img/icon_128.png",
+      "16": "img/icon_16.png",
+      "48": "img/icon_48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoN82y0YTQ3caEz8Gi0rXpi7uyCsbWkqlHCaIDYJ0ZSKop7DIP9Eijx+xZic7UcPbf2RZIZp9xc3gcFjU32HKCaePoS4jWxRFlp2lkwp+7gsNTbMdNK2nCM6Ls37KG2SRN+8ABP8bQxx+uSILdcFFHsyFD6ZFJRLtdLka/RPN/O0fPL2XhLkVnE+gnNMQk12U6Q/QeEoV7IVuOqLrgpm/SeRvEv7VqZ0PP9HW/VvxG4VqvGFjZtjHQO+T4baH0/SETVxEzJp0qhPx+IwwbUMjAnY6C0w6Kibm6UNzJ1vPf9O49xUY6OtWtXeiddhLZeJtXXTcJSQBBDGKIppuh7bIaQIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "40",
+   "name": "__MSG_extName__",
+   "options_page": "options.html",
+   "permissions": [ "tabs", "downloads", "storage", "unlimitedStorage", "\u003Call_urls>", "clipboardWrite", "webRequest", "webRequestBlocking" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "9.659"
+}

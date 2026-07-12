@@ -1,0 +1,102 @@
+2024-07-12 02:29:54.347 [info] Getting Manifest... eww-yuck.yuck
+2024-07-12 02:29:54.361 [info] Installing extension: eww-yuck.yuck {"isMachineScoped":false,"installPreReleaseVersion":false,"pinned":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/notpineapple/.vscode/extensions/extensions.json","path":"/home/notpineapple/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"installOnlyNewlyAddedFromExtensionPack":true,"isApplicationScoped":false,"productVersion":{"version":"1.91.1","date":"2024-07-09T22:08:12.169Z"}}
+2024-07-12 02:29:55.547 [info] Extension signature verification result for eww-yuck.yuck: UnknownError. Executed: true. Duration: 15ms.
+2024-07-12 02:29:55.598 [info] Extracted extension to file:///home/notpineapple/.vscode/extensions/eww-yuck.yuck-0.0.3: eww-yuck.yuck
+2024-07-12 02:29:55.602 [info] Renamed to /home/notpineapple/.vscode/extensions/eww-yuck.yuck-0.0.3
+2024-07-12 02:29:55.612 [info] Extension installed successfully: eww-yuck.yuck vscode-userdata:/home/notpineapple/.vscode/extensions/extensions.json
+2024-07-12 02:29:55.683 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/notpineapple/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/notpineapple/.vscode/extensions/extensions.json.vsctmp'
+    at h.create (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:54:19262)
+    at f (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:54:19372)
+    at P.hb (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:59:36571)
+    at P.stat (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:59:28919)
+    at async s.stat (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:59:14907)
+    at async V.vb (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:105:119283)
+2024-07-12 02:33:33.009 [info] Getting Manifest... tabnine.tabnine-vscode
+2024-07-12 02:33:33.019 [info] Installing extension: tabnine.tabnine-vscode {"isMachineScoped":false,"installPreReleaseVersion":false,"pinned":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/notpineapple/.vscode/extensions/extensions.json","path":"/home/notpineapple/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"installOnlyNewlyAddedFromExtensionPack":true,"isApplicationScoped":false,"productVersion":{"version":"1.91.1","date":"2024-07-09T22:08:12.169Z"}}
+2024-07-12 02:33:34.111 [info] Extension signature verification result for tabnine.tabnine-vscode: UnknownError. Executed: true. Duration: 6ms.
+2024-07-12 02:33:34.172 [info] Extracted extension to file:///home/notpineapple/.vscode/extensions/tabnine.tabnine-vscode-3.126.0: tabnine.tabnine-vscode
+2024-07-12 02:33:34.177 [info] Renamed to /home/notpineapple/.vscode/extensions/tabnine.tabnine-vscode-3.126.0
+2024-07-12 02:33:34.187 [info] Extension installed successfully: tabnine.tabnine-vscode vscode-userdata:/home/notpineapple/.vscode/extensions/extensions.json
+2024-07-12 02:33:34.257 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/notpineapple/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/notpineapple/.vscode/extensions/extensions.json.vsctmp'
+    at h.create (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:54:19262)
+    at f (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:54:19372)
+    at P.hb (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:59:36571)
+    at P.stat (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:59:28919)
+    at async s.stat (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:59:14907)
+    at async V.vb (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:105:119283)
+2024-07-12 02:36:39.365 [info] Getting Manifest... visualstudioexptteam.intellicode-api-usage-examples
+2024-07-12 02:36:39.373 [info] Installing extension: visualstudioexptteam.intellicode-api-usage-examples {"isMachineScoped":false,"installPreReleaseVersion":false,"pinned":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/notpineapple/.vscode/extensions/extensions.json","path":"/home/notpineapple/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"installOnlyNewlyAddedFromExtensionPack":true,"isApplicationScoped":false,"productVersion":{"version":"1.91.1","date":"2024-07-09T22:08:12.169Z"}}
+2024-07-12 02:36:40.708 [info] Extension signature verification result for visualstudioexptteam.intellicode-api-usage-examples: UnknownError. Executed: true. Duration: 19ms.
+2024-07-12 02:36:40.806 [info] Extracted extension to file:///home/notpineapple/.vscode/extensions/visualstudioexptteam.intellicode-api-usage-examples-0.2.8: visualstudioexptteam.intellicode-api-usage-examples
+2024-07-12 02:36:40.810 [info] Renamed to /home/notpineapple/.vscode/extensions/visualstudioexptteam.intellicode-api-usage-examples-0.2.8
+2024-07-12 02:36:40.821 [info] Extension installed successfully: visualstudioexptteam.intellicode-api-usage-examples vscode-userdata:/home/notpineapple/.vscode/extensions/extensions.json
+2024-07-12 02:36:40.888 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/notpineapple/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/notpineapple/.vscode/extensions/extensions.json.vsctmp'
+    at h.create (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:54:19262)
+    at f (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:54:19372)
+    at P.hb (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:59:36571)
+    at P.stat (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:59:28919)
+    at async s.stat (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:59:14907)
+    at async V.vb (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:105:119283)
+2024-07-12 02:37:02.033 [info] Getting Manifest... yunduo.color-highlight-css-color-4
+2024-07-12 02:37:02.042 [info] Installing extension: yunduo.color-highlight-css-color-4 {"isMachineScoped":false,"installPreReleaseVersion":false,"pinned":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/notpineapple/.vscode/extensions/extensions.json","path":"/home/notpineapple/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"installOnlyNewlyAddedFromExtensionPack":true,"isApplicationScoped":false,"productVersion":{"version":"1.91.1","date":"2024-07-09T22:08:12.169Z"}}
+2024-07-12 02:37:02.528 [info] Extension signature verification result for yunduo.color-highlight-css-color-4: UnknownError. Executed: true. Duration: 4ms.
+2024-07-12 02:37:02.634 [info] Extracted extension to file:///home/notpineapple/.vscode/extensions/yunduo.color-highlight-css-color-4-1.1.3: yunduo.color-highlight-css-color-4
+2024-07-12 02:37:02.639 [info] Renamed to /home/notpineapple/.vscode/extensions/yunduo.color-highlight-css-color-4-1.1.3
+2024-07-12 02:37:02.652 [info] Extension installed successfully: yunduo.color-highlight-css-color-4 vscode-userdata:/home/notpineapple/.vscode/extensions/extensions.json
+2024-07-12 02:37:02.712 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/notpineapple/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/notpineapple/.vscode/extensions/extensions.json.vsctmp'
+    at h.create (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:54:19262)
+    at f (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:54:19372)
+    at P.hb (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:59:36571)
+    at P.stat (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:59:28919)
+    at async s.stat (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:59:14907)
+    at async V.vb (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:105:119283)
+2024-07-12 02:37:41.505 [info] Getting Manifest... anseki.vscode-color
+2024-07-12 02:37:41.509 [info] Installing extension: anseki.vscode-color {"isMachineScoped":false,"installPreReleaseVersion":false,"pinned":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/notpineapple/.vscode/extensions/extensions.json","path":"/home/notpineapple/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"installOnlyNewlyAddedFromExtensionPack":true,"isApplicationScoped":false,"productVersion":{"version":"1.91.1","date":"2024-07-09T22:08:12.169Z"}}
+2024-07-12 02:37:42.009 [info] Extension signature verification result for anseki.vscode-color: UnknownError. Executed: true. Duration: 4ms.
+2024-07-12 02:37:42.025 [info] Extracted extension to file:///home/notpineapple/.vscode/extensions/anseki.vscode-color-0.4.5: anseki.vscode-color
+2024-07-12 02:37:42.029 [info] Renamed to /home/notpineapple/.vscode/extensions/anseki.vscode-color-0.4.5
+2024-07-12 02:37:42.039 [info] Extension installed successfully: anseki.vscode-color vscode-userdata:/home/notpineapple/.vscode/extensions/extensions.json
+2024-07-12 02:37:42.107 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/notpineapple/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/notpineapple/.vscode/extensions/extensions.json.vsctmp'
+    at h.create (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:54:19262)
+    at f (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:54:19372)
+    at P.hb (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:59:36571)
+    at P.stat (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:59:28919)
+    at async s.stat (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:59:14907)
+    at async V.vb (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:105:119283)
+2024-07-12 02:38:02.250 [info] Getting Manifest... oderwat.indent-rainbow
+2024-07-12 02:38:02.259 [info] Installing extension: oderwat.indent-rainbow {"isMachineScoped":false,"installPreReleaseVersion":false,"pinned":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/notpineapple/.vscode/extensions/extensions.json","path":"/home/notpineapple/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"installOnlyNewlyAddedFromExtensionPack":true,"isApplicationScoped":false,"productVersion":{"version":"1.91.1","date":"2024-07-09T22:08:12.169Z"}}
+2024-07-12 02:38:03.019 [info] Extension signature verification result for oderwat.indent-rainbow: UnknownError. Executed: true. Duration: 4ms.
+2024-07-12 02:38:03.416 [info] Extracted extension to file:///home/notpineapple/.vscode/extensions/oderwat.indent-rainbow-8.3.1: oderwat.indent-rainbow
+2024-07-12 02:38:03.421 [info] Renamed to /home/notpineapple/.vscode/extensions/oderwat.indent-rainbow-8.3.1
+2024-07-12 02:38:03.435 [info] Extension installed successfully: oderwat.indent-rainbow vscode-userdata:/home/notpineapple/.vscode/extensions/extensions.json
+2024-07-12 02:38:03.503 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/notpineapple/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/notpineapple/.vscode/extensions/extensions.json.vsctmp'
+    at h.create (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:54:19262)
+    at f (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:54:19372)
+    at P.hb (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:59:36571)
+    at P.stat (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:59:28919)
+    at async s.stat (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:59:14907)
+    at async V.vb (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:105:119283)
+2024-07-12 02:38:23.929 [info] Uninstalling extension from the profile: oderwat.indent-rainbow@8.3.1 vscode-userdata:/home/notpineapple/.vscode/extensions/extensions.json
+2024-07-12 02:38:23.947 [info] Marked extension as uninstalled oderwat.indent-rainbow-8.3.1
+2024-07-12 02:38:24.017 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/notpineapple/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/notpineapple/.vscode/extensions/extensions.json.vsctmp'
+    at h.create (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:54:19262)
+    at f (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:54:19372)
+    at P.hb (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:59:36571)
+    at P.stat (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:59:28919)
+    at async s.stat (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:59:14907)
+    at async V.vb (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:105:119283)
+2024-07-12 02:38:24.403 [info] Successfully uninstalled extension from the profile oderwat.indent-rainbow@8.3.1 vscode-userdata:/home/notpineapple/.vscode/extensions/extensions.json
+2024-07-12 02:38:46.132 [info] Getting Manifest... visualstudioexptteam.vscodeintellicode
+2024-07-12 02:38:46.136 [info] Installing extension: visualstudioexptteam.vscodeintellicode {"isMachineScoped":false,"installPreReleaseVersion":false,"pinned":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/notpineapple/.vscode/extensions/extensions.json","path":"/home/notpineapple/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"installOnlyNewlyAddedFromExtensionPack":true,"isApplicationScoped":false,"productVersion":{"version":"1.91.1","date":"2024-07-09T22:08:12.169Z"}}
+2024-07-12 02:38:46.391 [info] Getting Manifest... visualstudioexptteam.intellicode-api-usage-examples
+2024-07-12 02:38:53.397 [info] Extension signature verification result for visualstudioexptteam.vscodeintellicode: UnknownError. Executed: true. Duration: 5ms.
+2024-07-12 02:38:53.762 [info] Extracted extension to file:///home/notpineapple/.vscode/extensions/visualstudioexptteam.vscodeintellicode-1.3.1: visualstudioexptteam.vscodeintellicode
+2024-07-12 02:38:53.766 [info] Renamed to /home/notpineapple/.vscode/extensions/visualstudioexptteam.vscodeintellicode-1.3.1
+2024-07-12 02:38:53.779 [info] Extension installed successfully: visualstudioexptteam.vscodeintellicode vscode-userdata:/home/notpineapple/.vscode/extensions/extensions.json
+2024-07-12 02:38:53.846 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/notpineapple/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/notpineapple/.vscode/extensions/extensions.json.vsctmp'
+    at h.create (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:54:19262)
+    at f (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:54:19372)
+    at P.hb (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:59:36571)
+    at P.stat (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:59:28919)
+    at async s.stat (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:59:14907)
+    at async V.vb (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:105:119283)

@@ -1,0 +1,15 @@
+2024-07-13 00:32:29.408 [info] Started local extension host with pid 1622872.
+2024-07-13 00:32:31.925 [warning] 
+
+----------------------------------------------
+***	Installation has been modified on disk ***
+----------------------------------------------
+
+
+2024-07-13 00:32:32.066 [info] [perf] Render performance baseline is 26ms
+2024-07-13 01:31:03.055 [error] Unhandled method getIdAtPosition: Error: Unhandled method getIdAtPosition
+	at /home/notpineapple/.vscode/extensions/visualstudioexptteam.intellicode-api-usage-examples-0.2.8/dist/extension.js:2:398068
+	at re (/home/notpineapple/.vscode/extensions/visualstudioexptteam.intellicode-api-usage-examples-0.2.8/dist/extension.js:2:398362)
+	at /home/notpineapple/.vscode/extensions/visualstudioexptteam.intellicode-api-usage-examples-0.2.8/dist/extension.js:2:393146
+	at Immediate.<anonymous> (/home/notpineapple/.vscode/extensions/visualstudioexptteam.intellicode-api-usage-examples-0.2.8/dist/extension.js:2:393166)
+	at process.processImmediate (node:internal/timers:478:21)

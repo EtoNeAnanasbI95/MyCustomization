@@ -1,0 +1,8 @@
+2024-07-12 02:28:56.410 [info] update#setState idle
+2024-07-12 02:29:26.413 [info] update#setState checking for updates
+2024-07-12 02:29:26.500 [info] update#setState idle
+2024-07-12 02:29:35.816 [info] Extension host with pid 2166 exited with code: 0, signal: unknown.
+2024-07-12 02:33:02.294 [info] Extension host with pid 2450 exited with code: 0, signal: unknown.
+2024-07-12 02:33:35.538 [error] CodeWindow: failed to load (reason: ERR_BLOCKED_BY_RESPONSE, code: -27)
+2024-07-12 02:38:30.135 [info] Extension host with pid 4850 exited with code: 0, signal: unknown.
+2024-07-12 02:57:21.357 [info] Extension host with pid 6386 exited with code: 0, signal: unknown.
