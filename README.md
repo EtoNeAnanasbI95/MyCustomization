@@ -24,6 +24,24 @@
 
 # [Linux](https://github.com/EtoNeAnanasbI95/MyCustomization/tree/main/Linux)
 * Наиболее крупная и важная папка. В ней содержатся мои dotfiles кастомизации Arch Linux 
+## Fist omz set-up
+* At first install omz
+
+``` 
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+* Next, install concurrent plugins
+
+```
+git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
+
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+
+git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
+
+sed -i 's/pluginso=(git)/plugins=(git autosuggestions zsh-syntax-highlighting fast-syntax-highlighting)/g' "$HOME/.zshrc"
+```
 
 # [Windows](https://github.com/EtoNeAnanasbI95/MyCustomization/tree/main/Windows)
 * Эта папка, как и linux, содержит в себе кастомизацию системы. Там лежит конфигурация софта для эффекта прозрачности в проводнике и контекстном меню, красивого меню пуск и, наверное самое важное, конфигурация powershell, с внешней кастомизацией
