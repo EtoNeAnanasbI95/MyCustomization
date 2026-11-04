@@ -23,7 +23,7 @@
 </details>
 
 # [Linux](https://github.com/EtoNeAnanasbI95/MyCustomization/tree/main/Linux)
-* Наиболее крупная и важная папка. В ней содержатся мои dotfiles кастомизации Arch Linux 
+* Наиболее крупная и важная папка. В ней содержатся мои dotfiles кастомизации Arch Linux: Hyprland (Lua-конфиг) + Noctalia Shell, темы SDDM, GRUB и Plymouth со скриптами установки. Подробности в [Linux/README.md](./Linux/README.md)
 ## Fist omz set-up
 * At first install omz
 
@@ -57,4 +57,4 @@ sed -i 's/plugins=(git)/plugins=(git zsh-autosuggestions zsh-syntax-highlighting
 
 # TODO
 * ~~поменять конфиг alacritty~~
-* доделать linux
+* ~~доделать linux~~ (переехал на Hyprland + Noctalia)
