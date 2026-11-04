@@ -1,0 +1,22 @@
+[general]
+fullscreen = false
+resize = { mode = "smart" }
+floating-hack = true
+early-exit = ["copy", "save"]
+corner-roundness = 12
+initial-tool = "arrow"
+copy-command = "wl-copy"
+annotation-size-factor = 1
+output-filename = "~/Pictures/Screenshots/%Y-%m-%d_%H-%M-%S.png"
+save-after-copy = true
+default-round-caps = true
+primary-highlighter = "block"
+actions-on-enter = ["save-to-clipboard"]
+actions-on-escape = ["exit"]
+actions-on-right-click = []
+no-window-decoration = true
+brush-smooth-history-size = 10
+
+[font]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"

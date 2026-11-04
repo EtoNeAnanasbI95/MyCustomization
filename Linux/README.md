@@ -13,7 +13,8 @@
 | Цвета | Noctalia из обоев (Material You, `vibrant`) + шаблоны для kitty, btop, cava, GTK, Qt, Hyprland |
 | Терминал | kitty |
 | Шрифты | JetBrainsMono Nerd Font |
-| Проводник | dolphin, yazi (TUI) |
+| Проводник | nautilus, yazi (TUI) |
+| Скриншоты | grim + slurp → редактор [satty](https://github.com/gabm/Satty), OCR через tesseract, пипетка hyprpicker |
 | Шпаргалка по хоткеям | rofi (`SUPER + /`) |
 | Загрузчик | GRUB + [Graphite grub2 theme](https://github.com/vinceliuice/Graphite-gtk-theme/tree/main/other/grub2) |
 | Сплэш при загрузке | Plymouth + [hyprland-mac-style](https://www.gnome-look.org/p/2214975) |
@@ -30,8 +31,10 @@ Linux/
 │   │   ├── hyprland-gui.lua    # настройки, которые пишет HyprMod (мониторы и т.п.)
 │   │   ├── noctalia.lua        # цвета рамок, генерирует Noctalia
 │   │   ├── cheatsheet.txt      # шпаргалка, которую показывает SUPER + /
+│   │   ├── scripts/capture.sh  # скриншоты, OCR, пипетка, меню захвата
 │   │   └── hyprmod/            # профиль HyprMod
 │   ├── noctalia/config.toml    # конфиг Noctalia (экспорт, см. ниже)
+│   ├── satty/config.toml       # редактор скриншотов
 │   ├── kitty/ btop/ rofi/ yazi/ cava/ ...
 ├── system/
 │   ├── install-sddm-grub.sh    # темы SDDM и GRUB
@@ -45,7 +48,8 @@ Linux/
 ## 1. Пакеты
 
 ```sh
-sudo pacman -S hyprland kitty rofi dolphin yazi btop playerctl telegram-desktop ttf-jetbrains-mono-nerd
+sudo pacman -S hyprland kitty rofi nautilus yazi btop playerctl telegram-desktop ttf-jetbrains-mono-nerd
+sudo pacman -S grim slurp wl-clipboard libnotify satty tesseract tesseract-data-rus tesseract-data-eng hyprpicker
 sudo pacman -S noctalia
 ```
 
@@ -57,7 +61,8 @@ cd MyCustomization/Linux
 
 cp -r .config/hypr ~/.config/
 mkdir -p ~/.config/noctalia && cp .config/noctalia/config.toml ~/.config/noctalia/
-cp -r .config/kitty .config/btop .config/rofi .config/yazi ~/.config/
+cp -r .config/kitty .config/btop .config/rofi .config/yazi .config/satty ~/.config/
+xdg-mime default org.gnome.Nautilus.desktop inode/directory
 
 # обои: Noctalia берёт их из ~/Pictures/Wallpapers, это симлинк на папку из репозитория
 mkdir -p ~/Pictures && ln -s "$(realpath ../wallpapers)" ~/Pictures/Wallpapers
@@ -106,14 +111,17 @@ sddm-greeter-qt6 --test-mode --theme /usr/share/sddm/themes/sddm-astronaut-theme
 | Клавиши | Действие |
 |---|---|
 | `SUPER + T` | Терминал (kitty) |
-| `SUPER + E` | Файловый менеджер (dolphin) |
+| `SUPER + E` | Файловый менеджер (nautilus) |
 | `SUPER + SHIFT + T` | Telegram |
 | `SUPER + R` / `ALT + Space` | Лаунчер приложений |
 | `SUPER + S` | Центр управления |
 | `SUPER + ,` | Настройки Noctalia |
 | `SUPER + Escape` | Меню сессии (выход, перезагрузка, выключение) |
 | `SUPER + Tab` | Переключатель окон |
-| `SUPER + SHIFT + 4` | Скриншот области |
+| `SUPER + SHIFT + 4` | Скриншот области → редактор satty |
+| `SUPER + SHIFT + S` | Меню захвата: область / окно / экран → редактор, область сразу в буфер, OCR, пипетка |
+| `SUPER + SHIFT + O` | Текст с экрана (OCR, rus+eng) → буфер |
+| `SUPER + SHIFT + C` | Пипетка → HEX в буфер |
 | `SUPER + SHIFT + V` | История буфера обмена |
 | `SUPER + Space` | Сменить раскладку EN/RU |
 | `SUPER + /` | Шпаргалка |
@@ -128,6 +136,14 @@ sddm-greeter-qt6 --test-mode --theme /usr/share/sddm/themes/sddm-astronaut-theme
 | `SUPER + 1…0` | Перейти на воркспейс |
 | `SUPER + SHIFT + 1…0` | Перенести окно на воркспейс (кроме 4: там скриншот) |
 | `SUPER + колёсико` / свайп 3 пальцами | Листать воркспейсы |
+
+## Скриншоты
+
+В satty: `Enter` — скопировать в буфер и сохранить в `~/Pictures/Screenshots/`, `Ctrl + S` — только сохранить, `Esc` — закрыть. Инструменты: стрелка, линия, прямоугольник, эллипс, текст, маркер, размытие, кисть, обрезка.
+
+## Мониторы
+
+Внешний монитор `DP-1` (2560×1440 @ 165 Гц) справа от ноутбука и основной: воркспейсы 1–5 на нём, 6–10 на ноутбуке. Настраивается в начале `hyprland.lua`, под другой монитор надо поменять `output` и `mode` (`hyprctl monitors all` покажет доступные режимы).
 
 ## Раскладка
 

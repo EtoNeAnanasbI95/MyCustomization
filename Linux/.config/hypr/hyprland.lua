@@ -28,6 +28,24 @@ hl.monitor({
     scale    = "auto",
 })
 
+-- Внешний монитор 2K 165 Гц справа от ноутбука, основной
+hl.monitor({
+    output   = "DP-1",
+    mode     = "2560x1440@164.69",
+    position = "1600x0",
+    scale    = 1,
+})
+
+-- Воркспейсы 1-5 на внешнем мониторе (1 по умолчанию), 6-10 на ноутбуке.
+-- Если внешний отключить, Hyprland перенесёт его воркспейсы на ноутбук.
+for i = 1, 10 do
+    hl.workspace_rule({
+        workspace = tostring(i),
+        monitor   = (i <= 5) and "DP-1" or "eDP-1",
+        default   = (i == 1 or i == 6),
+    })
+end
+
 
 ---------------------
 ---- MY PROGRAMS ----
@@ -35,7 +53,7 @@ hl.monitor({
 
 -- Set programs that you use
 local terminal    = "kitty" -- old config used alacritty, which isn't installed here; kitty is
-local fileManager = "dolphin"
+local fileManager = "nautilus"
 local menu        = "rofi -show drun"
 
 
@@ -294,9 +312,11 @@ hl.bind(mainMod .. " + SHIFT + M", hl.dsp.workspace.toggle_special("hidden"))
 hl.bind(mainMod .. " + SHIFT + T", hl.dsp.exec_cmd(messenger))
 
 -- Screenshots / clipboard
-hl.bind(mainMod .. " + SHIFT + 4", hl.dsp.exec_cmd(ipc .. "screenshot-region"))
--- hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd(screenshotRegion))
--- hl.bind(mainMod .. " + F7",        hl.dsp.exec_cmd(screenshotMenu))
+local capture = os.getenv("HOME") .. "/.config/hypr/scripts/capture.sh "
+hl.bind(mainMod .. " + SHIFT + 4", hl.dsp.exec_cmd(capture .. "region")) -- область -> редактор satty
+hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd(capture .. "menu"))   -- меню захвата
+hl.bind(mainMod .. " + SHIFT + O", hl.dsp.exec_cmd(capture .. "ocr"))    -- текст с экрана
+hl.bind(mainMod .. " + SHIFT + C", hl.dsp.exec_cmd(capture .. "color"))  -- пипетка
 hl.bind(mainMod .. " + SHIFT + V", hl.dsp.exec_cmd(ipc .. "panel-toggle clipboard"))
 
 -- Move focus with mainMod + arrow keys
@@ -415,6 +435,15 @@ hl.layer_rule({
   ignore_alpha = 0.5,
   blur = true,
   blur_popups = true,
+})
+
+-- Satty (редактор скриншотов): плавающее окно по центру
+hl.window_rule({
+    name  = "satty-float",
+    match = { class = "^(com.gabm.satty)$" },
+
+    float  = true,
+    center = true,
 })
 
 -- Telegram: float it, dim it when unfocused-ish, and keep the media viewer fully opaque
