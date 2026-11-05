@@ -37,11 +37,13 @@ Linux/
 │   │   ├── cheatsheet.txt      # шпаргалка, которую показывает SUPER + /
 │   │   ├── scripts/capture.sh  # скриншоты, запись, OCR, пипетка, меню захвата
 │   │   ├── scripts/launcher.sh # лаунчер на английской раскладке, потом возврат прежней
+│   │   ├── scripts/claude-panel.sh # выдвижная панель Claude Code справа (SUPER + A)
 │   │   └── hyprmod/            # профиль HyprMod
 │   ├── noctalia/config.toml    # конфиг Noctalia (экспорт, см. ниже)
 │   ├── satty/config.toml       # редактор скриншотов
 │   ├── zed/                    # settings.json, keymap.json
 │   ├── kitty/ btop/ rofi/ yazi/ cava/ ...
+├── .tmux.conf                  # tmux: vim-копирование в системный буфер, Alt-бинды для панелей
 ├── system/
 │   ├── install-sddm-grub.sh    # темы SDDM и GRUB
 │   └── install-plymouth.sh     # Plymouth + тема
@@ -54,7 +56,7 @@ Linux/
 ## 1. Пакеты
 
 ```sh
-sudo pacman -S hyprland kitty rofi nautilus yazi btop playerctl telegram-desktop ttf-jetbrains-mono-nerd
+sudo pacman -S hyprland kitty tmux rofi nautilus yazi btop playerctl telegram-desktop ttf-jetbrains-mono-nerd
 sudo pacman -S grim slurp wl-clipboard libnotify satty tesseract tesseract-data-rus tesseract-data-eng hyprpicker
 sudo pacman -S noctalia gpu-screen-recorder mpv socat jq bitwarden-cli
 yay -S mpvpaper ai-usagebar-bin happ-desktop-bin
@@ -68,6 +70,7 @@ cd MyCustomization/Linux
 
 cp -r .config/hypr ~/.config/
 mkdir -p ~/.config/noctalia && cp .config/noctalia/config.toml ~/.config/noctalia/
+cp .tmux.conf ~/
 cp -r .config/kitty .config/btop .config/rofi .config/yazi .config/satty .config/zed ~/.config/
 xdg-mime default org.gnome.Nautilus.desktop inode/directory
 
@@ -147,6 +150,7 @@ sddm-greeter-qt6 --test-mode --theme /usr/share/sddm/themes/sddm-astronaut-theme
 | `SUPER + SHIFT + R` | Запись области экрана / остановить |
 | `SUPER + SHIFT + V` | История буфера обмена |
 | `SUPER + Space` | Сменить раскладку EN/RU |
+| `SUPER + A` | Панель Claude Code справа (ещё раз — спрятать) |
 | `SUPER + /` | Шпаргалка |
 | `SUPER + Q` | Закрыть окно |
 | `SUPER + F` | Полный экран |
@@ -179,9 +183,28 @@ sddm-greeter-qt6 --test-mode --theme /usr/share/sddm/themes/sddm-astronaut-theme
 - **Happ** запускается из автозапуска Hyprland свёрнутым в трей (`Happ --autostart`). Автоподключение и «запускать свёрнутым» включаются в настройках самого Happ.
 - **Рабочий OpenVPN** импортирован в NetworkManager из `.ovpn` (`nmcli connection import type openvpn file <профиль>.ovpn`), профиль с ключами в репозиторий не кладётся.
 
+## Claude Code в панели
+
+`SUPER + A` или кнопка ✨ в баре выдвигает справа kitty с Claude Code. Сессия живёт в tmux (`claude-panel`): спрятал панель — Claude продолжает работать, открыл — диалог на месте. Окно лежит в спецворкспейсе `special:claude`.
+
+## tmux
+
+| Клавиши | Действие |
+|---|---|
+| `Alt + y` | режим копирования (vim) |
+| `v` / `V` / `Ctrl + v` | выделение: посимвольно / строкой / прямоугольником |
+| `y` или `Enter` | скопировать в системный буфер и выйти |
+| `Esc` | снять выделение, второй раз — выйти |
+| `Alt + h j k l` | переключение между панелями |
+| `Alt + v` / `Alt + s` | разделить вертикально / горизонтально |
+| `Alt + x` | закрыть панель |
+| `Ctrl + b` + `H J K L` | изменить размер панели |
+
 ## Раскладка
 
 `us,ru(mac)`: русская раскладка как на MacBook. На ней запятая стоит на `Shift + 6`, точка на `Shift + 7`, `ё` на клавише `\`.
+
+Автоповтор при зажатой клавише как на маке на максимуме: 35 символов/с после 225 мс (`repeat_rate`, `repeat_delay` в `hyprland.lua`).
 
 # TODO
 * ~~Анимированные обои~~ (плагин Video Wallpaper)

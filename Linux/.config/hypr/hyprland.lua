@@ -71,7 +71,8 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("wl-paste --watch cliphist store")
   hl.exec_cmd("systemctl --user start hyprpolkitagent")
   hl.exec_cmd("noctalia")
-  hl.exec_cmd("/opt/happ/bin/Happ --autostart") -- VPN Happ: свёрнутым в трей, автоподключение в его настройках
+  -- VPN Happ: окно сразу уезжает в скрытый воркспейс (SUPER+SHIFT+M), в трее остаётся иконка
+  hl.exec_cmd("/opt/happ/bin/Happ --autostart", { workspace = "special:hidden silent" })
 end)
 
 
@@ -256,6 +257,10 @@ hl.config({
         kb_options = "grp:win_space_toggle",
         kb_rules   = "",
 
+        -- Автоповтор как на маке на максимуме (KeyRepeat=2 -> 30 мс, InitialKeyRepeat=15 -> 225 мс)
+        repeat_rate  = 35,   -- символов в секунду при зажатой клавише
+        repeat_delay = 225,  -- мс до начала автоповтора
+
         follow_mouse = 1,
 
         sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
@@ -286,7 +291,7 @@ hl.device({
 
 local mainMod = "SUPER"
 local ipc = "noctalia msg "
-local messenger = "telegram-desktop"
+local messenger = "Telegram" -- бинарник из пакета telegram-desktop называется так
 
 -- Applications
 hl.bind(mainMod .. "+T", hl.dsp.exec_cmd(terminal))
@@ -319,6 +324,9 @@ hl.bind(mainMod .. "+Escape", hl.dsp.exec_cmd(ipc .. "panel-toggle session"))
 -- "Свернуть" для приложений без трея: прячем окно в скрытый воркспейс
 hl.bind(mainMod .. " + M",         hl.dsp.window.move({ workspace = "special:hidden", follow = false }))
 hl.bind(mainMod .. " + SHIFT + M", hl.dsp.workspace.toggle_special("hidden"))
+
+-- Панель Claude Code справа (повторное нажатие прячет)
+hl.bind(mainMod .. " + A", hl.dsp.exec_cmd(os.getenv("HOME") .. "/.config/hypr/scripts/claude-panel.sh"))
 
 -- Telegram
 hl.bind(mainMod .. " + SHIFT + T", hl.dsp.exec_cmd(messenger))
@@ -448,6 +456,18 @@ hl.layer_rule({
   ignore_alpha = 0.5,
   blur = true,
   blur_popups = true,
+})
+
+-- Панель Claude: плавающая, справа на всю высоту, живёт в спецворкспейсе "claude"
+hl.window_rule({
+    name  = "claude-panel",
+    match = { class = "^(claude-panel)$" },
+
+    float     = true,
+    workspace = "special:claude silent",
+    size      = "(monitor_w*0.36) (monitor_h*0.90)",
+    move      = "(monitor_w*0.63) (monitor_h*0.06)",
+    opacity   = "0.94 0.90",
 })
 
 -- Прозрачность с размытием фона (активное окно / неактивное)

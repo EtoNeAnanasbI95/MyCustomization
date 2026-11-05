@@ -1,6 +1,17 @@
 [bar.default]
 center = [ "clock", "bar" ]
-end = [ "tray", "notes", "recorder", "network", "volume", "battery", "control-center", "session", "notifications" ]
+end = [
+    "claude-panel",
+    "tray",
+    "notes",
+    "recorder",
+    "network",
+    "volume",
+    "battery",
+    "control-center",
+    "session",
+    "notifications"
+]
 start = [ "launcher", "wallpaper", "mpvpaper", "workspaces", "active_window" ]
 
 [calendar]
@@ -243,6 +254,14 @@ wallpaper_scheme = "vibrant"
 
 [widget.bar]
 type = "felipeartur/ai-usagebar:bar"
+
+[widget.claude-panel]
+glyph = "sparkles"
+tooltip = "Claude Code (SUPER+A)"
+type = "custom_button"
+
+    [widget.claude-panel.actions]
+    left = "exec ~/.config/hypr/scripts/claude-panel.sh"
 
 [widget.mpvpaper]
 type = "noctalia/mpvpaper:mpvpaper"
