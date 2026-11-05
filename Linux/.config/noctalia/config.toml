@@ -1,5 +1,43 @@
 [bar.default]
+center = [ "clock", "bar", "notes" ]
+end = [
+    "noctalia/screen_recorder:recorder",
+    "media",
+    "tray",
+    "notifications",
+    "clipboard",
+    "network",
+    "bluetooth",
+    "volume",
+    "brightness",
+    "battery",
+    "control-center",
+    "session"
+]
 start = [ "launcher", "wallpaper", "workspaces", "active_window" ]
+
+[calendar]
+
+[control_center.calendar]
+show_events_card = false
+
+[desktop_widgets]
+schema_version = 2
+widget_order = []
+
+    [desktop_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget]
+
+[keybinds]
+down = [ "Down", "Ctrl+j", "Ctrl+Cyrillic_o" ]
+up = [ "Up", "Ctrl+k", "Ctrl+Cyrillic_el" ]
+
+[location]
+address = "Moscow, Russia"
 
 [lockscreen]
 transition = [ "golden", "honeycomb", "melt", "pixel", "stripes", "vortex", "wipe", "zoom" ]
@@ -160,8 +198,27 @@ widget_order = [
         [lockscreen_widgets.widget.lockscreen-widget-0000000000000004.settings]
         show_forecast = true
 
+[plugin_settings."noctalia/mpvpaper"]
+video_directory = "/home/notkirilov/Pictures/Wallpapers"
+
+[plugin_settings."noctalia/screen_recorder"]
+video_source = "region"
+
+[plugins]
+enabled = [
+    "0rgl/ask-claude",
+    "felipeartur/ai-usagebar",
+    "noctalia/notes",
+    "noctalia/bitwarden",
+    "noctalia/screen_recorder",
+    "noctalia/mpvpaper"
+]
+
 [shell]
 font_family = "JetBrainsMono NF"
+
+    [shell.window_switcher]
+    mru = true
 
 [theme]
 builtin = "Noctalia"
@@ -174,13 +231,16 @@ wallpaper_scheme = "vibrant"
     builtin_ids = [ "btop", "cava", "gtk3", "gtk4", "hyprland", "kcolorscheme", "kitty", "qt" ]
 
 [wallpaper.default]
-path = "/home/notkirilov/Pictures/Wallpapers/sanset_purple.png"
+path = "/home/notkirilov/Pictures/Wallpapers/lofi-caffe.gif"
 
 [wallpaper.last]
-path = "/home/notkirilov/Pictures/Wallpapers/sanset_purple.png"
+path = "/home/notkirilov/Pictures/Wallpapers/lofi-caffe.gif"
+
+[wallpaper.monitors.DP-1]
+path = "/home/notkirilov/Pictures/Wallpapers/lofi-caffe.gif"
 
 [wallpaper.monitors.eDP-1]
-path = "/home/notkirilov/Pictures/Wallpapers/sanset_purple.png"
+path = "/home/notkirilov/Pictures/Wallpapers/lofi-caffe.gif"
 
 [[wallpaper.favorite]]
 palette_source = "wallpaper"
@@ -193,3 +253,9 @@ palette_source = "wallpaper"
 path = "/home/notkirilov/Pictures/Wallpapers/beach-landscape-twilight-sunset.jpg"
 theme_mode = "dark"
 wallpaper_scheme = "vibrant"
+
+[widget.bar]
+type = "felipeartur/ai-usagebar:bar"
+
+[widget.notes]
+type = "noctalia/notes:notes"

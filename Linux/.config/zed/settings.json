@@ -1,0 +1,201 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  // Расширения с мака, Zed доставит их сам при запуске
+  "auto_install_extensions": {
+    "ansible": true,
+    "catppuccin": true,
+    "catppuccin-icons": true,
+    "chrome-devtools-mcp": true,
+    "colored-zed-icons-theme": true,
+    "comment": true,
+    "csharp": true,
+    "csv": true,
+    "dockerfile": true,
+    "emmet": true,
+    "git-firefly": true,
+    "gitlab-ci-ls": true,
+    "haproxy": true,
+    "html": true,
+    "log": true,
+    "make": true,
+    "nginx": true,
+    "react-snippets-es7": true,
+    "react-typescript-snippets": true,
+    "sql": true,
+  },
+  "cli_default_open_behavior": "new_window",
+  "context_servers": {
+    "chrome-devtools-mcp-zed": {
+      "enabled": true,
+      "remote": false,
+      "settings": {
+        "browser_url": null,
+        "ws_endpoint": null,
+        "ws_headers": null,
+        "auto_connect": null,
+        "channel": null,
+        "headless": null,
+        "isolated": null,
+        "user_data_dir": null,
+        "viewport": null,
+        "executable_path": null,
+        "chrome_arg": [],
+        "proxy_server": null,
+        "accept_insecure_certs": null,
+        "category_emulation": null,
+        "category_performance": null,
+        "category_network": null,
+        "log_file": null,
+        "extra_args": [],
+      },
+    },
+  },
+  "outline_panel": {
+    "dock": "left",
+  },
+  "collaboration_panel": {
+    "dock": "left",
+  },
+  "agent": {
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "git_panel": {
+    "dock": "left",
+  },
+  "lsp": {
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always",
+          },
+        },
+        "javascript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always",
+          },
+        },
+      },
+      "enable_lsp_tasks": true,
+    },
+  },
+  "agent_servers": {
+    "codex-acp": {
+      "default_config_options": {
+        "mode": "agent-full-access",
+        "model": "gpt-5.5"
+      },
+      "type": "registry",
+    },
+    "claude-acp": {
+      "default_config_options": {
+        "effort": "default",
+        "model": "default",
+        "mode": "bypassPermissions",
+      },
+      "favorite_config_option_values": {
+        "model": [
+          "default"
+        ],
+        "mode": ["bypassPermissions"],
+      },
+      "type": "registry",
+    },
+  },
+  "experimental.theme_overrides": {
+    "players": [
+      {
+        "cursor": "#DC5BFF",
+        "background": "#DC5BFF",
+        "selection": "#DC5BFF30",
+      },
+    ],
+  },
+  "agent_buffer_font_size": 14.0,
+  "languages": {
+    "TypeScript": {
+      "document_folding_ranges": "on",
+      "format_on_save": "on",
+    },
+    "TSX": {
+      "document_folding_ranges": "on",
+      "format_on_save": "on",
+    },
+    "CSharp": {
+      "language_servers": ["roslyn", "!omnisharp", "..."],
+    },
+  },
+  "jsx_tag_auto_close": {
+    "enabled": true,
+  },
+  "use_autoclose": true,
+  "ui_font_weight": 500.0,
+  "ui_font_family": "JetBrainsMono Nerd Font",
+  "icon_theme": "Catppuccin Mocha",
+  "buffer_line_height": { "custom": 3.0 },
+  "session": {
+    "trust_all_worktrees": true,
+  },
+  "vim_mode": true,
+  "terminal": {
+    "env": {
+      "Q_NEW_SESSION": "\"1\"",
+    },
+  },
+  "project_panel": {
+    "dock": "left",
+    "auto_reveal_entries": false,
+    "indent_size": 20,
+    "hide_root": true,
+  },
+  "preview_tabs": {
+    "enabled": false,
+  },
+  "tab_bar": {
+    "show": false,
+    "show_tab_bar_buttons": false,
+  },
+  "sticky_scroll": {
+    "enabled": false,
+  },
+  "cursor_shape": "hollow",
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 2000,
+    },
+  },
+  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
+  "buffer_font_weight": 600,
+  "file_types": {
+    "tailwindcss": ["*.css"],
+  },
+  "relative_line_numbers": "enabled",
+  "ensure_final_newline_on_save": true,
+  "indent_guides": {
+    "enabled": true,
+  },
+  "gutter": {
+    "min_line_number_digits": 0,
+  },
+  "title_bar": {
+    "show_user_menu": false,
+    "show_project_items": false,
+  },
+  "status_bar": {
+    "experimental.show": true,
+  },
+  "soft_wrap": "editor_width",
+  "base_keymap": "Cursor",
+  "ui_font_size": 16.0,
+  "buffer_font_size": 14,
+  "theme": "Catppuccin Mocha",
+}

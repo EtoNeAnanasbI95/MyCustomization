@@ -11,6 +11,7 @@ SUPER + SHIFT + 4          Скриншот области → редактор
 SUPER + SHIFT + S          Меню захвата (окно, экран, OCR, пипетка…)
 SUPER + SHIFT + O          Текст с экрана (OCR) → буфер
 SUPER + SHIFT + C          Пипетка → HEX в буфер
+SUPER + SHIFT + R          Запись области экрана / остановить
 SUPER + SHIFT + V          История буфера обмена
 SUPER + Space              Сменить раскладку EN/RU
 SUPER + /                  Эта шпаргалка

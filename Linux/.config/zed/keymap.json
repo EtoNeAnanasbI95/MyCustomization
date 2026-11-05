@@ -1,0 +1,116 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown",
+    },
+  },
+  {
+    "bindings": {
+      "ctrl-k": null,
+      "ctrl-e": null,
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+    },
+  },
+  {
+    "context": "Editor && showing_completions",
+    "bindings": {
+      "enter": "editor::ConfirmCompletion",
+      "tab": "editor::ContextMenuNext",
+      "shift-tab": "editor::ContextMenuPrevious",
+    },
+  },
+  {
+    "context": "Editor && edit_prediction",
+    "bindings": {
+      "ctrl-enter": "editor::AcceptEditPrediction",
+    },
+  },
+  {
+    "context": "((Editor && showing_signature_help) && !showing_completions)",
+    "bindings": {
+      "tab": "editor::SignatureHelpNext",
+    },
+  },
+  {
+    "context": "((Editor && showing_signature_help) && !showing_completions)",
+    "bindings": {
+      "shift-tab": "editor::SignatureHelpPrevious",
+    },
+  },
+  {
+    "context": "Picker > Editor",
+    "bindings": {
+      "enter": "picker::ConfirmCompletion",
+    },
+  },
+  {
+    "context": "(Editor && edit_prediction)",
+    "bindings": {
+      "ctrl-enter": "editor::AcceptEditPrediction",
+    },
+  },
+  {
+    "context": "(Editor && edit_prediction)",
+    "bindings": {
+      "tab": null,
+    },
+  },
+  {
+    "context": "Picker > Editor",
+    "bindings": {
+      "ctrl-enter": "picker::ConfirmCompletion",
+    },
+  },
+  {
+    "context": "vim_mode == literal",
+    "bindings": {
+      "tab": null,
+    },
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "tab": null,
+    },
+  },
+  {
+    "context": "vim_mode == replace",
+    "bindings": {
+      "tab": null,
+    },
+  },
+  {
+    "context": "vim_mode == waiting",
+    "bindings": {
+      "tab": null,
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-l": null,
+    },
+  },
+]

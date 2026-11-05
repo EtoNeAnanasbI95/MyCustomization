@@ -6,6 +6,7 @@
 #   capture.sh quick    - область сразу в буфер и в ~/Pictures/Screenshots, без редактора
 #   capture.sh ocr      - текст из области -> буфер
 #   capture.sh color    - пипетка, HEX -> буфер
+#   capture.sh record [region|focused|portal] - начать запись экрана, либо остановить, если уже идёт
 #   capture.sh menu     - меню со всем этим
 set -euo pipefail
 
@@ -30,7 +31,13 @@ import json,sys
 print(next(m["name"] for m in json.load(sys.stdin) if m["focused"]))'
 }
 
+REC="noctalia msg plugin noctalia/screen_recorder:service all"
+recording() { pgrep -f '^(/usr/bin/)?gpu-screen-recorder' >/dev/null; }
+
 case "${1:-region}" in
+  record)
+    if recording; then $REC stop >/dev/null
+    else $REC start "${2:-region}" >/dev/null; fi ;;
   region) g=$(region) || exit 0; grim -g "$g" - | edit ;;
   window) grim -g "$(active_window_geom)" - | edit ;;
   screen) grim -o "$(focused_monitor)" - | edit ;;
@@ -54,8 +61,10 @@ case "${1:-region}" in
       "󰆏  Область → сразу в буфер" \
       "󰊄  Текст с экрана (OCR)" \
       "󰈊  Пипетка" \
+      "󰑋  Записать область" \
+      "󰑋  Записать экран" \
       "󰉋  Открыть папку скриншотов" |
-      rofi -dmenu -i -no-custom -p "Захват" -theme-str 'window {width: 26em;} listview {lines: 7;}') || exit 0
+      rofi -dmenu -i -no-custom -p "Захват" -theme-str 'window {width: 26em;} listview {lines: 9;}') || exit 0
     sleep 0.2   # дать rofi закрыться, чтобы он не попал в кадр
     case "$choice" in
       *"Область → редактор"*) exec "$0" region ;;
@@ -64,7 +73,9 @@ case "${1:-region}" in
       *"сразу в буфер"*)      exec "$0" quick ;;
       *"OCR"*)                exec "$0" ocr ;;
       *"Пипетка"*)            exec "$0" color ;;
+      *"Записать область"*)   exec "$0" record region ;;
+      *"Записать экран"*)     exec "$0" record focused ;;
       *"папку"*)              xdg-open "$DIR" ;;
     esac ;;
-  *) echo "usage: $0 {region|window|screen|quick|ocr|color|menu}" >&2; exit 1 ;;
+  *) echo "usage: $0 {region|window|screen|quick|ocr|color|record|menu}" >&2; exit 1 ;;
 esac

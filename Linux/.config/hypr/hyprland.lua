@@ -71,6 +71,7 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("wl-paste --watch cliphist store")
   hl.exec_cmd("systemctl --user start hyprpolkitagent")
   hl.exec_cmd("noctalia")
+  hl.exec_cmd("/opt/happ/bin/Happ --autostart") -- VPN Happ: свёрнутым в трей, автоподключение в его настройках
 end)
 
 
@@ -286,8 +287,10 @@ hl.bind(mainMod .. "+F", hl.dsp.window.fullscreen())
 hl.bind(mainMod .. "+V", hl.dsp.window.float({ action = "toggle" }))
 
 -- Launcher
-hl.bind(mainMod .. "+R", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher"))
-hl.bind("ALT + Space", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher"))
+-- лаунчер открывается на английской раскладке, после закрытия возвращается прежняя
+local launcher = os.getenv("HOME") .. "/.config/hypr/scripts/launcher.sh"
+hl.bind(mainMod .. "+R", hl.dsp.exec_cmd(launcher))
+hl.bind("ALT + Space", hl.dsp.exec_cmd(launcher))
 
 -- Control Center
 hl.bind(mainMod .. "+S", hl.dsp.exec_cmd(ipc .. "panel-toggle control-center"))
@@ -296,7 +299,7 @@ hl.bind(mainMod .. "+S", hl.dsp.exec_cmd(ipc .. "panel-toggle control-center"))
 hl.bind(mainMod .. "+comma", hl.dsp.exec_cmd(ipc .. "settings-toggle"))
 
 -- Window Switcher
-hl.bind(mainMod .. " + Tab", hl.dsp.exec_cmd(ipc .. "window-switcher"))
+hl.bind(mainMod .. " + Tab", hl.dsp.exec_cmd(ipc .. "window-switcher hold")) -- как в macOS/Windows: держишь SUPER, жмёшь Tab, отпускаешь
 
 -- Cheatsheet
 hl.bind(mainMod .. " + slash", hl.dsp.exec_cmd("rofi -dmenu -i -no-custom -p 'Хоткеи' -theme-str 'window {width: 50em;} listview {lines: 20;}' < " .. os.getenv("HOME") .. "/.config/hypr/cheatsheet.txt"))
@@ -317,6 +320,7 @@ hl.bind(mainMod .. " + SHIFT + 4", hl.dsp.exec_cmd(capture .. "region")) -- об
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd(capture .. "menu"))   -- меню захвата
 hl.bind(mainMod .. " + SHIFT + O", hl.dsp.exec_cmd(capture .. "ocr"))    -- текст с экрана
 hl.bind(mainMod .. " + SHIFT + C", hl.dsp.exec_cmd(capture .. "color"))  -- пипетка
+hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd(capture .. "record region")) -- запись области / стоп
 hl.bind(mainMod .. " + SHIFT + V", hl.dsp.exec_cmd(ipc .. "panel-toggle clipboard"))
 
 -- Move focus with mainMod + arrow keys
@@ -459,7 +463,7 @@ hl.window_rule({
     name  = "telegram-opacity",
     match = { class = "^(org.telegram.desktop)$" },
 
-    opacity = "0.70",
+    opacity = "0.85",
 })
 
 hl.window_rule({
