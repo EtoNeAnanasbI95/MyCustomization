@@ -15,7 +15,10 @@
 | Шрифты | JetBrainsMono Nerd Font, эмодзи Apple Color Emoji (`ttf-apple-emoji`) |
 | Проводник | nautilus, yazi (TUI) |
 | Скриншоты | grim + slurp → редактор [satty](https://github.com/gabm/Satty), OCR через tesseract, пипетка hyprpicker |
-| Шпаргалка по хоткеям | rofi (`SUPER + /`) |
+| Шпаргалка по хоткеям | плагин Keybind Cheatsheet (`SUPER + /`), описания берутся из `description` у биндов |
+| Заметки | Quill (markdown в `~/obsidian-storage/publish/Quick Notes`) и стикеры Noctes на рабочем столе |
+| Перевод | плагин Translator: двойное `SUPER + C` переводит выделенное на русский |
+| Телефон | KDE Connect + плагин Phone Connect |
 | Запись экрана | плагин Noctalia Screen Recorder (gpu-screen-recorder) |
 | Анимированные обои | плагин Noctalia Video Wallpaper (mpvpaper): GIF, mp4, webm |
 | Редактор кода | Zed (vim mode, Catppuccin, агент Claude Code через ACP) |
@@ -34,7 +37,7 @@ Linux/
 │   │   ├── hyprland.lua        # основной конфиг: хоткеи, анимации, ввод, правила окон
 │   │   ├── hyprland-gui.lua    # настройки, которые пишет HyprMod (мониторы и т.п.)
 │   │   ├── noctalia.lua        # цвета рамок, генерирует Noctalia
-│   │   ├── cheatsheet.txt      # шпаргалка, которую показывает SUPER + /
+│   │   ├── scripts/translate-copy.sh # двойное SUPER + C → перевод выделенного
 │   │   ├── scripts/capture.sh  # скриншоты, запись, OCR, пипетка, меню захвата
 │   │   ├── scripts/launcher.sh # лаунчер на английской раскладке, потом возврат прежней
 │   │   ├── scripts/claude-panel.sh # выдвижная панель Claude Code справа (SUPER + A)
@@ -49,6 +52,7 @@ Linux/
 │   ├── zed/                    # settings.json, keymap.json
 │   ├── kitty/ btop/ rofi/ yazi/ cava/ ...
 ├── .tmux.conf                  # tmux: vim-копирование в системный буфер, Alt-бинды для панелей
+├── .local/bin/speedtest         # speedtest в формате Ookla поверх speed.cloudflare.com (для Speedtest Meter)
 ├── system/
 │   ├── install-sddm-grub.sh    # темы SDDM и GRUB
 │   └── install-plymouth.sh     # Plymouth + тема
@@ -61,7 +65,7 @@ Linux/
 ## 1. Пакеты
 
 ```sh
-sudo pacman -S hyprland kitty tmux rofi nautilus yazi btop playerctl telegram-desktop ttf-jetbrains-mono-nerd
+sudo pacman -S hyprland kitty tmux rofi nautilus yazi btop playerctl telegram-desktop ttf-jetbrains-mono-nerd kdeconnect sshfs
 sudo pacman -S grim slurp wl-clipboard libnotify satty tesseract tesseract-data-rus tesseract-data-eng hyprpicker
 sudo pacman -S noctalia gpu-screen-recorder mpv socat jq bitwarden-cli spotify-launcher python-wand zenity
 yay -S mpvpaper ai-usagebar-bin happ-desktop-bin ttf-apple-emoji win2xcur
@@ -78,6 +82,7 @@ mkdir -p ~/.config/noctalia && cp .config/noctalia/config.toml .config/noctalia/
 cp .config/spotify-launcher.conf ~/.config/
 mkdir -p ~/.local/share/applications && cp .local/share/applications/Happ.desktop ~/.local/share/applications/
 cp .tmux.conf ~/
+mkdir -p ~/.local/bin && cp .local/bin/speedtest ~/.local/bin/
 cp -r .config/kitty .config/btop .config/rofi .config/yazi .config/satty .config/zed .config/fontconfig ~/.config/
 fc-cache -f
 xdg-mime default org.gnome.Nautilus.desktop inode/directory
@@ -111,7 +116,13 @@ noctalia config validate Linux/.config/noctalia/config.toml
 |---|---|
 | `noctalia/screen_recorder` | запись экрана, виджет в баре |
 | `noctalia/mpvpaper` | видео- и GIF-обои (папка `~/Pictures/Wallpapers`) |
-| `noctalia/notes` | заметки |
+| `fel/quill` | Markdown-заметки и туду (`SUPER + N`, быстрая запись `SUPER + SHIFT + N` / `/nt`) |
+| `remo/noctes` | стикеры на рабочем столе, видны на всех воркспейсах (`SUPER + ALT + N`) |
+| `noctalia/translator` | перевод в лаунчере (`/tr`), язык по умолчанию — русский |
+| `icefish/phone-connect` | телефон через KDE Connect: заряд, буфер, файлы |
+| `kenn/keybind-cheatsheet` | шпаргалка по хоткеям (`SUPER + /`) |
+| `nilsonlinux/speedtest-meter` | спидтест с живым спидометром; меряет через Cloudflare благодаря `~/.local/bin/speedtest` |
+| `thaer99ob/default-apps` | приложения по умолчанию |
 | `noctalia/bitwarden` | пароли из Bitwarden (`bw login` один раз) |
 | `0rgl/ask-claude` | `/ai вопрос` в лаунчере → ответ Claude Code |
 | `felipeartur/ai-usagebar` | лимиты AI-подписок в баре (нужен `ai-usagebar`) |
@@ -160,7 +171,11 @@ sddm-greeter-qt6 --test-mode --theme /usr/share/sddm/themes/sddm-astronaut-theme
 | `SUPER + SHIFT + V` | История буфера обмена |
 | `SUPER + Space` | Сменить раскладку EN/RU |
 | `SUPER + A` | Панель Claude Code справа (ещё раз — спрятать) |
-| `SUPER + /` | Шпаргалка |
+| `SUPER + /` | Шпаргалка (плагин) |
+| `SUPER + N` | Заметки Quill |
+| `SUPER + SHIFT + N` | Быстрая заметка / туду |
+| `SUPER + ALT + N` | Новый стикер на рабочий стол |
+| `SUPER + C` дважды | Перевести выделенный текст на русский |
 | `SUPER + Q` | Закрыть окно |
 | `SUPER + F` | Полный экран |
 | `SUPER + V` | Плавающее / тайлинг |

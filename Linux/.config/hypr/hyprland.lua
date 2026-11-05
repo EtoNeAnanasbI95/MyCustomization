@@ -71,6 +71,7 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("wl-paste --watch cliphist store")
   hl.exec_cmd("systemctl --user start hyprpolkitagent")
   hl.exec_cmd("noctalia")
+  hl.exec_cmd("kdeconnectd") -- KDE Connect (телефон), плагин Noctalia icefish/phone-connect
   -- VPN Happ: окно сразу уезжает в скрытый воркспейс (SUPER+SHIFT+M), в трее остаётся иконка
   hl.exec_cmd("env QT_QPA_PLATFORM=wayland /opt/happ/bin/Happ --autostart", { workspace = "special:hidden silent" }) -- Happ сам по себе лезет в XWayland и мылится
 end)
@@ -84,6 +85,15 @@ end)
 
 -- Electron-приложения (VS Code, Discord, Obsidian и т.п.) сразу на Wayland, без мыльного XWayland
 hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
+
+-- ~/.local/bin первым в PATH: там свои обёртки (например, speedtest поверх Cloudflare для Speedtest Meter)
+do
+    local localbin = os.getenv("HOME") .. "/.local/bin"
+    local path = os.getenv("PATH") or "/usr/local/bin:/usr/bin"
+    if not (":" .. path .. ":"):find(":" .. localbin .. ":", 1, true) then
+        hl.env("PATH", localbin .. ":" .. path)
+    end
+end
 
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
@@ -323,108 +333,91 @@ local mainMod = "SUPER"
 local ipc = "noctalia msg "
 local messenger = "Telegram" -- бинарник из пакета telegram-desktop называется так
 
--- Applications
-hl.bind(mainMod .. "+T", hl.dsp.exec_cmd(terminal))
-hl.bind(mainMod .. "+E", hl.dsp.exec_cmd(fileManager))
-hl.bind(mainMod .. "+Q", hl.dsp.window.close())
-hl.bind(mainMod .. "+F", hl.dsp.window.fullscreen())
-hl.bind(mainMod .. "+V", hl.dsp.window.float({ action = "toggle" }))
+-- Заголовки "-- N. Категория" и поля description читает плагин Keybind Cheatsheet (SUPER + /)
+local scripts  = os.getenv("HOME") .. "/.config/hypr/scripts/"
+local launcher = scripts .. "launcher.sh" -- лаунчер на английской раскладке, потом возврат прежней
+local capture  = scripts .. "capture.sh "
 
--- Launcher
--- лаунчер открывается на английской раскладке, после закрытия возвращается прежняя
-local launcher = os.getenv("HOME") .. "/.config/hypr/scripts/launcher.sh"
-hl.bind(mainMod .. "+R", hl.dsp.exec_cmd(launcher))
-hl.bind("ALT + Space", hl.dsp.exec_cmd(launcher))
+-- 1. Приложения
+hl.bind(mainMod .. " + T",         hl.dsp.exec_cmd(terminal),    { description = "Терминал (kitty)" })
+hl.bind(mainMod .. " + E",         hl.dsp.exec_cmd(fileManager), { description = "Файловый менеджер" })
+hl.bind(mainMod .. " + SHIFT + T", hl.dsp.exec_cmd(messenger),   { description = "Telegram" })
+hl.bind(mainMod .. " + A",         hl.dsp.exec_cmd(scripts .. "claude-panel.sh"), { description = "Панель Claude Code (ещё раз — спрятать)" })
 
--- Control Center
-hl.bind(mainMod .. "+S", hl.dsp.exec_cmd(ipc .. "panel-toggle control-center"))
+-- 2. Noctalia
+hl.bind(mainMod .. " + R",      hl.dsp.exec_cmd(launcher), { description = "Лаунчер" })
+hl.bind("ALT + Space",          hl.dsp.exec_cmd(launcher), { description = "Лаунчер" })
+hl.bind(mainMod .. " + S",      hl.dsp.exec_cmd(ipc .. "panel-toggle control-center"), { description = "Центр управления" })
+hl.bind(mainMod .. " + comma",  hl.dsp.exec_cmd(ipc .. "settings-toggle"),             { description = "Настройки Noctalia" })
+hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd(ipc .. "panel-toggle session"),        { description = "Меню сессии: выход, перезагрузка, выключение" })
+hl.bind(mainMod .. " + slash",  hl.dsp.exec_cmd(ipc .. "panel-toggle kenn/keybind-cheatsheet:cheatsheet"), { description = "Шпаргалка по хоткеям" })
+hl.bind(mainMod .. " + SHIFT + V", hl.dsp.exec_cmd(ipc .. "panel-toggle clipboard"),   { description = "История буфера обмена" })
+hl.bind(mainMod .. " + C",      hl.dsp.exec_cmd(scripts .. "translate-copy.sh"),       { description = "Дважды — перевести выделенное на русский" })
 
--- Settings
-hl.bind(mainMod .. "+comma", hl.dsp.exec_cmd(ipc .. "settings-toggle"))
+-- 3. Заметки
+hl.bind(mainMod .. " + N",         hl.dsp.exec_cmd(ipc .. "panel-toggle fel/quill:panel"),          { description = "Заметки (Quill)" })
+hl.bind(mainMod .. " + SHIFT + N", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher '/nt '"),          { description = "Быстрая заметка / туду" })
+hl.bind(mainMod .. " + ALT + N",   hl.dsp.exec_cmd(ipc .. "plugin remo/noctes:service all desk"),   { description = "Новый стикер на рабочий стол" })
 
--- Window Switcher
-hl.bind(mainMod .. " + Tab", hl.dsp.exec_cmd(ipc .. "window-switcher hold")) -- как в macOS/Windows: держишь SUPER, жмёшь Tab, отпускаешь
+-- 4. Скриншоты и запись
+hl.bind(mainMod .. " + SHIFT + 4", hl.dsp.exec_cmd(capture .. "region"),        { description = "Скриншот области → редактор" })
+hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd(capture .. "menu"),          { description = "Меню захвата" })
+hl.bind(mainMod .. " + SHIFT + O", hl.dsp.exec_cmd(capture .. "ocr"),           { description = "Текст с экрана (OCR) → буфер" })
+hl.bind(mainMod .. " + SHIFT + C", hl.dsp.exec_cmd(capture .. "color"),         { description = "Пипетка → HEX в буфер" })
+hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd(capture .. "record region"), { description = "Запись области экрана / стоп" })
 
--- Cheatsheet
-hl.bind(mainMod .. " + slash", hl.dsp.exec_cmd("rofi -dmenu -i -no-custom -p 'Хоткеи' -theme-str 'window {width: 50em;} listview {lines: 20;}' < " .. os.getenv("HOME") .. "/.config/hypr/cheatsheet.txt"))
+-- 5. Окна
+hl.bind(mainMod .. " + Q",   hl.dsp.window.close(),                        { description = "Закрыть окно" })
+hl.bind(mainMod .. " + F",   hl.dsp.window.fullscreen(),                   { description = "Полный экран" })
+hl.bind(mainMod .. " + V",   hl.dsp.window.float({ action = "toggle" }),   { description = "Плавающее / тайлинг" })
+hl.bind(mainMod .. " + Tab", hl.dsp.exec_cmd(ipc .. "window-switcher hold"), { description = "Переключатель окон (держи SUPER, жми Tab)" })
+hl.bind(mainMod .. " + M",         hl.dsp.window.move({ workspace = "special:hidden", follow = false }), { description = "Спрятать окно (вместо трея)" })
+hl.bind(mainMod .. " + SHIFT + M", hl.dsp.workspace.toggle_special("hidden"),                            { description = "Показать / скрыть спрятанные окна" })
 
--- Logout menu
-hl.bind(mainMod .. "+Escape", hl.dsp.exec_cmd(ipc .. "panel-toggle session"))
+hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }),  { description = "Фокус влево" })
+hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }), { description = "Фокус вправо" })
+hl.bind(mainMod .. " + up",    hl.dsp.focus({ direction = "up" }),    { description = "Фокус вверх" })
+hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }),  { description = "Фокус вниз" })
+hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }),  { description = "Фокус влево" })
+hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }), { description = "Фокус вправо" })
+hl.bind(mainMod .. " + K", hl.dsp.focus({ direction = "up" }),    { description = "Фокус вверх" })
+hl.bind(mainMod .. " + J", hl.dsp.focus({ direction = "down" }),  { description = "Фокус вниз" })
 
--- "Свернуть" для приложений без трея: прячем окно в скрытый воркспейс
-hl.bind(mainMod .. " + M",         hl.dsp.window.move({ workspace = "special:hidden", follow = false }))
-hl.bind(mainMod .. " + SHIFT + M", hl.dsp.workspace.toggle_special("hidden"))
+hl.bind(mainMod .. " + ALT + L", hl.dsp.window.resize({ x = 20,  y = 0,   relative = true }), { description = "Шире" })
+hl.bind(mainMod .. " + ALT + H", hl.dsp.window.resize({ x = -20, y = 0,   relative = true }), { description = "Уже" })
+hl.bind(mainMod .. " + ALT + K", hl.dsp.window.resize({ x = 0,   y = -20, relative = true }), { description = "Ниже ростом" })
+hl.bind(mainMod .. " + ALT + J", hl.dsp.window.resize({ x = 0,   y = 20,  relative = true }), { description = "Выше ростом" })
 
--- Панель Claude Code справа (повторное нажатие прячет)
-hl.bind(mainMod .. " + A", hl.dsp.exec_cmd(os.getenv("HOME") .. "/.config/hypr/scripts/claude-panel.sh"))
+hl.bind(mainMod .. " + SHIFT + H", hl.dsp.window.move({ direction = "left" }),  { description = "Поменять окно с левым" })
+hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.move({ direction = "right" }), { description = "Поменять окно с правым" })
+hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.move({ direction = "up" }),    { description = "Поменять окно с верхним" })
+hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ direction = "down" }),  { description = "Поменять окно с нижним" })
 
--- Telegram
-hl.bind(mainMod .. " + SHIFT + T", hl.dsp.exec_cmd(messenger))
+hl.bind(mainMod .. " + mouse:272",       hl.dsp.window.drag(),   { mouse = true, description = "Двигать окно мышью" })
+hl.bind(mainMod .. " + ALT + mouse:272", hl.dsp.window.resize(), { mouse = true, description = "Менять размер мышью" })
+hl.bind(mainMod .. " + mouse:273",       hl.dsp.window.resize(), { mouse = true, description = "Менять размер мышью" })
 
--- Screenshots / clipboard
-local capture = os.getenv("HOME") .. "/.config/hypr/scripts/capture.sh "
-hl.bind(mainMod .. " + SHIFT + 4", hl.dsp.exec_cmd(capture .. "region")) -- область -> редактор satty
-hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd(capture .. "menu"))   -- меню захвата
-hl.bind(mainMod .. " + SHIFT + O", hl.dsp.exec_cmd(capture .. "ocr"))    -- текст с экрана
-hl.bind(mainMod .. " + SHIFT + C", hl.dsp.exec_cmd(capture .. "color"))  -- пипетка
-hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd(capture .. "record region")) -- запись области / стоп
-hl.bind(mainMod .. " + SHIFT + V", hl.dsp.exec_cmd(ipc .. "panel-toggle clipboard"))
-
--- Move focus with mainMod + arrow keys
-hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
-hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
-hl.bind(mainMod .. " + up",    hl.dsp.focus({ direction = "up" }))
-hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
-
--- Move focus with mainMod + hjkl (vim-style, as in the old config)
-hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
-hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))
-hl.bind(mainMod .. " + K", hl.dsp.focus({ direction = "up" }))
-hl.bind(mainMod .. " + J", hl.dsp.focus({ direction = "down" }))
-
--- Resize the active window with mainMod + ALT + hjkl
-hl.bind(mainMod .. " + ALT + L", hl.dsp.window.resize({ x = 20,  y = 0,   relative = true }))
-hl.bind(mainMod .. " + ALT + H", hl.dsp.window.resize({ x = -20, y = 0,   relative = true }))
-hl.bind(mainMod .. " + ALT + K", hl.dsp.window.resize({ x = 0,   y = -20, relative = true }))
-hl.bind(mainMod .. " + ALT + J", hl.dsp.window.resize({ x = 0,   y = 20,  relative = true }))
-
--- Swap the active window's position with mainMod + SHIFT + hjkl
-hl.bind(mainMod .. " + SHIFT + H", hl.dsp.window.move({ direction = "left" }))
-hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.move({ direction = "right" }))
-hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.move({ direction = "up" }))
-hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ direction = "down" }))
-
--- Switch workspaces with mainMod + [0-9]
--- Move active window to a workspace with mainMod + SHIFT + [0-9]
+-- 6. Воркспейсы
 for i = 1, 10 do
     local key = i % 10 -- 10 maps to key 0
-    hl.bind(mainMod .. " + " .. key,             hl.dsp.focus({ workspace = i}))
+    hl.bind(mainMod .. " + " .. key, hl.dsp.focus({ workspace = i }), { description = "Воркспейс " .. i })
     if key ~= 4 then -- SUPER+SHIFT+4 занят скриншотом области
-        hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
+        hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }), { description = "Окно на воркспейс " .. i })
     end
 end
+hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }), { description = "Следующий воркспейс" })
+hl.bind(mainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "e-1" }), { description = "Предыдущий воркспейс" })
 
--- Scroll through existing workspaces with mainMod + scroll
-hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
-hl.bind(mainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "e-1" }))
-
--- Move/resize windows with mainMod + LMB/RMB and dragging
-hl.bind(mainMod .. " + mouse:272",       hl.dsp.window.drag(),   { mouse = true })
-hl.bind(mainMod .. " + ALT + mouse:272", hl.dsp.window.resize(), { mouse = true })
-hl.bind(mainMod .. " + mouse:273",       hl.dsp.window.resize(), { mouse = true })
-
--- Laptop multimedia keys for volume and LCD brightness
-hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd(ipc .. "volume-up"))
-hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd(ipc .. "volume-down"))
-hl.bind("XF86AudioMute", hl.dsp.exec_cmd(ipc .. "volume-mute"))
-hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd(ipc .. "brightness-up"))
-hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd(ipc .. "brightness-down"))
-
--- Requires playerctl
-hl.bind("XF86AudioNext",  hl.dsp.exec_cmd("playerctl next"),       { locked = true })
-hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
-hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
-hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
+-- 7. Медиа
+hl.bind("XF86AudioRaiseVolume",  hl.dsp.exec_cmd(ipc .. "volume-up"),       { description = "Громче" })
+hl.bind("XF86AudioLowerVolume",  hl.dsp.exec_cmd(ipc .. "volume-down"),     { description = "Тише" })
+hl.bind("XF86AudioMute",         hl.dsp.exec_cmd(ipc .. "volume-mute"),     { description = "Без звука" })
+hl.bind("XF86MonBrightnessUp",   hl.dsp.exec_cmd(ipc .. "brightness-up"),   { description = "Ярче" })
+hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd(ipc .. "brightness-down"), { description = "Темнее" })
+hl.bind("XF86AudioNext",  hl.dsp.exec_cmd("playerctl next"),       { locked = true, description = "Следующий трек" })
+hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true, description = "Пауза / play" })
+hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = true, description = "Пауза / play" })
+hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true, description = "Предыдущий трек" })
 
 
 --------------------------------

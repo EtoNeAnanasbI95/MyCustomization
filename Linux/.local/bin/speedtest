@@ -1,0 +1,201 @@
+#!/usr/bin/env python3
+"""speedtest — замена Ookla CLI поверх speed.cloudflare.com.
+
+Понимает то, что вызывает плагин Noctalia «Speedtest Meter»:
+    speedtest --version
+    speedtest --accept-license --accept-gdpr --format=json --progress=yes
+и печатает построчный JSON в формате Ookla (testStart / ping / download / upload / result).
+Без --format=json выводит короткий человекочитаемый итог.
+"""
+import http.client
+import json
+import os
+import ssl
+import statistics
+import sys
+import threading
+import time
+
+HOST = "speed.cloudflare.com"
+THREADS = 4
+DL_SECONDS = 10
+UL_SECONDS = 8
+TICK = 0.25
+CHUNK = 64 * 1024
+
+JSON_MODE = any(a.startswith("--format") and "json" in a for a in sys.argv[1:])
+CTX = ssl.create_default_context()
+
+COLO_CITY = {
+    "DME": "Москва", "SVO": "Москва", "VKO": "Москва", "LED": "Санкт-Петербург", "KJA": "Красноярск",
+    "SVX": "Екатеринбург", "OVB": "Новосибирск", "KZN": "Казань", "HEL": "Хельсинки", "ARN": "Стокгольм",
+    "FRA": "Франкфурт", "AMS": "Амстердам", "WAW": "Варшава", "RIX": "Рига", "TLL": "Таллин",
+    "VIE": "Вена", "IST": "Стамбул", "LHR": "Лондон", "CDG": "Париж",
+}
+
+
+def emit(obj):
+    if JSON_MODE:
+        print(json.dumps(obj, ensure_ascii=False), flush=True)
+
+
+def conn():
+    return http.client.HTTPSConnection(HOST, timeout=15, context=CTX)
+
+
+def trace():
+    c = conn()
+    c.request("GET", "/cdn-cgi/trace")
+    body = c.getresponse().read().decode()
+    c.close()
+    return dict(line.split("=", 1) for line in body.splitlines() if "=" in line)
+
+
+def isp_name(ip):
+    try:
+        c = http.client.HTTPSConnection("ipinfo.io", timeout=4, context=CTX)
+        c.request("GET", f"/{ip}/json", headers={"Accept": "application/json"})
+        org = json.loads(c.getresponse().read()).get("org", "")
+        c.close()
+        return org.split(" ", 1)[1] if org.startswith("AS") and " " in org else org
+    except Exception:
+        return ""
+
+
+def measure_ping(n=12):
+    c = conn()
+    samples = []
+    for i in range(n):
+        t0 = time.perf_counter()
+        c.request("GET", "/__down?bytes=0")
+        r = c.getresponse()
+        r.read()
+        dt = (time.perf_counter() - t0) * 1000
+        if i:  # первый запрос включает TLS-рукопожатие
+            samples.append(dt)
+        lat = statistics.median(samples) if samples else dt
+        jit = statistics.mean(abs(a - b) for a, b in zip(samples, samples[1:])) if len(samples) > 1 else 0.0
+        emit({"type": "ping", "ping": {"latency": round(lat, 3), "jitter": round(jit, 3), "progress": (i + 1) / n}})
+    c.close()
+    lat = statistics.median(samples)
+    jit = statistics.mean(abs(a - b) for a, b in zip(samples, samples[1:]))
+    return round(lat, 3), round(jit, 3)
+
+
+class Counter:
+    def __init__(self):
+        self.n = 0
+        self.lock = threading.Lock()
+
+    def add(self, k):
+        with self.lock:
+            self.n += k
+
+
+def run_phase(kind, seconds):
+    total = Counter()
+    stop = time.monotonic() + seconds
+
+    def dl_worker():
+        c = conn()
+        while time.monotonic() < stop:
+            try:
+                c.request("GET", "/__down?bytes=50000000")
+                r = c.getresponse()
+                while time.monotonic() < stop:
+                    b = r.read(CHUNK)
+                    if not b:
+                        break
+                    total.add(len(b))
+                if time.monotonic() >= stop:
+                    break
+            except Exception:
+                c.close()
+                c = conn()
+        c.close()
+
+    def ul_worker():
+        payload = os.urandom(CHUNK)
+        while time.monotonic() < stop:
+            c = conn()
+            size = 25_000_000
+            try:
+                c.putrequest("POST", "/__up")
+                c.putheader("Content-Type", "application/octet-stream")
+                c.putheader("Content-Length", str(size))
+                c.endheaders()
+                sent = 0
+                while sent < size and time.monotonic() < stop:
+                    part = payload[: min(CHUNK, size - sent)]
+                    c.send(part)
+                    sent += len(part)
+                    total.add(len(part))
+                if sent >= size:
+                    c.getresponse().read()
+            except Exception:
+                pass
+            finally:
+                c.close()
+
+    workers = [threading.Thread(target=dl_worker if kind == "download" else ul_worker, daemon=True) for _ in range(THREADS)]
+    t0 = time.monotonic()
+    for w in workers:
+        w.start()
+    warm_t, warm_b = None, 0
+    while time.monotonic() < stop:
+        time.sleep(TICK)
+        el = time.monotonic() - t0
+        if warm_t is None and el >= 1.0:  # первую секунду не считаем: разгон TCP
+            warm_t, warm_b = el, total.n
+        if warm_t is not None and el > warm_t:
+            bw = (total.n - warm_b) / (el - warm_t)
+            emit({"type": kind, kind: {"bandwidth": int(bw), "bytes": total.n, "elapsed": int(el * 1000),
+                                       "progress": min(1.0, el / seconds)}})
+    for w in workers:
+        w.join(timeout=2)
+    el = time.monotonic() - t0
+    bw = (total.n - warm_b) / max(0.001, el - (warm_t or 0))
+    return int(bw), total.n, int(el * 1000)
+
+
+def main():
+    if "--version" in sys.argv or "-V" in sys.argv:
+        print("Speedtest by Ookla 1.2.0 (совместимая обёртка: замер через speed.cloudflare.com)")
+        return 0
+    try:
+        tr = trace()
+        ip, colo, country = tr.get("ip", ""), tr.get("colo", ""), tr.get("loc", "")
+        server = {"id": 0, "name": "Cloudflare", "host": HOST, "port": 443,
+                  "location": COLO_CITY.get(colo, colo), "country": country, "ip": ""}
+        isp = isp_name(ip)
+        iface = {"externalIp": ip, "isVpn": False}
+        emit({"type": "testStart", "isp": isp, "interface": iface, "server": server})
+
+        lat, jit = measure_ping()
+        dl = run_phase("download", DL_SECONDS)
+        ul = run_phase("upload", UL_SECONDS)
+        res = {
+            "type": "result",
+            "ping": {"latency": lat, "jitter": jit},
+            "download": {"bandwidth": dl[0], "bytes": dl[1], "elapsed": dl[2]},
+            "upload": {"bandwidth": ul[0], "bytes": ul[1], "elapsed": ul[2]},
+            "isp": isp, "interface": iface, "server": server,
+            "result": {"url": "https://speed.cloudflare.com/", "persisted": False},
+        }
+        if JSON_MODE:
+            emit(res)
+        else:
+            print(f"Сервер:  Cloudflare, {server['location']} ({colo})\nПровайдер: {isp or '-'}\n"
+                  f"Пинг:    {lat:.1f} мс (джиттер {jit:.1f} мс)\n"
+                  f"Загрузка: {dl[0] * 8 / 1e6:.1f} Мбит/с\nОтдача:   {ul[0] * 8 / 1e6:.1f} Мбит/с")
+        return 0
+    except Exception as e:  # noqa: BLE001
+        if JSON_MODE:
+            emit({"type": "error", "message": f"Cloudflare speedtest: {e}"})
+        else:
+            print(f"ошибка: {e}", file=sys.stderr)
+        return 1
+
+
+if __name__ == "__main__":
+    sys.exit(main())

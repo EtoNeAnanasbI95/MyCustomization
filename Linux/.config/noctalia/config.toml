@@ -1,17 +1,6 @@
 [bar.default]
-center = [ "clock", "bar" ]
-end = [
-    "claude-panel",
-    "tray",
-    "notes",
-    "recorder",
-    "network",
-    "volume",
-    "battery",
-    "control-center",
-    "session",
-    "notifications"
-]
+center = [ "clock", "bar", "bar_2" ]
+end = [ "claude-panel", "tray", "recorder", "network", "volume", "battery", "control-center", "session", "notifications" ]
 start = [ "launcher", "wallpaper", "mpvpaper", "workspaces", "active_window" ]
 
 [calendar]
@@ -27,8 +16,6 @@ widget_order = []
     cell_size = 16
     major_interval = 4
     visible = true
-
-    [desktop_widgets.widget]
 
 [keybinds]
 down = [ "Down", "Ctrl+j", "Ctrl+Cyrillic_o" ]
@@ -196,11 +183,19 @@ widget_order = [
         [lockscreen_widgets.widget.lockscreen-widget-0000000000000004.settings]
         show_forecast = true
 
+[plugin_settings."fel/quill"]
+git_history = false
+notes_dir = "/home/notkirilov/obsidian-storage/publish/Quick Notes"
+
 [plugin_settings."noctalia/mpvpaper"]
 video_directory = "/home/notkirilov/Pictures/Wallpapers"
 
 [plugin_settings."noctalia/screen_recorder"]
 video_source = "region"
+
+[plugin_settings."noctalia/translator"]
+provider = "google"
+target_lang = "ru"
 
 [plugin_settings."vn1k/cursor"]
 hyprland_config = "/home/notkirilov/.config/hypr/cursor-plugin/hyprland.conf"
@@ -209,11 +204,17 @@ hyprland_config = "/home/notkirilov/.config/hypr/cursor-plugin/hyprland.conf"
 enabled = [
     "0rgl/ask-claude",
     "felipeartur/ai-usagebar",
-    "noctalia/notes",
     "noctalia/bitwarden",
     "noctalia/screen_recorder",
     "noctalia/mpvpaper",
-    "vn1k/cursor"
+    "vn1k/cursor",
+    "fel/quill",
+    "remo/noctes",
+    "noctalia/translator",
+    "icefish/phone-connect",
+    "kenn/keybind-cheatsheet",
+    "nilsonlinux/speedtest-meter",
+    "thaer99ob/default-apps"
 ]
 
 [shell]
@@ -266,6 +267,9 @@ wallpaper_scheme = "vibrant"
 
 [widget.bar]
 type = "felipeartur/ai-usagebar:bar"
+
+[widget.bar_2]
+type = "icefish/phone-connect:bar"
 
 [widget.claude-panel]
 glyph = "sparkles"

@@ -2,8 +2,13 @@
 Курсор	cursor мышь тема курсора	vn1k/cursor:manager
 Видеообои	обои гифки gif video wallpaper mpvpaper	noctalia/mpvpaper:picker
 Обои	wallpaper картинки фон	wallpaper
-Заметки	notes	noctalia/notes:panel
+Заметки	notes quill markdown записки	fel/quill:panel
+Стикеры	sticky noctes записки на рабочем столе	remo/noctes:panel
 Лимиты AI	ai usage claude codex лимиты подписка	felipeartur/ai-usagebar:panel
 Буфер обмена	clipboard история копирование	clipboard
 Центр управления	control center звук сеть bluetooth	control-center
 Настройки Noctalia	settings конфиг	ipc:settings-toggle
+Телефон	phone iphone kde connect айфон	icefish/phone-connect:details
+Шпаргалка	хоткеи keybinds бинды cheatsheet	kenn/keybind-cheatsheet:cheatsheet
+Спидтест	speedtest скорость интернета	nilsonlinux/speedtest-meter:speedtest
+Приложения по умолчанию	default apps браузер почта xdg-mime	thaer99ob/default-apps:manager
