@@ -12,7 +12,7 @@
 | Оболочка (бар, уведомления, лаунчер, локскрин, OSD, скриншоты, буфер обмена) | [Noctalia](https://github.com/noctalia-dev/noctalia) |
 | Цвета | Noctalia из обоев (Material You, `vibrant`) + шаблоны для kitty, btop, cava, GTK, Qt, Hyprland |
 | Терминал | kitty |
-| Шрифты | JetBrainsMono Nerd Font |
+| Шрифты | JetBrainsMono Nerd Font, эмодзи Apple Color Emoji (`ttf-apple-emoji`) |
 | Проводник | nautilus, yazi (TUI) |
 | Скриншоты | grim + slurp → редактор [satty](https://github.com/gabm/Satty), OCR через tesseract, пипетка hyprpicker |
 | Шпаргалка по хоткеям | rofi (`SUPER + /`) |
@@ -41,6 +41,7 @@ Linux/
 │   │   └── hyprmod/            # профиль HyprMod
 │   ├── noctalia/config.toml    # конфиг Noctalia (экспорт, см. ниже)
 │   ├── satty/config.toml       # редактор скриншотов
+│   ├── fontconfig/fonts.conf   # эмодзи Apple вместо Noto
 │   ├── zed/                    # settings.json, keymap.json
 │   ├── kitty/ btop/ rofi/ yazi/ cava/ ...
 ├── .tmux.conf                  # tmux: vim-копирование в системный буфер, Alt-бинды для панелей
@@ -59,7 +60,7 @@ Linux/
 sudo pacman -S hyprland kitty tmux rofi nautilus yazi btop playerctl telegram-desktop ttf-jetbrains-mono-nerd
 sudo pacman -S grim slurp wl-clipboard libnotify satty tesseract tesseract-data-rus tesseract-data-eng hyprpicker
 sudo pacman -S noctalia gpu-screen-recorder mpv socat jq bitwarden-cli
-yay -S mpvpaper ai-usagebar-bin happ-desktop-bin
+yay -S mpvpaper ai-usagebar-bin happ-desktop-bin ttf-apple-emoji
 ```
 
 ## 2. Конфиги
@@ -71,7 +72,8 @@ cd MyCustomization/Linux
 cp -r .config/hypr ~/.config/
 mkdir -p ~/.config/noctalia && cp .config/noctalia/config.toml ~/.config/noctalia/
 cp .tmux.conf ~/
-cp -r .config/kitty .config/btop .config/rofi .config/yazi .config/satty .config/zed ~/.config/
+cp -r .config/kitty .config/btop .config/rofi .config/yazi .config/satty .config/zed .config/fontconfig ~/.config/
+fc-cache -f
 xdg-mime default org.gnome.Nautilus.desktop inode/directory
 
 # обои: Noctalia берёт их из ~/Pictures/Wallpapers, это симлинк на папку из репозитория
