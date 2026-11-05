@@ -72,7 +72,7 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("systemctl --user start hyprpolkitagent")
   hl.exec_cmd("noctalia")
   -- VPN Happ: окно сразу уезжает в скрытый воркспейс (SUPER+SHIFT+M), в трее остаётся иконка
-  hl.exec_cmd("/opt/happ/bin/Happ --autostart", { workspace = "special:hidden silent" })
+  hl.exec_cmd("env QT_QPA_PLATFORM=wayland /opt/happ/bin/Happ --autostart", { workspace = "special:hidden silent" }) -- Happ сам по себе лезет в XWayland и мылится
 end)
 
 
@@ -82,8 +82,31 @@ end)
 
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
 
+-- Electron-приложения (VS Code, Discord, Obsidian и т.п.) сразу на Wayland, без мыльного XWayland
+hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
+
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
+
+-- Курсор: тему выбирает плагин Noctalia "Cursor" и пишет её в cursor-plugin/cursor.conf
+-- (hyprlang-формат: env = XCURSOR_THEME,... / env = XCURSOR_SIZE,...). Читаем оттуда.
+do
+    local f = io.open(os.getenv("HOME") .. "/.config/hypr/cursor-plugin/cursor.conf")
+    if f then
+        local theme, size
+        for line in f:lines() do
+            local k, v = line:match("^%s*env%s*=%s*(XCURSOR_%u+)%s*,%s*(.-)%s*$")
+            if k then
+                v = v:gsub("##", "#")
+                hl.env(k, v)
+                hl.env(k == "XCURSOR_SIZE" and "HYPRCURSOR_SIZE" or "HYPRCURSOR_THEME", v)
+                if k == "XCURSOR_THEME" then theme = v else size = v end
+            end
+        end
+        f:close()
+        if theme then hl.exec_cmd("hyprctl setcursor '" .. theme .. "' " .. (size or "24")) end
+    end
+end
 
 
 -----------------------
@@ -236,6 +259,13 @@ hl.config({
 ----------------
 ----  MISC  ----
 ----------------
+
+-- X11-программы (XWayland) не растягиваем под масштаб 1.2: чёткие, но чуть мельче на ноутбуке
+hl.config({
+    xwayland = {
+        force_zero_scaling = true,
+    },
+})
 
 hl.config({
     misc = {

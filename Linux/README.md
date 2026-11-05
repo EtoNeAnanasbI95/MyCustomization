@@ -38,8 +38,12 @@ Linux/
 │   │   ├── scripts/capture.sh  # скриншоты, запись, OCR, пипетка, меню захвата
 │   │   ├── scripts/launcher.sh # лаунчер на английской раскладке, потом возврат прежней
 │   │   ├── scripts/claude-panel.sh # выдвижная панель Claude Code справа (SUPER + A)
+│   │   ├── scripts/open-panel.sh   # открыть панель Noctalia по названию из лаунчера
+│   │   ├── cursor-plugin/      # мост между плагином Cursor и Lua-конфигом
 │   │   └── hyprmod/            # профиль HyprMod
 │   ├── noctalia/config.toml    # конфиг Noctalia (экспорт, см. ниже)
+│   ├── noctalia/panels.tsv     # панели для поиска в лаунчере по названию
+│   ├── spotify-launcher.conf   # Spotify на нативном Wayland
 │   ├── satty/config.toml       # редактор скриншотов
 │   ├── fontconfig/fonts.conf   # эмодзи Apple вместо Noto
 │   ├── zed/                    # settings.json, keymap.json
@@ -59,8 +63,8 @@ Linux/
 ```sh
 sudo pacman -S hyprland kitty tmux rofi nautilus yazi btop playerctl telegram-desktop ttf-jetbrains-mono-nerd
 sudo pacman -S grim slurp wl-clipboard libnotify satty tesseract tesseract-data-rus tesseract-data-eng hyprpicker
-sudo pacman -S noctalia gpu-screen-recorder mpv socat jq bitwarden-cli
-yay -S mpvpaper ai-usagebar-bin happ-desktop-bin ttf-apple-emoji
+sudo pacman -S noctalia gpu-screen-recorder mpv socat jq bitwarden-cli spotify-launcher python-wand zenity
+yay -S mpvpaper ai-usagebar-bin happ-desktop-bin ttf-apple-emoji win2xcur
 ```
 
 ## 2. Конфиги
@@ -70,7 +74,9 @@ git clone https://github.com/EtoNeAnanasbI95/MyCustomization
 cd MyCustomization/Linux
 
 cp -r .config/hypr ~/.config/
-mkdir -p ~/.config/noctalia && cp .config/noctalia/config.toml ~/.config/noctalia/
+mkdir -p ~/.config/noctalia && cp .config/noctalia/config.toml .config/noctalia/panels.tsv ~/.config/noctalia/
+cp .config/spotify-launcher.conf ~/.config/
+mkdir -p ~/.local/share/applications && cp .local/share/applications/Happ.desktop ~/.local/share/applications/
 cp .tmux.conf ~/
 cp -r .config/kitty .config/btop .config/rofi .config/yazi .config/satty .config/zed .config/fontconfig ~/.config/
 fc-cache -f
@@ -109,6 +115,7 @@ noctalia config validate Linux/.config/noctalia/config.toml
 | `noctalia/bitwarden` | пароли из Bitwarden (`bw login` один раз) |
 | `0rgl/ask-claude` | `/ai вопрос` в лаунчере → ответ Claude Code |
 | `felipeartur/ai-usagebar` | лимиты AI-подписок в баре (нужен `ai-usagebar`) |
+| `vn1k/cursor` | выбор и сборка тем курсора. Тему в Hyprland передаёт `hypr/cursor-plugin/cursor.conf`, его читает `hyprland.lua` |
 
 Ещё в конфиге: переключатель окон по последнему использованию (`shell.window_switcher.mru`), навигация в списках `Ctrl + J / K` (`[keybinds]`), город для погоды (`[location]`).
 
@@ -170,6 +177,18 @@ sddm-greeter-qt6 --test-mode --theme /usr/share/sddm/themes/sddm-astronaut-theme
 ## Скриншоты
 
 В satty: `Enter` — скопировать в буфер и сохранить в `~/Pictures/Screenshots/`, `Ctrl + S` — только сохранить, `Esc` — закрыть. Инструменты: стрелка, линия, прямоугольник, эллипс, текст, маркер, размытие, кисть, обрезка.
+
+## Панели из лаунчера
+
+Чтобы не держать виджет каждого плагина в баре, панели ищутся в лаунчере просто по названию: `курсор`, `видеообои`, `заметки`, `лимиты`, `буфер`… Список лежит в `noctalia/panels.tsv` (название, ключевые слова, id панели), провайдер — `[shell.launcher.dmenu.entry.panels]` в конфиге Noctalia. Встроенный `/pan` тоже работает.
+
+## Масштабирование
+
+На ноутбуке масштаб 1.2, и всё, что идёт через XWayland, получалось мыльным. Поэтому:
+- Electron-приложения переведены на Wayland (`ELECTRON_OZONE_PLATFORM_HINT=auto`);
+- Spotify запускается с `--ozone-platform=wayland` (`spotify-launcher.conf`);
+- Happ — с `QT_QPA_PLATFORM=wayland` (автозапуск и `Happ.desktop`);
+- оставшиеся X11-программы не растягиваются (`xwayland.force_zero_scaling`): чёткие, но чуть мельче на ноутбуке.
 
 ## Эффекты
 

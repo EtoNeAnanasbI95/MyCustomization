@@ -1,0 +1,9 @@
+# Панели для глобального поиска в лаунчере. Формат: Название<TAB>ключевые слова<TAB>id панели (или ipc:<команда>)
+Курсор	cursor мышь тема курсора	vn1k/cursor:manager
+Видеообои	обои гифки gif video wallpaper mpvpaper	noctalia/mpvpaper:picker
+Обои	wallpaper картинки фон	wallpaper
+Заметки	notes	noctalia/notes:panel
+Лимиты AI	ai usage claude codex лимиты подписка	felipeartur/ai-usagebar:panel
+Буфер обмена	clipboard история копирование	clipboard
+Центр управления	control center звук сеть bluetooth	control-center
+Настройки Noctalia	settings конфиг	ipc:settings-toggle

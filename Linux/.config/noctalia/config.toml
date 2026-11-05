@@ -202,6 +202,9 @@ video_directory = "/home/notkirilov/Pictures/Wallpapers"
 [plugin_settings."noctalia/screen_recorder"]
 video_source = "region"
 
+[plugin_settings."vn1k/cursor"]
+hyprland_config = "/home/notkirilov/.config/hypr/cursor-plugin/hyprland.conf"
+
 [plugins]
 enabled = [
     "0rgl/ask-claude",
@@ -209,11 +212,20 @@ enabled = [
     "noctalia/notes",
     "noctalia/bitwarden",
     "noctalia/screen_recorder",
-    "noctalia/mpvpaper"
+    "noctalia/mpvpaper",
+    "vn1k/cursor"
 ]
 
 [shell]
 font_family = "JetBrainsMono NF"
+
+    [shell.launcher.dmenu.entry.panels]
+    command = "grep -v '^#' ~/.config/noctalia/panels.tsv | cut -f1,2"
+    exec = "~/.config/hypr/scripts/open-panel.sh '{selection}'"
+    global = true
+    glyph = "layout-sidebar-right"
+    label = "Панели"
+    prefix = "p"
 
     [shell.window_switcher]
     mru = true
