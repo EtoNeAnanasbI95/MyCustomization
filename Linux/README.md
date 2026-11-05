@@ -165,6 +165,11 @@ sddm-greeter-qt6 --test-mode --theme /usr/share/sddm/themes/sddm-astronaut-theme
 
 В satty: `Enter` — скопировать в буфер и сохранить в `~/Pictures/Screenshots/`, `Ctrl + S` — только сохранить, `Esc` — закрыть. Инструменты: стрелка, линия, прямоугольник, эллипс, текст, маркер, размытие, кисть, обрезка.
 
+## Эффекты
+
+- **Желейные окна** (`decoration.wobble`, Hyprland 0.57+): окна гнутся и колышутся, когда их таскаешь. Сила настраивается в `hyprland.lua`: `intensity`, `stiffness`, `damping`.
+- **Полупрозрачность с размытием** для Telegram, Zed, DataGrip и окна настроек Noctalia: правила `*-opacity` в `hyprland.lua`.
+
 ## Мониторы
 
 Внешний монитор `DP-1` (2560×1440 @ 165 Гц) справа от ноутбука и основной: воркспейсы 1–5 на нём, 6–10 на ноутбуке. Настраивается в начале `hyprland.lua`, под другой монитор надо поменять `output` и `mode` (`hyprctl monitors all` покажет доступные режимы).

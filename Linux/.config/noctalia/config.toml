@@ -1,20 +1,7 @@
 [bar.default]
-center = [ "clock", "bar", "notes" ]
-end = [
-    "noctalia/screen_recorder:recorder",
-    "media",
-    "tray",
-    "notifications",
-    "clipboard",
-    "network",
-    "bluetooth",
-    "volume",
-    "brightness",
-    "battery",
-    "control-center",
-    "session"
-]
-start = [ "launcher", "wallpaper", "workspaces", "active_window" ]
+center = [ "clock", "bar" ]
+end = [ "tray", "notes", "recorder", "network", "volume", "battery", "control-center", "session", "notifications" ]
+start = [ "launcher", "wallpaper", "mpvpaper", "workspaces", "active_window" ]
 
 [calendar]
 
@@ -231,16 +218,16 @@ wallpaper_scheme = "vibrant"
     builtin_ids = [ "btop", "cava", "gtk3", "gtk4", "hyprland", "kcolorscheme", "kitty", "qt" ]
 
 [wallpaper.default]
-path = "/home/notkirilov/Pictures/Wallpapers/lofi-caffe.gif"
+path = "/home/notkirilov/Pictures/Wallpapers/beach-landscape-twilight-sunset.jpg"
 
 [wallpaper.last]
-path = "/home/notkirilov/Pictures/Wallpapers/lofi-caffe.gif"
+path = "/home/notkirilov/Pictures/Wallpapers/beach-landscape-twilight-sunset.jpg"
 
 [wallpaper.monitors.DP-1]
-path = "/home/notkirilov/Pictures/Wallpapers/lofi-caffe.gif"
+path = "/home/notkirilov/Pictures/Wallpapers/beach-landscape-twilight-sunset.jpg"
 
 [wallpaper.monitors.eDP-1]
-path = "/home/notkirilov/Pictures/Wallpapers/lofi-caffe.gif"
+path = "/home/notkirilov/Pictures/Wallpapers/beach-landscape-twilight-sunset.jpg"
 
 [[wallpaper.favorite]]
 palette_source = "wallpaper"
@@ -257,5 +244,11 @@ wallpaper_scheme = "vibrant"
 [widget.bar]
 type = "felipeartur/ai-usagebar:bar"
 
+[widget.mpvpaper]
+type = "noctalia/mpvpaper:mpvpaper"
+
 [widget.notes]
 type = "noctalia/notes:notes"
+
+[widget.recorder]
+type = "noctalia/screen_recorder:recorder"

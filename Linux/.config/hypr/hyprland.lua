@@ -145,6 +145,15 @@ hl.config({
             color        = 0xee1a1a1a,
         },
 
+        -- "Желейные" окна при перетаскивании (Hyprland 0.57+)
+        wobble = {
+            enabled   = true,
+            intensity = 0.6,   -- сила изгиба
+            stiffness = 120,   -- жёсткость пружины: больше = быстрее успокаивается
+            damping   = 5,     -- затухание: меньше = дольше трясётся
+            mesh      = 16,    -- густота сетки: плавнее изгиб
+        },
+
         blur = {
             enabled   = true,
             size      = 3,
@@ -439,6 +448,28 @@ hl.layer_rule({
   ignore_alpha = 0.5,
   blur = true,
   blur_popups = true,
+})
+
+-- Прозрачность с размытием фона (активное окно / неактивное)
+hl.window_rule({
+    name  = "noctalia-settings-opacity",
+    match = { class = "^(dev.noctalia.Noctalia)$" },
+
+    opacity = "0.88 0.80",
+})
+
+hl.window_rule({
+    name  = "zed-opacity",
+    match = { class = "^(dev.zed.Zed)$" },
+
+    opacity = "0.92 0.85",
+})
+
+hl.window_rule({
+    name  = "datagrip-opacity",
+    match = { class = "^(jetbrains-datagrip)$" },
+
+    opacity = "0.92 0.85",
 })
 
 -- Satty (редактор скриншотов): плавающее окно по центру
