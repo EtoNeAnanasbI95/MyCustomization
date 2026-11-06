@@ -282,8 +282,5 @@ type = "custom_button"
 [widget.mpvpaper]
 type = "noctalia/mpvpaper:mpvpaper"
 
-[widget.notes]
-type = "noctalia/notes:notes"
-
 [widget.recorder]
 type = "noctalia/screen_recorder:recorder"
