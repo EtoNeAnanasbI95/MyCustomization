@@ -218,6 +218,15 @@ sddm-greeter-qt6 --test-mode --theme /usr/share/sddm/themes/sddm-astronaut-theme
 
 - **Happ** запускается из автозапуска Hyprland свёрнутым в трей (`Happ --autostart`). Автоподключение и «запускать свёрнутым» включаются в настройках самого Happ.
 - **Рабочий OpenVPN** импортирован в NetworkManager из `.ovpn` (`nmcli connection import type openvpn file <профиль>.ovpn`), профиль с ключами в репозиторий не кладётся.
+- Чтобы рабочий VPN не забирал весь трафик (и Telegram с Happ продолжали работать), у подключения выключен маршрут по умолчанию, а рабочие домены заданы отдельно:
+  ```sh
+  nmcli connection modify "<имя подключения>" ipv4.never-default yes ipv4.dns-search "<рабочий-домен>,~<ещё-домен>" ipv6.method disabled
+  ```
+  В туннель тогда идут только сети, которые присылает сервер, остальное — через Happ. Для полноценного раздельного DNS (рабочему DNS — только рабочие домены) нужен `systemd-resolved` и `dns=systemd-resolved` в NetworkManager.
+
+## pacman
+
+В `/etc/pacman.conf`, секция `[options]`: `Color`, `ILoveCandy` (Пакман вместо полоски прогресса), `ParallelDownloads = 5`.
 
 ## Claude Code в панели
 
