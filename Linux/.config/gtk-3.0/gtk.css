@@ -1,0 +1,61 @@
+@import url("noctalia.css");
+
+/* ===== Диалоги GTK3 (выбор файла в TrueConf и т.п.): вид как у libadwaita/Nautilus, цвета Noctalia =====
+   Цвета из noctalia.css (@window_bg_color и т.д.). Переменные Adwaita GTK3 не читает → прямые правила. */
+
+* { font-family: "Adwaita Sans", "Noto Sans", sans-serif; font-size: 11pt; }
+
+window, window.background, dialog, .background { background-color: @window_bg_color; color: @window_fg_color; }
+label { color: inherit; }
+
+/* заголовок */
+headerbar, .titlebar { background-image: none; background-color: @window_bg_color; color: @window_fg_color; border: none; box-shadow: none; padding: 4px 8px; min-height: 42px; }
+headerbar .title { font-weight: bold; }
+headerbar .subtitle { color: alpha(currentColor, 0.6); font-size: 9.5pt; }
+
+/* боковая панель: «таблетки», выбранный пункт — нейтральная подсветка, как в Nautilus */
+placessidebar, placessidebar list, .sidebar { background-color: @sidebar_bg_color; color: @sidebar_fg_color; padding: 6px 0; border: none; }
+placessidebar row { padding: 5px 10px; margin: 1px 6px; min-height: 28px; border-radius: 8px; }
+placessidebar row:hover { background-color: alpha(@window_fg_color, 0.06); }
+placessidebar row:selected, placessidebar row:selected:hover { background-color: alpha(@window_fg_color, 0.12); color: @window_fg_color; }
+placessidebar row image { margin-right: 6px; opacity: 0.85; }
+
+/* список файлов */
+treeview.view, .view, iconview, textview text, list, scrolledwindow { background-color: @view_bg_color; color: @view_fg_color; }
+treeview.view cell { padding: 4px 10px; min-height: 26px; }
+treeview.view:hover { background-color: alpha(@window_fg_color, 0.05); }
+treeview.view:selected, treeview.view:selected:focus, .view:selected, selection { background-color: alpha(@accent_bg_color, 0.30); color: @view_fg_color; border-radius: 8px; }
+treeview.view header button { background-image: none; background-color: transparent; color: alpha(@window_fg_color, 0.65); border: none; border-radius: 0; box-shadow: none; padding: 6px 10px; font-size: 9.5pt; font-weight: normal; min-height: 0; min-width: 0; margin: 0; }
+treeview.view header button:hover { background-color: alpha(@window_fg_color, 0.06); color: @window_fg_color; }
+
+/* кнопки: плоские мягкие, как в libadwaita */
+button { background-image: none; background-color: alpha(@window_fg_color, 0.08); color: @window_fg_color; border: none; border-radius: 8px; box-shadow: none; padding: 5px 14px; min-height: 24px; min-width: 0; margin: 0 3px; }
+button:hover { background-color: alpha(@window_fg_color, 0.14); }
+button:active, button:checked { background-color: alpha(@window_fg_color, 0.20); }
+button:disabled { opacity: 0.45; }
+button.suggested-action, button.default { background-color: @accent_bg_color; color: @accent_fg_color; font-weight: bold; }
+button.suggested-action:hover, button.default:hover { background-color: shade(@accent_bg_color, 1.10); }
+headerbar button, actionbar button { padding: 4px 10px; }
+.dialog-action-area, actionbar { padding: 10px 12px; background-color: @window_bg_color; border: none; }
+combobox button.combo { padding: 4px 10px; }
+
+/* поля ввода, поиск */
+entry, searchbar { background-image: none; background-color: alpha(@window_fg_color, 0.08); color: @view_fg_color; border: 1px solid transparent; border-radius: 8px; padding: 5px 10px; min-height: 24px; box-shadow: none; }
+entry:focus { border-color: @accent_bg_color; box-shadow: none; }
+
+/* меню и подсказки */
+menu, .popup, popover, popover.background { background-color: @popover_bg_color; color: @popover_fg_color; border-radius: 12px; border: 1px solid alpha(@window_fg_color, 0.10); }
+menuitem { padding: 6px 12px; border-radius: 6px; }
+menuitem:hover { background-color: alpha(@window_fg_color, 0.10); }
+tooltip, tooltip.background { background-color: @popover_bg_color; color: @popover_fg_color; border-radius: 8px; border: 1px solid alpha(@window_fg_color, 0.10); }
+tooltip * { padding: 2px; }
+
+/* тонкие скроллбары */
+scrollbar { background: transparent; border: none; }
+scrollbar slider { min-width: 6px; min-height: 6px; border-radius: 8px; background-color: alpha(@window_fg_color, 0.28); border: 2px solid transparent; }
+scrollbar slider:hover { background-color: alpha(@window_fg_color, 0.45); }
+separator { background-color: alpha(@window_fg_color, 0.08); min-height: 1px; min-width: 1px; }
+
+/* X11-режим: GTK3 рисует тень CSD внутри окна, Hyprland обводит рамкой окно вместе с ней — убираем тень GTK, оставляем Hyprland */
+decoration, decoration:backdrop { box-shadow: none; margin: 0; }
+window.csd, window.csd decoration { border-radius: 0; }

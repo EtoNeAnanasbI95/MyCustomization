@@ -53,6 +53,7 @@ Linux/
 │   ├── xdg-desktop-portal/hyprland-portals.conf # диалог выбора файлов = Nautilus через прослойку
 │   ├── systemd/user/portal-strip-x11-parent.service # автозапуск прослойки
 │   ├── systemd/user/xdg-desktop-portal-gnome.service.d/wayland.conf # XDG_SESSION_TYPE для GNOME-портала
+│   ├── gtk-3.0/gtk.css         # необязательно: GTK3-диалоги под Nautilus, цвета Noctalia (см. «Выбор файлов»)
 │   ├── zed/                    # settings.json, keymap.json
 │   ├── kitty/ btop/ rofi/ yazi/ cava/ ...
 ├── .tmux.conf                  # tmux: vim-копирование в системный буфер, Alt-бинды для панелей
@@ -236,6 +237,7 @@ sddm-greeter-qt6 --test-mode --theme /usr/share/sddm/themes/sddm-astronaut-theme
 
 - **TrueConf** запускается через `~/.local/bin/trueconf` в XWayland (нативный Wayland ломает его меню «Upload file»: оно открывается как огромное окно и сразу закрывается). Масштаб на 4K даёт `Xft.dpi` из `scripts/xwayland-dpi.sh` (запускается при старте Hyprland и при смене мониторов) + `xwayland.force_zero_scaling`. Нативный Wayland: `TRUECONF_WAYLAND=1 trueconf`.
 - **Telegram** сам идёт мимо портала с `QT_QPA_PLATFORMTHEME=gtk3`, поэтому в его `.desktop` стоит `TDESKTOP_USE_PORTAL=1` и `QT_QPA_PLATFORMTHEME=xdgdesktopportal`; глобально `hyprland.lua` задаёт `xdgdesktopportal` для всех Qt-программ.
+- `gtk-3.0/gtk.css` остался от попытки сделать GTK3-диалоги похожими на Nautilus (шрифт Adwaita Sans, скругления, цвета из `noctalia.css`). Для выбора файлов он не нужен, хватает прослойки. Хранится на всякий случай; без него Noctalia обходится одной строкой `@import url("noctalia.css");`.
 - **Правила окон** (`hyprland.lua`): `file-picker` — окно диалога плавающее, по центру, с затемнением остального; `sushi-float` — Quick Look по пробелу в Nautilus, тоже модальный. Регулярки в правилах Hyprland должны совпадать со **всей** строкой (`^(Choose|Open).*`, а не просто `^Choose`).
 
 ## Эффекты
