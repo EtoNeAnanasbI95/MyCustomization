@@ -61,6 +61,7 @@ Linux/
 ├── .local/bin/portal-strip-x11-parent # прослойка FileChooser-портала (см. «Выбор файлов»)
 ├── .local/share/xdg-desktop-portal/portals/stripx11.portal # описание бэкенда прослойки
 ├── .local/share/applications/org.telegram.desktop.desktop # Telegram: диалоги файлов через портал
+├── .local/share/applications/trueconf.desktop # TrueConf из лаунчера идёт через обёртку (@HOME@ → $HOME при установке)
 ├── .Xresources                  # базовый Xft.dpi/курсор для XWayland (скрипт xwayland-dpi.sh перебивает)
 ├── system/
 │   ├── install-sddm-grub.sh    # темы SDDM и GRUB
@@ -95,6 +96,7 @@ cp .tmux.conf ~/
 cp .Xresources ~/
 mkdir -p ~/.local/bin && cp .local/bin/speedtest .local/bin/trueconf .local/bin/portal-strip-x11-parent ~/.local/bin/
 chmod +x ~/.local/bin/trueconf ~/.local/bin/portal-strip-x11-parent
+sed "s|@HOME@|$HOME|g" .local/share/applications/trueconf.desktop > ~/.local/share/applications/trueconf.desktop
 mkdir -p ~/.config/xdg-desktop-portal ~/.config/systemd/user ~/.local/share/xdg-desktop-portal/portals
 cp .config/xdg-desktop-portal/hyprland-portals.conf ~/.config/xdg-desktop-portal/
 cp .config/systemd/user/portal-strip-x11-parent.service ~/.config/systemd/user/

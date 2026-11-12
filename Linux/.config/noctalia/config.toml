@@ -38,7 +38,8 @@ widget_order = [
     "desktop-widget-0000000000000003",
     "desktop-widget-000000000000001d",
     "desktop-widget-000000000000001e",
-    "desktop-widget-0000000000000002"
+    "desktop-widget-0000000000000002",
+    "desktop-widget-000000000000001f"
 ]
 
     [desktop_widgets.grid]
@@ -459,6 +460,21 @@ widget_order = [
         [desktop_widgets.widget.desktop-widget-000000000000001e.settings]
         background = false
         key = "nota-6"
+
+    [desktop_widgets.widget.desktop-widget-000000000000001f]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 170.0
+    cy = 410.0
+    output = "DP-7"
+    placement_height = 720.0
+    placement_width = 1280.0
+    rotation = 0.028663000000000001
+    type = "remo/noctes:note"
+
+        [desktop_widgets.widget.desktop-widget-000000000000001f.settings]
+        background = false
+        key = "nota-7"
 
 [keybinds]
 down = [ "Down", "Ctrl+j", "Ctrl+Cyrillic_o" ]

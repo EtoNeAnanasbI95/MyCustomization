@@ -1,0 +1,21 @@
+[Desktop Entry]
+Version=1.0
+Name=TrueConf
+Comment=Easy Video Conferencing
+TryExec=trueconf
+Exec=@HOME@/.local/bin/trueconf -- %u
+Icon=trueconf
+Terminal=false
+Type=Application
+Categories=Network;
+MimeType=x-scheme-handler/trueconf;
+Keywords=TrueConf;Video;Chat;Messaging;Messenger;
+Actions=Quit;
+X-KDE-Protocols=trueconf
+X-GNOME-UsesNotifications=true
+StartupNotify=false
+
+[Desktop Action Quit]
+Exec=killall -s SIGUSR1 TrueConf
+Name=Quit TrueConf
+Icon=application-exit
