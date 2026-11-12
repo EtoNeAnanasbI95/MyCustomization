@@ -42,6 +42,7 @@ Linux/
 │   │   ├── scripts/launcher.sh # лаунчер на английской раскладке, потом возврат прежней
 │   │   ├── scripts/claude-panel.sh # выдвижная панель Claude Code справа (SUPER + A)
 │   │   ├── scripts/open-panel.sh   # открыть панель Noctalia по названию из лаунчера
+│   │   ├── scripts/xwayland-dpi.sh # Xft.dpi для X11-программ (TrueConf) по масштабу мониторов
 │   │   ├── cursor-plugin/      # мост между плагином Cursor и Lua-конфигом
 │   │   └── hyprmod/            # профиль HyprMod
 │   ├── noctalia/config.toml    # конфиг Noctalia (экспорт, см. ниже)
@@ -49,10 +50,18 @@ Linux/
 │   ├── spotify-launcher.conf   # Spotify на нативном Wayland
 │   ├── satty/config.toml       # редактор скриншотов
 │   ├── fontconfig/fonts.conf   # эмодзи Apple вместо Noto
+│   ├── xdg-desktop-portal/hyprland-portals.conf # диалог выбора файлов = Nautilus через прослойку
+│   ├── systemd/user/portal-strip-x11-parent.service # автозапуск прослойки
+│   ├── systemd/user/xdg-desktop-portal-gnome.service.d/wayland.conf # XDG_SESSION_TYPE для GNOME-портала
 │   ├── zed/                    # settings.json, keymap.json
 │   ├── kitty/ btop/ rofi/ yazi/ cava/ ...
 ├── .tmux.conf                  # tmux: vim-копирование в системный буфер, Alt-бинды для панелей
 ├── .local/bin/speedtest         # speedtest в формате Ookla поверх speed.cloudflare.com (для Speedtest Meter)
+├── .local/bin/trueconf          # обёртка TrueConf: XWayland + диалог файлов через портал
+├── .local/bin/portal-strip-x11-parent # прослойка FileChooser-портала (см. «Выбор файлов»)
+├── .local/share/xdg-desktop-portal/portals/stripx11.portal # описание бэкенда прослойки
+├── .local/share/applications/org.telegram.desktop.desktop # Telegram: диалоги файлов через портал
+├── .Xresources                  # базовый Xft.dpi/курсор для XWayland (скрипт xwayland-dpi.sh перебивает)
 ├── system/
 │   ├── install-sddm-grub.sh    # темы SDDM и GRUB
 │   └── install-plymouth.sh     # Plymouth + тема
@@ -68,6 +77,7 @@ Linux/
 sudo pacman -S hyprland kitty tmux rofi nautilus yazi btop playerctl telegram-desktop ttf-jetbrains-mono-nerd kdeconnect sshfs
 sudo pacman -S grim slurp wl-clipboard libnotify satty tesseract tesseract-data-rus tesseract-data-eng hyprpicker
 sudo pacman -S noctalia gpu-screen-recorder mpv socat jq bitwarden-cli spotify-launcher python-wand zenity
+sudo pacman -S xdg-desktop-portal-gnome xorg-xrdb python-gobject sushi
 yay -S mpvpaper ai-usagebar-bin happ-desktop-bin ttf-apple-emoji win2xcur
 ```
 
@@ -82,7 +92,16 @@ mkdir -p ~/.config/noctalia && cp .config/noctalia/config.toml .config/noctalia/
 cp .config/spotify-launcher.conf ~/.config/
 mkdir -p ~/.local/share/applications && cp .local/share/applications/Happ.desktop ~/.local/share/applications/
 cp .tmux.conf ~/
-mkdir -p ~/.local/bin && cp .local/bin/speedtest ~/.local/bin/
+cp .Xresources ~/
+mkdir -p ~/.local/bin && cp .local/bin/speedtest .local/bin/trueconf .local/bin/portal-strip-x11-parent ~/.local/bin/
+chmod +x ~/.local/bin/trueconf ~/.local/bin/portal-strip-x11-parent
+mkdir -p ~/.config/xdg-desktop-portal ~/.config/systemd/user ~/.local/share/xdg-desktop-portal/portals
+cp .config/xdg-desktop-portal/hyprland-portals.conf ~/.config/xdg-desktop-portal/
+cp .config/systemd/user/portal-strip-x11-parent.service ~/.config/systemd/user/
+cp -r .config/systemd/user/xdg-desktop-portal-gnome.service.d ~/.config/systemd/user/
+cp .local/share/xdg-desktop-portal/portals/stripx11.portal ~/.local/share/xdg-desktop-portal/portals/
+cp .local/share/applications/org.telegram.desktop.desktop ~/.local/share/applications/
+systemctl --user daemon-reload && systemctl --user enable --now portal-strip-x11-parent.service
 cp -r .config/kitty .config/btop .config/rofi .config/yazi .config/satty .config/zed .config/fontconfig ~/.config/
 fc-cache -f
 xdg-mime default org.gnome.Nautilus.desktop inode/directory
@@ -204,6 +223,18 @@ sddm-greeter-qt6 --test-mode --theme /usr/share/sddm/themes/sddm-astronaut-theme
 - Spotify запускается с `--ozone-platform=wayland` (`spotify-launcher.conf`);
 - Happ — с `QT_QPA_PLATFORM=wayland` (автозапуск и `Happ.desktop`);
 - оставшиеся X11-программы не растягиваются (`xwayland.force_zero_scaling`): чёткие, но чуть мельче на ноутбуке.
+
+## Выбор файлов и TrueConf
+
+Диалог «Открыть / Сохранить» везде один — Nautilus (`xdg-desktop-portal-gnome`), красится темой Noctalia. Маршрут задан в `~/.config/xdg-desktop-portal/hyprland-portals.conf` (`FileChooser=stripx11`).
+
+Зачем прослойка `stripx11` (`portal-strip-x11-parent`, сервис `systemd --user`): Qt-программы в XWayland (TrueConf) передают порталу родительское окно `x11:<id>`, а Nautilus-портал с ним падает и диалог просто не открывается. Прослойка принимает вызов, подменяет `x11:…` на пустого родителя и пересылает в GNOME-бэкенд, остальное идёт как есть. Если она упадёт, выбор файлов везде перестанет работать. Откат: в `hyprland-portals.conf` поставить `FileChooser=gnome` и `systemctl --user disable --now portal-strip-x11-parent`.
+
+Для GNOME-портала вне GNOME нужен `XDG_SESSION_TYPE=wayland` в его окружении, иначе он стартует в режиме «только настройки»: это прописано в drop-in сервиса `xdg-desktop-portal-gnome` (`~/.config/systemd/user/xdg-desktop-portal-gnome.service.d/wayland.conf`).
+
+- **TrueConf** запускается через `~/.local/bin/trueconf` в XWayland (нативный Wayland ломает его меню «Upload file»: оно открывается как огромное окно и сразу закрывается). Масштаб на 4K даёт `Xft.dpi` из `scripts/xwayland-dpi.sh` (запускается при старте Hyprland и при смене мониторов) + `xwayland.force_zero_scaling`. Нативный Wayland: `TRUECONF_WAYLAND=1 trueconf`.
+- **Telegram** сам идёт мимо портала с `QT_QPA_PLATFORMTHEME=gtk3`, поэтому в его `.desktop` стоит `TDESKTOP_USE_PORTAL=1` и `QT_QPA_PLATFORMTHEME=xdgdesktopportal`; глобально `hyprland.lua` задаёт `xdgdesktopportal` для всех Qt-программ.
+- **Правила окон** (`hyprland.lua`): `file-picker` — окно диалога плавающее, по центру, с затемнением остального; `sushi-float` — Quick Look по пробелу в Nautilus, тоже модальный. Регулярки в правилах Hyprland должны совпадать со **всей** строкой (`^(Choose|Open).*`, а не просто `^Choose`).
 
 ## Эффекты
 

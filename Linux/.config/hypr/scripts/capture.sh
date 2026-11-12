@@ -17,6 +17,18 @@ notify() { notify-send -a "Скриншот" "$@" 2>/dev/null || true; }
 region()  { slurp -d -b '#00000066' -c '#f39959ff' -w 2; }
 edit()    { satty --filename - ; }
 
+# Заморозка экрана на время выделения (wayfreeze рисует снимок оверлеем).
+# Без wayfreeze просто работаем по живому экрану.
+FZ=
+freeze()   { command -v wayfreeze >/dev/null || return 0; wayfreeze >/dev/null 2>&1 & FZ=$!; sleep 0.15; }
+unfreeze() { [[ -n $FZ ]] && kill "$FZ" 2>/dev/null || true; FZ=; }
+# Область -> PNG-файл (с заморозкой), оверлей снимается сразу после grim
+grab_region() {
+  freeze
+  local g; g=$(region) || { unfreeze; return 1; }
+  grim -g "$g" "$1"; unfreeze
+}
+
 active_window_geom() {
   hyprctl activewindow -j | python3 -I -c '
 import json,sys
@@ -38,16 +50,20 @@ case "${1:-region}" in
   record)
     if recording; then $REC stop >/dev/null
     else $REC start "${2:-region}" >/dev/null; fi ;;
-  region) g=$(region) || exit 0; grim -g "$g" - | edit ;;
+  region)
+    t=$(mktemp --suffix=.png); trap 'rm -f "$t"' EXIT
+    grab_region "$t" || exit 0
+    edit < "$t" ;;
   window) grim -g "$(active_window_geom)" - | edit ;;
   screen) grim -o "$(focused_monitor)" - | edit ;;
   quick)
-    g=$(region) || exit 0
     f="$DIR/$(date +%Y-%m-%d_%H-%M-%S).png"
-    grim -g "$g" "$f" && wl-copy < "$f" && notify -i "$f" "Скопировано в буфер" "$f" ;;
+    grab_region "$f" || exit 0
+    wl-copy < "$f" && notify -i "$f" "Скопировано в буфер" "$f" ;;
   ocr)
-    g=$(region) || exit 0
-    text=$(grim -g "$g" - | tesseract - - -l rus+eng --psm 6 2>/dev/null | sed -e 's/[[:space:]]*$//' | sed -e :a -e '/^\n*$/{$d;N;ba' -e '}')
+    t=$(mktemp --suffix=.png); trap 'rm -f "$t"' EXIT
+    grab_region "$t" || exit 0
+    text=$(tesseract "$t" - -l rus+eng --psm 6 2>/dev/null | sed -e 's/[[:space:]]*$//' | sed -e :a -e '/^\n*$/{$d;N;ba' -e '}')
     if [[ -n $text ]]; then printf '%s' "$text" | wl-copy; notify "Текст скопирован" "$(printf '%s' "$text" | head -c 200)"
     else notify "Текст не найден"; fi ;;
   color)

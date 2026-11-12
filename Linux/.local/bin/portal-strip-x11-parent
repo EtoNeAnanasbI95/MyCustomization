@@ -1,0 +1,101 @@
+#!/usr/bin/env python3
+"""Прослойка FileChooser-бэкенда для xdg-desktop-portal.
+
+Зачем: Qt-программы в XWayland (TrueConf) передают порталу родителя "x11:<xid>", а Nautilus-портал
+(xdg-desktop-portal-gnome) с таким родителем падает ("Remote peer disconnected") и диалог не открывается.
+Эта прослойка принимает вызов, заменяет "x11:..." на пустого родителя и пересылает в GNOME-бэкенд как есть
+(остальные аргументы, включая фильтры/choices/multiple, проходят без изменений). "wayland:..." не трогаем.
+
+Регистрируется как бэкенд "stripx11": ~/.local/share/xdg-desktop-portal/portals/stripx11.portal,
+выбор в ~/.config/xdg-desktop-portal/hyprland-portals.conf, запуск по D-Bus-активации.
+"""
+import sys
+import gi
+
+gi.require_version("Gio", "2.0")
+from gi.repository import Gio, GLib
+
+NAME = "org.freedesktop.impl.portal.desktop.stripx11"
+BACKEND = "org.freedesktop.impl.portal.desktop.gnome"
+PATH = "/org/freedesktop/portal/desktop"
+FC = "org.freedesktop.impl.portal.FileChooser"
+REQ = "org.freedesktop.impl.portal.Request"
+
+_METHOD = """
+  <method name="{n}">
+    <arg type="o" name="handle" direction="in"/>
+    <arg type="s" name="app_id" direction="in"/>
+    <arg type="s" name="parent_window" direction="in"/>
+    <arg type="s" name="title" direction="in"/>
+    <arg type="a{{sv}}" name="options" direction="in"/>
+    <arg type="u" name="response" direction="out"/>
+    <arg type="a{{sv}}" name="results" direction="out"/>
+  </method>"""
+FC_XML = ('<node><interface name="%s">' % FC
+          + "".join(_METHOD.format(n=n) for n in ("OpenFile", "SaveFile", "SaveFiles"))
+          + "</interface></node>")
+REQ_XML = '<node><interface name="%s"><method name="Close"/></interface></node>' % REQ
+
+FC_INFO = Gio.DBusNodeInfo.new_for_xml(FC_XML).interfaces[0]
+REQ_INFO = Gio.DBusNodeInfo.new_for_xml(REQ_XML).interfaces[0]
+
+
+def log(*a):
+    print("portal-strip-x11-parent:", *a, file=sys.stderr, flush=True)
+
+
+def on_request_method(conn, sender, path, iface, method, params, invocation):
+    # Frontend закрывает запрос -> закрываем его и в GNOME-бэкенде (тот же handle).
+    if method == "Close":
+        conn.call(BACKEND, path, REQ, "Close", None, None,
+                  Gio.DBusCallFlags.NONE, -1, None, None, None)
+        invocation.return_value(None)
+
+
+def on_fc_method(conn, sender, path, iface, method, params, invocation):
+    handle = params.get_child_value(0).get_string()
+    app_id = params.get_child_value(1)
+    parent = params.get_child_value(2).get_string()
+    title = params.get_child_value(3)
+    options = params.get_child_value(4)
+
+    if parent.startswith("x11:"):
+        log(method, "родитель", parent, "-> пустой")
+        parent = ""
+
+    try:
+        req_id = conn.register_object(handle, REQ_INFO, on_request_method, None, None)
+    except GLib.Error as e:
+        log("не удалось экспортировать Request", handle, e.message)
+        req_id = None
+
+    new_params = GLib.Variant.new_tuple(
+        GLib.Variant("o", handle), app_id, GLib.Variant("s", parent), title, options)
+
+    def done(src, res, _data):
+        try:
+            invocation.return_value(src.call_finish(res))
+        except GLib.Error as e:
+            log(method, "ошибка бэкенда:", e.message)
+            invocation.return_gerror(e)
+        finally:
+            if req_id is not None:
+                conn.unregister_object(req_id)
+
+    conn.call(BACKEND, PATH, FC, method, new_params, GLib.VariantType("(ua{sv})"),
+              Gio.DBusCallFlags.NONE, 2**31 - 1, None, done, None)
+
+
+def on_bus_acquired(conn, name):
+    conn.register_object(PATH, FC_INFO, on_fc_method, None, None)
+
+
+def on_name_lost(conn, name):
+    log("имя потеряно/занято, выхожу")
+    loop.quit()
+
+
+loop = GLib.MainLoop()
+Gio.bus_own_name(Gio.BusType.SESSION, NAME, Gio.BusNameOwnerFlags.NONE,
+                 on_bus_acquired, None, on_name_lost)
+loop.run()

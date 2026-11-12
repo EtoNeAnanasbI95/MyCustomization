@@ -36,6 +36,15 @@ hl.monitor({
     scale    = 1,
 })
 
+-- Рабочий 4K iiyama (27"): ровно над ноутбуком, по центру. Порт (DP-N) через док
+-- каждый раз разный, поэтому матчим по описанию.
+hl.monitor({
+    output   = "desc:iiyama Corporation PL2792UH 1216532112629",
+    mode     = "3840x2160@60",
+    position = "auto-center-up",
+    scale    = 1.5,
+})
+
 -- Воркспейсы 1-5 на внешнем мониторе (1 по умолчанию), 6-10 на ноутбуке.
 -- Если внешний отключить, Hyprland перенесёт его воркспейсы на ноутбук.
 for i = 1, 10 do
@@ -70,11 +79,19 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("wl-clipboard-history -t")
   hl.exec_cmd("wl-paste --watch cliphist store")
   hl.exec_cmd("systemctl --user start hyprpolkitagent")
-  hl.exec_cmd("noctalia")
+  hl.exec_cmd("env EDITOR=zeditor noctalia") -- EDITOR нужен Quill (SUPER+N): «открыть в редакторе» = $EDITOR, не xdg-mime
   hl.exec_cmd("kdeconnectd") -- KDE Connect (телефон), плагин Noctalia icefish/phone-connect
   -- VPN Happ: окно сразу уезжает в скрытый воркспейс (SUPER+SHIFT+M), в трее остаётся иконка
   hl.exec_cmd("env QT_QPA_PLATFORM=wayland /opt/happ/bin/Happ --autostart", { workspace = "special:hidden silent" }) -- Happ сам по себе лезет в XWayland и мылится
+  hl.exec_cmd(os.getenv("HOME") .. "/.config/hypr/scripts/xwayland-dpi.sh") -- Xft.dpi для X11-программ (TrueConf)
 end)
+
+-- Xft.dpi заново при подключении/отключении мониторов (уже открытые X11-окна размер не меняют)
+for _, ev in ipairs({ "monitor.added", "monitor.removed", "monitor.layout_changed" }) do
+    hl.on(ev, function ()
+        hl.exec_cmd(os.getenv("HOME") .. "/.config/hypr/scripts/xwayland-dpi.sh 1")
+    end)
+end
 
 
 -------------------------------
@@ -85,6 +102,9 @@ end)
 
 -- Electron-приложения (VS Code, Discord, Obsidian и т.п.) сразу на Wayland, без мыльного XWayland
 hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
+
+-- Qt-программы: диалоги файлов через портал (Nautilus), палитра по color-scheme портала. Откат: "gtk3"
+hl.env("QT_QPA_PLATFORMTHEME", "xdgdesktopportal")
 
 -- ~/.local/bin первым в PATH: там свои обёртки (например, speedtest поверх Cloudflare для Speedtest Meter)
 do
@@ -307,12 +327,15 @@ hl.config({
 
         touchpad = {
             natural_scroll = true,
+            drag_3fg       = 1, -- как на маке: тремя пальцами = зажатая ЛКМ (выделение / перетаскивание)
+            tap_and_drag   = false, -- двойной тап (тап + тап с удержанием) больше не превращается в выделение
         },
     },
 })
 
+-- Переключение воркспейсов — 4 пальца (3 заняты под перетаскивание, как на маке)
 hl.gesture({
-    fingers = 3,
+    fingers = 4,
     direction = "horizontal",
     action = "workspace"
 })
@@ -513,6 +536,35 @@ hl.window_rule({
     match = { class = "^(jetbrains-datagrip)$" },
 
     opacity = "0.92 0.85",
+})
+
+-- Sushi (Quick Look по пробелу в Nautilus): модальное окно по центру, остальное затемняется
+hl.window_rule({
+    name  = "sushi-float",
+    match = { class = "^(org.gnome.NautilusPreviewer)$" },
+
+    float      = true,
+    center     = true,
+    size       = "60% 70%",
+    dim_around = true,
+})
+
+-- Диалог выбора файла (портал → Nautilus: "Choose files", "Open File", "Save As"…): модальное окно по центру
+hl.window_rule({
+    name  = "file-picker",
+    match = { class = "^(org.gnome.Nautilus)$", title = "^(Choose|Open|Save|Select).*" },
+
+    float      = true,
+    center     = true,
+    size       = "(monitor_w*0.55) (monitor_h*0.70)",
+    dim_around = true,
+})
+
+hl.window_rule({
+    name  = "nautilus-opacity",
+    match = { class = "^(org.gnome.Nautilus)$" },
+
+    opacity = "0.95 0.90",
 })
 
 -- Satty (редактор скриншотов): плавающее окно по центру

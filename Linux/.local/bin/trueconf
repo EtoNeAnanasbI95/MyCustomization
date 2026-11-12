@@ -1,0 +1,19 @@
+#!/bin/bash
+# Обёртка над /opt/trueconf/client/trueconf.
+# По умолчанию — штатный путь через XWayland (QT_QPA_PLATFORM=xcb): в нативном Wayland у TrueConf
+# всплывающее меню «upload file/photo» открывается как огромное окно и тут же закрывается.
+# Размер на 4K даёт Xft.dpi (~/.config/hypr/scripts/xwayland-dpi.sh) + xwayland.force_zero_scaling.
+# Диалог выбора файла — через портал (Nautilus). Qt в XWayland отдаёт порталу X11-родителя, на нём
+# Nautilus-портал падает, поэтому FileChooser идёт через прослойку portal-strip-x11-parent
+# (systemd --user: portal-strip-x11-parent.service, бэкенд "stripx11" в ~/.config/xdg-desktop-portal/).
+# Нативный Wayland (меню загрузки не работает): TRUECONF_WAYLAND=1 trueconf
+CLIENT_PATH="/opt/trueconf/client"
+export QT_QPA_PLATFORMTHEME=xdgdesktopportal
+if [ -z "$TRUECONF_WAYLAND" ]; then
+    exec "$CLIENT_PATH/trueconf" "$@"
+fi
+export QT_QPA_PLATFORM="wayland;xcb"
+export LD_LIBRARY_PATH="$CLIENT_PATH/lib:$CLIENT_PATH/qt6/lib:$LD_LIBRARY_PATH"
+export QT_SUPPORT_GL_CHILD_WIDGETS=1
+export QT_FORCING_RHI=1
+exec "$CLIENT_PATH/TrueConf" "$@"

@@ -1,0 +1,14 @@
+[Unit]
+Description=Прослойка FileChooser-портала: убирает X11-родителя (TrueConf/Qt в XWayland -> Nautilus)
+After=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+Type=dbus
+BusName=org.freedesktop.impl.portal.desktop.stripx11
+ExecStart=/usr/bin/python3 -I %h/.local/bin/portal-strip-x11-parent
+Restart=on-failure
+RestartSec=1
+
+[Install]
+WantedBy=graphical-session.target

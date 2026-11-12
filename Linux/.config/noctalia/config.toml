@@ -10,12 +10,455 @@ show_events_card = false
 
 [desktop_widgets]
 schema_version = 2
-widget_order = []
+widget_order = [
+    "desktop-widget-000000000000000e",
+    "desktop-widget-000000000000000d",
+    "desktop-widget-0000000000000001",
+    "desktop-widget-0000000000000004",
+    "desktop-widget-0000000000000005",
+    "desktop-widget-0000000000000006",
+    "desktop-widget-0000000000000009",
+    "desktop-widget-000000000000000a",
+    "desktop-widget-000000000000000b",
+    "desktop-widget-000000000000000c",
+    "desktop-widget-000000000000000f",
+    "desktop-widget-0000000000000010",
+    "desktop-widget-0000000000000011",
+    "desktop-widget-0000000000000012",
+    "desktop-widget-0000000000000013",
+    "desktop-widget-0000000000000014",
+    "desktop-widget-0000000000000015",
+    "desktop-widget-0000000000000016",
+    "desktop-widget-0000000000000017",
+    "desktop-widget-0000000000000018",
+    "desktop-widget-0000000000000019",
+    "desktop-widget-000000000000001a",
+    "desktop-widget-000000000000001b",
+    "desktop-widget-000000000000001c",
+    "desktop-widget-0000000000000003",
+    "desktop-widget-000000000000001d",
+    "desktop-widget-000000000000001e",
+    "desktop-widget-0000000000000002"
+]
 
     [desktop_widgets.grid]
     cell_size = 16
     major_interval = 4
     visible = true
+
+    [desktop_widgets.widget.desktop-widget-0000000000000001]
+    box_height = 256.0
+    box_width = 272.0
+    cx = 227.4288330078125
+    cy = 240.8677978515625
+    output = "eDP-1"
+    placement_height = 1000.0
+    placement_width = 1600.0
+    rotation = 0.036424998193979263
+    type = "remo/noctes:note"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000001.settings]
+        background = false
+        key = "nota-1"
+
+    [desktop_widgets.widget.desktop-widget-0000000000000002]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 354.34182739257812
+    cy = 820.0
+    output = "eDP-1"
+    placement_height = 1000.0
+    placement_width = 1600.0
+    rotation = 0.044523000717163086
+    type = "remo/noctes:note"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000002.settings]
+        background = false
+        key = "nota-2"
+
+    [desktop_widgets.widget.desktop-widget-0000000000000003]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 1392.255615234375
+    cy = 586.48663330078125
+    output = "eDP-1"
+    placement_height = 1000.0
+    placement_width = 1600.0
+    rotation = -0.022845000028610229
+    type = "remo/noctes:note"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000003.settings]
+        background = false
+        key = "nota-3"
+
+    [desktop_widgets.widget.desktop-widget-0000000000000004]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 1347.2061767578125
+    cy = 253.757080078125
+    output = "eDP-1"
+    placement_height = 1000.0
+    placement_width = 1600.0
+    rotation = -0.053672000765800476
+    type = "remo/noctes:note"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000004.settings]
+        background = false
+        key = "nota-4"
+
+    [desktop_widgets.widget.desktop-widget-0000000000000005]
+    box_height = 208.0
+    box_width = 432.0
+    cx = 1280.0
+    cy = 432.0
+    output = "DP-1"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "clock"
+
+    [desktop_widgets.widget.desktop-widget-0000000000000006]
+    box_height = 224.0
+    box_width = 2432.0
+    cx = 1282.0
+    cy = 1248.0
+    output = "DP-1"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "audio_visualizer"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000006.settings]
+        background_opacity = 0.40000000000000002
+        bands = 84
+        centered = false
+        mirrored = true
+        show_when_idle = true
+
+    [desktop_widgets.widget.desktop-widget-0000000000000009]
+    box_height = 288.0
+    box_width = 256.0
+    cx = 1584.0
+    cy = 720.0
+    output = "DP-1"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "media_player"
+
+    [desktop_widgets.widget.desktop-widget-000000000000000a]
+    box_height = 240.0
+    box_width = 112.0
+    cx = 1208.0
+    cy = 688.0
+    output = "DP-1"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "sysmon"
+
+        [desktop_widgets.widget.desktop-widget-000000000000000a.settings]
+        display = "gauge"
+        gauge_layout = "vertical"
+        stat = "cpu_usage"
+        stat2 = "cpu_temp"
+
+    [desktop_widgets.widget.desktop-widget-000000000000000b]
+    box_height = 240.0
+    box_width = 112.0
+    cx = 1352.0
+    cy = 688.0
+    output = "DP-1"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "sysmon"
+
+        [desktop_widgets.widget.desktop-widget-000000000000000b.settings]
+        display = "gauge"
+        gauge_layout = "vertical"
+        stat = "ram_pct"
+        stat2 = "cpu_temp"
+
+    [desktop_widgets.widget.desktop-widget-000000000000000c]
+    box_height = 288.0
+    box_width = 256.0
+    cx = 976.0
+    cy = 720.0
+    output = "DP-1"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "fel/quill:tile"
+
+        [desktop_widgets.widget.desktop-widget-000000000000000c.settings]
+        background = true
+
+    [desktop_widgets.widget.desktop-widget-000000000000000d]
+    box_height = 208.0
+    box_width = 432.0
+    cx = 800.0
+    cy = 212.0
+    output = "eDP-1"
+    placement_height = 1000.0
+    placement_width = 1600.0
+    rotation = 0.0
+    type = "clock"
+
+    [desktop_widgets.widget.desktop-widget-000000000000000e]
+    box_height = 224.0
+    box_width = 1456.0
+    cx = 800.0
+    cy = 866.0
+    output = "eDP-1"
+    placement_height = 1000.0
+    placement_width = 1600.0
+    rotation = 0.0
+    type = "audio_visualizer"
+
+        [desktop_widgets.widget.desktop-widget-000000000000000e.settings]
+        background_opacity = 0.40000000000000002
+        bands = 84
+        centered = false
+        mirrored = true
+        show_when_idle = true
+
+    [desktop_widgets.widget.desktop-widget-000000000000000f]
+    box_height = 288.0
+    box_width = 256.0
+    cx = 1104.0
+    cy = 500.0
+    output = "eDP-1"
+    placement_height = 1000.0
+    placement_width = 1600.0
+    rotation = 0.0
+    type = "media_player"
+
+    [desktop_widgets.widget.desktop-widget-0000000000000010]
+    box_height = 240.0
+    box_width = 112.0
+    cx = 728.0
+    cy = 468.0
+    output = "eDP-1"
+    placement_height = 1000.0
+    placement_width = 1600.0
+    rotation = 0.0
+    type = "sysmon"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000010.settings]
+        display = "gauge"
+        gauge_layout = "vertical"
+        stat = "cpu_usage"
+        stat2 = "cpu_temp"
+
+    [desktop_widgets.widget.desktop-widget-0000000000000011]
+    box_height = 240.0
+    box_width = 112.0
+    cx = 872.0
+    cy = 468.0
+    output = "eDP-1"
+    placement_height = 1000.0
+    placement_width = 1600.0
+    rotation = 0.0
+    type = "sysmon"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000011.settings]
+        display = "gauge"
+        gauge_layout = "vertical"
+        stat = "ram_pct"
+        stat2 = "cpu_temp"
+
+    [desktop_widgets.widget.desktop-widget-0000000000000012]
+    box_height = 288.0
+    box_width = 256.0
+    cx = 496.0
+    cy = 500.0
+    output = "eDP-1"
+    placement_height = 1000.0
+    placement_width = 1600.0
+    rotation = 0.0
+    type = "fel/quill:tile"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000012.settings]
+        background = true
+
+    [desktop_widgets.widget.desktop-widget-0000000000000013]
+    box_height = 256.0
+    box_width = 272.0
+    cx = 416.0
+    cy = 340.8677978515625
+    output = "DP-7"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.036424998193979263
+    type = "remo/noctes:note"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000013.settings]
+        background = false
+        key = "nota-1"
+
+    [desktop_widgets.widget.desktop-widget-0000000000000014]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 717.658203125
+    cy = 903.20318603515625
+    output = "DP-7"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.044523000717163086
+    type = "remo/noctes:note"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000014.settings]
+        background = false
+        key = "nota-2"
+
+    [desktop_widgets.widget.desktop-widget-0000000000000015]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 848.255615234375
+    cy = 430.48663330078125
+    output = "DP-7"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = -0.022845000028610229
+    type = "remo/noctes:note"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000015.settings]
+        background = false
+        key = "nota-3"
+
+    [desktop_widgets.widget.desktop-widget-0000000000000016]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 1872.0
+    cy = 427.2161865234375
+    output = "DP-7"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = -0.053672000765800476
+    type = "remo/noctes:note"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000016.settings]
+        background = false
+        key = "nota-4"
+
+    [desktop_widgets.widget.desktop-widget-0000000000000017]
+    box_height = 208.0
+    box_width = 432.0
+    cx = 1280.0
+    cy = 432.0
+    output = "DP-7"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "clock"
+
+    [desktop_widgets.widget.desktop-widget-0000000000000018]
+    box_height = 224.0
+    box_width = 2432.0
+    cx = 1282.0
+    cy = 1248.0
+    output = "DP-7"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "audio_visualizer"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000018.settings]
+        background_opacity = 0.40000000000000002
+        bands = 84
+        centered = false
+        mirrored = true
+        show_when_idle = true
+
+    [desktop_widgets.widget.desktop-widget-0000000000000019]
+    box_height = 288.0
+    box_width = 256.0
+    cx = 1584.0
+    cy = 720.0
+    output = "DP-7"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "media_player"
+
+    [desktop_widgets.widget.desktop-widget-000000000000001a]
+    box_height = 240.0
+    box_width = 112.0
+    cx = 1208.0
+    cy = 688.0
+    output = "DP-7"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "sysmon"
+
+        [desktop_widgets.widget.desktop-widget-000000000000001a.settings]
+        display = "gauge"
+        gauge_layout = "vertical"
+        stat = "cpu_usage"
+        stat2 = "cpu_temp"
+
+    [desktop_widgets.widget.desktop-widget-000000000000001b]
+    box_height = 240.0
+    box_width = 112.0
+    cx = 1352.0
+    cy = 688.0
+    output = "DP-7"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "sysmon"
+
+        [desktop_widgets.widget.desktop-widget-000000000000001b.settings]
+        display = "gauge"
+        gauge_layout = "vertical"
+        stat = "ram_pct"
+        stat2 = "cpu_temp"
+
+    [desktop_widgets.widget.desktop-widget-000000000000001c]
+    box_height = 288.0
+    box_width = 256.0
+    cx = 976.0
+    cy = 720.0
+    output = "DP-7"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "fel/quill:tile"
+
+        [desktop_widgets.widget.desktop-widget-000000000000001c.settings]
+        background = true
+
+    [desktop_widgets.widget.desktop-widget-000000000000001d]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 170.0
+    cy = 170.0
+    output = "DP-7"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.037719998508691788
+    type = "remo/noctes:note"
+
+        [desktop_widgets.widget.desktop-widget-000000000000001d.settings]
+        background = false
+        key = "nota-5"
+
+    [desktop_widgets.widget.desktop-widget-000000000000001e]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 943.831298828125
+    cy = 820.0
+    output = "eDP-1"
+    placement_height = 1000.0
+    placement_width = 1600.0
+    rotation = 0.021953999996185303
+    type = "remo/noctes:note"
+
+        [desktop_widgets.widget.desktop-widget-000000000000001e.settings]
+        background = false
+        key = "nota-6"
 
 [keybinds]
 down = [ "Down", "Ctrl+j", "Ctrl+Cyrillic_o" ]
@@ -37,7 +480,8 @@ widget_order = [
     "lockscreen-widget-0000000000000002",
     "lockscreen-widget-0000000000000003",
     "lockscreen-widget-0000000000000004",
-    "lockscreen-login-box@DP-1"
+    "lockscreen-login-box@DP-1",
+    "lockscreen-login-box@DP-7"
 ]
 
     [lockscreen_widgets.grid]
@@ -85,6 +529,34 @@ widget_order = [
     type = "login_box"
 
         [lockscreen_widgets.widget."lockscreen-login-box@DP-6".settings]
+        background_color = "surface_container"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_password_reveal = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-7"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 1280.0
+    cy = 1258.0
+    output = "DP-7"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-7".settings]
         background_color = "surface_container"
         background_opacity = 0.88
         background_radius = 12.0
@@ -242,16 +714,19 @@ wallpaper_scheme = "vibrant"
     builtin_ids = [ "btop", "cava", "gtk3", "gtk4", "hyprland", "kcolorscheme", "kitty", "qt" ]
 
 [wallpaper.default]
-path = "/home/notkirilov/Pictures/Wallpapers/beach-landscape-twilight-sunset.jpg"
+path = "/home/notkirilov/Pictures/Wallpapers/RanchoTwilight_T_Mac.jpg"
 
 [wallpaper.last]
-path = "/home/notkirilov/Pictures/Wallpapers/beach-landscape-twilight-sunset.jpg"
+path = "/home/notkirilov/Pictures/Wallpapers/RanchoTwilight_T_Mac.jpg"
 
 [wallpaper.monitors.DP-1]
-path = "/home/notkirilov/Pictures/Wallpapers/beach-landscape-twilight-sunset.jpg"
+path = "/home/notkirilov/Pictures/Wallpapers/RanchoTwilight_T_Mac.jpg"
+
+[wallpaper.monitors.DP-7]
+path = "/home/notkirilov/Pictures/Wallpapers/RanchoTwilight_T_Mac.jpg"
 
 [wallpaper.monitors.eDP-1]
-path = "/home/notkirilov/Pictures/Wallpapers/beach-landscape-twilight-sunset.jpg"
+path = "/home/notkirilov/Pictures/Wallpapers/RanchoTwilight_T_Mac.jpg"
 
 [[wallpaper.favorite]]
 palette_source = "wallpaper"
