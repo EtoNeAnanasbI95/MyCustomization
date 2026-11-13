@@ -38,9 +38,9 @@ Linux/
 │   │   ├── hyprland-gui.lua    # настройки, которые пишет HyprMod (мониторы и т.п.)
 │   │   ├── noctalia.lua        # цвета рамок, генерирует Noctalia
 │   │   ├── scripts/translate-copy.sh # двойное SUPER + C → перевод выделенного
-│   │   ├── scripts/capture.sh  # скриншоты, запись, OCR, пипетка, меню захвата
+│   │   ├── scripts/capture.sh  # скриншоты, запись, OCR, пипетка, меню захвата (через `noctalia dmenu`)
 │   │   ├── scripts/launcher.sh # лаунчер на английской раскладке, потом возврат прежней
-│   │   ├── scripts/claude-panel.sh # выдвижная панель Claude Code справа (SUPER + A)
+│   │   ├── scripts/claude-panel.sh # старая панель Claude Code в kitty (сейчас SUPER + A — плагин, см. ниже)
 │   │   ├── scripts/open-panel.sh   # открыть панель Noctalia по названию из лаунчера
 │   │   ├── scripts/xwayland-dpi.sh # Xft.dpi для X11-программ (TrueConf) по масштабу мониторов
 │   │   ├── cursor-plugin/      # мост между плагином Cursor и Lua-конфигом
@@ -55,11 +55,12 @@ Linux/
 │   ├── systemd/user/xdg-desktop-portal-gnome.service.d/wayland.conf # XDG_SESSION_TYPE для GNOME-портала
 │   ├── gtk-3.0/gtk.css         # необязательно: GTK3-диалоги под Nautilus, цвета Noctalia (см. «Выбор файлов»)
 │   ├── zed/                    # settings.json, keymap.json
-│   ├── kitty/ btop/ rofi/ yazi/ cava/ ...
+│   ├── kitty/ btop/ yazi/ cava/ ...
 ├── .tmux.conf                  # tmux: vim-копирование в системный буфер, Alt-бинды для панелей
 ├── .local/bin/speedtest         # speedtest в формате Ookla поверх speed.cloudflare.com (для Speedtest Meter)
 ├── .local/bin/trueconf          # обёртка TrueConf: XWayland + диалог файлов через портал
 ├── .local/bin/portal-strip-x11-parent # прослойка FileChooser-портала (см. «Выбор файлов»)
+├── .local/bin/zed-sudoedit      # `zed-sudoedit <host> /etc/файл`: правка root-файла на сервере через sudoedit в локальном Zed
 ├── .local/share/xdg-desktop-portal/portals/stripx11.portal # описание бэкенда прослойки
 ├── .local/share/applications/org.telegram.desktop.desktop # Telegram: диалоги файлов через портал
 ├── .local/share/applications/trueconf.desktop # TrueConf из лаунчера идёт через обёртку (@HOME@ → $HOME при установке)
@@ -76,11 +77,11 @@ Linux/
 ## 1. Пакеты
 
 ```sh
-sudo pacman -S hyprland kitty tmux rofi nautilus yazi btop playerctl telegram-desktop ttf-jetbrains-mono-nerd kdeconnect sshfs
+sudo pacman -S hyprland kitty tmux nautilus yazi btop playerctl telegram-desktop ttf-jetbrains-mono-nerd kdeconnect sshfs
 sudo pacman -S grim slurp wl-clipboard libnotify satty tesseract tesseract-data-rus tesseract-data-eng hyprpicker
 sudo pacman -S noctalia gpu-screen-recorder mpv socat jq bitwarden-cli spotify-launcher python-wand zenity
 sudo pacman -S xdg-desktop-portal-gnome xorg-xrdb python-gobject sushi
-yay -S mpvpaper ai-usagebar-bin happ-desktop-bin ttf-apple-emoji win2xcur
+yay -S mpvpaper happ-desktop-bin ttf-apple-emoji win2xcur
 ```
 
 ## 2. Конфиги
@@ -95,8 +96,8 @@ cp .config/spotify-launcher.conf ~/.config/
 mkdir -p ~/.local/share/applications && cp .local/share/applications/Happ.desktop ~/.local/share/applications/
 cp .tmux.conf ~/
 cp .Xresources ~/
-mkdir -p ~/.local/bin && cp .local/bin/speedtest .local/bin/trueconf .local/bin/portal-strip-x11-parent ~/.local/bin/
-chmod +x ~/.local/bin/trueconf ~/.local/bin/portal-strip-x11-parent
+mkdir -p ~/.local/bin && cp .local/bin/speedtest .local/bin/trueconf .local/bin/portal-strip-x11-parent .local/bin/zed-sudoedit ~/.local/bin/
+chmod +x ~/.local/bin/trueconf ~/.local/bin/portal-strip-x11-parent ~/.local/bin/zed-sudoedit
 sed "s|@HOME@|$HOME|g" .local/share/applications/trueconf.desktop > ~/.local/share/applications/trueconf.desktop
 mkdir -p ~/.config/xdg-desktop-portal ~/.config/systemd/user ~/.local/share/xdg-desktop-portal/portals
 cp .config/xdg-desktop-portal/hyprland-portals.conf ~/.config/xdg-desktop-portal/
@@ -105,7 +106,7 @@ cp -r .config/systemd/user/xdg-desktop-portal-gnome.service.d ~/.config/systemd/
 cp .local/share/xdg-desktop-portal/portals/stripx11.portal ~/.local/share/xdg-desktop-portal/portals/
 cp .local/share/applications/org.telegram.desktop.desktop ~/.local/share/applications/
 systemctl --user daemon-reload && systemctl --user enable --now portal-strip-x11-parent.service
-cp -r .config/kitty .config/btop .config/rofi .config/yazi .config/satty .config/zed .config/fontconfig ~/.config/
+cp -r .config/kitty .config/btop .config/yazi .config/satty .config/zed .config/fontconfig ~/.config/
 fc-cache -f
 xdg-mime default org.gnome.Nautilus.desktop inode/directory
 
@@ -147,7 +148,8 @@ noctalia config validate Linux/.config/noctalia/config.toml
 | `thaer99ob/default-apps` | приложения по умолчанию |
 | `noctalia/bitwarden` | пароли из Bitwarden (`bw login` один раз) |
 | `0rgl/ask-claude` | `/ai вопрос` в лаунчере → ответ Claude Code |
-| `felipeartur/ai-usagebar` | лимиты AI-подписок в баре (нужен `ai-usagebar`) |
+| `pvs/ai-usage` | лимиты AI-подписок в баре — свой плагин, подключается локальным источником (`[[plugins.source]] kind = "path"`), в репозитории его нет |
+| `notkirilov/system-ai-agent` | ИИ-агент в панели (`SUPER + A`) — свой плагин, тоже локальный источник |
 | `vn1k/cursor` | выбор и сборка тем курсора. Тему в Hyprland передаёт `hypr/cursor-plugin/cursor.conf`, его читает `hyprland.lua` |
 
 Ещё в конфиге: переключатель окон по последнему использованию (`shell.window_switcher.mru`), навигация в списках `Ctrl + J / K` (`[keybinds]`), город для погоды (`[location]`).
@@ -263,9 +265,18 @@ sddm-greeter-qt6 --test-mode --theme /usr/share/sddm/themes/sddm-astronaut-theme
 
 В `/etc/pacman.conf`, секция `[options]`: `Color`, `ILoveCandy` (Пакман вместо полоски прогресса), `ParallelDownloads = 5`.
 
-## Claude Code в панели
+## ИИ-агент в панели
 
-`SUPER + A` или кнопка ✨ в баре выдвигает справа kitty с Claude Code. Сессия живёт в tmux (`claude-panel`): спрятал панель — Claude продолжает работать, открыл — диалог на месте. Окно лежит в спецворкспейсе `special:claude`.
+`SUPER + A` открывает панель плагина `notkirilov/system-ai-agent` (ещё раз — спрятать). Старый вариант — kitty с Claude Code в tmux (`scripts/claude-panel.sh`, спецворкспейс `special:claude`) — остался в репозитории, но к хоткею не привязан.
+
+## Фокус в панелях Noctalia
+
+Пока открыта панель Noctalia с вводом (лаунчер, агент, буфер обмена…), `hyprland.lua` ставит `follow_mouse = 0`, после закрытия возвращает `1`. Иначе дрогнувшая мышь уводит клавиатуру в окно под курсором и набор обрывается: лаунчер берёт клавиатуру в режиме `on_demand`, своей настройки на это у Noctalia нет.
+
+## Мелочи
+
+- Мини-плеер Spotify (окно `chromium-browser`) без рамки, тени и блюра Hyprland: у него своя карточка с отступами, рамка вокруг всего окна выглядит криво.
+- rofi больше не нужен: меню захвата (`SUPER + SHIFT + S`) показывает `noctalia dmenu`. Его старые темы лежат в `legacy/.config/rofi`.
 
 ## tmux
 

@@ -1,0 +1,228 @@
+#!/usr/bin/env python3
+"""Edit one remote file via real sudoedit and a local Zed window."""
+import argparse
+import base64
+import hmac
+import json
+import os
+from pathlib import Path
+import re
+import secrets
+import shlex
+import shutil
+import socket
+import stat
+import struct
+import subprocess
+import sys
+import tempfile
+
+MAX_BYTES = 8 * 1024 * 1024
+MAX_MESSAGE = 12 * 1024 * 1024
+
+
+def receive_exact(conn, size):
+    result = bytearray()
+    while len(result) < size:
+        block = conn.recv(size - len(result))
+        if not block:
+            raise RuntimeError("Connection closed before transfer completed")
+        result.extend(block)
+    return bytes(result)
+
+
+def receive(conn):
+    size = struct.unpack("!I", receive_exact(conn, 4))[0]
+    if size > MAX_MESSAGE:
+        raise RuntimeError("Message exceeds transfer limit")
+    value = json.loads(receive_exact(conn, size))
+    if not isinstance(value, dict):
+        raise RuntimeError("Invalid message")
+    return value
+
+
+def send(conn, value):
+    data = json.dumps(value).encode()
+    if len(data) > MAX_MESSAGE:
+        raise RuntimeError("Message exceeds transfer limit")
+    conn.sendall(struct.pack("!I", len(data)) + data)
+
+
+def decode(value):
+    data = base64.b64decode(value, validate=True)
+    if len(data) > MAX_BYTES:
+        raise RuntimeError("File exceeds 8 MiB limit")
+    return data
+
+
+def remote_editor(socket_path, token, paths):
+    if len(paths) != 1:
+        raise RuntimeError("Only one file per invocation is supported")
+    path = paths[0]
+    fd = os.open(path, os.O_RDWR | os.O_NOFOLLOW | os.O_NONBLOCK)
+    with os.fdopen(fd, "r+b", buffering=0) as file:
+        original_stat = os.fstat(file.fileno())
+        if (not stat.S_ISREG(original_stat.st_mode)
+                or original_stat.st_uid != os.getuid() or original_stat.st_nlink != 1):
+            raise RuntimeError("Expected a regular sudoedit temporary file owned by this user")
+        original = file.read(MAX_BYTES + 1)
+        if len(original) > MAX_BYTES:
+            raise RuntimeError("File exceeds 8 MiB limit")
+        with socket.socket(socket.AF_UNIX) as conn:
+            conn.connect(socket_path)
+            send(conn, {"token": token, "data": base64.b64encode(original).decode()})
+            response = receive(conn)
+        if response.get("status") != "ok":
+            raise RuntimeError("Local editing failed; sudoedit temporary file was not changed")
+        updated = decode(response["data"])
+        if updated == original:
+            return
+        current_stat = os.stat(path, follow_symlinks=False)
+        if ((current_stat.st_dev, current_stat.st_ino) != (original_stat.st_dev, original_stat.st_ino)
+                or current_stat.st_uid != os.getuid() or current_stat.st_nlink != 1):
+            raise RuntimeError("Temporary file was replaced during editing")
+        file.seek(0)
+        if file.read(MAX_BYTES + 1) != original:
+            raise RuntimeError("Temporary file changed concurrently")
+        file.seek(0)
+        remaining = memoryview(updated)
+        while remaining:
+            written = file.write(remaining)
+            if not written:
+                raise OSError("Could not finish writing sudoedit temporary file")
+            remaining = remaining[written:]
+        file.truncate()
+        os.fsync(file.fileno())
+
+
+def edit_request(conn, token, editor, local_file):
+    request = receive(conn)
+    supplied = request.get("token")
+    if not isinstance(supplied, str) or not hmac.compare_digest(supplied, token):
+        raise RuntimeError("Invalid session token")
+    original = decode(request["data"])
+    with open(local_file, "xb") as file:
+        file.write(original)
+    # Zed is started locally, as the normal desktop user. No shell evaluation.
+    subprocess.run([editor, "--wait", str(local_file)], check=True)
+    with open(local_file, "rb") as file:
+        updated = file.read(MAX_BYTES + 1)
+    if len(updated) > MAX_BYTES:
+        raise RuntimeError("Edited file exceeds 8 MiB limit")
+    send(conn, {"status": "ok", "data": base64.b64encode(updated).decode()})
+
+
+def ssh_run(host, command, **kwargs):
+    return subprocess.run(["ssh", "-T", "--", host, command], check=True, **kwargs)
+
+
+def run_local(host, target):
+    if not re.fullmatch(r"[A-Za-z0-9_][A-Za-z0-9_.@-]*", host):
+        raise RuntimeError("Use an SSH config alias or user@hostname (ports/jump hosts go in ~/.ssh/config)")
+    if not target.startswith("/") or any(ord(c) < 32 for c in target):
+        raise RuntimeError("Specify an absolute remote path without control characters")
+    if not sys.stdin.isatty():
+        raise RuntimeError("Run from a local interactive terminal for the remote sudo password prompt")
+    editor = os.environ.get("ZED_SUDOEDIT_EDITOR") or shutil.which("zed") or shutil.which("zeditor")
+    if not editor or not shutil.which(editor):
+        raise RuntimeError("Zed CLI not found: install Zed or set ZED_SUDOEDIT_EDITOR to its executable path")
+    print(f"Remote file: {host}:{target}", flush=True)
+    print("Save in Zed and close the file tab to apply. No service reload is performed.", flush=True)
+    setup = "command -v python3 >/dev/null && command -v sudoedit >/dev/null && umask 077 && mktemp -d /tmp/zed-sudoedit.XXXXXXXX"
+    remote_dir = ssh_run(host, setup, stdout=subprocess.PIPE, text=True).stdout.strip()
+    if not re.fullmatch(r"/tmp/zed-sudoedit\.[A-Za-z0-9]{8}", remote_dir):
+        raise RuntimeError("Unexpected remote temporary path; check shell startup output")
+    remote_script = remote_dir + "/editor.py"
+    remote_socket = remote_dir + "/bridge.sock"
+    ssh_run(host, "umask 077; cat > " + shlex.quote(remote_script), input=Path(__file__).read_bytes())
+    local_dir = Path(tempfile.mkdtemp(prefix="zed-sudoedit-", dir="/tmp"))
+    local_socket = str(local_dir / "bridge.sock")
+    # A fresh local filename preserves the extension and cannot be interpreted as a CLI option.
+    basename = Path(target).name
+    local_file = local_dir / ("edit-" + (basename if basename not in ("", ".", "..") else "config"))
+    token = secrets.token_hex(32)
+    process = None
+    success = False
+    try:
+        with socket.socket(socket.AF_UNIX) as listener:
+            listener.bind(local_socket)
+            os.chmod(local_socket, 0o600)
+            listener.listen(1)
+            listener.settimeout(0.5)
+            editor_setting = shlex.join(["python3", remote_script, "--remote-editor", remote_socket, token])
+            command = shlex.join(["env", "SUDO_EDITOR=" + editor_setting, "sudoedit", "--", target])
+            process = subprocess.Popen([
+                "ssh", "-t", "-o", "ExitOnForwardFailure=yes",
+                "-R", remote_socket + ":" + local_socket, "--", host, command
+            ])
+            while True:
+                try:
+                    conn, _ = listener.accept()
+                    break
+                except socket.timeout:
+                    status = process.poll()
+                    if status is not None:
+                        raise RuntimeError(f"Remote sudoedit exited before editor connection (status {status})")
+            with conn:
+                # Initial transfer cannot legitimately need an unbounded wait.
+                conn.settimeout(30)
+                edit_request(conn, token, editor, local_file)
+            status = process.wait()
+            if status != 0:
+                raise RuntimeError(f"Remote sudoedit failed (status {status}); keep the local recovery copy")
+            success = True
+    finally:
+        if process is not None and process.poll() is None:
+            process.terminate()
+            try:
+                process.wait(timeout=5)
+            except subprocess.TimeoutExpired:
+                process.kill()
+                process.wait()
+        if success:
+            shutil.rmtree(local_dir)
+            # Only the fresh directory created for this session is removed.
+            cleanup = shlex.join(["python3", remote_script, "--cleanup", remote_dir])
+            try:
+                ssh_run(host, cleanup)
+            except subprocess.CalledProcessError:
+                print(f"Editing completed; remote helper cleanup failed: {remote_dir}", file=sys.stderr)
+        else:
+            print(f"Recovery directory on your computer: {local_dir}", file=sys.stderr)
+            print(f"Remote helper directory: {remote_dir}", file=sys.stderr)
+
+
+def cleanup(path):
+    if not re.fullmatch(r"/tmp/zed-sudoedit\.[A-Za-z0-9]{8}", path):
+        raise RuntimeError("Invalid cleanup path")
+    info = os.lstat(path)
+    if not stat.S_ISDIR(info.st_mode) or info.st_uid != os.getuid():
+        raise RuntimeError("Cleanup directory ownership mismatch")
+    shutil.rmtree(path)
+
+
+def main():
+    if len(sys.argv) >= 2 and sys.argv[1] == "--remote-editor":
+        if len(sys.argv) < 5:
+            raise RuntimeError("Missing remote-editor arguments")
+        remote_editor(sys.argv[2], sys.argv[3], sys.argv[4:])
+    elif len(sys.argv) == 3 and sys.argv[1] == "--cleanup":
+        cleanup(sys.argv[2])
+    else:
+        parser = argparse.ArgumentParser(description=__doc__)
+        parser.add_argument("host", help="SSH config alias or user@hostname")
+        parser.add_argument("file", help="absolute remote path")
+        args = parser.parse_args()
+        run_local(args.host, args.file)
+
+
+if __name__ == "__main__":
+    os.umask(0o077)
+    try:
+        main()
+    except (OSError, ValueError, RuntimeError, KeyError, subprocess.SubprocessError) as error:
+        print(f"zed-sudoedit: {error}", file=sys.stderr)
+        sys.exit(1)
+    except KeyboardInterrupt:
+        print("\nzed-sudoedit: interrupted", file=sys.stderr)
+        sys.exit(130)

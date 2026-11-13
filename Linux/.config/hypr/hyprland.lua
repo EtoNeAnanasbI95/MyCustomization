@@ -63,7 +63,6 @@ end
 -- Set programs that you use
 local terminal    = "kitty" -- old config used alacritty, which isn't installed here; kitty is
 local fileManager = "nautilus"
-local menu        = "rofi -show drun"
 
 
 -------------------
@@ -84,6 +83,27 @@ hl.on("hyprland.start", function ()
   -- VPN Happ: окно сразу уезжает в скрытый воркспейс (SUPER+SHIFT+M), в трее остаётся иконка
   hl.exec_cmd("env QT_QPA_PLATFORM=wayland /opt/happ/bin/Happ --autostart", { workspace = "special:hidden silent" }) -- Happ сам по себе лезет в XWayland и мылится
   hl.exec_cmd(os.getenv("HOME") .. "/.config/hypr/scripts/xwayland-dpi.sh") -- Xft.dpi для X11-программ (TrueConf)
+end)
+
+-- Пока открыта панель Noctalia с вводом (лаунчер, Claude Agent, буфер…), фокус не ходит за мышью:
+-- иначе дрогнувший курсор уводит клавиатуру в окно под ним и набор обрывается.
+-- Лаунчер берёт клавиатуру "on_demand", своей настройки на это у Noctalia нет.
+local focusLockPanels = {}
+local function focusLockUpdate()
+    local locked = next(focusLockPanels) ~= nil
+    hl.config({ input = { follow_mouse = locked and 0 or 1 } })
+end
+hl.on("layer.opened", function (layer)
+    if layer and layer.namespace == "noctalia-panel" and (layer.keyboard_interactivity or 0) ~= 0 then
+        focusLockPanels[layer.address] = true
+        focusLockUpdate()
+    end
+end)
+hl.on("layer.closed", function (layer)
+    if layer and focusLockPanels[layer.address] then
+        focusLockPanels[layer.address] = nil
+        focusLockUpdate()
+    end
 end)
 
 -- Xft.dpi заново при подключении/отключении мониторов (уже открытые X11-окна размер не меняют)
@@ -365,7 +385,7 @@ local capture  = scripts .. "capture.sh "
 hl.bind(mainMod .. " + T",         hl.dsp.exec_cmd(terminal),    { description = "Терминал (kitty)" })
 hl.bind(mainMod .. " + E",         hl.dsp.exec_cmd(fileManager), { description = "Файловый менеджер" })
 hl.bind(mainMod .. " + SHIFT + T", hl.dsp.exec_cmd(messenger),   { description = "Telegram" })
-hl.bind(mainMod .. " + A",         hl.dsp.exec_cmd(scripts .. "claude-panel.sh"), { description = "Панель Claude Code (ещё раз — спрятать)" })
+hl.bind(mainMod .. " + A",         hl.dsp.exec_cmd(ipc .. "panel-toggle notkirilov/system-ai-agent:panel"), { description = "Панель System AI Agent (ещё раз — спрятать)" })
 
 -- 2. Noctalia
 hl.bind(mainMod .. " + R",      hl.dsp.exec_cmd(launcher), { description = "Лаунчер" })
@@ -536,6 +556,17 @@ hl.window_rule({
     match = { class = "^(jetbrains-datagrip)$" },
 
     opacity = "0.92 0.85",
+})
+
+-- Мини-плеер Spotify (окно Document PiP, class chromium-browser): у него своя карточка с отступами,
+-- рамка/тень Hyprland рисуются вокруг всего окна и выглядят криво — убираем
+hl.window_rule({
+    name  = "spotify-miniplayer",
+    match = { class = "^(chromium-browser)$", float = true },
+
+    border_size = 0,
+    no_shadow   = true,
+    no_blur     = true,
 })
 
 -- Sushi (Quick Look по пробелу в Nautilus): модальное окно по центру, остальное затемняется

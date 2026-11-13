@@ -1,5 +1,5 @@
 [bar.default]
-center = [ "clock", "bar", "bar_2" ]
+center = [ "clock", "ai_usage", "bar_2" ]
 end = [ "claude-panel", "tray", "recorder", "network", "volume", "battery", "control-center", "session", "notifications" ]
 start = [ "launcher", "wallpaper", "mpvpaper", "workspaces", "active_window" ]
 
@@ -13,8 +13,6 @@ schema_version = 2
 widget_order = [
     "desktop-widget-000000000000000e",
     "desktop-widget-000000000000000d",
-    "desktop-widget-0000000000000001",
-    "desktop-widget-0000000000000004",
     "desktop-widget-0000000000000005",
     "desktop-widget-0000000000000006",
     "desktop-widget-0000000000000009",
@@ -24,88 +22,21 @@ widget_order = [
     "desktop-widget-000000000000000f",
     "desktop-widget-0000000000000010",
     "desktop-widget-0000000000000011",
-    "desktop-widget-0000000000000012",
     "desktop-widget-0000000000000013",
-    "desktop-widget-0000000000000014",
-    "desktop-widget-0000000000000015",
-    "desktop-widget-0000000000000016",
     "desktop-widget-0000000000000017",
     "desktop-widget-0000000000000018",
     "desktop-widget-0000000000000019",
     "desktop-widget-000000000000001a",
     "desktop-widget-000000000000001b",
     "desktop-widget-000000000000001c",
-    "desktop-widget-0000000000000003",
-    "desktop-widget-000000000000001d",
-    "desktop-widget-000000000000001e",
-    "desktop-widget-0000000000000002",
-    "desktop-widget-000000000000001f"
+    "desktop-widget-0000000000000020",
+    "desktop-widget-0000000000000021"
 ]
 
     [desktop_widgets.grid]
     cell_size = 16
     major_interval = 4
     visible = true
-
-    [desktop_widgets.widget.desktop-widget-0000000000000001]
-    box_height = 256.0
-    box_width = 272.0
-    cx = 227.4288330078125
-    cy = 240.8677978515625
-    output = "eDP-1"
-    placement_height = 1000.0
-    placement_width = 1600.0
-    rotation = 0.036424998193979263
-    type = "remo/noctes:note"
-
-        [desktop_widgets.widget.desktop-widget-0000000000000001.settings]
-        background = false
-        key = "nota-1"
-
-    [desktop_widgets.widget.desktop-widget-0000000000000002]
-    box_height = 0.0
-    box_width = 0.0
-    cx = 354.34182739257812
-    cy = 820.0
-    output = "eDP-1"
-    placement_height = 1000.0
-    placement_width = 1600.0
-    rotation = 0.044523000717163086
-    type = "remo/noctes:note"
-
-        [desktop_widgets.widget.desktop-widget-0000000000000002.settings]
-        background = false
-        key = "nota-2"
-
-    [desktop_widgets.widget.desktop-widget-0000000000000003]
-    box_height = 0.0
-    box_width = 0.0
-    cx = 1392.255615234375
-    cy = 586.48663330078125
-    output = "eDP-1"
-    placement_height = 1000.0
-    placement_width = 1600.0
-    rotation = -0.022845000028610229
-    type = "remo/noctes:note"
-
-        [desktop_widgets.widget.desktop-widget-0000000000000003.settings]
-        background = false
-        key = "nota-3"
-
-    [desktop_widgets.widget.desktop-widget-0000000000000004]
-    box_height = 0.0
-    box_width = 0.0
-    cx = 1347.2061767578125
-    cy = 253.757080078125
-    output = "eDP-1"
-    placement_height = 1000.0
-    placement_width = 1600.0
-    rotation = -0.053672000765800476
-    type = "remo/noctes:note"
-
-        [desktop_widgets.widget.desktop-widget-0000000000000004.settings]
-        background = false
-        key = "nota-4"
 
     [desktop_widgets.widget.desktop-widget-0000000000000005]
     box_height = 208.0
@@ -269,79 +200,20 @@ widget_order = [
         stat = "ram_pct"
         stat2 = "cpu_temp"
 
-    [desktop_widgets.widget.desktop-widget-0000000000000012]
-    box_height = 288.0
-    box_width = 256.0
-    cx = 496.0
-    cy = 500.0
-    output = "eDP-1"
-    placement_height = 1000.0
-    placement_width = 1600.0
-    rotation = 0.0
-    type = "fel/quill:tile"
-
-        [desktop_widgets.widget.desktop-widget-0000000000000012.settings]
-        background = true
-
     [desktop_widgets.widget.desktop-widget-0000000000000013]
     box_height = 256.0
     box_width = 272.0
-    cx = 416.0
-    cy = 340.8677978515625
-    output = "DP-7"
-    placement_height = 1440.0
-    placement_width = 2560.0
+    cx = 437.83056640625
+    cy = 244.0
+    output = "eDP-1"
+    placement_height = 1000.0
+    placement_width = 1600.0
     rotation = 0.036424998193979263
     type = "remo/noctes:note"
 
         [desktop_widgets.widget.desktop-widget-0000000000000013.settings]
         background = false
         key = "nota-1"
-
-    [desktop_widgets.widget.desktop-widget-0000000000000014]
-    box_height = 0.0
-    box_width = 0.0
-    cx = 717.658203125
-    cy = 903.20318603515625
-    output = "DP-7"
-    placement_height = 1440.0
-    placement_width = 2560.0
-    rotation = 0.044523000717163086
-    type = "remo/noctes:note"
-
-        [desktop_widgets.widget.desktop-widget-0000000000000014.settings]
-        background = false
-        key = "nota-2"
-
-    [desktop_widgets.widget.desktop-widget-0000000000000015]
-    box_height = 0.0
-    box_width = 0.0
-    cx = 848.255615234375
-    cy = 430.48663330078125
-    output = "DP-7"
-    placement_height = 1440.0
-    placement_width = 2560.0
-    rotation = -0.022845000028610229
-    type = "remo/noctes:note"
-
-        [desktop_widgets.widget.desktop-widget-0000000000000015.settings]
-        background = false
-        key = "nota-3"
-
-    [desktop_widgets.widget.desktop-widget-0000000000000016]
-    box_height = 0.0
-    box_width = 0.0
-    cx = 1872.0
-    cy = 427.2161865234375
-    output = "DP-7"
-    placement_height = 1440.0
-    placement_width = 2560.0
-    rotation = -0.053672000765800476
-    type = "remo/noctes:note"
-
-        [desktop_widgets.widget.desktop-widget-0000000000000016.settings]
-        background = false
-        key = "nota-4"
 
     [desktop_widgets.widget.desktop-widget-0000000000000017]
     box_height = 208.0
@@ -431,50 +303,34 @@ widget_order = [
         [desktop_widgets.widget.desktop-widget-000000000000001c.settings]
         background = true
 
-    [desktop_widgets.widget.desktop-widget-000000000000001d]
-    box_height = 0.0
-    box_width = 0.0
-    cx = 170.0
-    cy = 170.0
-    output = "DP-7"
-    placement_height = 1440.0
-    placement_width = 2560.0
-    rotation = 0.037719998508691788
-    type = "remo/noctes:note"
-
-        [desktop_widgets.widget.desktop-widget-000000000000001d.settings]
-        background = false
-        key = "nota-5"
-
-    [desktop_widgets.widget.desktop-widget-000000000000001e]
-    box_height = 0.0
-    box_width = 0.0
-    cx = 943.831298828125
-    cy = 820.0
+    [desktop_widgets.widget.desktop-widget-0000000000000020]
+    box_height = 288.0
+    box_width = 256.0
+    cx = 496.0
+    cy = 500.0
     output = "eDP-1"
     placement_height = 1000.0
     placement_width = 1600.0
-    rotation = 0.021953999996185303
-    type = "remo/noctes:note"
+    rotation = 0.0
+    type = "fancy_audio_visualizer"
 
-        [desktop_widgets.widget.desktop-widget-000000000000001e.settings]
-        background = false
-        key = "nota-6"
+        [desktop_widgets.widget.desktop-widget-0000000000000020.settings]
+        background = true
 
-    [desktop_widgets.widget.desktop-widget-000000000000001f]
+    [desktop_widgets.widget.desktop-widget-0000000000000021]
     box_height = 0.0
     box_width = 0.0
-    cx = 170.0
-    cy = 410.0
-    output = "DP-7"
-    placement_height = 720.0
-    placement_width = 1280.0
-    rotation = 0.028663000000000001
+    cx = 1712.779541015625
+    cy = 408.93411254882812
+    output = "DP-1"
+    placement_height = 1440.0
+    placement_width = 2560.0
+    rotation = -0.028238000348210335
     type = "remo/noctes:note"
 
-        [desktop_widgets.widget.desktop-widget-000000000000001f.settings]
+        [desktop_widgets.widget.desktop-widget-0000000000000021.settings]
         background = false
-        key = "nota-7"
+        key = "nota-8"
 
 [keybinds]
 down = [ "Down", "Ctrl+j", "Ctrl+Cyrillic_o" ]
@@ -685,13 +541,22 @@ video_source = "region"
 provider = "google"
 target_lang = "ru"
 
+[plugin_settings."notkirilov/claude-agent"]
+model = "default"
+send_on_enter = true
+
+[plugin_settings."notkirilov/system-ai-agent"]
+send_on_enter = true
+suggestion_accept = "enter"
+suggestion_next = "tab"
+suggestion_previous = "shift_tab"
+
 [plugin_settings."vn1k/cursor"]
 hyprland_config = "/home/notkirilov/.config/hypr/cursor-plugin/hyprland.conf"
 
 [plugins]
 enabled = [
     "0rgl/ask-claude",
-    "felipeartur/ai-usagebar",
     "noctalia/bitwarden",
     "noctalia/screen_recorder",
     "noctalia/mpvpaper",
@@ -702,10 +567,33 @@ enabled = [
     "icefish/phone-connect",
     "kenn/keybind-cheatsheet",
     "nilsonlinux/speedtest-meter",
-    "thaer99ob/default-apps"
+    "thaer99ob/default-apps",
+    "pvs/ai-usage",
+    "notkirilov/system-ai-agent"
 ]
 
+    [[plugins.source]]
+    kind = "git"
+    location = "https://github.com/noctalia-dev/official-plugins"
+    name = "official"
+
+    [[plugins.source]]
+    kind = "git"
+    location = "https://github.com/noctalia-dev/community-plugins"
+    name = "community"
+
+    [[plugins.source]]
+    kind = "path"
+    location = "/home/notkirilov/Desktop/balovstvo/system-ai-agent"
+    name = "system-ai-agent-dev"
+
+    [[plugins.source]]
+    kind = "path"
+    location = "/home/notkirilov/Desktop/balovstvo/neo-ai-uasge"
+    name = "ai-usage-dev"
+
 [shell]
+app_icon_colorize = true
 font_family = "JetBrainsMono NF"
 
     [shell.launcher.dmenu.entry.panels]
@@ -721,43 +609,46 @@ font_family = "JetBrainsMono NF"
 
 [theme]
 builtin = "Noctalia"
-community_palette = "Mizuki-Akiyama"
+community_palette = "Cyberpunk"
 mode = "dark"
-source = "wallpaper"
+source = "community"
 wallpaper_scheme = "vibrant"
 
     [theme.templates]
     builtin_ids = [ "btop", "cava", "gtk3", "gtk4", "hyprland", "kcolorscheme", "kitty", "qt" ]
 
-[wallpaper.default]
-path = "/home/notkirilov/Pictures/Wallpapers/RanchoTwilight_T_Mac.jpg"
+[wallpaper]
+directory = "/home/notkirilov/Pictures/Wallpapers"
 
-[wallpaper.last]
-path = "/home/notkirilov/Pictures/Wallpapers/RanchoTwilight_T_Mac.jpg"
+    [wallpaper.default]
+    path = "/home/notkirilov/Pictures/Wallpapers/hyprland-anime-blue-4k.png"
 
-[wallpaper.monitors.DP-1]
-path = "/home/notkirilov/Pictures/Wallpapers/RanchoTwilight_T_Mac.jpg"
+    [wallpaper.last]
+    path = "/home/notkirilov/Pictures/Wallpapers/hyprland-anime-blue-4k.png"
 
-[wallpaper.monitors.DP-7]
-path = "/home/notkirilov/Pictures/Wallpapers/RanchoTwilight_T_Mac.jpg"
+    [wallpaper.monitors.DP-1]
+    path = "/home/notkirilov/Pictures/Wallpapers/hyprland-anime-blue-4k.png"
 
-[wallpaper.monitors.eDP-1]
-path = "/home/notkirilov/Pictures/Wallpapers/RanchoTwilight_T_Mac.jpg"
+    [wallpaper.monitors.DP-7]
+    path = "/home/notkirilov/Pictures/Wallpapers/MainGifToPng.png"
 
-[[wallpaper.favorite]]
-palette_source = "wallpaper"
-path = "/home/notkirilov/Pictures/Wallpapers/RanchoTwilight_T_Mac.jpg"
-theme_mode = "dark"
-wallpaper_scheme = "vibrant"
+    [wallpaper.monitors.eDP-1]
+    path = "/home/notkirilov/Pictures/Wallpapers/hyprland-anime-blue-4k.png"
 
-[[wallpaper.favorite]]
-palette_source = "wallpaper"
-path = "/home/notkirilov/Pictures/Wallpapers/beach-landscape-twilight-sunset.jpg"
-theme_mode = "dark"
-wallpaper_scheme = "vibrant"
+    [[wallpaper.favorite]]
+    palette_source = "wallpaper"
+    path = "/home/notkirilov/Pictures/Wallpapers/RanchoTwilight_T_Mac.jpg"
+    theme_mode = "dark"
+    wallpaper_scheme = "vibrant"
 
-[widget.bar]
-type = "felipeartur/ai-usagebar:bar"
+    [[wallpaper.favorite]]
+    palette_source = "wallpaper"
+    path = "/home/notkirilov/Pictures/Wallpapers/beach-landscape-twilight-sunset.jpg"
+    theme_mode = "dark"
+    wallpaper_scheme = "vibrant"
+
+[widget.ai_usage]
+type = "pvs/ai-usage:bar"
 
 [widget.bar_2]
 type = "icefish/phone-connect:bar"

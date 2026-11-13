@@ -80,8 +80,9 @@ case "${1:-region}" in
       "󰑋  Записать область" \
       "󰑋  Записать экран" \
       "󰉋  Открыть папку скриншотов" |
-      rofi -dmenu -i -no-custom -p "Захват" -theme-str 'window {width: 26em;} listview {lines: 9;}') || exit 0
-    sleep 0.2   # дать rofi закрыться, чтобы он не попал в кадр
+      noctalia dmenu -p "Захват") || exit 0
+    [[ -n $choice ]] || exit 0
+    sleep 0.3   # дать лаунчеру закрыться, чтобы он не попал в кадр
     case "$choice" in
       *"Область → редактор"*) exec "$0" region ;;
       *"Окно"*)               exec "$0" window ;;
