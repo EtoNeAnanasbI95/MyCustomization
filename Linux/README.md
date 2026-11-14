@@ -150,6 +150,7 @@ noctalia config validate Linux/.config/noctalia/config.toml
 | `0rgl/ask-claude` | `/ai вопрос` в лаунчере → ответ Claude Code |
 | `pvs/ai-usage` | лимиты AI-подписок в баре — свой плагин, подключается локальным источником (`[[plugins.source]] kind = "path"`), в репозитории его нет |
 | `notkirilov/system-ai-agent` | ИИ-агент в панели (`SUPER + A`) — свой плагин, тоже локальный источник |
+| `pvs/kanban` | канбан-доска в панели, карточки-стикеры, хранение в markdown формата Obsidian Kanban. Локальный источник — клон [klopopop/kanban-noctalia-plugin](https://github.com/klopopop/kanban-noctalia-plugin): `noctalia msg plugins source add kanban-dev path <клон>` и `noctalia msg plugins enable pvs/kanban` (нужен `imagemagick`) |
 | `vn1k/cursor` | выбор и сборка тем курсора. Тему в Hyprland передаёт `hypr/cursor-plugin/cursor.conf`, его читает `hyprland.lua` |
 
 Ещё в конфиге: переключатель окон по последнему использованию (`shell.window_switcher.mru`), навигация в списках `Ctrl + J / K` (`[keybinds]`), город для погоды (`[location]`).

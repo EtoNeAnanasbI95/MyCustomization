@@ -1,4 +1,8 @@
 [bar.default]
+background_opacity = 0.68999998457729816
+capsule = true
+capsule_opacity = 0.79999998211860657
+capsule_padding = 9.0
 center = [ "clock", "ai_usage", "bar_2" ]
 end = [ "claude-panel", "tray", "recorder", "network", "volume", "battery", "control-center", "session", "notifications" ]
 start = [ "launcher", "wallpaper", "mpvpaper", "workspaces", "active_window" ]
@@ -22,7 +26,6 @@ widget_order = [
     "desktop-widget-000000000000000f",
     "desktop-widget-0000000000000010",
     "desktop-widget-0000000000000011",
-    "desktop-widget-0000000000000013",
     "desktop-widget-0000000000000017",
     "desktop-widget-0000000000000018",
     "desktop-widget-0000000000000019",
@@ -30,7 +33,9 @@ widget_order = [
     "desktop-widget-000000000000001b",
     "desktop-widget-000000000000001c",
     "desktop-widget-0000000000000020",
-    "desktop-widget-0000000000000021"
+    "desktop-widget-0000000000000021",
+    "desktop-widget-0000000000000022",
+    "desktop-widget-0000000000000023"
 ]
 
     [desktop_widgets.grid]
@@ -200,21 +205,6 @@ widget_order = [
         stat = "ram_pct"
         stat2 = "cpu_temp"
 
-    [desktop_widgets.widget.desktop-widget-0000000000000013]
-    box_height = 256.0
-    box_width = 272.0
-    cx = 437.83056640625
-    cy = 244.0
-    output = "eDP-1"
-    placement_height = 1000.0
-    placement_width = 1600.0
-    rotation = 0.036424998193979263
-    type = "remo/noctes:note"
-
-        [desktop_widgets.widget.desktop-widget-0000000000000013.settings]
-        background = false
-        key = "nota-1"
-
     [desktop_widgets.widget.desktop-widget-0000000000000017]
     box_height = 208.0
     box_width = 432.0
@@ -318,19 +308,49 @@ widget_order = [
         background = true
 
     [desktop_widgets.widget.desktop-widget-0000000000000021]
-    box_height = 0.0
-    box_width = 0.0
-    cx = 1712.779541015625
-    cy = 408.93411254882812
-    output = "DP-1"
-    placement_height = 1440.0
-    placement_width = 2560.0
+    box_height = 208.0
+    box_width = 224.0
+    cx = 834.8916015625
+    cy = 743.94195556640625
+    output = "eDP-1"
+    placement_height = 1000.0
+    placement_width = 1600.0
     rotation = -0.028238000348210335
     type = "remo/noctes:note"
 
         [desktop_widgets.widget.desktop-widget-0000000000000021.settings]
         background = false
         key = "nota-8"
+
+    [desktop_widgets.widget.desktop-widget-0000000000000022]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 160.34141540527344
+    cy = 250.58146667480469
+    output = "eDP-1"
+    placement_height = 1000.0
+    placement_width = 1600.0
+    rotation = -0.023725999519228935
+    type = "remo/noctes:note"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000022.settings]
+        background = false
+        key = "nota-1"
+
+    [desktop_widgets.widget.desktop-widget-0000000000000023]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 1311.525634765625
+    cy = 245.27154541015625
+    output = "eDP-1"
+    placement_height = 1000.0
+    placement_width = 1600.0
+    rotation = -0.025093000382184982
+    type = "remo/noctes:note"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000023.settings]
+        background = false
+        key = "nota-2"
 
 [keybinds]
 down = [ "Down", "Ctrl+j", "Ctrl+Cyrillic_o" ]
@@ -569,7 +589,8 @@ enabled = [
     "nilsonlinux/speedtest-meter",
     "thaer99ob/default-apps",
     "pvs/ai-usage",
-    "notkirilov/system-ai-agent"
+    "notkirilov/system-ai-agent",
+    "pvs/kanban"
 ]
 
     [[plugins.source]]
@@ -592,6 +613,11 @@ enabled = [
     location = "/home/notkirilov/Desktop/balovstvo/neo-ai-uasge"
     name = "ai-usage-dev"
 
+    [[plugins.source]]
+    kind = "path"
+    location = "/home/notkirilov/Desktop/balovstvo/kanban-noctalia-plugin"
+    name = "kanban-dev"
+
 [shell]
 app_icon_colorize = true
 font_family = "JetBrainsMono NF"
@@ -611,7 +637,7 @@ font_family = "JetBrainsMono NF"
 builtin = "Noctalia"
 community_palette = "Cyberpunk"
 mode = "dark"
-source = "community"
+source = "wallpaper"
 wallpaper_scheme = "vibrant"
 
     [theme.templates]
@@ -627,7 +653,7 @@ directory = "/home/notkirilov/Pictures/Wallpapers"
     path = "/home/notkirilov/Pictures/Wallpapers/hyprland-anime-blue-4k.png"
 
     [wallpaper.monitors.DP-1]
-    path = "/home/notkirilov/Pictures/Wallpapers/hyprland-anime-blue-4k.png"
+    path = "/home/notkirilov/Pictures/Wallpapers/lake-mountains-rocks-twilight-sunset-starry-sky-purple-sky.jpg"
 
     [wallpaper.monitors.DP-7]
     path = "/home/notkirilov/Pictures/Wallpapers/MainGifToPng.png"
