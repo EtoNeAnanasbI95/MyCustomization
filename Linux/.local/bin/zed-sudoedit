@@ -112,13 +112,14 @@ def edit_request(conn, token, editor, local_file):
     send(conn, {"status": "ok", "data": base64.b64encode(updated).decode()})
 
 
-def ssh_run(host, command, **kwargs):
-    return subprocess.run(["ssh", "-T", "--", host, command], check=True, **kwargs)
+def ssh_run(host, command, ssh_opts=(), **kwargs):
+    return subprocess.run(["ssh", *ssh_opts, "-T", "--", host, command], check=True, **kwargs)
 
 
-def run_local(host, target):
+def run_local(host, target, port=None):
     if not re.fullmatch(r"[A-Za-z0-9_][A-Za-z0-9_.@-]*", host):
-        raise RuntimeError("Use an SSH config alias or user@hostname (ports/jump hosts go in ~/.ssh/config)")
+        raise RuntimeError("Use an SSH config alias or user@hostname (use -p for the port; jump hosts go in ~/.ssh/config)")
+    ssh_opts = ["-p", str(port)] if port is not None else []
     if not target.startswith("/") or any(ord(c) < 32 for c in target):
         raise RuntimeError("Specify an absolute remote path without control characters")
     if not sys.stdin.isatty():
@@ -129,12 +130,12 @@ def run_local(host, target):
     print(f"Remote file: {host}:{target}", flush=True)
     print("Save in Zed and close the file tab to apply. No service reload is performed.", flush=True)
     setup = "command -v python3 >/dev/null && command -v sudoedit >/dev/null && umask 077 && mktemp -d /tmp/zed-sudoedit.XXXXXXXX"
-    remote_dir = ssh_run(host, setup, stdout=subprocess.PIPE, text=True).stdout.strip()
+    remote_dir = ssh_run(host, setup, ssh_opts, stdout=subprocess.PIPE, text=True).stdout.strip()
     if not re.fullmatch(r"/tmp/zed-sudoedit\.[A-Za-z0-9]{8}", remote_dir):
         raise RuntimeError("Unexpected remote temporary path; check shell startup output")
     remote_script = remote_dir + "/editor.py"
     remote_socket = remote_dir + "/bridge.sock"
-    ssh_run(host, "umask 077; cat > " + shlex.quote(remote_script), input=Path(__file__).read_bytes())
+    ssh_run(host, "umask 077; cat > " + shlex.quote(remote_script), ssh_opts, input=Path(__file__).read_bytes())
     local_dir = Path(tempfile.mkdtemp(prefix="zed-sudoedit-", dir="/tmp"))
     local_socket = str(local_dir / "bridge.sock")
     # A fresh local filename preserves the extension and cannot be interpreted as a CLI option.
@@ -152,7 +153,7 @@ def run_local(host, target):
             editor_setting = shlex.join(["python3", remote_script, "--remote-editor", remote_socket, token])
             command = shlex.join(["env", "SUDO_EDITOR=" + editor_setting, "sudoedit", "--", target])
             process = subprocess.Popen([
-                "ssh", "-t", "-o", "ExitOnForwardFailure=yes",
+                "ssh", *ssh_opts, "-t", "-o", "ExitOnForwardFailure=yes",
                 "-R", remote_socket + ":" + local_socket, "--", host, command
             ])
             while True:
@@ -184,7 +185,7 @@ def run_local(host, target):
             # Only the fresh directory created for this session is removed.
             cleanup = shlex.join(["python3", remote_script, "--cleanup", remote_dir])
             try:
-                ssh_run(host, cleanup)
+                ssh_run(host, cleanup, ssh_opts)
             except subprocess.CalledProcessError:
                 print(f"Editing completed; remote helper cleanup failed: {remote_dir}", file=sys.stderr)
         else:
@@ -201,6 +202,12 @@ def cleanup(path):
     shutil.rmtree(path)
 
 
+def ssh_port(value):
+    if not value.isdigit() or not 1 <= int(value) <= 65535:
+        raise argparse.ArgumentTypeError("port must be an integer 1-65535")
+    return int(value)
+
+
 def main():
     if len(sys.argv) >= 2 and sys.argv[1] == "--remote-editor":
         if len(sys.argv) < 5:
@@ -210,10 +217,11 @@ def main():
         cleanup(sys.argv[2])
     else:
         parser = argparse.ArgumentParser(description=__doc__)
+        parser.add_argument("-p", "--port", type=ssh_port, help="SSH port (overrides ~/.ssh/config)")
         parser.add_argument("host", help="SSH config alias or user@hostname")
         parser.add_argument("file", help="absolute remote path")
         args = parser.parse_args()
-        run_local(args.host, args.file)
+        run_local(args.host, args.file, args.port)
 
 
 if __name__ == "__main__":

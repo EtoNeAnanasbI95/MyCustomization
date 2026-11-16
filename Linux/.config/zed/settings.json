@@ -91,6 +91,7 @@
   "agent_servers": {
     "codex-acp": {
       "default_config_options": {
+        "fast-mode": true,
         "mode": "agent-full-access",
         "model": "gpt-5.5"
       },

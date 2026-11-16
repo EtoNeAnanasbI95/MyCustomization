@@ -3,9 +3,9 @@ background_opacity = 0.68999998457729816
 capsule = true
 capsule_opacity = 0.79999998211860657
 capsule_padding = 9.0
-center = [ "clock", "ai_usage", "bar_2" ]
-end = [ "claude-panel", "tray", "recorder", "network", "volume", "battery", "control-center", "session", "notifications" ]
-start = [ "launcher", "wallpaper", "mpvpaper", "workspaces", "active_window" ]
+center = [ "ai_usage", "clock", "launcher" ]
+end = [ "tray", "recorder", "network", "volume", "battery", "control-center", "session", "notifications" ]
+start = [ "wallpaper", "mpvpaper", "workspaces", "active_window" ]
 
 [calendar]
 
@@ -675,9 +675,6 @@ directory = "/home/notkirilov/Pictures/Wallpapers"
 
 [widget.ai_usage]
 type = "pvs/ai-usage:bar"
-
-[widget.bar_2]
-type = "icefish/phone-connect:bar"
 
 [widget.claude-panel]
 glyph = "sparkles"

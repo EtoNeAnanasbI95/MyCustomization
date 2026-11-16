@@ -60,7 +60,7 @@ Linux/
 ├── .local/bin/speedtest         # speedtest в формате Ookla поверх speed.cloudflare.com (для Speedtest Meter)
 ├── .local/bin/trueconf          # обёртка TrueConf: XWayland + диалог файлов через портал
 ├── .local/bin/portal-strip-x11-parent # прослойка FileChooser-портала (см. «Выбор файлов»)
-├── .local/bin/zed-sudoedit      # `zed-sudoedit <host> /etc/файл`: правка root-файла на сервере через sudoedit в локальном Zed
+├── .local/bin/zed-sudoedit      # `zed-sudoedit [-p порт] <host> /etc/файл`: правка root-файла на сервере через sudoedit в локальном Zed
 ├── .local/share/xdg-desktop-portal/portals/stripx11.portal # описание бэкенда прослойки
 ├── .local/share/applications/org.telegram.desktop.desktop # Telegram: диалоги файлов через портал
 ├── .local/share/applications/trueconf.desktop # TrueConf из лаунчера идёт через обёртку (@HOME@ → $HOME при установке)
