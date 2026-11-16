@@ -24,6 +24,8 @@
 | Редактор кода | Zed (vim mode, Catppuccin, агент Claude Code через ACP) |
 | VPN | Happ (xray) в трее, рабочий OpenVPN через NetworkManager |
 | DNS | systemd-resolved: рабочие домены → рабочий DNS, всё остальное → через Happ |
+| Отпечаток пальца | Goodix 550A через libfprint-tod + драйвер Lenovo; локскрин и `sudo` |
+| sudo | [sudo-rs](https://github.com/trifectatechfoundation/sudo-rs) (реализация на Rust) вместо обычного sudo |
 | Загрузчик | GRUB + [Graphite grub2 theme](https://github.com/vinceliuice/Graphite-gtk-theme/tree/main/other/grub2) |
 | Сплэш при загрузке | Plymouth + [hyprland-mac-style](https://www.gnome-look.org/p/2214975) |
 | Менеджер входа | SDDM + [sddm-astronaut-theme](https://github.com/Keyitdev/sddm-astronaut-theme) (вариант `black_hole`) |
@@ -69,7 +71,8 @@ Linux/
 ├── system/
 │   ├── install-sddm-grub.sh    # темы SDDM и GRUB
 │   ├── install-plymouth.sh     # Plymouth + тема
-│   └── NetworkManager/         # DNS через systemd-resolved и Happ (см. «DNS: systemd-resolved»)
+│   ├── NetworkManager/         # DNS через systemd-resolved и Happ (см. «DNS: systemd-resolved»)
+│   └── pam.d/sudo              # sudo по отпечатку пальца, пароль — запасной (см. «Отпечаток пальца и sudo-rs»)
 ├── bin/                        # мои скрипты
 └── legacy/                     # старый сетап
 ```
@@ -290,6 +293,36 @@ sudo install -m 755 system/NetworkManager/dispatcher.d/90-happ-dns-ipv4 /etc/Net
 sudo systemctl enable --now NetworkManager-dispatcher
 sudo systemctl restart NetworkManager
 ```
+
+## Отпечаток пальца и sudo-rs
+
+Ноутбук — Lenovo ThinkBook 16 G6 IRL, сканер Goodix `27c6:550a`. Штатный `libfprint` его не поддерживает (в списке «Known unsupported devices»), работает закрытый драйвер Lenovo из Ubuntu-пакета для ThinkPad E14 Gen 4 через форк `libfprint-tod`, который умеет грузить драйверы производителей:
+
+```sh
+yay -S libfprint-tod libfprint-2-tod1-goodix   # libfprint-tod заменяет libfprint
+sudo pacman -S fprintd
+fprintd-enroll -f right-index-finger            # и left-index-finger
+fprintd-verify                                  # должно быть verify-match
+```
+
+Бинарник драйвера (0.0.9) из AUR-пакета совпадает с архивом Lenovo `r1slg01w.zip`. Известная особенность: после проверки пальца `fprintd` падает внутри драйвера при освобождении сканера (`ReleaseDevice failed`). На работу не влияет: fprintd поднимается заново при следующем обращении.
+
+- **Локскрин Noctalia** спрашивает fprintd сам (`fingerprint = true` в настройках локскрина), PAM для него не нужен.
+- **sudo** — через PAM: `system/pam.d/sudo`, первая строка `auth sufficient pam_fprintd.so`. `sufficient` значит «палец подошёл — пускаем, нет — идём дальше к паролю», так что без пальца sudo просто спросит пароль. Вход в SDDM оставлен по паролю: иначе не разблокируется связка ключей GNOME.
+
+  ```sh
+  sudo install -m 644 system/pam.d/sudo /etc/pam.d/sudo
+  ```
+  Правило в sudoers при этом обычное, с паролем (`<user> ALL=(ALL) ALL`) — с `NOPASSWD` палец бессмыслен.
+
+**sudo-rs** — та же sudo, переписанная на Rust (меньше кода, нет классов ошибок с памятью). Ставится рядом с обычной под именами `sudo-rs`, `sudoedit-rs` и т.д., читает тот же `/etc/sudoers` и PAM-файл `sudo`. Чтобы `sudo` в терминале вызывал её, ссылки в `/usr/local/bin` (он в `PATH` раньше `/usr/bin`):
+
+```sh
+sudo pacman -S sudo-rs
+sudo ln -sf /usr/bin/sudo-rs /usr/local/bin/sudo
+sudo ln -sf /usr/bin/sudoedit-rs /usr/local/bin/sudoedit
+```
+Обычный `/usr/bin/sudo` остаётся запасным (на нём `base-devel`/makepkg); откат — удалить две ссылки. Чего в sudo-rs нет: `logfile` (логи только в syslog) и `INTERCEPT`.
 
 ## pacman
 
