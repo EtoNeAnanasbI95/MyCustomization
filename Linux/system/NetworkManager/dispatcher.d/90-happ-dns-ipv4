@@ -1,0 +1,17 @@
+#!/bin/sh
+# Use resolved for Happ DNS; reject broken global IPv6 only while Happ TUN is up.
+# Priority 10990 is reserved for this workaround.
+[ "$1" = happ-xray ] || exit 0
+case "$2" in
+  up|reapply)
+    /usr/bin/resolvectl dns "$1" 1.1.1.1 || exit 1
+    /usr/bin/resolvectl domain "$1" '~.' || exit 1
+    /usr/bin/resolvectl default-route "$1" yes || exit 1
+    if ! /usr/bin/ip -6 rule show pref 10990 | /usr/bin/grep -q 'to 2000::/3 unreachable'; then
+      /usr/bin/ip -6 rule add to 2000::/3 unreachable pref 10990 || exit 1
+    fi
+    ;;
+  down)
+    /usr/bin/ip -6 rule del to 2000::/3 unreachable pref 10990 2>/dev/null || :
+    ;;
+esac

@@ -23,6 +23,7 @@
 | Анимированные обои | плагин Noctalia Video Wallpaper (mpvpaper): GIF, mp4, webm |
 | Редактор кода | Zed (vim mode, Catppuccin, агент Claude Code через ACP) |
 | VPN | Happ (xray) в трее, рабочий OpenVPN через NetworkManager |
+| DNS | systemd-resolved: рабочие домены → рабочий DNS, всё остальное → через Happ |
 | Загрузчик | GRUB + [Graphite grub2 theme](https://github.com/vinceliuice/Graphite-gtk-theme/tree/main/other/grub2) |
 | Сплэш при загрузке | Plymouth + [hyprland-mac-style](https://www.gnome-look.org/p/2214975) |
 | Менеджер входа | SDDM + [sddm-astronaut-theme](https://github.com/Keyitdev/sddm-astronaut-theme) (вариант `black_hole`) |
@@ -67,7 +68,8 @@ Linux/
 ├── .Xresources                  # базовый Xft.dpi/курсор для XWayland (скрипт xwayland-dpi.sh перебивает)
 ├── system/
 │   ├── install-sddm-grub.sh    # темы SDDM и GRUB
-│   └── install-plymouth.sh     # Plymouth + тема
+│   ├── install-plymouth.sh     # Plymouth + тема
+│   └── NetworkManager/         # DNS через systemd-resolved и Happ (см. «DNS: systemd-resolved»)
 ├── bin/                        # мои скрипты
 └── legacy/                     # старый сетап
 ```
@@ -260,7 +262,34 @@ sddm-greeter-qt6 --test-mode --theme /usr/share/sddm/themes/sddm-astronaut-theme
   ```sh
   nmcli connection modify "<имя подключения>" ipv4.never-default yes ipv4.dns-search "<рабочий-домен>,~<ещё-домен>" ipv6.method disabled
   ```
-  В туннель тогда идут только сети, которые присылает сервер, остальное — через Happ. Для полноценного раздельного DNS (рабочему DNS — только рабочие домены) нужен `systemd-resolved` и `dns=systemd-resolved` в NetworkManager.
+  В туннель тогда идут только сети, которые присылает сервер, остальное — через Happ. Тильда в `~<домен>` значит «этот домен резолвить только через DNS VPN» — это работает благодаря systemd-resolved (ниже).
+
+## DNS: systemd-resolved
+
+**Зачем.** Одновременно подняты два туннеля — рабочий OpenVPN и Happ — плюс обычный Wi-Fi, и у каждого свой DNS. Классический `/etc/resolv.conf` — это один общий список серверов: какой ответил первым, тот и прав. С ним рабочие имена резолвятся, только если запрос попал на рабочий DNS, а все остальные запросы уходят рабочему DNS или провайдеру мимо Happ. systemd-resolved держит DNS **для каждого интерфейса отдельно** и направляет запрос по домену:
+
+| Запрос | Куда идёт |
+|---|---|
+| рабочие домены (`~<рабочий-домен>` в `ipv4.dns-search` у OpenVPN) | DNS рабочего VPN, через tun0 |
+| всё остальное (`~.` на `happ-xray`) | `1.1.1.1` через туннель Happ |
+| Happ выключен | DNS роутера по Wi-Fi |
+
+Проверить, кто что резолвит: `resolvectl status`, `resolvectl query <имя>`.
+
+**Как устроено:**
+- `/etc/resolv.conf` — симлинк на заглушку resolved `/run/systemd/resolve/stub-resolv.conf` (все программы спрашивают `127.0.0.53`, а resolved уже раскидывает).
+- `system/NetworkManager/conf.d/90-happ-resolved.conf` — NetworkManager отдаёт DNS каждого подключения в resolved, а не пишет resolv.conf сам.
+- `system/NetworkManager/dispatcher.d/90-happ-dns-ipv4` — Happ поднимает свой TUN мимо NetworkManager и DNS на нём не задаёт. Скрипт при поднятии `happ-xray` вешает на него `1.1.1.1` и домен `~.` (маршрут DNS по умолчанию), а ещё, пока Happ поднят, запрещает глобальный IPv6 (правило `pref 10990`): туннель IPv6 не возит, и программы иначе подвисают на попытках по IPv6.
+
+**Установка:**
+```sh
+sudo systemctl enable --now systemd-resolved
+sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
+sudo install -m 644 system/NetworkManager/conf.d/90-happ-resolved.conf /etc/NetworkManager/conf.d/
+sudo install -m 755 system/NetworkManager/dispatcher.d/90-happ-dns-ipv4 /etc/NetworkManager/dispatcher.d/
+sudo systemctl enable --now NetworkManager-dispatcher
+sudo systemctl restart NetworkManager
+```
 
 ## pacman
 
