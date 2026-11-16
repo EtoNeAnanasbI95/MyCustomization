@@ -87,6 +87,9 @@ sudo pacman -S grim slurp wl-clipboard libnotify satty tesseract tesseract-data-
 sudo pacman -S noctalia gpu-screen-recorder mpv socat jq bitwarden-cli spotify-launcher python-wand zenity
 sudo pacman -S xdg-desktop-portal-gnome xorg-xrdb python-gobject sushi
 yay -S mpvpaper happ-desktop-bin ttf-apple-emoji win2xcur
+# отпечаток пальца (Goodix 550A) и sudo на Rust — см. «Отпечаток пальца и sudo-rs»
+yay -S libfprint-tod libfprint-2-tod1-goodix
+sudo pacman -S fprintd sudo-rs
 ```
 
 ## 2. Конфиги
@@ -114,6 +117,12 @@ systemctl --user daemon-reload && systemctl --user enable --now portal-strip-x11
 cp -r .config/kitty .config/btop .config/yazi .config/satty .config/zed .config/fontconfig ~/.config/
 fc-cache -f
 xdg-mime default org.gnome.Nautilus.desktop inode/directory
+
+# sudo-rs вместо sudo и вход в sudo по пальцу (пароль остаётся запасным)
+sudo ln -sf /usr/bin/sudo-rs /usr/local/bin/sudo
+sudo ln -sf /usr/bin/sudoedit-rs /usr/local/bin/sudoedit
+sudo install -m 644 system/pam.d/sudo /etc/pam.d/sudo
+fprintd-enroll -f right-index-finger && fprintd-enroll -f left-index-finger
 
 # обои: Noctalia берёт их из ~/Pictures/Wallpapers, это симлинк на папку из репозитория
 mkdir -p ~/Pictures && ln -s "$(realpath ../wallpapers)" ~/Pictures/Wallpapers
