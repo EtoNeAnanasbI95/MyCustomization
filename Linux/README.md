@@ -207,7 +207,7 @@ sddm-greeter-qt6 --test-mode --theme /usr/share/sddm/themes/sddm-astronaut-theme
 | `SUPER + SHIFT + O` | Текст с экрана (OCR, rus+eng) → буфер |
 | `SUPER + SHIFT + C` | Пипетка → HEX в буфер |
 | `SUPER + SHIFT + R` | Запись области экрана / остановить |
-| `SUPER + SHIFT + V` | История буфера обмена |
+| `SUPER + SHIFT + V` | История буфера обмена (встроенная в Noctalia, переживает перезагрузку: хранится зашифрованной в `~/.local/state/noctalia/clipboard/`, ключ в gnome-keyring; `cliphist` не нужен) |
 | `SUPER + Space` | Сменить раскладку EN/RU |
 | `SUPER + A` | Панель Claude Code справа (ещё раз — спрятать) |
 | `SUPER + /` | Шпаргалка (плагин) |
@@ -259,12 +259,12 @@ sddm-greeter-qt6 --test-mode --theme /usr/share/sddm/themes/sddm-astronaut-theme
 
 ## Эффекты
 
-- **Желейные окна** (`decoration.wobble`, Hyprland 0.57+): окна гнутся и колышутся, когда их таскаешь. Сила настраивается в `hyprland.lua`: `intensity`, `stiffness`, `damping`.
+- **Желейные окна** (`decoration.wobble`, Hyprland 0.57+): окна гнутся и колышутся, когда их таскаешь. Подобрано под GNOME Wobbly Windows: мягкая пружина и инерция. Настраивается в `hyprland.lua`: `intensity`, `stiffness`, `mass`, `damping`, `mesh`.
 - **Полупрозрачность с размытием** для Telegram, Zed, DataGrip и окна настроек Noctalia: правила `*-opacity` в `hyprland.lua`.
 
 ## Мониторы
 
-Внешний монитор `DP-1` (2560×1440 @ 165 Гц) справа от ноутбука и основной: воркспейсы 1–5 на нём, 6–10 на ноутбуке. Настраивается в начале `hyprland.lua`, под другой монитор надо поменять `output` и `mode` (`hyprctl monitors all` покажет доступные режимы).
+Внешний монитор (дома `DP-1`, 2560×1440 @ 165 Гц) справа от ноутбука и основной: воркспейсы 1–5 на нём, 6–10 на ноутбуке. Имя внешнего монитора не зашито: `applyWorkspaceLayout()` в начале `hyprland.lua` находит его на лету (дома `DP-1`, на работе через док `DP-N`) и пересобирает правила воркспейсов при подключении (`monitor.added`), уже открытые 1–5 переезжают на него. Если внешний отключить, Hyprland сам перенесёт их на ноутбук. Режим монитора задаётся там же, `hyprctl monitors all` покажет доступные.
 
 ## VPN
 

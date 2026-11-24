@@ -45,15 +45,50 @@ hl.monitor({
     scale    = 1.5,
 })
 
--- Воркспейсы 1-5 на внешнем мониторе (1 по умолчанию), 6-10 на ноутбуке.
--- Если внешний отключить, Hyprland перенесёт его воркспейсы на ноутбук.
-for i = 1, 10 do
-    hl.workspace_rule({
-        workspace = tostring(i),
-        monitor   = (i <= 5) and "DP-1" or "eDP-1",
-        default   = (i == 1 or i == 6),
-    })
+-- Воркспейсы 1-5 на внешнем мониторе (любом: дома DP-1, на работе DP-N через док), 6-10 на ноутбуке.
+-- Имя внешнего выясняется на лету; при подключении монитора правила пересобираются, а уже
+-- существующие 1-5 переезжают на него. Если внешний отключить, Hyprland сам перенесёт их на ноутбук.
+local LAPTOP = "eDP-1"
+local wsRules = {}
+local function applyWorkspaceLayout()
+    local ext
+    for _, m in ipairs(hl.get_monitors()) do
+        if m.name ~= LAPTOP then ext = m.name; break end
+    end
+    for _, r in ipairs(wsRules) do r:set_enabled(false) end
+    wsRules = {}
+    for i = 1, 10 do
+        wsRules[i] = hl.workspace_rule({
+            workspace = tostring(i),
+            monitor   = (i <= 5 and ext) or LAPTOP,
+            default   = (i == 1 and ext ~= nil) or i == 6,
+        })
+    end
+    if not ext then return end
+    for i = 1, 5 do
+        local ws = hl.get_workspace(i)
+        if ws and ws.monitor and ws.monitor.name ~= ext then
+            hl.dispatch(hl.dsp.workspace.move({ workspace = tostring(i), monitor = ext }))
+        end
+    end
+    -- если на внешнем остался «чужой» воркспейс (11 и т.п.), показать на нём 1
+    local active = hl.get_active_workspace(ext)
+    if active and active.id and (active.id < 1 or active.id > 5) then
+        if hl.get_workspace(1) then
+            hl.dispatch(hl.dsp.workspace.move({ workspace = "1", monitor = ext }))
+        else
+            -- пустого 1 не существует, move ничего не делает: создаём его на внешнем и возвращаем фокус
+            local prev = hl.get_active_monitor and hl.get_active_monitor()
+            hl.dispatch(hl.dsp.focus({ monitor = ext }))
+            hl.dispatch(hl.dsp.focus({ workspace = 1 }))
+            if prev and prev.name and prev.name ~= ext then
+                hl.dispatch(hl.dsp.focus({ monitor = prev.name }))
+            end
+        end
+    end
 end
+applyWorkspaceLayout()
+hl.on("monitor.added", function () applyWorkspaceLayout() end)
 
 
 ---------------------
@@ -75,8 +110,6 @@ local fileManager = "nautilus"
 -- Or execute your favorite apps at launch like this:
 --
 hl.on("hyprland.start", function () 
-  hl.exec_cmd("wl-clipboard-history -t")
-  hl.exec_cmd("wl-paste --watch cliphist store")
   hl.exec_cmd("systemctl --user start hyprpolkitagent")
   hl.exec_cmd("env EDITOR=zeditor noctalia") -- EDITOR нужен Quill (SUPER+N): «открыть в редакторе» = $EDITOR, не xdg-mime
   hl.exec_cmd("kdeconnectd") -- KDE Connect (телефон), плагин Noctalia icefish/phone-connect
@@ -219,13 +252,18 @@ hl.config({
             color        = 0xee1a1a1a,
         },
 
-        -- "Желейные" окна при перетаскивании (Hyprland 0.57+)
+        -- "Желейные" окна при перетаскивании (Hyprland 0.57+), настроено под GNOME Wobbly Windows:
+        -- мягкая пружина + инерция = окно сильно гнётся, медленно и долго колышется.
+        -- Частота колебаний ~ sqrt(stiffness/mass), "трясучесть" ~ damping / (2*sqrt(stiffness*mass)).
         wobble = {
-            enabled   = true,
-            intensity = 0.6,   -- сила изгиба
-            stiffness = 120,   -- жёсткость пружины: больше = быстрее успокаивается
-            damping   = 5,     -- затухание: меньше = дольше трясётся
-            mesh      = 16,    -- густота сетки: плавнее изгиб
+            enabled          = true,
+            intensity        = 1.3,   -- сила изгиба (0..2)
+            stiffness        = 35,    -- жёсткость пружины: меньше = мягче, сильнее отстаёт от курсора
+            mass             = 1.4,   -- инерция: больше = тяжелее, медленнее колышется
+            damping          = 4,     -- затухание: меньше = дольше трясётся
+            mesh             = 24,    -- густота сетки: плавнее изгиб (2..32)
+            value_epsilon    = 0.1,   -- порог остановки: ниже = затухает до конца, без рывка в конце
+            velocity_epsilon = 0.5,
         },
 
         blur = {
@@ -534,6 +572,17 @@ hl.window_rule({
     size      = "(monitor_w*0.36) (monitor_h*0.90)",
     move      = "(monitor_w*0.63) (monitor_h*0.06)",
     opacity   = "0.94 0.90",
+})
+
+-- sudo-term: окно подтверждения root-команд от Claude (отпечаток), по центру поверх всего
+hl.window_rule({
+    name  = "sudo-term",
+    match = { class = "^(sudo-term)$" },
+
+    float  = true,
+    center = true,
+    pin    = true,
+    size   = "(monitor_w*0.50) (monitor_h*0.50)",
 })
 
 -- Прозрачность с размытием фона (активное окно / неактивное)
