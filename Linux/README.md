@@ -86,6 +86,8 @@ sudo pacman -S hyprland kitty tmux nautilus yazi btop playerctl telegram-desktop
 sudo pacman -S grim slurp wl-clipboard libnotify satty tesseract tesseract-data-rus tesseract-data-eng hyprpicker
 sudo pacman -S noctalia gpu-screen-recorder mpv socat jq bitwarden-cli spotify-launcher python-wand zenity
 sudo pacman -S xdg-desktop-portal-gnome xorg-xrdb python-gobject sushi
+# ОБЯЗАТЕЛЬНО: хранилище паролей (Secret Service) — без него не работает почта Evolution, см. «Почта Evolution и keyring»
+sudo pacman -S gnome-keyring libsecret evolution
 yay -S mpvpaper happ-desktop-bin ttf-apple-emoji win2xcur
 # отпечаток пальца (Goodix 550A) и sudo на Rust — см. «Отпечаток пальца и sudo-rs»
 yay -S libfprint-tod libfprint-2-tod1-goodix
@@ -332,6 +334,33 @@ sudo ln -sf /usr/bin/sudo-rs /usr/local/bin/sudo
 sudo ln -sf /usr/bin/sudoedit-rs /usr/local/bin/sudoedit
 ```
 Обычный `/usr/bin/sudo` остаётся запасным (на нём `base-devel`/makepkg); откат — удалить две ссылки. Чего в sudo-rs нет: `logfile` (логи только в syslog) и `INTERCEPT`.
+
+## Почта Evolution и keyring
+
+> ⚠️ **Без keyring почта в Evolution нормально не работает.** Evolution (через `evolution-data-server`) хранит пароли и OAuth-токены почтовых аккаунтов не у себя, а в системном хранилище секретов (Secret Service API, `libsecret`). В GNOME/KDE оно есть из коробки, а в голом Hyprland его нет. Без него Evolution не может сохранить пароль или токен, и ящик не работает: аккаунт не подключается, пароль спрашивается заново или ошибки непонятные. Я так долго не понимал, что не так, пока не поставил keyring.
+
+Что нужно:
+
+1. Поставить `gnome-keyring` (сам демон Secret Service) и `libsecret`:
+   ```sh
+   sudo pacman -S gnome-keyring libsecret
+   ```
+2. Включить пользовательский сокет, чтобы демон поднимался по запросу:
+   ```sh
+   systemctl --user enable --now gnome-keyring-daemon.socket
+   ```
+3. Чтобы связка ключей `login` разблокировалась сама при входе, в `/etc/pam.d/sddm` должны быть строки `pam_gnome_keyring.so` (в пакете sddm для Arch они уже есть):
+   ```
+   -auth       optional    pam_gnome_keyring.so
+   -password   optional    pam_gnome_keyring.so    use_authtok
+   -session    optional    pam_gnome_keyring.so    auto_start
+   ```
+   Пароль связки `login` должен совпадать с паролем пользователя.
+4. Перезайти в сессию и заново добавить или переподключить аккаунт в Evolution.
+
+Если войти по **отпечатку пальца**, пароля нет, и keyring остаётся заблокированным: при первом обращении появится окно ввода пароля. Это нормально.
+
+Тот же keyring используют и другие программы: история буфера обмена Noctalia (ключ шифрования), секреты NetworkManager, браузеры.
 
 ## pacman
 
